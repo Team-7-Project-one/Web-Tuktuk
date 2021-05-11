@@ -33,11 +33,11 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link">Hotel</a></li>
-            <li class="nav-item active"><a href="souvenir.html" class="nav-link">Souvenir</a></li>
-            <li class="nav-item"><a href="blog.html" class="nav-link">Event</a></li>
-            <li class="nav-item"><a href="AboutUs.html" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/hotel" class="nav-link">Hotel</a></li>
+            <li class="nav-item active"><a href="/souvenir" class="nav-link">Souvenir</a></li>
+            <li class="nav-item"><a href="/event" class="nav-link">Event</a></li>
+            <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
           </ul>
         </div>
       </div>
