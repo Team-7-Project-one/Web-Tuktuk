@@ -29,17 +29,17 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Tuktuk<span>Tour</span></a>
+        <a class="navbar-brand" href="index.html" style="font-size: 2rem">Tuktuk<span>Tour</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="oi oi-menu"></span> Menu</button>
 
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="/hotel" class="nav-link">Hotel</a></li>
-            <li class="nav-item"><a href="/souvenir" class="nav-link">Souvenir</a></li>
-            <li class="nav-item"><a href="/event" class="nav-link">Event</a></li>
-            <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
-            <li class="nav-item">
+            <li class="nav-item active"><a href="/" class="nav-link" style="font-size: 1.5rem">Home</a></li>
+            <li class="nav-item"><a href="/hotel" class="nav-link" style="font-size: 1.5rem">Hotel</a></li>
+            <li class="nav-item"><a href="/souvenir" class="nav-link" style="font-size: 1.5rem">Souvenir</a></li>
+            <li class="nav-item"><a href="/event" class="nav-link" style="font-size: 1.5rem">Event</a></li>
+            <li class="nav-item"><a href="/about" class="nav-link" style="font-size: 1.5rem">About Us</a></li>
+            <li class="nav-item" style="font-size: 1.5rem">
               <div class="btn-group nav-link text-dark">
                 <i class="far fa-user-circle fw-bold " style="font-size: 30px; color: #F9E79F;" data-bs-toggle="dropdown"></i>
                 <button type="button" style="border: none; font-size: 20px" class="btn btn-light btn-sm dropdown-toggle bg-transparent text-dark fw-bold" data-bs-toggle="dropdown" aria-expanded="false"></button>
@@ -65,9 +65,9 @@
             <div class="row no-gutters slider-text align-items-center justify-content-end">
               <div class="col-md-6 ftco-animate">
                 <div class="text">
-                  <h2 >Tuk-Tuk Tour Website</h2>
-                  <h1 class="mb-3">Horas!!
-                    Selamat datang di website tuk-tuk siadong
+                  <h2 >Tuktuk Tour Website</h2>
+                  <h1 class="mb-3">Horas!!! <br>
+                    Welcome To Tuktuk Tour Website
                   </h1>
                 </div>
               </div>
@@ -81,8 +81,8 @@
             <div class="row no-gutters slider-text align-items-center justify-content-end">
               <div class="col-md-6 ftco-animate">
                 <div class="text">
-                  <h2>Harbor Lights Hotel &amp; Resort</h2>
-                  <h1 class="mb-3">It's feels like staying in your own home.</h1>
+                  <h2>Tuk-Tuk Tour Website</h2>
+                  <h1 class="mb-3">It's feels like staying in your own home</h1>
                 </div>
               </div>
             </div>
@@ -95,35 +95,7 @@
             <div class="row no-gutters slider-text align-items-center justify-content-end">
               <div class="col-md-6 ftco-animate">
                 <div class="text">
-                  <h2>Harbor Lights Hotel &amp; Resort</h2>
-                  <h1 class="mb-3">It's feels like staying in your own home.</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="slider-item" style="background-image: url(img/carousel.4.jfif)">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="row no-gutters slider-text align-items-center justify-content-end">
-              <div class="col-md-6 ftco-animate">
-                <div class="text">
-                  <h2>Harbor Lights Hotel &amp; Resort</h2>
-                  <h1 class="mb-3">It's feels like staying in your own home.</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="slider-item" style="background-image: url(img/carousel5.jpg)">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="row no-gutters slider-text align-items-center justify-content-end">
-              <div class="col-md-6 ftco-animate">
-                <div class="text">
-                  <h2>Harbor Lights Hotel &amp; Resort</h2>
+                  <h2>Tuk-Tuk Tour Website</h2>
                   <h1 class="mb-3">It's feels like staying in your own home.</h1>
                 </div>
               </div>

@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('restaurant');
-// });
 
+Route::get('/', function () {
+    return view('index');
+});
 Route::get('/hotel', 'HotelController@index');
 Route::get('/souvenir', 'SouvenirController@index');
 Route::get('/event', 'EventController@index');
