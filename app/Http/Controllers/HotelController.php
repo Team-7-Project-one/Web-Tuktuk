@@ -8,6 +8,8 @@ use App\Models\Hotel;
 class HotelController extends Controller
 {
     public function index(){
-        return view('hotel');
+        // $data = Hotel::all();
+        // return view('HotelController.index', ['data'=>$data]);
+        return view('Hotel');
     }
 }

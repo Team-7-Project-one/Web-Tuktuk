@@ -8,6 +8,8 @@ use App\Models\Event;
 class EventController extends Controller
 {
     public function index(){
-        return view('event');
+        // $data = Event::all();
+        // return view('EventController.index', ['data'=>$data]);
+        return view('Event');
     }
 }
