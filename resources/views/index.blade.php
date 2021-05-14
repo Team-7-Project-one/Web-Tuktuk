@@ -38,8 +38,8 @@
             <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
             <li class="nav-item">
               <div class="btn-group nav-link text-dark">
-                <i class="far fa-user-circle fw-bold " style="font-size: 30px; color: #F9E79F;" data-bs-toggle="dropdown"></i>
-                <button type="button" style="border: none; font-size: 20px" class="btn btn-light btn-sm dropdown-toggle bg-transparent text-dark fw-bold" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                <!-- <i class="far fa-user-circle fw-bold " style="font-size: 30px; color: #F9E79F;" data-bs-toggle="dropdown"></i>
+                <button type="button" style="border: none; font-size: 20px" class="btn btn-light btn-sm dropdown-toggle bg-transparent text-dark fw-bold" data-bs-toggle="dropdown" aria-expanded="false"></button> -->
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Action</a></li>
                   <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -62,9 +62,9 @@
             <div class="row no-gutters slider-text align-items-center justify-content-end">
               <div class="col-md-6 ftco-animate">
                 <div class="text">
-                  <h2 >Tuk-Tuk Tour Website</h2>
-                  <h1 class="mb-3">Horas!!
-                    Selamat datang di website tuk-tuk siadong
+                  <h2 >Tuktuk Tour Website</h2>
+                  <h1 class="mb-3">Horas <br><br>
+                    Welcome To Tuktuk Tour Website
                   </h1>
                 </div>
               </div>
@@ -78,8 +78,8 @@
             <div class="row no-gutters slider-text align-items-center justify-content-end">
               <div class="col-md-6 ftco-animate">
                 <div class="text">
-                  <h2>Harbor Lights Hotel &amp; Resort</h2>
-                  <h1 class="mb-3">It's feels like staying in your own home.</h1>
+                  <h2>Tuk-Tuk Tour Website</h2>
+                  <h1 class="mb-3">It's feels like staying in your own home</h1>
                 </div>
               </div>
             </div>
@@ -92,36 +92,8 @@
             <div class="row no-gutters slider-text align-items-center justify-content-end">
               <div class="col-md-6 ftco-animate">
                 <div class="text">
-                  <h2>Harbor Lights Hotel &amp; Resort</h2>
-                  <h1 class="mb-3">It's feels like staying in your own home.</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="slider-item" style="background-image: url(img/carousel.4.jfif)">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="row no-gutters slider-text align-items-center justify-content-end">
-              <div class="col-md-6 ftco-animate">
-                <div class="text">
-                  <h2>Harbor Lights Hotel &amp; Resort</h2>
-                  <h1 class="mb-3">It's feels like staying in your own home.</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="slider-item" style="background-image: url(img/carousel5.jpg)">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="row no-gutters slider-text align-items-center justify-content-end">
-              <div class="col-md-6 ftco-animate">
-                <div class="text">
-                  <h2>Harbor Lights Hotel &amp; Resort</h2>
-                  <h1 class="mb-3">It's feels like staying in your own home.</h1>
+                  <h2>Tuk-Tuk Tour Website</h2>
+                  <h1 class="mb-3">It has beautiful scenery and charming sight</h1>
                 </div>
               </div>
             </div>
@@ -216,12 +188,7 @@
       </div>
       <div class="container">
         <p style="text-align: center">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium molestias unde cum ipsam ea aliquid dolore et tempora odit ducimus consectetur esse distinctio totam eveniet in ab perspiciatis eum, debitis a quisquam
-          repudiandae, corporis nostrum ut. Ipsum delectus voluptatibus ipsa velit aut excepturi dignissimos quas atque fuga, repellendus eveniet sapiente error, nemo, facilis possimus. Et adipisci non repellat amet ea optio quidem expedita
-          veniam! Eaque, quo. Iusto odit a aspernatur exercitationem. Dolorum dolor accusantium facere a, sunt iure delectus perferendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi laborum quia assumenda cumque fugit
-          pariatur voluptas id nesciunt tempora? Labore amet minus ea repudiandae suscipit. Maiores numquam accusamus excepturi deleniti deserunt doloremque voluptas reiciendis voluptates nostrum pariatur veniam, consectetur beatae
-          consequatur fuga ullam quidem in cumque sed iusto ea sequi error dolore alias officia! Odit blanditiis facere sequi dolore, hic mollitia nesciunt ex quam earum cum nihil dolorum maiores repudiandae quae labore rem, harum
-          voluptatem libero error. Hic, nihil tempora.
+        Tuk Tuk is an area that full of exotic landscapes. From this place anyway, you can enjoy the beauty of Lake Toba that is so magical. The place is become the center of tourists who want to spend the night in Samosir. There are numbers of hotels and villas that can be your best deal to stay. There are also several coffee shop that provide internet facilities for your business important. As a tourist destination village, in addition to its natural scenery, Tuk Tuk is also known for rich Batak culture. Therefore, when you took a visit to Tuk Tuk, you do not need to worry because there are plenty of attractions that will make your vacation more memorable.
         </p>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -242,7 +209,7 @@
             <div class="col-md-7 wrap-about pb-md-3 ftco-animate pr-md-5 pb-md-5 pt-md-4">
               <div class="heading-section mb-4 my-5 my-md-0">
                 <span class="subheading">About Tuk-tuk Siadong</span>
-                <h2 class="mb-4" style="font-size: -webkit-calc(100% + 30px);">Pemerintahan</h2>
+                <h2 class="mb-4" style="font-size: -webkit-calc(100% + 30px);">Governance</h2>
               </div>
               <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
               <p><a href="#" class="btn btn-secondary rounded">More</a></p>

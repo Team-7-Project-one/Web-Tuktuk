@@ -13499,6 +13499,14 @@ reply-button {
   animation-delay: 0.75s;
 }
 
+.navbar .navbar-brand {
+  font-size: 2rem;
+}
+
+.collapse .navbar-link {
+  font-size: 1.5rem;
+}
+
 @keyframes animate4 {
   0% {
     bottom: -100%;
