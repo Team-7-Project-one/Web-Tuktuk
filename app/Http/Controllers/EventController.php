@@ -10,6 +10,6 @@ class EventController extends Controller
     public function index(){
 
         $data=EventModel::all();
-        return view('blog',compact('data'));
+        return view('event',compact('data'));
     }
 }

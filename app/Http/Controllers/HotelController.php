@@ -22,7 +22,7 @@ class HotelController extends Controller
             $data = HotelModel::paginate(6);
         }
         // $data=SouvenirModel::all();
-        return view('contact',['data'=>$data]);
+        return view('hotel',['data'=>$data]);
     }
     
 }

@@ -24,6 +24,6 @@ class SouvenirController extends Controller
             $data = SouvenirModel::paginate(6);
         }
         // $data=SouvenirModel::all();
-        return view('restaurant',['data'=>$data]);
+        return view('souvenir',['data'=>$data]);
     }
 }
