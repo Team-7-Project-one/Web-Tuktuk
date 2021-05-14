@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\EventModel;
 
 class EventController extends Controller
 {
     public function index(){
-        return view('blog');
+
+        $data=EventModel::all();
+        return view('blog',compact('data'));
     }
 }

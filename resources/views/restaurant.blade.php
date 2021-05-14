@@ -77,35 +77,39 @@
     </center>
       <br><br><br><center>
     <div class="searchotel container col-md-10">
-      <form class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="Temukan Souvenir Anda Disini ..." aria-label="Search" />&nbsp;
+      <form class="d-flex" method="GET">
+      <input name="keyword" class="form-control me-2"  placeholder="Temukan Souvenir Anda Disini ..." aria-label="Search" value{{Request::get('keyword')}} />&nbsp;
       <button id="cari" class="btn btn-outline-warning rounded-circle" style="width: 55px ;" type="submit"><i class="fas fa-search"></i></button>
       </form>
     </div>
   </center>
     <br />
 
+  
 	<section class="ftco-section container"> <center>
 		 <h1 class="ftco-animate">List Souvenir</h1>
 		  <br />
-			  <div class="row ftco-animate">
-          <div class="col-md-4">  
-            <div class="card card-product" style="width: 18rem;">
-              <img src="img/souvenir/souvenir1.jpeg" class="card-img-top" alt="...">
+      <div class="row container ftco-animate">
+        @foreach ($data as $item)
+        <div class="col-md-4">
+            <div class="container card card-product" style="width: 18rem;">
+              <img src="{{ $item['gambar1'] }}" class="card-img-top" alt="...">
               <div class="card-body product-desc">
-                <h5 class="card-title ">Ukiran Lampu Hias<br></h5>
-                <b class="product-price text-warning"><i class="fas fa-tags"></i> IDR 50.000</b>
-                <p><i class="fas fa-store text-primary"></i> Arga art & Souvenir</p>
-                <div class="container d-flex justify-content-center">
+                <h5 class="card-title ">{{ $item['nama_souvenir'] }}<br></h5>
+                <b class="product-price text-warning"><i class="fas fa-tags"></i>{{ $item['harga'] }}</b>
+                <p><i class="fas fa-store text-primary"></i>{{ $item['nama_toko'] }}</p>
+                <button id="modalbtn" href="#" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#abc{{ $item['id'] }}"><i class="fas fa-info-circle"></i> Detail</button>
               </div>
-                <button href="#" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-info-circle"></i> Detail</button>
-              </div>
-            </div>
             </div>
           </div>
+            @endforeach
+            
+          </div>
+        
 
-                <!-- Modal souvenir -->
-      <div class="modal fade" id="staticBackdrop"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <!-- Modal souvenir -->
+      @foreach ($data as $item)
+      <div class="modal fade" id="abc{{ $item['id'] }}"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog  modal-xl">
           <div class="modal-content">
             <div class="modal-body">
@@ -120,16 +124,16 @@
                     </div>
                     <div class="carousel-inner" id="hotel-carousel">
                       <div class="carousel-item active">
-                        <a href="img/souvenir/souvenir1.jpeg" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-                        <img src="img/souvenir/souvenir1.jpeg" class="d-block w-100" alt=""></a>
+                        <a href="{{ $item['gambar1'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                        <img src="{{ $item['gambar1'] }}" class="d-block w-100" alt=""></a>
                       </div>
                       <div class="carousel-item">
-                        <a href="img/souvenir/patung2.jpeg" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-                        <img src="img/souvenir/patung2.jpeg" class="d-block w-100" alt=""></a>
+                        <a href="{{ $item['gambar2'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                        <img src="{{ $item['gambar2'] }}" class="d-block w-100" alt=""></a>
                       </div>
                       <div class="carousel-item">
-                        <a href="img/souvenir/patung3.jpeg" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-                        <img src="img/souvenir/patung3.jpeg" class="d-block w-100" alt="">
+                        <a href="{{ $item['gambar3'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                        <img src="{{ $item['gambar3'] }}" class="d-block w-100" alt="">
                         </a>
                       </div>
                     </div>
@@ -144,39 +148,39 @@
                   </div>
                 </div>
                   <div style="margin-top: -30px;" class="container col-md-5 fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><br>
-                      <h4 class="text-primary" style="font-weight: bold !important;">Kerangka Lampu Hias</h4><p style="font-style: italic;">Kerangka lampu tidur untuk mempercantik kamar anda</p>
-                        <p class="text-dark"><i class="fas fa-store " style="color: #1A5276;"></i> Arga Art & Souvenir</p>
-                      <p class="text-dark"><i class="fas fa-user" style="color: #D35400;"></i> Rawadinson Saragih</p>
+                      <h4 class="text-primary" style="font-weight: bold !important;">{{ $item['nama_souvenir'] }}</h4><p style="font-style: italic;">{{ $item['deskripsi'] }}</p>
+                        <p class="text-dark"><i class="fas fa-store " style="color: #1A5276;"></i> {{ $item['nama_toko'] }}</p>
+                      <p class="text-dark"><i class="fas fa-user" style="color: #D35400;"></i> {{$item['pemilik']}}</p>
                     <table class="table">
                       <tr>
                         <td><i class="fas fa-wrench text-primary"></i> Bahan</td>
                         <td>:</td>
-                        <td>Kayu Mahoni</td>
+                        <td>{{ $item['bahan'] }}</td>
                       </tr>
                       <tr>
                         <td><i class="fas fa-dharmachakra text-primary"></i> Tipe</td>
                         <td>:</td>
-                        <td>Patung</td>
+                        <td>{{ $item['tipe'] }}</td>
                       </tr>
                       <tr>
                         <td><i class="fas fa-search-plus text-primary"></i> Ukuran</td>
                         <td>:</td>
-                        <td>-</td>
+                        <td>{{ $item['ukuran'] }}</td>
                       </tr>
                       <tr>
                         <td><i class="fas fa-palette text-primary"></i> Warna</td>
                         <td>:</td>
-                        <td>-</td>
+                        <td>{{ $item['warna'] }}</td>
                       </tr>
                       <tr>
                         <td><i class="fas fa-tags text-warning"></i> Harga</td>
                         <td>:</td>
-                        <td class="text-success">Rp.200000</td>
+                        <td class="text-success">{{ $item['harga'] }}</td>
                       </tr>
                       <tr>
                         <td><i class="fas fa-phone-volume text-primary"></i> Contact</td>
                         <td>:</td>
-                        <td class="text-success "></i> 089820937192</td>
+                        <td class="text-success "></i> {{ $item['kontak'] }}</td>
                       </tr>
                       <tr>
                         <td></td>
@@ -194,8 +198,33 @@
           </div>
         </div>
       </div>
+      @endforeach
+
+      <center>
+      <div class="item rounded-3 fs-6 mt-3">
+        &nbsp;Menampilkan
+        {{ $data->firstItem() }}
+        -
+        {{ $data->lastItem() }}
+        dari
+        {{ $data->total() }}
+        entri data
+    </div>
+    <div class="pagination mt-3 justify-content-center ">
+        {{ $data->links() }}
+    </div>
+  </center>
+
+  <style>
+    .w-5{
+      width: 20px;
+    }
+    .text-sm{
+      margin-top: 10px;
+    }
+  </style>
 			  
-		  <div class="row mt-5">
+		  {{-- <div class="row mt-5">
 			<div class="col text-center">
 			  <div class="block-27">
 				<ul>
@@ -209,7 +238,7 @@
 				</ul>
 			  </div>
 			</div>
-		  </div>
+		  </div> --}}
 	  </section>
 
 

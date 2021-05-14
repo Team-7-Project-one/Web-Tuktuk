@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\HotelController;
+use App\Http\Controllers\SouvenirController;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +18,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Route::get('/', function () {
-//     return view('restaurant');
+//     return view('welcome');
 // });
 
-Route::get('/hotel', 'HotelController@index');
-Route::get('/souvenir', 'SouvenirController@index');
-Route::get('/event', 'EventController@index');
+Route::get('/', [IndexController::class, 'index'])->name('home');
+Route::get('/hotel', [HotelController::class, 'index'])->name('hotel');
 
+Route::get('/souvenir', [SouvenirController::class, 'index'])->name('souvenir');
 
+Route::get('/event', [EventController::class, 'index'])->name('event');
+
+// Route::get('/hotel', 'HotelController@index')->name('hotel');
+// Route::get('/souvenir', 'SouvenirController@index')->name('souvenir');
+// Route::get('/event', 'EventController@index')->name('event');
 

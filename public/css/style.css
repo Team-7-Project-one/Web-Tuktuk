@@ -13233,9 +13233,11 @@ reply-button {
   transition: 0.3s;
   padding-top: 10px;
 }
-
+.blog-entry{
+  width: 100%;
+}
 .hotel-list:hover {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
 }
 
 .insta-img {
@@ -13284,6 +13286,7 @@ reply-button {
 }
 .card-product {
   overflow: hidden;
+  width: max-content;
   border: 1px solid rgb(0, 214, 54);
   cursor: pointer;
   margin-bottom: 10px;
@@ -13296,6 +13299,11 @@ reply-button {
   background-color: white;
   width: 100%;
   transition: 0.5s;
+  justify-content: center;
+  margin-left: -10px;
+}
+.product-desc h5,b,p,.modalbtn{
+  margin-left: -15px;
 }
 .product-desc button {
   transform: scale(1.5);
@@ -13310,7 +13318,7 @@ reply-button {
   filter: brightness(50%);
 }
 .card-product:hover .product-desc {
-  margin-top: 72%;
+  margin-top: 75%;
 }
 .product-price {
   margin-top: -12px;

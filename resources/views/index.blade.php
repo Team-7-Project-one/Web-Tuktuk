@@ -13,11 +13,8 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/magnific-popup.css" />
-
     <link rel="stylesheet" href="css/aos.css" />
-
     <link rel="stylesheet" href="css/ionicons.min.css" />
-
     <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
     <link rel="stylesheet" href="css/jquery.timepicker.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
@@ -304,7 +301,7 @@
                       <h3 class="text-danger">District</h3>
                      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam exercitationem nulla odio quas maiores neque, numquam reiciendis, voluptates officiis vitae illum animi enim repellendus, earum veritatis ea beatae! Amet
                       quam vero rerum ipsa excepturi soluta ducimus non, explicabo illum sunt laboriosam aut officia provident at natus commodi reiciendis magnam. Animi!</p>
-                      <button id="carbut" class="btn btn-outline-danger">More Details</button>
+                      <a target="_blank" href="https://samosirkab.go.id/" id="carbut" class="btn btn-outline-danger">More Details</a>
                     </div>
                   </div>
                 </div>

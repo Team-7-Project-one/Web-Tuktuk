@@ -55,19 +55,20 @@
 
     <section class="ftco-section container">
       <h1 class="list-event text-center text-light ">List Event</h1><br>
+      @foreach ($data as $data)
         <div class="container row">
-            <div class="hero-wrap  event-card" style="background-image: url('img/event/Event.jpeg');  border-radius: 30px; overflow: hidden;">
+            <div class="hero-wrap  event-card" style="background-image: url('{{$data['gambar']}}');  border-radius: 30px; overflow: hidden;">
               <div class="overlay" id="eventdark"></div>
               <div class="container">
                 <div class="row  ">
                   <div class=" ftco-animate text-center  justify-content-center">
                     <div class="text event-caption"><br>
-                      <h3 class="text-center event-title text-light" style=" font-size: 80px">Samosir Music  Festival 2020</h3>
-                      <h2 class="text-light tanggal">25-8-2020</h2>
+                      <h3 class="text-center event-title text-light" style=" font-size: 80px">{{ $data['nama_event'] }}</h3>
+                      <h2 class="text-light tanggal">{{ $data['tgl_pelaksanaan'] }}</h2>
                       <p>
-                        Event musik yang menampilkan musisi luar negeri dan lokal ini menjadi acara tahunan yang banyak ditunggu-tunggu masyarakat kawasan Danau Toba, terkhusus Kabupaten Samosir.
+                        {{ $data['deskripsi'] }}
                       </p>
-                      <a class="event-detail" href="#" data-bs-toggle="modal" data-bs-target="#eventdetailmodal">
+                      <a class="event-detail" href="#" data-bs-toggle="modal" data-bs-target="#abc{{ $data['id'] }}">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -83,7 +84,7 @@
     </section>
     
     <!-- Event Modal -->
-    <div class="modal fade" id="eventdetailmodal"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="abc{{ $data['id'] }}"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog  modal-xl">
         <div class="modal-content">
           <div class="modal-body">
@@ -103,42 +104,42 @@
                 </div>
               </div>
                 <div style="margin-top: -30px;" class="container col-md-5 fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><br>
-                    <h4 class="text-primary" style="font-weight: bold !important;">Samosir Music Festival 2020</h4><p style="font-style: italic; color: gray;">Event musik yang menampilkan musisi luar negeri dan lokal ini menjadi acara tahunan yang banyak ditunggu-tunggu masyarakat kawasan Danau Toba, terkhusus Kabupaten Samosir.</p>
+                    <h4 class="text-primary" style="font-weight: bold !important;">{{ $data['nama_event'] }}</h4><p style="font-style: italic; color: gray;">Event musik yang menampilkan musisi luar negeri dan lokal ini menjadi acara tahunan yang banyak ditunggu-tunggu masyarakat kawasan Danau Toba, terkhusus Kabupaten Samosir.</p>
                   <table class="table">
                     <tr>
                       <td><i class="fab fa-elementor text-primary"></i> Category</td>
                       <td>:</td>
-                      <td>Music</td>
+                      <td>{{ $data['kategori'] }}</td>
                     </tr>
                     <tr>
                       <td><i class="far fa-calendar-check text-primary"></i> Tanggal Mulai</td>
                       <td>:</td>
-                      <td>25-08-2020</td>
+                      <td>{{ $data['tgl_pelaksanaan'] }}</td>
                     </tr>
                     <tr>
                       <td><i class="far fa-calendar-minus text-primary"></i> Tanggal Berakhir</td>
                       <td>:</td>
-                      <td>25-08-2020</td>
+                      <td>{{ $data['tgl_selesai'] }}</td>
                     </tr>
                     <tr>
                       <td><i class="fas fa-clock text-primary"></i> Waktu</td>
                       <td>:</td>
-                      <td>20.00 to 01.00</td>
+                      <td>{{ $data['waktu'] }}</td>
                     </tr>
                     <tr>
                       <td><i class="fas fa-ticket-alt text-primary"></i> Harga Tiket</td>
                       <td>:</td>
-                      <td class="text-success">Rp.2000</td>
+                      <td class="text-success">{{ $data['harga'] }}</td>
                     </tr>
                     <tr>
                       <td><i class="fas fa-map-marker-alt text-primary"></i> Lokasi</td>
                       <td>:</td>
-                      <td class="text-success">Open Stage Tuk-tuk</td>
+                      <td class="text-success">{{ $data['lokasi'] }}</td>
                     </tr>
                   </table>
                   <div>
                     <h5 class="text-center" >Location</h5>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.4835473374446!2d98.85817631484893!3d2.6710595980539975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031ea218872fbed%3A0xba87d2f92345c80a!2sOpen%20Stage!5e0!3m2!1sid!2sid!4v1619005065753!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    {{ $data['link_lokasi'] }}
                 </div>
                 </div>
             </div>
@@ -146,7 +147,7 @@
         </div>
       </div>
     </div>
-
+    @endforeach
      <!-- Modal login-->
      <div class="modal fade" style="background-image: url(/img/login.jpg); height: 100%;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog ">
@@ -365,3 +366,4 @@
     <script src="js/main.js"></script>
   </body>
 </html>
+
