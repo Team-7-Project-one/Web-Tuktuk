@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\HotelModel;
+use App\Models\Hotel;
 
 class HotelController extends Controller
 {
     public function index(Request $request){
         if($request->has('keyword')) {
-            $data = HotelModel::where('nama_hotel','LIKE','%'.$request->keyword.'%')
+            $data = Hotel::where('nama_hotel','LIKE','%'.$request->keyword.'%')
             ->orWhere('rating', 'LIKE', '%'.$request->keyword.'%')
             ->orWhere('harga', 'LIKE', '%'.$request->keyword.'%')
             ->orWhere('lokasi', 'LIKE', '%'.$request->keyword.'%')
@@ -19,7 +19,7 @@ class HotelController extends Controller
             ->paginate(6);
         }
         else{
-            $data = HotelModel::paginate(6);
+            $data = Hotel::paginate(6);
         }
         // $data=SouvenirModel::all();
         return view('hotel',['data'=>$data]);

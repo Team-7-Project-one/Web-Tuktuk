@@ -79,9 +79,9 @@
               <div class="text mt-3">
                 <div class="meta mb-2">
                 </div>
-                <h3 class="heading">{{ $item['nama_hotel'] }}</h3>
-                <p class="hotel-title-list container"><i class="fas fa-map-marker-alt text-danger"></i>{{ $item['lokasi'] }}</p>
-                <p class="container">{{ $item['deskripsi'] }}</p>
+                <h3 class="heading">{{ $item->nama_hotel }}</h3>
+                <p class="hotel-title-list container"><i class="fas fa-map-marker-alt text-danger"></i>{{ $item->lokasi }}</p>
+                <p class="container">{{ $item->deskripsi }}</p>
                 <a href="#" class="btn btn-outline-primary" style="font-weight: bold;" data-bs-toggle="modal" data-bs-target="#abc{{ $item['id'] }}">More info</a>
               </div>
             </div>
