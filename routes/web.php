@@ -32,3 +32,7 @@ Route::get('/event', [EventController::class, 'index'])->name('event');
 // Route::get('/souvenir', 'SouvenirController@index')->name('souvenir');
 // Route::get('/event', 'EventController@index')->name('event');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

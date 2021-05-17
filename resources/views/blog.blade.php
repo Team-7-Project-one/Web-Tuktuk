@@ -32,24 +32,6 @@
             <li class="nav-item"><a href="/souvenir" class="nav-link">Souvenir</a></li>
             <li class="nav-item active"><a href="/event" class="nav-link">Event</a></li>
             <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
-            <li class="nav-item"><a href="" class="nav-link"> @if(Auth::user())
-              <i class="fas fa-user"></i> {{Auth::user()->name}}
-            @else
-              <i class="fas fa-user"></i>
-            @endif
-          </a></li>
-          @if (Auth::user())
-          <li class="nav-item fw-bold">
-            <a class="text-danger nav-link" style="margin-left: px;" href="{{ route('logout') }}"
-            onclick="event.preventDefault();
-                          document.getElementById('logout-form').submit();">
-             {{ __('Logout') }}
-          </a>
-          </li>
-         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-             @csrf
-         </form>
-          @endif
           </ul>
         </div>
       </div>
@@ -238,11 +220,7 @@
               <div class="col-md-9 mt-2">
                 <textarea type="text" class="form-control" placeholder="Tuliskan Pesan Anda Disini...."></textarea>
                 <div class="button">
-                  <button  id="kirim" class="btn btn-success mt-1" @if (Auth::user())
-                      type="submit"
-                  @else
-                    data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"
-                  @endif>Kirim</button>
+                  <button type="button" id="kirim" class="btn btn-success mt-1" data-bs-toggle="modal" data-bs-target="#exampleModal">Kirim</button>
                   <button type="reset" id="reset" class="btn btn-danger mt-1">Reset</button>
                 </div>
               </div>

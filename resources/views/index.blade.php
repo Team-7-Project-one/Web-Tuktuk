@@ -36,7 +36,25 @@
             <li class="nav-item"><a href="/souvenir" class="nav-link">Souvenir</a></li>
             <li class="nav-item"><a href="/event" class="nav-link">Event</a></li>
             <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
-            <li class="nav-item">
+            <li class="nav-item"><a href="" class="nav-link"> @if(Auth::user())
+              <i class="fas fa-user"></i> {{Auth::user()->name}}
+            @else
+              <i class="fas fa-user"></i>
+            @endif
+          </a></li>
+          @if (Auth::user())
+          <li class="nav-item fw-bold">
+            <a class="text-danger nav-link" style="margin-left: px;" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();">
+             {{ __('Logout') }}
+          </a>
+          </li>
+         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+             @csrf
+         </form>
+          @endif
+            {{-- <li class="nav-item">
               <div class="btn-group nav-link text-dark">
                 <!-- <i class="far fa-user-circle fw-bold " style="font-size: 30px; color: #F9E79F;" data-bs-toggle="dropdown"></i>
                 <button type="button" style="border: none; font-size: 20px" class="btn btn-light btn-sm dropdown-toggle bg-transparent text-dark fw-bold" data-bs-toggle="dropdown" aria-expanded="false"></button> -->
@@ -48,7 +66,7 @@
                   <li><a class="dropdown-item" href="#">Separated link</a></li>
                 </ul>
               </div>
-            </li>
+            </li> --}}
           </ul>
         </div>
       </div>

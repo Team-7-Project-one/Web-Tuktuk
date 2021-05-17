@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Harborlights - Free Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700&display=swap" rel="stylesheet" />
+
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
+
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/magnific-popup.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+
     <link rel="stylesheet" href="css/aos.css" />
+
     <link rel="stylesheet" href="css/ionicons.min.css" />
+
     <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
     <link rel="stylesheet" href="css/jquery.timepicker.css" />
     <link rel="stylesheet" href="css/flaticon.css" />
@@ -19,7 +25,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
   </head>
-  <body class="bg-dark text-light" style="background-color: #212F3D;">
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
         <a class="navbar-brand" href="index.html">TukTuk<span>Tour</span></a>
@@ -29,8 +35,8 @@
           <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="/hotel" class="nav-link">Hotel</a></li>
-            <li class="nav-item"><a href="/souvenir" class="nav-link">Souvenir</a></li>
-            <li class="nav-item active"><a href="/event" class="nav-link">Event</a></li>
+            <li class="nav-item active"><a href="/souvenir" class="nav-link">Souvenir</a></li>
+            <li class="nav-item"><a href="/event" class="nav-link">Event</a></li>
             <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
             <li class="nav-item"><a href="" class="nav-link"> @if(Auth::user())
               <i class="fas fa-user"></i> {{Auth::user()->name}}
@@ -55,144 +61,237 @@
       </div>
     </nav>
     <!-- END nav -->
-    <div class="hero-wrap" style="background-image: url('img/hotel/backgroundevent.jpg')">
+    <div class="hero-wrap" style="background-image: url('img/carousel1.jpg')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text d-flex align-itemd-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
             <div class="text">
               <p class="breadcrumbs mb-2">
-                <span class="mr-2"><a href="index.html">Home</a></span> <span>Event</span>
+                <span class="mr-2"><a href="index.html">Home</a></span> <span>Souvenir</span>
               </p>
-              <h1 class="bread" style="margin-bottom: 450px; font-size: 80px">Event</h1>
+              <h1 class="bread" style="margin-bottom: 450px; font-size: 80px">Souvenir</h1>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <section class="ftco-section container">
-      <h1 class="list-event text-center text-light ">List Event</h1><br>
-      @foreach ($data as $data)
-        <div class="container row">
-            <div class="hero-wrap  event-card" style="background-image: url('{{$data['gambar']}}');  border-radius: 30px; overflow: hidden;">
-              <div class="overlay" id="eventdark"></div>
-              <div class="container">
-                <div class="row  ">
-                  <div class=" ftco-animate text-center  justify-content-center">
-                    <div class="text event-caption"><br>
-                      <h3 class="text-center event-title text-light" style=" font-size: 80px">{{ $data['nama_event'] }}</h3>
-                      <h2 class="text-light tanggal">{{ $data['tgl_pelaksanaan'] }}</h2>
-                      <p>
-                        {{ $data['deskripsi'] }}
-                      </p>
-                      <a class="event-detail" href="#" data-bs-toggle="modal" data-bs-target="#abc{{ $data['id'] }}">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <b> More Details </b>
-                    </a>
-                    </div><br>
-                  </div>
-                </div>
-              </div>
-             
+
+<br><br>
+<h1 class="ftco-animate text-center ">Category</h1><br>
+<center>
+    <div class="category container row">
+        <div class=" col-md-4 btncategory">
+          <a id="btnpatung" class="btn btn-outline-warning mr-5 rounded-pill">Patung</a>
         </div>
-    </section>
-    
-    <!-- Event Modal -->
-    <div class="modal fade" id="abc{{ $data['id'] }}"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog  modal-xl">
-        <div class="modal-content">
-          <div class="modal-body">
-            <center><h1 id="hotel-info-title" class="text-success">Details</h1></center><br>
-            <div class="row container">
-              <div class="col-md-7">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                  <div id="carbut2" class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  </div>
-                  <div class="carousel-inner" id="hotel-carousel">
-                    <div class="carousel-item active">
-                      <a href="img/event/Event.jpeg" class="insta-img image-popup" style="">
-                      <img src="img/event/Event.jpeg" class="d-block w-100" alt=""></a>
-                    </div>
-                  </div>
-                </div>
+        <div class=" col-md-4 btncategory">
+          <a id="btnulos" class="btn btn-outline-danger mr-5 rounded-pill">Ulos</a>
+        </div>
+        <div class=" col-md-4 btncategory">
+          <a id="btnbaju" class="btn btn-outline-primary rounded-pill">Baju</a>
+        </div>
+      </div>
+    </center>
+      <br><br><br><center>
+    <div class="searchotel container col-md-10">
+      <form class="d-flex" method="GET">
+      <input name="keyword" class="form-control me-2"  placeholder="Temukan Souvenir Anda Disini ..." aria-label="Search" value{{Request::get('keyword')}} />&nbsp;
+      <button id="cari" class="btn btn-outline-warning rounded-circle" style="width: 55px ;" type="submit"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+  </center>
+    <br />
+
+  
+	<section class="ftco-section container"> <center>
+		 <h1 class="ftco-animate">List Souvenir</h1>
+		  <br />
+      <div class="row container ftco-animate">
+        @foreach ($data as $item)
+        <div class="col-md-4">
+            <div class="container card card-product" style="width: 18rem;">
+              <img src="{{ $item['gambar1'] }}" class="card-img-top" alt="...">
+              <div class="card-body product-desc">
+                <h5 class="card-title ">{{ $item['nama_souvenir'] }}<br></h5>
+                <b class="product-price text-warning"><i class="fas fa-tags"></i>{{ $item['harga'] }}</b>
+                <p><i class="fas fa-store text-primary"></i>{{ $item['nama_toko'] }}</p>
+                <button id="modalbtn" href="#" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#abc{{ $item['id'] }}"><i class="fas fa-info-circle"></i> Detail</button>
               </div>
-                <div style="margin-top: -30px;" class="container col-md-5 fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><br>
-                    <h4 class="text-primary" style="font-weight: bold !important;">{{ $data['nama_event'] }}</h4><p style="font-style: italic; color: gray;">Event musik yang menampilkan musisi luar negeri dan lokal ini menjadi acara tahunan yang banyak ditunggu-tunggu masyarakat kawasan Danau Toba, terkhusus Kabupaten Samosir.</p>
-                  <table class="table">
-                    <tr>
-                      <td><i class="fab fa-elementor text-primary"></i> Category</td>
-                      <td>:</td>
-                      <td>{{ $data['kategori'] }}</td>
-                    </tr>
-                    <tr>
-                      <td><i class="far fa-calendar-check text-primary"></i> Tanggal Mulai</td>
-                      <td>:</td>
-                      <td>{{ $data['tgl_pelaksanaan'] }}</td>
-                    </tr>
-                    <tr>
-                      <td><i class="far fa-calendar-minus text-primary"></i> Tanggal Berakhir</td>
-                      <td>:</td>
-                      <td>{{ $data['tgl_selesai'] }}</td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-clock text-primary"></i> Waktu</td>
-                      <td>:</td>
-                      <td>{{ $data['waktu'] }}</td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-ticket-alt text-primary"></i> Harga Tiket</td>
-                      <td>:</td>
-                      <td class="text-success">{{ $data['harga'] }}</td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-map-marker-alt text-primary"></i> Lokasi</td>
-                      <td>:</td>
-                      <td class="text-success">{{ $data['lokasi'] }}</td>
-                    </tr>
-                  </table>
-                  <div>
-                    <h5 class="text-center" >Location</h5>
-                    {{ $data['link_lokasi'] }}
+            </div>
+          </div>
+            @endforeach
+            
+          </div>
+        
+
+      <!-- Modal souvenir -->
+      @foreach ($data as $item)
+      <div class="modal fade" id="abc{{ $item['id'] }}"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-xl">
+          <div class="modal-content">
+            <div class="modal-body">
+              <center><h1 id="hotel-info-title" class="text-success">Details</h1></center><br>
+              <div class="row container">
+                <div class="col-md-7">
+                  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carbut2" class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner" id="hotel-carousel">
+                      <div class="carousel-item active">
+                        <a href="{{ $item['gambar1'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                        <img src="{{ $item['gambar1'] }}" class="d-block w-100" alt=""></a>
+                      </div>
+                      <div class="carousel-item">
+                        <a href="{{ $item['gambar2'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                        <img src="{{ $item['gambar2'] }}" class="d-block w-100" alt=""></a>
+                      </div>
+                      <div class="carousel-item">
+                        <a href="{{ $item['gambar3'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                        <img src="{{ $item['gambar3'] }}" class="d-block w-100" alt="">
+                        </a>
+                      </div>
+                    </div>
+                    <button id="carbut2"  class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button id="carbut2" class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
                 </div>
-                </div>
+                  <div style="margin-top: -30px;" class="container col-md-5 fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><br>
+                      <h4 class="text-primary" style="font-weight: bold !important;">{{ $item['nama_souvenir'] }}</h4><p style="font-style: italic;">{{ $item['deskripsi'] }}</p>
+                        <p class="text-dark"><i class="fas fa-store " style="color: #1A5276;"></i> {{ $item['nama_toko'] }}</p>
+                      <p class="text-dark"><i class="fas fa-user" style="color: #D35400;"></i> {{$item['pemilik']}}</p>
+                    <table class="table">
+                      <tr>
+                        <td><i class="fas fa-wrench text-primary"></i> Bahan</td>
+                        <td>:</td>
+                        <td>{{ $item['bahan'] }}</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fas fa-dharmachakra text-primary"></i> Tipe</td>
+                        <td>:</td>
+                        <td>{{ $item['tipe'] }}</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fas fa-search-plus text-primary"></i> Ukuran</td>
+                        <td>:</td>
+                        <td>{{ $item['ukuran'] }}</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fas fa-palette text-primary"></i> Warna</td>
+                        <td>:</td>
+                        <td>{{ $item['warna'] }}</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fas fa-tags text-warning"></i> Harga</td>
+                        <td>:</td>
+                        <td class="text-success">{{ $item['harga'] }}</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fas fa-phone-volume text-primary"></i> Contact</td>
+                        <td>:</td>
+                        <td class="text-success "></i> {{ $item['kontak'] }}</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td><a href="" class="btn btn-success"><i class="fab fa-whatsapp"></i> Hubungi Penjual</a></td>
+                      </tr>
+                    </table>
+                    <div>
+                      <h5 class="text-center" >Location</h5>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d498.1853754954091!2d98.85503591955273!3d2.671227034993255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031ea1969796789%3A0x9985261e59ec6c96!2sJl.%20Inpres%2C%20Tuktuk%20Siadong%2C%20Simanindo%2C%20Kabupaten%20Samosir%2C%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1618834107634!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+                  </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      @endforeach
+
+      <center>
+      <div class="item rounded-3 fs-6 mt-3">
+        &nbsp;Menampilkan
+        {{ $data->firstItem() }}
+        -
+        {{ $data->lastItem() }}
+        dari
+        {{ $data->total() }}
+        entri data
     </div>
-    @endforeach
-     <!-- Modal login-->
-     <div class="modal fade" style="background-image: url(/img/login.jpg); height: 100%;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog ">
-        <div class="modal-content" style="border: none; border-radius: 20px; background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(5px); box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;">
-          <div class="modal-body text-light">
-            <center><br>
-              <h3 class="fw-bold text-light"><i class="fas fa-user-alt"></i> LOGIN</h3>
-            </center>
-            <form action="" class="container">
-              <label for="">Username</label>
-              <input id="loginput" style="background: transparent;" class="form-control rounded-pill text-light" type="text" placeholder="Masukkan Username anda ...." /><br />
-              <label for="">Password</label>
-              <input id="loginput" class="form-control rounded-pill text-light" type="password" placeholder="Masukkan Password anda ...." />
-              <br />
-              <center>
-                <button id="login" class="btn fw-bold p-2 rounded-pill" ">Login</button><br /><br>
-                <p>Don't have account? <a href="" class="" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#registerModal">Register here</a></p>
-                <p>OR</p>
-                <button id="gogle" class="btn btn"><i class="fab fa-google-plus-g"></i></button>
-                <button id="fb" class="btn btn"><i class="fab fa-facebook-f"></i></button>
-              </center>
-            </form>
-            <br />
-          </div>
-        </div>
-      </div>
+    <div class="pagination mt-3 justify-content-center ">
+        {{ $data->links() }}
     </div>
+  </center>
+
+  <style>
+    .w-5{
+      width: 20px;
+    }
+    .text-sm{
+      margin-top: 10px;
+    }
+  </style>
+			  
+		  {{-- <div class="row mt-5">
+			<div class="col text-center">
+			  <div class="block-27">
+				<ul>
+				  <li><a href="#">&lt;</a></li>
+				  <li class="active"><span>1</span></li>
+				  <li><a href="#">2</a></li>
+				  <li><a href="#">3</a></li>
+				  <li><a href="#">4</a></li>
+				  <li><a href="#">5</a></li>
+				  <li><a href="#">&gt;</a></li>
+				</ul>
+			  </div>
+			</div>
+		  </div> --}}
+	  </section>
+
+
+
+
+
+
+	<!-- Modal login-->
+    <div class="modal fade" style="background-image: url(/img/login.jpg); height: 100%;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog ">
+		  <div class="modal-content" style="border: none; border-radius: 20px; background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(5px); box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;">
+			<div class="modal-body text-light">
+			  <center><br>
+				<h3 class="fw-bold text-light"><i class="fas fa-user-alt"></i> LOGIN</h3>
+			  </center>
+			  <form action="" class="container">
+				<label for="">Username</label>
+				<input id="loginput" style="background: transparent;" class="form-control rounded-pill text-light" type="text" placeholder="Masukkan Username anda ...." /><br />
+				<label for="">Password</label>
+				<input id="loginput" class="form-control rounded-pill text-light" type="password" placeholder="Masukkan Password anda ...." />
+				<br />
+				<center>
+				  <button id="login" class="btn fw-bold p-2 rounded-pill" ">Login</button><br /><br>
+				  <p>Don't have account? <a href="" class="" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#registerModal">Register here</a></p>
+				  <p>OR</p>
+				  <button id="gogle" class="btn btn"><i class="fab fa-google-plus-g"></i></button>
+				  <button id="fb" class="btn btn"><i class="fab fa-facebook-f"></i></button>
+				</center>
+			  </form>
+			  <br />
+			</div>
+		  </div>
+		</div>
+	  </div>
+
 
      <!-- Modal registrasi-->
      <div class="modal fade" style="background-image: url(/img/login.jpg); height: 100%;" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -226,7 +325,7 @@
     <section class="komentar">
       <br />
       <div class="comment container">
-        <h1 class="text-center text-light">Comment & Suggestions</h1>
+        <h1 class="text-center">Comment & Suggestions</h1>
         <br />
         <div class="container col-md-10" id="inform">
           <form action="" method="GET">
@@ -238,17 +337,13 @@
               <div class="col-md-9 mt-2">
                 <textarea type="text" class="form-control" placeholder="Tuliskan Pesan Anda Disini...."></textarea>
                 <div class="button">
-                  <button  id="kirim" class="btn btn-success mt-1" @if (Auth::user())
-                      type="submit"
-                  @else
-                    data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"
-                  @endif>Kirim</button>
+                  <button type="button" id="kirim" class="btn btn-success mt-1" data-bs-toggle="modal" data-bs-target="#exampleModal">Kirim</button>
                   <button type="reset" id="reset" class="btn btn-danger mt-1">Reset</button>
                 </div>
               </div>
             </div>
           </form>
-        </div><br>
+        </div>
         <div class="user-comment container col-md-10">
           <div class="message row container">
             <div class="col-md-8">
@@ -284,7 +379,6 @@
       </div>
       <br /><br />
     </section>
-
     <footer class="ftco-footer ftco-section img" style="background-image: url(images/bg_4.jpg)">
       <div class="overlay"></div>
       <div class="container">
@@ -368,7 +462,7 @@
         <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
       </svg>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/replyform.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -388,4 +482,3 @@
     <script src="js/main.js"></script>
   </body>
 </html>
-

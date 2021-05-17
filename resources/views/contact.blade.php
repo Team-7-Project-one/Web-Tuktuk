@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Harborlights - Free Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700&display=swap" rel="stylesheet" />
@@ -9,7 +10,6 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/magnific-popup.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/ionicons.min.css" />
     <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
@@ -18,156 +18,82 @@
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+    
   </head>
-  <body class="bg-dark text-light" style="background-color: #212F3D;">
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
         <a class="navbar-brand" href="index.html">TukTuk<span>Tour</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="oi oi-menu"></span> Menu</button>
-
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="/hotel" class="nav-link">Hotel</a></li>
+            <li class="nav-item active"><a href="/hotel" class="nav-link">Hotel</a></li>
             <li class="nav-item"><a href="/souvenir" class="nav-link">Souvenir</a></li>
-            <li class="nav-item active"><a href="/event" class="nav-link">Event</a></li>
+            <li class="nav-item"><a href="/event" class="nav-link">Event</a></li>
             <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
-            <li class="nav-item"><a href="" class="nav-link"> @if(Auth::user())
-              <i class="fas fa-user"></i> {{Auth::user()->name}}
-            @else
-              <i class="fas fa-user"></i>
-            @endif
-          </a></li>
-          @if (Auth::user())
-          <li class="nav-item fw-bold">
-            <a class="text-danger nav-link" style="margin-left: px;" href="{{ route('logout') }}"
-            onclick="event.preventDefault();
-                          document.getElementById('logout-form').submit();">
-             {{ __('Logout') }}
-          </a>
-          </li>
-         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-             @csrf
-         </form>
-          @endif
           </ul>
         </div>
       </div>
     </nav>
     <!-- END nav -->
-    <div class="hero-wrap" style="background-image: url('img/hotel/backgroundevent.jpg')">
+    <div class="hero-wrap" style="background-image: url('img/hotel/carolina3.jpg')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text d-flex align-itemd-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
             <div class="text">
               <p class="breadcrumbs mb-2">
-                <span class="mr-2"><a href="index.html">Home</a></span> <span>Event</span>
+                <span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span>
               </p>
-              <h1 class="bread" style="margin-bottom: 450px; font-size: 80px">Event</h1>
+              <h1 class="bread" style="margin-bottom: 450px; font-size: 80px">Hotel</h1>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <section class="ftco-section container">
-      <h1 class="list-event text-center text-light ">List Event</h1><br>
-      @foreach ($data as $data)
-        <div class="container row">
-            <div class="hero-wrap  event-card" style="background-image: url('{{$data['gambar']}}');  border-radius: 30px; overflow: hidden;">
-              <div class="overlay" id="eventdark"></div>
-              <div class="container">
-                <div class="row  ">
-                  <div class=" ftco-animate text-center  justify-content-center">
-                    <div class="text event-caption"><br>
-                      <h3 class="text-center event-title text-light" style=" font-size: 80px">{{ $data['nama_event'] }}</h3>
-                      <h2 class="text-light tanggal">{{ $data['tgl_pelaksanaan'] }}</h2>
-                      <p>
-                        {{ $data['deskripsi'] }}
-                      </p>
-                      <a class="event-detail" href="#" data-bs-toggle="modal" data-bs-target="#abc{{ $data['id'] }}">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <b> More Details </b>
-                    </a>
-                    </div><br>
-                  </div>
-                </div>
-              </div>
-             
-        </div>
-    </section>
-    
-    <!-- Event Modal -->
-    <div class="modal fade" id="abc{{ $data['id'] }}"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog  modal-xl">
-        <div class="modal-content">
-          <div class="modal-body">
-            <center><h1 id="hotel-info-title" class="text-success">Details</h1></center><br>
-            <div class="row container">
-              <div class="col-md-7">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                  <div id="carbut2" class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  </div>
-                  <div class="carousel-inner" id="hotel-carousel">
-                    <div class="carousel-item active">
-                      <a href="img/event/Event.jpeg" class="insta-img image-popup" style="">
-                      <img src="img/event/Event.jpeg" class="d-block w-100" alt=""></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-                <div style="margin-top: -30px;" class="container col-md-5 fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><br>
-                    <h4 class="text-primary" style="font-weight: bold !important;">{{ $data['nama_event'] }}</h4><p style="font-style: italic; color: gray;">Event musik yang menampilkan musisi luar negeri dan lokal ini menjadi acara tahunan yang banyak ditunggu-tunggu masyarakat kawasan Danau Toba, terkhusus Kabupaten Samosir.</p>
-                  <table class="table">
-                    <tr>
-                      <td><i class="fab fa-elementor text-primary"></i> Category</td>
-                      <td>:</td>
-                      <td>{{ $data['kategori'] }}</td>
-                    </tr>
-                    <tr>
-                      <td><i class="far fa-calendar-check text-primary"></i> Tanggal Mulai</td>
-                      <td>:</td>
-                      <td>{{ $data['tgl_pelaksanaan'] }}</td>
-                    </tr>
-                    <tr>
-                      <td><i class="far fa-calendar-minus text-primary"></i> Tanggal Berakhir</td>
-                      <td>:</td>
-                      <td>{{ $data['tgl_selesai'] }}</td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-clock text-primary"></i> Waktu</td>
-                      <td>:</td>
-                      <td>{{ $data['waktu'] }}</td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-ticket-alt text-primary"></i> Harga Tiket</td>
-                      <td>:</td>
-                      <td class="text-success">{{ $data['harga'] }}</td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-map-marker-alt text-primary"></i> Lokasi</td>
-                      <td>:</td>
-                      <td class="text-success">{{ $data['lokasi'] }}</td>
-                    </tr>
-                  </table>
-                  <div>
-                    <h5 class="text-center" >Location</h5>
-                    {{ $data['link_lokasi'] }}
-                </div>
-                </div>
-            </div>
+
+    <section class="ftco-section">
+      <div class="container">
+        <center>
+          <div class="searchotel col-md-10">
+            <form class="d-flex">
+              <input name="keyword" class="form-control me-2"  placeholder="Temukan Souvenir Anda Disini ..." aria-label="Search" value{{Request::get('keyword')}} />&nbsp;
+              <button id="cari" class="btn btn-outline-warning rounded-circle" style="width: 55px ;" type="submit"><i class="fas fa-search"></i></button>
+            </form>
           </div>
+        </center>
+        <br />
+        <center><h1 class="ftco-animate">List Hotel</h1></center>
+        <br />
+        <div class="row d-flex">
+          @foreach ($data as $item)
+          <div class="hotel-list col-md-4 d-flex ftco-animate container">
+            <div class="blog-entry align-self-stretch">
+            <center>
+            <a href="img/carolina.jpg" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+              <p class="block-20 rounded container" style="background-image: url('img/carolina.jpg')"> </p>
+            </a>
+          </center>
+              <div class="text mt-3">
+                <div class="meta mb-2">
+                </div>
+                <h3 class="heading">{{ $item['nama_hotel'] }}</h3>
+                <p class="hotel-title-list container"><i class="fas fa-map-marker-alt text-danger"></i>{{ $item['lokasi'] }}</p>
+                <p class="container">{{ $item['deskripsi'] }}</p>
+                <a href="#" class="btn btn-outline-primary" style="font-weight: bold;" data-bs-toggle="modal" data-bs-target="#abc{{ $item['id'] }}">More info</a>
+              </div>
+            </div>
+          </div>    
+          @endforeach
         </div>
       </div>
-    </div>
-    @endforeach
-     <!-- Modal login-->
-     <div class="modal fade" style="background-image: url(/img/login.jpg); height: 100%;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    </section>
+
+  
+    <!-- Modal login-->
+    <div class="modal fade" style="background-image: url(/img/login.jpg); height: 100%;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog ">
         <div class="modal-content" style="border: none; border-radius: 20px; background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(5px); box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;">
           <div class="modal-body text-light">
@@ -222,11 +148,41 @@
         </div>
       </div>
     </div>
+    
+    <center>
+      <div class="paglink item rounded-3 fs-6">
+        &nbsp;Menampilkan
+        {{ $data->firstItem() }}
+        -
+        {{ $data->lastItem() }}
+        dari
+        {{ $data->total() }}
+        entri data
+    </div>
+    <div class="pagination paglink2 mt-3 justify-content-center ">
+        {{ $data->links() }}
+    </div>
+  </center>
+
+  <style>
+    .paglink{
+      margin-top: -40px;
+    }
+    .paglink2{
+      margin-bottom: 30px;
+    }
+    .w-5{
+      width: 20px;
+    }
+    .text-sm{
+      margin-top: 10px;
+    }
+    </style>
 
     <section class="komentar">
       <br />
       <div class="comment container">
-        <h1 class="text-center text-light">Comment & Suggestions</h1>
+        <h1 class="text-center">Comment & Suggestions</h1>
         <br />
         <div class="container col-md-10" id="inform">
           <form action="" method="GET">
@@ -238,17 +194,13 @@
               <div class="col-md-9 mt-2">
                 <textarea type="text" class="form-control" placeholder="Tuliskan Pesan Anda Disini...."></textarea>
                 <div class="button">
-                  <button  id="kirim" class="btn btn-success mt-1" @if (Auth::user())
-                      type="submit"
-                  @else
-                    data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"
-                  @endif>Kirim</button>
+                  <button type="button" id="kirim" class="btn btn-success mt-1" data-bs-toggle="modal" data-bs-target="#exampleModal">Kirim</button>
                   <button type="reset" id="reset" class="btn btn-danger mt-1">Reset</button>
                 </div>
               </div>
             </div>
           </form>
-        </div><br>
+        </div>
         <div class="user-comment container col-md-10">
           <div class="message row container">
             <div class="col-md-8">
@@ -285,13 +237,113 @@
       <br /><br />
     </section>
 
+@foreach ($data as $item)  
+<!-- Modal hotel -->
+<div class="modal fade" id="abc{{ $item['id'] }}"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-xl">
+    <div class="modal-content">
+      <div class="modal-body">
+        <center><h1 id="hotel-info-title" class="">Description</h1></center><br>
+        <div class="row container">
+          <div class="col-md-7">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+              <div id="carbut2" class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              </div>
+              <div class="carousel-inner" id="hotel-carousel">
+                <div class="carousel-item active">
+                  <a href="{{ $item['gambar1'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                  <img src="{{ $item['gambar1'] }}" class="d-block w-100" alt=""></a>
+                </div>
+                <div class="carousel-item">
+                  <a href="{{ $item['gambar2'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                  <img src="{{ $item['gambar2'] }}" class="d-block w-100" alt=""></a>
+                </div>
+                <div class="carousel-item">
+                  <a href="{{ $item['gambar3'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                  <img src="{{ $item['gambar3'] }}" class="d-block w-100" alt="">
+                  </a>
+                </div>
+                <div class="carousel-item">
+                  <a href="{{ $item['gambar3'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                  <img src="{{ $item['gambar3'] }}" class="d-block w-100" alt="">
+                  </a>
+                </div>
+                <div class="carousel-item">
+                  <a href="{{ $item['gambar2'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                  <img src="{{ $item['gambar1'] }}" class="d-block w-100" alt="">
+                  </a>
+                </div>
+              </div>
+              <button id="carbut2"  class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button id="carbut2" class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="hotel-description-text col-md-5 container">
+            <table class="table">
+              <tr>
+                <td colspan="3"><b class="hotel-name">{{ $item['nama_hotel'] }}</b>
+                </td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-map-marker-alt text-danger"></i> Location &nbsp;</td>
+                <td>:</td>
+                <td>{{ $item['lokasi'] }}</td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-star text-warning"></i> Rating</td>
+                <td>:</td>
+                <td>{{ $item['rating'] }}</td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-bed"></i> Fasilitas</td>
+                <td>:</td>
+                <td>{{ $item['fasilitas'] }}</td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-address-book text-primary"></i> Contact</td>
+                <td>:</td>
+                <td>{{ $item['kontak'] }}</td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-tags"></i> Price</td>
+                <td>:</td>
+                <td>{{ $item['harga'] }}</td>
+              </tr>
+            </table>
+          </div>
+        <div class="map-hotel container col-md-12 mt-4" style="border: 1px solid;" ><center><h3>Location</h3>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.493451052165!2d98.8592063146407!3d2.668005998056226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031ea2112864dc7%3A0x1008f25c1f100c47!2sCarolina%20Hotel!5e0!3m2!1sid!2sid!4v1618652268823!5m2!1sid!2sid" width="100%" height="250" style="border:0;" allowfullscreen="true" loading="lazy"></iframe>
+        </center>
+        </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary container">Kunjungi</button>
+      </div>
+    </div>
+  </div>
+</div>
+@endforeach
+
+
     <footer class="ftco-footer ftco-section img" style="background-image: url(images/bg_4.jpg)">
       <div class="overlay"></div>
       <div class="container">
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Harbor Lights</h2>
+              <h2 class="ftco-heading-2">Tuk-Tuk Tour</h2>
               <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate">
@@ -388,4 +440,3 @@
     <script src="js/main.js"></script>
   </body>
 </html>
-

@@ -38,6 +38,24 @@
             <li class="nav-item active"><a href="/souvenir" class="nav-link">Souvenir</a></li>
             <li class="nav-item"><a href="/event" class="nav-link">Event</a></li>
             <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="" class="nav-link"> @if(Auth::user())
+              <i class="fas fa-user"></i> {{Auth::user()->name}}
+            @else
+              <i class="fas fa-user"></i>
+            @endif
+          </a></li>
+          @if (Auth::user())
+          <li class="nav-item fw-bold">
+            <a class="text-danger nav-link" style="margin-left: px;" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();">
+             {{ __('Logout') }}
+          </a>
+          </li>
+         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+             @csrf
+         </form>
+          @endif
           </ul>
         </div>
       </div>
@@ -254,20 +272,45 @@
 			  <center><br>
 				<h3 class="fw-bold text-light"><i class="fas fa-user-alt"></i> LOGIN</h3>
 			  </center>
-			  <form action="" class="container">
-				<label for="">Username</label>
-				<input id="loginput" style="background: transparent;" class="form-control rounded-pill text-light" type="text" placeholder="Masukkan Username anda ...." /><br />
-				<label for="">Password</label>
-				<input id="loginput" class="form-control rounded-pill text-light" type="password" placeholder="Masukkan Password anda ...." />
-				<br />
-				<center>
-				  <button id="login" class="btn fw-bold p-2 rounded-pill" ">Login</button><br /><br>
-				  <p>Don't have account? <a href="" class="" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#registerModal">Register here</a></p>
-				  <p>OR</p>
-				  <button id="gogle" class="btn btn"><i class="fab fa-google-plus-g"></i></button>
-				  <button id="fb" class="btn btn"><i class="fab fa-facebook-f"></i></button>
-				</center>
-			  </form>
+			  <form method="POST" action="{{ route('login') }}" class="container">
+          @csrf
+          <label for="">{{ __('E-Mail') }}</label>
+          <input id="email" type="email" style="background-color: transparent;" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Masukkan Email anda ...."  />
+          @error('email')
+          <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+          </span>
+          @enderror
+          <br />
+          <label for="">Password</label>
+          <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Masukkan Password anda ...." />
+          @error('password')
+          <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+          </span>
+          @enderror
+          <br />
+          <center>
+             <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+        
+                      <label class="form-check-label" for="remember">
+                          {{ __('Remember Me') }}
+                      </label><br><br>
+                    <button type="submit" id="login" class="btn fw-bold p-2 rounded-pill">
+                      {{ __('Login') }}
+                  </button><br>
+        
+                  @if (Route::has('password.request'))
+                      <a class="btn btn-link" href="{{ route('password.request') }}">
+                          {{ __('Forgot Your Password?') }}
+                      </a>
+                  @endif
+            <p>Don't have account? <a href="" class="" {{--style="text-decoration: none"--}} data-bs-toggle="modal" data-bs-target="#registerModal">Register here</a></p>
+            <p>OR</p>
+            <button id="gogle" class="btn btn"><i class="fab fa-google-plus-g"></i></button>
+            <button id="fb" class="btn btn"><i class="fab fa-facebook-f"></i></button>
+          </center>
+        </form>
 			  <br />
 			</div>
 		  </div>
@@ -319,7 +362,11 @@
               <div class="col-md-9 mt-2">
                 <textarea type="text" class="form-control" placeholder="Tuliskan Pesan Anda Disini...."></textarea>
                 <div class="button">
-                  <button type="button" id="kirim" class="btn btn-success mt-1" data-bs-toggle="modal" data-bs-target="#exampleModal">Kirim</button>
+                  <button  id="kirim" class="btn btn-success mt-1" @if (Auth::user())
+                  type="submit"
+              @else
+                data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"
+              @endif>Kirim</button>
                   <button type="reset" id="reset" class="btn btn-danger mt-1">Reset</button>
                 </div>
               </div>
