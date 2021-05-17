@@ -37,14 +37,14 @@
       </div>
     </nav>
     <!-- END nav -->
-    <div class="hero-wrap" style="background-image: url('img/hotel/carolina3.jpg')">
+    <div class="hero-wrap" style="background-image: url('img/hotel/carolina4.jpg'); background-size: 100%">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text d-flex align-itemd-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
             <div class="text">
               <p class="breadcrumbs mb-2">
-                <span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span>
+                <span class="mr-2"><a href="index.html">Home</a></span> <span>Hotel</span>
               </p>
               <h1 class="bread" style="margin-bottom: 450px; font-size: 80px">Hotel</h1>
             </div>
@@ -150,7 +150,7 @@
     </div>
     
     <center>
-      <div class="paglink item rounded-3 fs-6">
+      <!-- <div class="paglink item rounded-3 fs-6">
         &nbsp;Menampilkan
         {{ $data->firstItem() }}
         -
@@ -158,7 +158,7 @@
         dari
         {{ $data->total() }}
         entri data
-    </div>
+    </div> -->
     <div class="pagination paglink2 mt-3 justify-content-center ">
         {{ $data->links() }}
     </div>
@@ -240,52 +240,25 @@
 @foreach ($data as $item)  
 <!-- Modal hotel -->
 <div class="modal fade" id="abc{{ $item['id'] }}"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-body">
         <center><h1 id="hotel-info-title" class="">Description</h1></center><br>
         <div class="row container">
+        
           <div class="container">
             <b class="hotel-name">{{ $item['nama_hotel'] }}</b>
-
-
-            <div id="carouselExampleIndicators" class="carousel slide mt-3" data-bs-ride="carousel">
-              <div id="carbut2" class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner" id="hotel-carousel">
-                <div class="carousel-item active">
-                  <a href="img/hotel/{{ $item['gambar1'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-                  <img src="img/hotel/{{ $item['gambar1'] }}" class="d-block w-100" alt=""></a>
-                </div>
-                <div class="carousel-item">
-                  <a href="img/hotel/{{ $item['gambar2'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-                  <img src="img/hotel/{{ $item['gambar2'] }}" class="d-block w-100" alt=""></a>
-                </div>
-                <div class="carousel-item">
-                  <a href="img/hotel/{{ $item['gambar3'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-                  <img src="img/hotel/{{ $item['gambar3'] }}" class="d-block w-100" alt="">
-                  </a>
-                </div>
-              </div>
-              <button id="carbut2"  class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden"></span>
-              </button>
-              <button id="carbut2" class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden"></span>
-              </button>
-            </div>
-
-
+            <section class="home-slider owl-carousel mt-3">
+              <div class="slider-item" style="background-image: url(img/hotel/{{ $item['gambar1'] }}); border-radius: 10px;"></div>
+              <div class="slider-item" style="background-image: url(img/hotel/{{ $item['gambar2'] }}); border-radius: 10px;"></div>
+              <div class="slider-item" style="background-image: url(img/hotel/{{ $item['gambar3'] }}); border-radius: 10px;"></div>
+            </section>
           </div>
+            
           <div class="container">
             <table class="table mt-4">
               <tr>
-                <td><i class="fas fa-map-marker-alt text-danger"></i>&nbsp; Location</td>
+                <td class="w-25"><i class="fas fa-map-marker-alt text-danger"></i>&nbsp;Location</td>
                 <td>:</td>
                 <td>{{ $item['lokasi'] }}</td>
               </tr>
@@ -312,13 +285,14 @@
             </table>
           </div>
             <div class="map-hotel container col-md-12 mt-4" style="border: 1px solid;" ><center><h3>Location</h3>
-              <iframe src="{{ $item['map'] }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              <iframe src="{{ $item['map'] }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="responsive-iframe"></iframe>
               </center>
             </div>
           </div>
       </div>
       <div class="modal-footer">
-        <a href="{{ $item['link'] }}" target="_blank" class="btn btn-primary container">Kunjungi</a>
+        <a href="{{ $item['link'] }}" target="_blank" class="btn btn-primary container col-md-6">Kunjungi</a>
+        <button type="button" class="btn btn-danger col-md-6" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
