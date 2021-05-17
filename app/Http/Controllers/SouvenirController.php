@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\SouvenirModel;
+use App\Models\Souvenir;
 
 class SouvenirController extends Controller
 {
     public function index(Request $request){
 
         if($request->has('keyword')) {
-            $data = SouvenirModel::where('nama_souvenir','LIKE','%'.$request->keyword.'%')
+            $data = Souvenir::where('nama_souvenir','LIKE','%'.$request->keyword.'%')
             ->orWhere('bahan', 'LIKE', '%'.$request->keyword.'%')
             ->orWhere('deskripsi', 'LIKE', '%'.$request->keyword.'%')
             ->orWhere('harga', 'LIKE', '%'.$request->keyword.'%')
@@ -21,7 +21,7 @@ class SouvenirController extends Controller
             ->paginate(6);
         }
         else{
-            $data = SouvenirModel::paginate(6);
+            $data = Souvenir::paginate(6);
         }
         // $data=SouvenirModel::all();
         return view('souvenir',['data'=>$data]);

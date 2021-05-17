@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -237,6 +238,7 @@
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ECF0F1" fill-opacity="1" d="M0,96L48,117.3C96,139,192,181,288,181.3C384,181,480,139,576,106.7C672,75,768,53,864,58.7C960,64,1056,96,1152,117.3C1248,139,1344,149,1392,154.7L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
     </section>
+
     <section class="testimony-section" style="margin-top: -150px; font-weight: bold">
       <div class="container">
         <div class="row no-gutters ftco-animate justify-content-center">
@@ -254,14 +256,14 @@
                 <div class="card p-3">
                   <div class="row ">
                     <div class="col-md-6">
-                      <img class="border border-dark" src="img/samosir.jpg" alt="" />
+                      <img class="border border-dark" src="img/samosir2.jpg" alt="" />
                     </div>
                     <div class="col-md-6"><br>
                       <h3 class="text-dark">History and Origins</h3>
-                     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam exercitationem nulla odio quas maiores neque, numquam reiciendis, voluptates officiis vitae illum animi enim repellendus, earum veritatis ea beatae! Amet
-                      quam vero rerum ipsa excepturi soluta ducimus non, explicabo illum sunt laboriosam aut officia provident at natus commodi reiciendis magnam. Animi!</p>
-                      <button id="carbut"class="btn btn-outline-dark">More Details</button>
+                     <p style="text-align:justify">Toba people (also referred to as Batak Toba people or often simply "Batak") are the most numerous of the Batak people of North Sumatra, Indonesia, and often considered the classical 'Batak', most likely to willingly self-identify as Batak. The Toba people are ...</p>
+                      <button type="button" id="carbut" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal1">More Details</button>
                     </div>
+
                   </div>
                 </div>
                 <div class="card p-3">
@@ -271,9 +273,8 @@
                     </div>
                     <div class="col-md-6"><br>
                       <h3 class="text-warning">Culture</h3>
-                     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam exercitationem nulla odio quas maiores neque, numquam reiciendis, voluptates officiis vitae illum animi enim repellendus, earum veritatis ea beatae! Amet
-                      quam vero rerum ipsa excepturi soluta ducimus non, explicabo illum sunt laboriosam aut officia provident at natus commodi reiciendis magnam. Animi!</p>
-                      <button id="carbut" class="btn btn-outline-warning">More Details</button>
+                     <p style="text-align:justify">The Toba people practices a distinct culture. It is not a must for Toba people to live in Toba region, although their origin is from Toba. Just as it is with other ethnicities, the Toba people have also migrated to other places to look for better life. For example, majority of the Silindung natives are ....</p>
+                      <button  type="button" id="carbut" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal2">More Details</button>
                     </div>
                   </div>
                 </div>
@@ -284,8 +285,7 @@
                     </div>
                     <div class="col-md-6"><br>
                       <h3 class="text-danger">District</h3>
-                     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam exercitationem nulla odio quas maiores neque, numquam reiciendis, voluptates officiis vitae illum animi enim repellendus, earum veritatis ea beatae! Amet
-                      quam vero rerum ipsa excepturi soluta ducimus non, explicabo illum sunt laboriosam aut officia provident at natus commodi reiciendis magnam. Animi!</p>
+                     <p style="text-align:justify">Samosir, or Samosir Island, is a large volcanic island in Lake Toba, located in the north of the island of Sumatra in Indonesia. Administratively, Samosir Island is governed as six of the nine districts within Samosir Regency. Samosir is a popular tourist destination due to its exotic history and the vistas it offers. The tourist resorts are concentrated in the Tuktuk area.</p>
                       <a target="_blank" href="https://samosirkab.go.id/" id="carbut" class="btn btn-outline-danger">More Details</a>
                     </div>
                   </div>
@@ -297,8 +297,7 @@
                     </div>
                     <div class="col-md-6"><br>
                       <h3 style="color: #3498DB;">Lake Toba</h3>
-                     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam exercitationem nulla odio quas maiores neque, numquam reiciendis, voluptates officiis vitae illum animi enim repellendus, earum veritatis ea beatae! Amet
-                      quam vero rerum ipsa excepturi soluta ducimus non, explicabo illum sunt laboriosam aut officia provident at natus commodi reiciendis magnam. Animi!</p>
+                     <p style="text-align:justify">Lake Toba (Indonesian: Danau Toba) is a large natural lake in North Sumatra, Indonesia, occupying the caldera of a supervolcano. The lake is located in the middle of the northern part of the island of Sumatra. The Origin of Lake Toba is a folk story about the lake, in which once upon a time, there was a fisherman who caught a golden fish. Samosir Island is believed to be the golden fish's son.</p>
                       <button id="carbut" class="btn btn-outline-primary">More Details</button>
                     </div>
                   </div>
@@ -310,8 +309,7 @@
                     </div>
                     <div class="col-md-6"><br>
                       <h3 class="text-success">Nature</h3>
-                     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam exercitationem nulla odio quas maiores neque, numquam reiciendis, voluptates officiis vitae illum animi enim repellendus, earum veritatis ea beatae! Amet
-                      quam vero rerum ipsa excepturi soluta ducimus non, explicabo illum sunt laboriosam aut officia provident at natus commodi reiciendis magnam. Animi!</p>
+                     <p style="text-align:justify">Tuk Tuk is an area that full of exotic landscapes. From this place anyway, you can enjoy the beauty of Lake Toba that is so magical. The place is become the center of tourists who want to spend the night in Samosir. There are numbers of hotels and villas that can be your best deal to stay. There are also several coffee shop that provide internet facilities for your business important. As a tourist destination village, in addition to its natural scenery, Tuk Tuk is also known for rich Batak culture. Therefore, when you took a visit to Tuk Tuk, you do not need to worry because there are plenty of attractions that will make your vacation more memorable.</p>
                       <button id="carbut" class="btn btn-outline-success">More Details</button>
                     </div>
                   </div>
@@ -323,6 +321,42 @@
         </div>
       </div>
     </section>
+
+     <!-- Modal -->
+     <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <center><h3 class="modal-title fw-bold" id="exampleModalLabel">History and Origins</h3></center>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body row mx-3">
+            <p style="text-align:justify">Toba people (also referred to as Batak Toba people or often simply "Batak") are the most numerous of the Batak people of North Sumatra, Indonesia, and often considered the classical 'Batak', most likely to willingly self-identify as Batak. The Toba people are found in Toba Samosir Regency, Humbang Hasundutan Regency, Samosir Regency, North Tapanuli Regency, part of Dairi Regency, Central Tapanuli Regency, Sibolga and its surrounding regions. The Batak Toba people speak in the Toba Batak language and are centered on Lake Toba and Samosir Island within the lake. Batak Toba people frequently build in traditional Batak architecture styles which are common on Samosir. Cultural demonstrations, performances and festivities such as Sigale Gale are often held for tourists.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <center><h3 class="modal-title fw-bold text-center" id="exampleModalLabel">History and Origins</h3></center>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body row mx-3">
+          <p style="text-align:justify">The Toba people practices a distinct culture. It is not a must for Toba people to live in Toba region, although their origin is from Toba. Just as it is with other ethnicities, the Toba people have also migrated to other places to look for better life. For example, majority of the Silindung natives are the Hutabarat, Panggabean, Simorangkir, Hutagalung, Hutapea and Lumbantobing clans. Instead all those six clans are actually descendants of Guru Mangaloksa, one of Raja Hasibuan's sons from Toba region. So it is with the Nasution clan where most of them live in Padangsidimpuan, surely share a common ancestor with their relative, the Siahaan clan in Balige. It is certain that the Toba people as a distinct culture can be found beyond the boundaries of their geographical origins. The region of Toba, known as "the king of Batak" is precisely Sianjur village situated on the slopes of Mount Pusuk Buhit, about 45 minutes drive from Pangururan, the capital of Samosir Regency today.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 <br><br>
 
     <section><center>
@@ -332,7 +366,7 @@
       </div>
       <div class=" container location row">
         <div class="col-md-5">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint in veniam eaque est debitis. Dolore corporis neque error laborum voluptatem alias nesciunt nihil blanditiis eaque debitis veniam assumenda minima fugit commodi, vero iure a sed. Possimus beatae incidunt quidem est ad harum! Quis deleniti eveniet quia labore odio numquam assumenda!</p>
+          <p style="text-align:justify">Tuktuk Siadong is located between the villages of Ambarita and Tomok... </p>
         </div>
         <div class="col-md-7">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16481.696988169602!2d98.84488082822975!3d2.6664429689172593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031ea1e1cfd2cf3%3A0xc7a6307559b9f4d3!2sTuktuk%20Siadong%2C%20Simanindo%2C%20Kabupaten%20Samosir%2C%20Sumatera%20Utara%2C%20Indonesia!5e1!3m2!1sid!2sus!4v1618405352690!5m2!1sid!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -440,5 +474,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   </body>
 </html>
