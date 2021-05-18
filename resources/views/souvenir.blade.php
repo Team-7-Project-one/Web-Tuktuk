@@ -38,15 +38,16 @@
             <li class="nav-item active"><a href="/souvenir" class="nav-link">Souvenir</a></li>
             <li class="nav-item"><a href="/event" class="nav-link">Event</a></li>
             <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
-            <li class="nav-item"><a href="" class="nav-link"> @if(Auth::user())
-              <i class="fas fa-user"></i> {{Auth::user()->name}}
+            <li class="nav-item">
+            @if(Auth::user())
+              <a href="" class="nav-link"><i class="fas fa-user"></i>&nbsp;{{Auth::user()->name}}
             @else
-              <i class="fas fa-user"></i>
+              <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="nav-link"><i class="fas fa-user"></i>&nbsp;Login
             @endif
           </a></li>
           @if (Auth::user())
           <li class="nav-item fw-bold">
-            <a class="text-danger nav-link" style="margin-left: px;" href="{{ route('logout') }}"
+            <a class="badge bg-danger nav-link" style="margin-left: px;" href="{{ route('logout') }}"
             onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();">
              {{ __('Logout') }}
@@ -111,9 +112,9 @@
         @foreach ($data as $item)
         <div class="col-md-4">
             <div class="container card card-product" style="width: 18rem;">
-              <img src="{{ $item['gambar1'] }}" class="card-img-top" alt="...">
+              <img src="img/souvenir/{{ $item['gambar1'] }}" class="card-img-top mt-2" alt="...">
               <div class="card-body product-desc">
-                <h5 class="card-title ">{{ $item['nama_souvenir'] }}<br></h5>
+                <h5 class="card-title mt-2">{{ $item['nama_souvenir'] }}<br></h5>
                 <b class="product-price text-warning"><i class="fas fa-tags"></i>{{ $item['harga'] }}</b>
                 <p><i class="fas fa-store text-primary"></i>{{ $item['nama_toko'] }}</p>
                 <button id="modalbtn" href="#" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#abc{{ $item['id'] }}"><i class="fas fa-info-circle"></i> Detail</button>
@@ -142,80 +143,79 @@
                     </div>
                     <div class="carousel-inner" id="hotel-carousel">
                       <div class="carousel-item active">
-                        <a href="{{ $item['gambar1'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-                        <img src="{{ $item['gambar1'] }}" class="d-block w-100" alt=""></a>
+                        <a href="img/souvenir/{{ $item['gambar1'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                        <img src="img/souvenir/{{ $item['gambar1'] }}" class="d-block w-100" alt=""></a>
                       </div>
                       <div class="carousel-item">
-                        <a href="{{ $item['gambar2'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-                        <img src="{{ $item['gambar2'] }}" class="d-block w-100" alt=""></a>
+                        <a href="img/souvenir/{{ $item['gambar2'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                        <img src="img/souvenir/{{ $item['gambar2'] }}" class="d-block w-100" alt=""></a>
                       </div>
                       <div class="carousel-item">
-                        <a href="{{ $item['gambar3'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-                        <img src="{{ $item['gambar3'] }}" class="d-block w-100" alt="">
+                        <a href="img/souvenir/{{ $item['gambar3'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                        <img src="img/souvenir/{{ $item['gambar3'] }}" class="d-block w-100" alt="">
                         </a>
                       </div>
                     </div>
                     <button id="carbut2"  class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
+                      <span class="visually-hidden"></span>
                     </button>
                     <button id="carbut2" class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
+                      <span class="visually-hidden"></span>
                     </button>
                   </div>
                 </div>
-                  <div style="margin-top: -30px;" class="container col-md-5 fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><br>
-                      <h4 class="text-primary" style="font-weight: bold !important;">{{ $item['nama_souvenir'] }}</h4><p style="font-style: italic;">{{ $item['deskripsi'] }}</p>
-                        <p class="text-dark"><i class="fas fa-store " style="color: #1A5276;"></i> {{ $item['nama_toko'] }}</p>
-                      <p class="text-dark"><i class="fas fa-user" style="color: #D35400;"></i> {{$item['pemilik']}}</p>
-                    <table class="table">
-                      <tr>
-                        <td><i class="fas fa-wrench text-primary"></i> Bahan</td>
-                        <td>:</td>
-                        <td>{{ $item['bahan'] }}</td>
-                      </tr>
-                      <tr>
-                        <td><i class="fas fa-dharmachakra text-primary"></i> Tipe</td>
-                        <td>:</td>
-                        <td>{{ $item['tipe'] }}</td>
-                      </tr>
-                      <tr>
-                        <td><i class="fas fa-search-plus text-primary"></i> Ukuran</td>
-                        <td>:</td>
-                        <td>{{ $item['ukuran'] }}</td>
-                      </tr>
-                      <tr>
-                        <td><i class="fas fa-palette text-primary"></i> Warna</td>
-                        <td>:</td>
-                        <td>{{ $item['warna'] }}</td>
-                      </tr>
-                      <tr>
-                        <td><i class="fas fa-tags text-warning"></i> Harga</td>
-                        <td>:</td>
-                        <td class="text-success">{{ $item['harga'] }}</td>
-                      </tr>
-                      <tr>
-                        <td><i class="fas fa-phone-volume text-primary"></i> Contact</td>
-                        <td>:</td>
-                        <td class="text-success "></i> {{ $item['kontak'] }}</td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td><a href="" class="btn btn-success"><i class="fab fa-whatsapp"></i> Hubungi Penjual</a></td>
-                      </tr>
-                    </table>
-                    <div>
-                      <h5 class="text-center" >Location</h5>
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d498.1853754954091!2d98.85503591955273!3d2.671227034993255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031ea1969796789%3A0x9985261e59ec6c96!2sJl.%20Inpres%2C%20Tuktuk%20Siadong%2C%20Simanindo%2C%20Kabupaten%20Samosir%2C%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1618834107634!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                  </div>
-                  </div>
+                <div style="margin-top: -30px;" class="container col-md-5 fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><br>
+                    <h4 class="text-primary" style="font-weight: bold !important;">{{ $item['nama_souvenir'] }}</h4><p style="font-style: italic;">{{ $item['deskripsi'] }}</p>
+                      <p class="text-dark"><i class="fas fa-store " style="color: #1A5276;"></i> {{ $item['nama_toko'] }}</p>
+                    <p class="text-dark"><i class="fas fa-user" style="color: #D35400;"></i> {{$item['pemilik']}}</p>
+                  <table class="table">
+                    <tr>
+                      <td><i class="fas fa-wrench text-primary"></i> Bahan</td>
+                      <td>:</td>
+                      <td>{{ $item['bahan'] }}</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fas fa-dharmachakra text-primary"></i> Tipe</td>
+                      <td>:</td>
+                      <td>{{ $item['tipe'] }}</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fas fa-search-plus text-primary"></i> Ukuran</td>
+                      <td>:</td>
+                      <td>{{ $item['ukuran'] }}</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fas fa-palette text-primary"></i> Warna</td>
+                      <td>:</td>
+                      <td>{{ $item['warna'] }}</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fas fa-tags text-warning"></i> Harga</td>
+                      <td>:</td>
+                      <td class="text-success">{{ $item['harga'] }}</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fas fa-phone-volume text-primary"></i> Contact</td>
+                      <td>:</td>
+                      <td class="text-success "></i> {{ $item['kontak'] }}</td>
+                    </tr>
+                  </table>
+                  <a href="" class="btn btn-success"><i class="fab fa-whatsapp mt-2"></i> Hubungi Penjual</a>
+                  <div>
+                </div>
               </div>
+              <div class="map-hotel container col-md-12 mt-4" style="border: 1px solid;" ><center><h3>Location</h3>
+              <iframe src="{{ $item['map'] }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="responsive-iframe"></iframe>
+              </center>
+              </div
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
       @endforeach
 
       <center>
