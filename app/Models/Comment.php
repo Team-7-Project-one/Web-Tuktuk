@@ -9,5 +9,5 @@ class Comment extends Model
 {
     use HasFactory;
     protected $table="comments";
-    public $timestamps = false;
+    protected $fillable = ['id', 'name', 'comment'];
 }

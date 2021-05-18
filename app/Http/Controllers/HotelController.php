@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Hotel;
+use App\Models\Comment;
+use App\Models\Reply;
 
 class HotelController extends Controller
 {
@@ -20,9 +22,40 @@ class HotelController extends Controller
         }
         else{
             $data = Hotel::paginate(6);
+            $comment = Comment::all();
+            $reply = Reply::all();
         }
         // $data=SouvenirModel::all();
-        return view('hotel',['data'=>$data]);
+        return view('hotel',['data'=>$data, 'comment'=>$comment, 'reply'=>$reply]);
     }
+
+    // public function createReply()
+    // {
+    //     $Hotel = Hotel::all();
+    //     $Comment = Comment::all();
+    //     $Reply = Reply::all();
+    //     return view('hotel', compact('Hotel', 'Comment', 'Reply'));
+    // }
+
+    public function store(Request $request)
+    {
+        Comment::create([
+            'name' => $request->nama,
+            'comment' => $request->comment,
+        ]);
+        return redirect('/hotel');
+    }
+
+    public function storeReply(Request $request)
+    {
+        // $Comment = Comment::find($id);
+        Reply::create([
+            'name' => $request->nama,
+            'comment' => $request->comment,
+            'comment_id' => $request->comment_id,
+        ]);
+        return redirect('/hotel');
+    }
+
     
 }

@@ -21,6 +21,11 @@ use App\Http\Controllers\EventController;
 //     return view('welcome');
 // });
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::get('/', [IndexController::class, 'index'])->name('home');
 Route::get('/hotel', [HotelController::class, 'index'])->name('hotel');
 
@@ -33,6 +38,5 @@ Route::get('/event', [EventController::class, 'index'])->name('event');
 // Route::get('/event', 'EventController@index')->name('event');
 
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('hotel/AddComment', 'HotelController@store');
+Route::post('hotel/AddReply', 'HotelController@storeReply');
