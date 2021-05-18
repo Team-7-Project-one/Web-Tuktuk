@@ -38,15 +38,16 @@
             <li class="nav-item active"><a href="/souvenir" class="nav-link">Souvenir</a></li>
             <li class="nav-item"><a href="/event" class="nav-link">Event</a></li>
             <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
-            <li class="nav-item"><a href="" class="nav-link"> @if(Auth::user())
-              <i class="fas fa-user"></i> {{Auth::user()->name}}
+            <li class="nav-item">
+            @if(Auth::user())
+              <a href="" class="nav-link"><i class="fas fa-user"></i>&nbsp;{{Auth::user()->name}}
             @else
-              <i class="fas fa-user"></i>
+              <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="nav-link"><i class="fas fa-user"></i>&nbsp;Login
             @endif
           </a></li>
           @if (Auth::user())
           <li class="nav-item fw-bold">
-            <a class="text-danger nav-link" style="margin-left: px;" href="{{ route('logout') }}"
+            <a class="badge bg-danger nav-link" style="margin-left: px;" href="{{ route('logout') }}"
             onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();">
              {{ __('Logout') }}
