@@ -4,12 +4,9 @@
     <title>Tuk-Tuk Tour</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700&display=swap" rel="stylesheet" />
-
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
-
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/magnific-popup.css" />
@@ -22,7 +19,6 @@
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -259,8 +255,8 @@
                       <img class="border border-dark" src="img/samosir2.jpg" alt="" />
                     </div>
                     <div class="col-md-6"><br>
-                      <h3 class="text-dark">History and Origins</h3>
-                     <p style="text-align:justify">Toba people (also referred to as Batak Toba people or often simply "Batak") are the most numerous of the Batak people of North Sumatra, Indonesia, and often considered the classical 'Batak', most likely to willingly self-identify as Batak. The Toba people are ...</p>
+                      <h3 class="text-dark container">History and Origins</h3>
+                     <p style="text-align:justify;" class="container">Toba people (also referred to as Batak Toba people or often simply "Batak") are the most numerous of the Batak people of North Sumatra, Indonesia, and often considered the classical 'Batak', most likely to willingly self-identify as Batak. The Toba people are ...</p>
                       <button type="button" id="carbut" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal1">More Details</button>
                     </div>
 
@@ -272,8 +268,8 @@
                       <img class="border border-warning" src="img/kkultur.jpg" alt="" />
                     </div>
                     <div class="col-md-6"><br>
-                      <h3 class="text-warning">Culture</h3>
-                     <p style="text-align:justify">The Toba people practices a distinct culture. It is not a must for Toba people to live in Toba region, although their origin is from Toba. Just as it is with other ethnicities, the Toba people have also migrated to other places to look for better life. For example, majority of the Silindung natives are ....</p>
+                      <h3 class="text-warning container">Culture</h3>
+                     <p style="text-align:justify;" class="container">The Toba people practices a distinct culture. It is not a must for Toba people to live in Toba region, although their origin is from Toba. Just as it is with other ethnicities, the Toba people have also migrated to other places to look for better life. For example, majority of the Silindung natives are ....</p>
                       <button  type="button" id="carbut" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal2">More Details</button>
                     </div>
                   </div>
@@ -284,8 +280,8 @@
                       <img class="border border-danger" src="img/pemkab.jpg" alt="" />
                     </div>
                     <div class="col-md-6"><br>
-                      <h3 class="text-danger">District</h3>
-                     <p style="text-align:justify">Samosir, or Samosir Island, is a large volcanic island in Lake Toba, located in the north of the island of Sumatra in Indonesia. Administratively, Samosir Island is governed as six of the nine districts within Samosir Regency. Samosir is a popular tourist destination due to its exotic history and the vistas it offers. The tourist resorts are concentrated in the Tuktuk area.</p>
+                      <h3 class="text-danger container">District</h3>
+                     <p style="text-align:justify;" class="container">Samosir, or Samosir Island, is a large volcanic island in Lake Toba, located in the north of the island of Sumatra in Indonesia. Administratively, Samosir Island is governed as six of the nine districts within Samosir Regency. Samosir is a popular tourist destination due to its exotic history and the vistas it offers. The tourist resorts are concentrated in the Tuktuk area.</p>
                       <a target="_blank" href="https://samosirkab.go.id/" id="carbut" class="btn btn-outline-danger">More Details</a>
                     </div>
                   </div>
@@ -296,8 +292,8 @@
                       <img class="border border-primary" src="img/toba.jpg" alt="" />
                     </div>
                     <div class="col-md-6"><br>
-                      <h3 style="color: #3498DB;">Lake Toba</h3>
-                     <p style="text-align:justify">Lake Toba (Indonesian: Danau Toba) is a large natural lake in North Sumatra, Indonesia, occupying the caldera of a supervolcano. The lake is located in the middle of the northern part of the island of Sumatra. The Origin of Lake Toba is a folk story about the lake, in which once upon a time, there was a fisherman who caught a golden fish. Samosir Island is believed to be the golden fish's son.</p>
+                      <h3 style="color: #3498DB;" class="container">Lake Toba</h3>
+                     <p style="text-align:justify;" class="container">Lake Toba (Indonesian: Danau Toba) is a large natural lake in North Sumatra, Indonesia, occupying the caldera of a supervolcano. The lake is located in the middle of the northern part of the island of Sumatra. The Origin of Lake Toba is a folk story about the lake, in which once upon a time, there was a fisherman who caught a golden fish. Samosir Island is believed to be the golden fish's son.</p>
                       <button id="carbut" class="btn btn-outline-primary">More Details</button>
                     </div>
                   </div>
@@ -308,8 +304,8 @@
                       <img class="border border-success" src="img/alam.jpg" alt="" />
                     </div>
                     <div class="col-md-6"><br>
-                      <h3 class="text-success">Nature</h3>
-                     <p style="text-align:justify">Tuk Tuk is an area that full of exotic landscapes. From this place anyway, you can enjoy the beauty of Lake Toba that is so magical. The place is become the center of tourists who want to spend the night in Samosir. There are numbers of hotels and villas that can be your best deal to stay. There are also several coffee shop that provide internet facilities for your business important. As a tourist destination village, in addition to its natural scenery, Tuk Tuk is also known for rich Batak culture. Therefore, when you took a visit to Tuk Tuk, you do not need to worry because there are plenty of attractions that will make your vacation more memorable.</p>
+                      <h3 class="text-success container">Nature</h3>
+                     <p style="text-align:justify;" class="container">Tuk Tuk is an area that full of exotic landscapes. From this place anyway, you can enjoy the beauty of Lake Toba that is so magical. The place is become the center of tourists who want to spend the night in Samosir. There are numbers of hotels and villas that can be your best deal to stay. There are also several coffee shop that provide internet facilities for your business important. As a tourist destination village, in addition to its natural scenery, Tuk Tuk is also known for rich Batak culture. Therefore, when you took a visit to Tuk Tuk, you do not need to worry because there are plenty of attractions that will make your vacation more memorable.</p>
                       <button id="carbut" class="btn btn-outline-success">More Details</button>
                     </div>
                   </div>

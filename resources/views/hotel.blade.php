@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Harborlights - Free Bootstrap 4 Template by Colorlib</title>
+    <title>TTT</title>
     <meta charset="utf-8" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700&display=swap" rel="stylesheet" />
@@ -121,7 +121,7 @@
             <form method="POST" action="{{ route('login') }}" class="container">
               @csrf
               <label for="">{{ __('E-Mail') }}</label>
-              <input id="email" type="email" style="background-color: transparent;" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Masukkan Email anda ...."  />
+              <input id="loginput" type="email" style="background-color: transparent;" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Masukkan Email anda ...."  />
               @error('email')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
@@ -129,7 +129,7 @@
               @enderror
               <br />
               <label for="">Password</label>
-              <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Masukkan Password anda ...." />
+              <input id="loginput" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Masukkan Password anda ...." />
               @error('password')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
@@ -157,63 +157,6 @@
                 <button id="fb" class="btn btn"><i class="fab fa-facebook-f"></i></button>
               </center>
             </form>
-            {{-- <form method="POST" action="{{ route('login') }}">
-              @csrf
-              <div class="form-group row">
-                  <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-            
-                  <div class="col-md-6">
-                      <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-            
-                      @error('email')
-                          <span class="invalid-feedback" role="alert">
-                              <strong>{{ $message }}</strong>
-                          </span>
-                      @enderror
-                  </div>
-              </div>
-            
-              <div class="form-group row">
-                  <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-            
-                  <div class="col-md-6">
-                      <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-            
-                      @error('password')
-                          <span class="invalid-feedback" role="alert">
-                              <strong>{{ $message }}</strong>
-                          </span>
-                      @enderror
-                  </div>
-              </div>
-            
-              <div class="form-group row">
-                  <div class="col-md-6 offset-md-4">
-                      <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-            
-                          <label class="form-check-label" for="remember">
-                              {{ __('Remember Me') }}
-                          </label>
-                      </div>
-                  </div>
-              </div>
-            
-              <div class="form-group row mb-0">
-                  <div class="col-md-8 offset-md-4">
-                      <button type="submit" class="btn btn-primary">
-                          {{ __('Login') }}
-                      </button>
-            
-                      @if (Route::has('password.request'))
-                          <a class="btn btn-link" href="{{ route('password.request') }}">
-                              {{ __('Forgot Your Password?') }}
-                          </a>
-                      @endif
-                  </div>
-              </div>
-            </form>
-             --}}
             <br />
           </div>
         </div>
@@ -228,21 +171,40 @@
             <center><br>
               <h3 class="fw-bold text-light"><i class="fas fa-registered"></i> REGISTER</h3>
             </center>
-            <form action="" class="container">
+            <form action="{{ route('register') }}" method="POST" class="container">
+              @csrf
               <label for="">Nama</label>
-              <input id="loginput" style="background: transparent;" class="form-control rounded-pill text-light" type="text" placeholder="Masukkan Nama anda ...." /><br />
+              <input id="loginput" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Masukkan Nama anda ...." />
+              @error('name')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+              @enderror
+              <br />
               <label for="">Email</label>
-              <input type="email" id="loginput" style="background: transparent;" class="form-control rounded-pill text-light" type="text" placeholder="Masukkan Email anda ...." /><br />
-              <label for="">Username</label>
-              <input id="loginput" style="background: transparent;" class="form-control rounded-pill text-light" type="text" placeholder="Masukkan Username anda ...." /><br />
+              <input id="loginput" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Masukkan Email anda ...." />
+              @error('email')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+              @enderror
+              <br />
               <label for="">Password</label>
-              <input id="loginput" class="form-control rounded-pill text-light" type="password" placeholder="Masukkan Password anda ...." />
+              <input id="loginput" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Masukkan Password anda ...." /><br />
+              @error('email')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+              @enderror
+              <label for="">Confirm Password</label>
+              <input id="loginput" {{--id="password-confirm"--}} type="password" class="form-control" name="password_confirmation" required autocomplete="new-password"/>
               <br />
               <center>
-                <button id="register" class="btn fw-bold p-2 rounded-pill" ">Register</button><br /><br>
-
+                <button id="register" class="btn fw-bold p-2 rounded-pill">Register</button><br /><br>
               </center>
             </form>
+
+            <br><br>
             <br />
           </div>
         </div>
@@ -402,70 +364,6 @@
   </div>
 </div>
 @endforeach
-
-
-{{-- <form method="POST" action="{{ route('login') }}">
-  @csrf
-  <div class="form-group row">
-      <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-      <div class="col-md-6">
-          <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-          @error('email')
-              <span class="invalid-feedback" role="alert">
-                  <strong>{{ $message }}</strong>
-              </span>
-          @enderror
-      </div>
-  </div>
-
-  <div class="form-group row">
-      <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-      <div class="col-md-6">
-          <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-          @error('password')
-              <span class="invalid-feedback" role="alert">
-                  <strong>{{ $message }}</strong>
-              </span>
-          @enderror
-      </div>
-  </div>
-
-  <div class="form-group row">
-      <div class="col-md-6 offset-md-4">
-          <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-              <label class="form-check-label" for="remember">
-                  {{ __('Remember Me') }}
-              </label>
-          </div>
-      </div>
-  </div>
-
-  <div class="form-group row mb-0">
-      <div class="col-md-8 offset-md-4">
-          <button type="submit" class="btn btn-primary">
-              {{ __('Login') }}
-          </button>
-
-          @if (Route::has('password.request'))
-              <a class="btn btn-link" href="{{ route('password.request') }}">
-                  {{ __('Forgot Your Password?') }}
-              </a>
-          @endif
-      </div>
-  </div>
-</form> --}}
-
-
-
-
-
-
 
     <footer class="ftco-footer ftco-section img" style="background-image: url(images/bg_4.jpg)">
       <div class="overlay"></div>
