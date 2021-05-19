@@ -26,8 +26,8 @@
 
     <div class="hero">
       <section class="home-slider owl-carousel">
-        <div class="slider-item" style="background-image: url(img/carousel2.jpg)">
-          <div class="overlay"></div>
+        <div class="slider-item" style="background-image: url(img/carousel2.jpg); background-size: cover; background-position: center center;">
+          <div class="overlay"></div> 
           <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-end">
               <div class="col-md-6 ftco-animate">
@@ -42,7 +42,7 @@
           </div>
         </div>
 
-        <div class="slider-item" style="background-image: url(img/carousel1.jpg)">
+        <div class="slider-item" style="background-image: url(img/carousel1.jpg); background-size: cover; background-position: center center;">
           <div class="overlay"></div>
           <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-end">
@@ -56,7 +56,7 @@
           </div>
         </div>
 
-        <div class="slider-item" style="background-image: url(img/carousel3.jpg)">
+        <div class="slider-item" style="background-image: url(img/carousel3.jpg); background-size: cover; background-position: center center;">
           <div class="overlay"></div>
           <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-end">
@@ -156,7 +156,7 @@
         <span class="subheading">Welcome to Tuk-tuk</span>
         <h2 class="mb-4" style="font-size: -webkit-calc(100% + 30px);">About</h2>
       </div>
-      <div class="container">
+      <div class="container px-5">
         <p style="text-align: center">
         Tuk Tuk is an area that full of exotic landscapes. From this place anyway, you can enjoy the beauty of Lake Toba that is so magical. The place is become the center of tourists who want to spend the night in Samosir. There are numbers of hotels and villas that can be your best deal to stay. There are also several coffee shop that provide internet facilities for your business important. As a tourist destination village, in addition to its natural scenery, Tuk Tuk is also known for rich Batak culture. Therefore, when you took a visit to Tuk Tuk, you do not need to worry because there are plenty of attractions that will make your vacation more memorable.
         </p>
@@ -176,7 +176,7 @@
               <img src="img/rap.png" alt="" />
               <!-- <div class="img img-2 ml-md-2 ftco-animate" style="background-image: url(images/about-2.jpg)"></div> -->
             </div>
-            <div class="col-md-7 wrap-about pb-md-3 ftco-animate pr-md-5 pb-md-5 pt-md-4">
+            <div class="col-md-7 wrap-about pb-md-3 ftco-animate pr-md-5 pb-md-5 pt-md-4 px-5">
               <div class="heading-section mb-4 my-5 my-md-0">
                 <span class="subheading">About Tuk-tuk Siadong</span>
                 <h2 class="mb-4" style="font-size: -webkit-calc(100% + 30px);">Governance</h2>
@@ -196,7 +196,7 @@
           <!-- <div class="col-md-5 d-flex">
             <div class="testimony-img aside-stretch-2" style="background-image: url(images/testimony-img.jpg)"></div>
           </div> -->
-          <div class="col-md-12 py-5 pl-md-7">            
+          <div class="col-md-12 py-5 pl-md-7 px-5">            
             <div id="testimony"class="py-md-10" style="margin-top: -15px">
               <div class="heading-section ftco-animate mb-4" >
               <h2 class="mb-0 text-center" style="font-size: -webkit-calc(100% + 30px);">History</h2>

@@ -24,7 +24,7 @@
 
     @include('layouts.header')
 
-    <div class="hero-wrap" style="background-image: url('img/hotel/carolina4.jpg'); background-size: 100%">
+    <div class="hero-wrap" style="background-image: url('img/hotel/carolina4.jpg'); background-size: cover; background-position: center center;">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text d-flex align-itemd-center justify-content-center">
@@ -56,13 +56,13 @@
         <br />
         <div class="row d-flex">
           @foreach ($data as $item)
-          <div class="hotel-list col-md-4 d-flex ftco-animate container">
+          <div class="hotel-list col-md-4 d-flex ftco-animate container mt-3">
             <div class="blog-entry align-self-stretch">
             <center>
             <a href="img/hotel/{{ $item->gambar1 }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
               <p class="block-20 rounded container" style="background-image: url('img/hotel/{{ $item->gambar1 }}')"> </p>
             </a>
-          </center>
+            </center>
               <div class="text mt-3">
                 <div class="meta mb-2">
                 </div>
