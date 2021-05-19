@@ -46,3 +46,8 @@ Route::post('souvenir/AddReply', 'SouvenirController@storeReply');
 
 Route::post('event/AddComment', 'EventController@store');
 Route::post('event/AddReply', 'EventController@storeReply');
+
+
+Route::get('/aboutus', function () {
+    return view('aboutus');
+});
