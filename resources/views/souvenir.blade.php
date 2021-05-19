@@ -100,6 +100,9 @@
           <div class="modal-content">
             <div class="modal-body">
               <center><h1 id="hotel-info-title" class="text-success">Details</h1></center><br>
+              
+              <h4 class="text-primary" style="font-weight: bold !important;">{{ $item['nama_souvenir'] }}</h4><p style="font-style: italic;" class="pb-3">{{ $item['deskripsi'] }}</p>
+
               <div class="row container">
                 <div class="col-md-7">
                   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -111,15 +114,15 @@
                     <div class="carousel-inner" id="hotel-carousel">
                       <div class="carousel-item active">
                         <a href="img/souvenir/{{ $item['gambar1'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-                        <img src="img/souvenir/{{ $item['gambar1'] }}" class="d-block w-100" alt=""></a>
+                        <img src="img/souvenir/{{ $item['gambar1'] }}" class="d-block w-50" alt=""></a>
                       </div>
                       <div class="carousel-item">
                         <a href="img/souvenir/{{ $item['gambar2'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-                        <img src="img/souvenir/{{ $item['gambar2'] }}" class="d-block w-100" alt=""></a>
+                        <img src="img/souvenir/{{ $item['gambar2'] }}" class="d-block w-50" alt=""></a>
                       </div>
                       <div class="carousel-item">
                         <a href="img/souvenir/{{ $item['gambar3'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-                        <img src="img/souvenir/{{ $item['gambar3'] }}" class="d-block w-100" alt="">
+                        <img src="img/souvenir/{{ $item['gambar3'] }}" class="d-block w-50" alt="">
                         </a>
                       </div>
                     </div>
@@ -134,7 +137,6 @@
                   </div>
                 </div>
                 <div style="margin-top: -30px;" class="container col-md-5 fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><br>
-                    <h4 class="text-primary" style="font-weight: bold !important;">{{ $item['nama_souvenir'] }}</h4><p style="font-style: italic;">{{ $item['deskripsi'] }}</p>
                       <p class="text-dark"><i class="fas fa-store " style="color: #1A5276;"></i> {{ $item['nama_toko'] }}</p>
                     <p class="text-dark"><i class="fas fa-user" style="color: #D35400;"></i> {{$item['pemilik']}}</p>
                   <table class="table">
@@ -169,7 +171,7 @@
                       <td class="text-success "></i> {{ $item['kontak'] }}</td>
                     </tr>
                   </table>
-                  <a href="" class="btn btn-success"><i class="fab fa-whatsapp mt-2"></i> Hubungi Penjual</a>
+                  <center><a href="" class="btn btn-success"><i class="fab fa-whatsapp mt-2"></i> Hubungi Penjual</a></center>
                   <div>
                 </div>
               </div>
@@ -178,6 +180,9 @@
               </center>
               </div
             </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger col-md-12" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
