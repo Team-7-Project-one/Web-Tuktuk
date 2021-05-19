@@ -10,7 +10,10 @@ use App\Models\HotelReply;
 class HotelController extends Controller
 {
     public function index(Request $request){
+        
         if($request->has('keyword')) {
+            $comment = HotelComment::all();
+            $reply = HotelReply::all();
             $data = Hotel::where('nama_hotel','LIKE','%'.$request->keyword.'%')
             ->orWhere('rating', 'LIKE', '%'.$request->keyword.'%')
             ->orWhere('harga', 'LIKE', '%'.$request->keyword.'%')
