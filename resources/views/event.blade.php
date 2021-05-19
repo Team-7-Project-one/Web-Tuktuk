@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
   </head>
-  <body class="text-light" style="background-color: #5b81a4;">
+  <body class="text-light bg-dark" {{--style="background-color: #5b81a4;"--}}>
 
     @include('layouts.header')
 

@@ -49,17 +49,19 @@
 <br><br>
 <h1 class="ftco-animate text-center ">Category</h1><br>
 <center>
+  <form action="" method="GET">
     <div class="category container row">
         <div class=" col-md-4 btncategory">
-          <a id="btnpatung" class="btn btn-outline-warning mr-5 rounded-pill">Patung</a>
+          <button name="keyword" id="btnpatung" type="submit" value="patung" class="btn btn-outline-warning mr-5 rounded-pill">Patung</button>
         </div>
         <div class=" col-md-4 btncategory">
-          <a id="btnulos" class="btn btn-outline-danger mr-5 rounded-pill">Ulos</a>
+          <button name="keyword" id="btnulos" value="ulos" class="btn btn-outline-danger mr-5 rounded-pill">Ulos</button>
         </div>
         <div class=" col-md-4 btncategory">
-          <a id="btnbaju" class="btn btn-outline-primary rounded-pill">Baju</a>
+          <button name="keyword" id="btnbaju" value="baju" class="btn btn-outline-primary rounded-pill">Baju</button>
         </div>
       </div>
+    </form>
     </center>
       <br><br><br><center>
     <div class="searchotel container col-md-10">

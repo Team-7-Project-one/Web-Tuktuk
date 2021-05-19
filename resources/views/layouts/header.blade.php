@@ -9,20 +9,20 @@
             <li class="nav-item"><a href="/hotel" class="nav-link">Hotel</a></li>
             <li class="nav-item"><a href="/souvenir" class="nav-link">Souvenir</a></li>
             <li class="nav-item"><a href="/event" class="nav-link">Event</a></li>
-            <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="/aboutus" class="nav-link">About Us</a></li>
             <li class="nav-item">
             @if(Auth::user())
-              <a href="" class="nav-link"><i class="fas fa-user"></i>&nbsp;{{Auth::user()->name}}
+              <a href="" class="nav-link"><i class="fas fa-user"></i>&nbsp; {{Auth::user()->name}}
             @else
               <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="nav-link"><i class="fas fa-user"></i>&nbsp;Login
             @endif
           </a></li>
           @if (Auth::user())
           <li class="nav-item fw-bold">
-            <a class="badge bg-danger nav-link px-2" href="{{ route('logout') }}"
+            <a class="btn btn-sm nav-link" style="background-color: red; transform: scale(0.5); font-size: 25px; border-radius: 40px; margin-top: -6%;"  href="{{ route('logout') }}"
             onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();">
-             {{ __('Logout') }}
+             <i class="fas fa-power-off"></i> {{ __('Logout') }}
           </a>
           </li>
          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

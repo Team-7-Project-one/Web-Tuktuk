@@ -12,6 +12,8 @@ class SouvenirController extends Controller
     public function index(Request $request){
 
         if($request->has('keyword')) {
+            $comment = SouvenirComment::all();
+            $reply = SouvenirReply::all();
             $data = Souvenir::where('nama_souvenir','LIKE','%'.$request->keyword.'%')
             ->orWhere('bahan', 'LIKE', '%'.$request->keyword.'%')
             ->orWhere('deskripsi', 'LIKE', '%'.$request->keyword.'%')
