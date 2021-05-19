@@ -40,3 +40,9 @@ Route::get('/event', [EventController::class, 'index'])->name('event');
 
 Route::post('hotel/AddComment', 'HotelController@store');
 Route::post('hotel/AddReply', 'HotelController@storeReply');
+
+Route::post('souvenir/AddComment', 'SouvenirController@store');
+Route::post('souvenir/AddReply', 'SouvenirController@storeReply');
+
+Route::post('event/AddComment', 'EventController@store');
+Route::post('event/AddReply', 'EventController@storeReply');

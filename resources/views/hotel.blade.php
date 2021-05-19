@@ -41,7 +41,7 @@
           </a></li>
           @if (Auth::user())
           <li class="nav-item fw-bold">
-            <a class="badge bg-danger nav-link" style="margin-left: px;" href="{{ route('logout') }}"
+            <a class="badge bg-danger nav-link px-2" href="{{ route('logout') }}"
             onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();">
              {{ __('Logout') }}

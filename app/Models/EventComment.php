@@ -5,9 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Comment extends Model
+class EventComment extends Model
 {
     use HasFactory;
-    protected $table="comments";
+    use HasFactory;
+    protected $table="eventcomments";
     protected $fillable = ['id', 'name', 'comment'];
 }

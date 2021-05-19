@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
   </head>
-  <body class="bg-dark text-light" style="background-color: #212F3D;">
+  <body class="text-light" style="background-color: #5b81a4;">
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
         <a class="navbar-brand" href="index.html">TukTuk<span>Tour</span></a>
@@ -41,7 +41,7 @@
           </a></li>
           @if (Auth::user())
           <li class="nav-item fw-bold">
-            <a class="text-danger nav-link" style="margin-left: px;" href="{{ route('logout') }}"
+            <a class="badge bg-danger nav-link px-2" href="{{ route('logout') }}"
             onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();">
              {{ __('Logout') }}
@@ -268,7 +268,173 @@
     </div>
   </div>
 
-    <section class="komentar">
+
+  @if(Auth::user())
+      <section class="komentar mt-4">
+        <br />
+        <div class="comment container">
+          <h1 style="color: white;" class="text-center">Comment & Suggestions</h1>
+          <br />
+          <div class="container col-md-10" id="inform">
+            <div class="row">
+              <div class="col-md-3">
+                <center>
+                  <p id="userimg" class="mt-3 fw-bold"> <img src="img/user.png" style="width: 35px; height: 35px" alt="" />&nbsp;{{Auth::user()->name}}</p>
+                </center>
+              </div>
+              <div class="col-md-9 mt-2">
+                <form action="event/AddComment" enctype="multipart/form-data" method="post">
+                @csrf
+                    <input type="hidden" name="nama" class="form-control" value="{{Auth::user()->name}}">
+                  <div class="form-group">
+                    <label for="comment">Comment : </label>
+                    <textarea type="text" name="comment" class="form-control" placeholder="Tuliskan Pesan Anda Disini...."></textarea>
+                  </div>
+                  <div class="button">
+                    <button  id="kirim" class="btn btn-success mt-1" type="submit">Kirim</button>
+                    <button type="reset" id="reset" class="btn btn-danger mt-1">Reset</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="user-comment container col-md-10 mt-4">
+            <div class="message row container">
+              @foreach($comment as $user)
+                <div class="col-md-8">
+                  <br />
+                  <h5 id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}}</h5>
+                </div>
+                <div class="container mx-4">
+                  <h5 id="usercomment">{{$user->comment}}</h5>
+                  <div class="replyform">
+
+                    <form action="event/AddReply/" method="post" enctype="multipart/form-data">
+                    @csrf
+                        <input type="hidden" name="nama" class="form-control" value="{{Auth::user()->name}}">
+                      <div class="form-group">
+                        <label for="comment">Comment : </label>
+                        <textarea type="text" name="comment" class="form-control" placeholder="Tuliskan Pesan Anda Disini...."></textarea>
+                      </div>
+                      <div class="button">
+                          <button  type="submit" id="balas" class="btn btn-primary mt-1 btn-sm">Balas</button>
+                        <button type="reset" id="reset" class="btn btn-warning mt-1 btn-sm">Reset</button>
+                      </div>
+                    </div> 
+
+
+                    <div class="form-group pb-4">
+                      <input type="hidden" name="comment_id" value="{{ $user->id }}">
+                      <label for="comment">Comment : </label>
+                      <textarea type="text" name="comment" class="form-control" placeholder="Tuliskan Pesan Anda Disini...."></textarea>
+                    </div>
+                    <div class="button">
+                          <button  type="submit" id="balas" class="btn btn-primary btn-sm">Balas</button>
+                          <button type="reset" id="reset" class="btn btn-warning btn-sm">Reset</button>
+                    </div>
+                  </form>
+                  
+                  @foreach ($reply as $user2)
+                    @if($user->id == $user2->comment_id)
+                      <div class="container mt-5" style="margin-top: -10px;">
+                        <h5 class="container"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}</h5>
+                        <h5 id="replyuser" class="ml-4">{{$user2->comment}}</h5>
+                      </div>
+                    @endif
+                  @endforeach
+                </div>
+              @endforeach
+            </div>
+            <br />
+          </div>
+          <br />
+        </div>
+        <br /><br />
+      </section>
+
+    @else
+    <section class="komentar mt-4">
+        <br />
+        <div class="comment container">
+          <h1 style="color: white;" class="text-center">Comment & Suggestions</h1>
+          <br />
+          <div class="container col-md-10" id="inform">
+            <div class="row">
+              <div class="col-md-3">
+                <center>
+                <img src="img/user.png" style="width: 35px; height: 35px" alt="" />
+                </center>
+              </div>
+              <div class="col-md-9 mt-2">
+                <form action="" enctype="multipart/form-data" method="post">
+                @csrf
+                  <div class="form-group">
+                    <label for="comment">Comment : </label>
+                    <textarea type="text" name="comment" class="form-control" placeholder="Tuliskan Pesan Anda Disini...."></textarea>
+                  </div>
+                  <div class="button">
+                    <a style="color: white" class="btn btn-success mt-1 "  data-bs-toggle="modal" data-bs-target="#exampleModal">Kirim</a>
+                    <button type="reset" id="reset" class="btn btn-danger mt-1">Reset</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="user-comment container col-md-10 mt-4">
+            <div class="message row container">
+              @foreach($comment as $user)
+                <div class="col-md-8">
+                  <br />
+                  <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}}</p>
+                </div>
+                <div class="container mx-4">
+                  <p id="usercomment">{{$user->comment}}</p>
+                  <div class="replyform">
+
+                    <form action="" method="post" enctype="multipart/form-data">
+                    @csrf
+                      <div class="form-group">
+                        <label for="comment">Comment : </label>
+                        <textarea type="text" name="comment" class="form-control" placeholder="Tuliskan Pesan Anda Disini...."></textarea>
+                      </div>
+                      <div class="button">
+                          <a style="color: white" id="balas" class="btn btn-primary mt-1 btn-sm"  data-bs-toggle="modal" data-bs-target="#exampleModal">Balas</a>
+                        <button type="reset" id="reset" class="btn btn-warning mt-1 btn-sm">Reset</button>
+                      </div>
+                    </div> 
+                  </form>
+                  
+                  @foreach ($reply as $user2)
+                    @if($user->id == $user2->comment_id)
+                      <div class="container mt-5" style="margin-top: -10px;">
+                        <h5 class="container"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}</h5>
+                        <p id="replyuser" class="ml-4">{{$user2->comment}}</p>
+                      </div>
+                    @endif
+                  @endforeach
+                </div>
+              @endforeach
+            </div>
+            <br />
+          </div>
+          <br />
+        </div>
+        <br /><br />
+      </section>
+
+    @endif
+
+
+
+
+
+
+
+
+
+
+    <!-- <section class="komentar">
       <br />
       <div class="comment container">
         <h1 class="text-center text-light">Comment & Suggestions</h1>
@@ -328,7 +494,8 @@
         <br />
       </div>
       <br /><br />
-    </section>
+    </section> -->
+
 
     <footer class="ftco-footer ftco-section img" style="background-image: url(images/bg_4.jpg)">
       <div class="overlay"></div>

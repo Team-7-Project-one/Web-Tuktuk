@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Hotel;
-use App\Models\Comment;
-use App\Models\Reply;
+use App\Models\HotelComment;
+use App\Models\HotelReply;
 
 class HotelController extends Controller
 {
@@ -22,8 +22,8 @@ class HotelController extends Controller
         }
         else{
             $data = Hotel::paginate(6);
-            $comment = Comment::all();
-            $reply = Reply::all();
+            $comment = HotelComment::all();
+            $reply = HotelReply::all();
         }
         // $data=SouvenirModel::all();
         return view('hotel',['data'=>$data, 'comment'=>$comment, 'reply'=>$reply]);
@@ -39,7 +39,7 @@ class HotelController extends Controller
 
     public function store(Request $request)
     {
-        Comment::create([
+        HotelComment::create([
             'name' => $request->nama,
             'comment' => $request->comment,
         ]);
@@ -49,7 +49,7 @@ class HotelController extends Controller
     public function storeReply(Request $request)
     {
         // $Comment = Comment::find($id);
-        Reply::create([
+        HotelReply::create([
             'name' => $request->nama,
             'comment' => $request->comment,
             'comment_id' => $request->comment_id,

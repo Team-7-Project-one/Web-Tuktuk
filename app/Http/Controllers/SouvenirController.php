@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Souvenir;
+use App\Models\SouvenirComment;
+use App\Models\SouvenirReply;
 
 class SouvenirController extends Controller
 {
@@ -22,8 +24,32 @@ class SouvenirController extends Controller
         }
         else{
             $data = Souvenir::paginate(6);
+            $comment = SouvenirComment::all();
+            $reply = SouvenirReply::all();
         }
         // $data=SouvenirModel::all();
-        return view('souvenir',['data'=>$data]);
+        return view('souvenir',['data'=>$data, 'comment'=>$comment, 'reply'=>$reply]);
     }
+
+    public function store(Request $request)
+    {
+        SouvenirComment::create([
+            'name' => $request->nama,
+            'comment' => $request->comment,
+        ]);
+        return redirect('/souvenir');
+    }
+
+    public function storeReply(Request $request)
+    {
+        // $Comment = Comment::find($id);
+        SouvenirReply::create([
+            'name' => $request->nama,
+            'comment' => $request->comment,
+            'comment_id' => $request->comment_id,
+        ]);
+        return redirect('/souvenir');
+    }
+
+
 }
