@@ -65,7 +65,7 @@
             Copyright &copy;
             <script>
             document.write(new Date().getFullYear());
-            </script>All Rights Reserved | This Website Is Developed By <a href="https://www.del.ac.id/" target="_blank"><span style="color: #ffff00;">Kelompok 07 PA 1 - IT Del</span> 
+            </script>All Rights Reserved | This Website Is Developed By <a href="https://www.del.ac.id/" target="_blank"><span style="color: #ffff00;">Kelompok 07 PA 1 - IT Del</span></a>
             <!-- Kelompok PA 1 | made with <i class="icon-heart color-danger" aria-hidden="true"></i><a href="https://colorlib.com" target="_blank"></a>
             Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
         </p>
