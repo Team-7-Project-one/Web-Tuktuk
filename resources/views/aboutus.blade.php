@@ -97,9 +97,7 @@
   <body>
 
     @include('layouts.header')
-
-    <div class="hero-wrap" style="background-image: url('img/aboutus.jpg')">
-    <div class="hero-wrap" style="background-image: url('img/hotel/carolina4.jpg'); background-size: cover; background-position: center center;">
+    <div class="hero-wrap" style="background-image: url('img/aboutus.jpg'); background-size: cover; background-position: center center;">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text d-flex align-itemd-center justify-content-center">
