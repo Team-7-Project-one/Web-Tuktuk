@@ -1,4 +1,4 @@
-<footer class="ftco-footer ftco-section img px-3" style="background-image: url(images/bg_4.jpg)">
+<footer class="ftco-footer ftco-section img px-3" style="background-image: url(img/footer_bg.jpg)">
     <div class="overlay"></div>
     <div class="container">
     <div class="row mb-5">
@@ -48,7 +48,7 @@
             <ul>
                 <li><span class="icon icon-map-marker"></span><span class="text">Tuktuk Siadong, Simanindo, Samosir, North Sumatera, Indonesia 22395</span></li>
                 <li>
-                <a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a>
+                <a href="#"><span class="icon icon-phone"></span><span class="text">+6285268615405</span></a>
                 </li>
                 <li>
                 <a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a>

@@ -54,7 +54,7 @@
         <br />
         <center><h1 class="ftco-animate">List Hotel</h1></center>
         <br />
-        <div class="row d-flex">
+        <div class="row d-flex shadow p-3 mb-5 bg-body rounded">
           @foreach ($data as $item)
           <div class="hotel-list col-md-4 d-flex ftco-animate container mt-3">
             <div class="blog-entry align-self-stretch">
@@ -138,24 +138,12 @@
                   <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}}</p>
                 </div>
                 <div class="container mx-4">
-                  <p id="usercomment">{{$user->comment}}</p>
-                  <div class="replyform">
+                  <p id="usercomment" style="font-size: 1rem">{{$user->comment}}</p>
 
-                    <form action="hotel/AddReply/" method="post" enctype="multipart/form-data">
-                    @csrf
-                        <input type="hidden" name="nama" class="form-control" value="{{Auth::user()->name}}">
-                      <div class="form-group">
-                        <label for="comment">Comment : </label>
-                        <textarea type="text" name="comment" class="form-control" placeholder="Tuliskan Pesan Anda Disini...."></textarea>
-                      </div>
-                      <div class="button">
-                          <button  type="submit" id="balas" class="btn btn-primary mt-1 btn-sm">Balas</button>
-                        <button type="reset" id="reset" class="btn btn-warning mt-1 btn-sm">Reset</button>
-                      </div>
-                    </div> 
-
-
+                  <form action="hotel/AddReply/" method="post" enctype="multipart/form-data">
+                  @csrf
                     <div class="form-group pb-4">
+                      <input type="hidden" name="nama" class="form-control" value="{{Auth::user()->name}}">
                       <input type="hidden" name="comment_id" value="{{ $user->id }}">
                       <label for="comment">Comment : </label>
                       <textarea type="text" name="comment" class="form-control" placeholder="Tuliskan Pesan Anda Disini...."></textarea>
@@ -164,13 +152,14 @@
                           <button  type="submit" id="balas" class="btn btn-primary btn-sm">Balas</button>
                           <button type="reset" id="reset" class="btn btn-warning btn-sm">Reset</button>
                     </div>
-                  </form>
+                  </form> 
+            
                   
                   @foreach ($reply as $user2)
                     @if($user->id == $user2->comment_id)
                       <div class="container mt-5" style="margin-top: -10px;">
                         <h5 class="container"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}</h5>
-                        <p id="replyuser" class="ml-4">{{$user2->comment}}</p>
+                        <p id="replyuser" class="ml-4" style="font-size: 1rem">{{$user2->comment}}</p>
                       </div>
                     @endif
                   @endforeach
@@ -220,7 +209,7 @@
                   <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}}</p>
                 </div>
                 <div class="container mx-4">
-                  <p id="usercomment">{{$user->comment}}</p>
+                  <p id="usercomment" style="font-size: 1rem">{{$user->comment}}</p>
                   <div class="replyform">
 
                     <form action="hotel/AddReply/" method="post" enctype="multipart/form-data">
@@ -240,7 +229,7 @@
                     @if($user->id == $user2->comment_id)
                       <div class="container mt-5" style="margin-top: -10px;">
                         <h5 class="container"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}</h5>
-                        <p id="replyuser" class="ml-4">{{$user2->comment}}</p>
+                        <p id="replyuser" class="ml-4" style="font-size: 1rem">{{$user2->comment}}</p>
                       </div>
                     @endif
                   @endforeach

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/ionicons.min.css" />
     <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/jquery.timepicker.css" />
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
@@ -21,7 +22,7 @@
     <link rel="stylesheet" href="Izmir-master/docs/css/izmir.min.css">
     <link rel="stylesheet" href="animate/animate.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Chela+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chela+One&display=swap" rel="stylesheet">
 
     <style>
       .c4-izmir {
@@ -97,23 +98,25 @@
   <body>
 
     @include('layouts.header')
-    <div class="hero-wrap" style="background-image: url('img/aboutus.jpg'); background-size: cover; background-position: center center;">
+
+    <div class="hero-wrap" style="background-image: url('img/aboutus2.jpg'); background-size: cover; background-position: center center;">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text d-flex align-itemd-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
             <div class="text">
               <p class="breadcrumbs mb-2">
-                <span class="mr-2"><a href="index.html">Home</a></span> <span>Event</span>
+                <span class="mr-2"><a href="index.html">Home</a></span> <span>About Us</span>
               </p>
-              <h1 class="bread" style="margin-bottom: 450px; font-size: 80px">Event</h1>
+              <h1 class="bread" style="margin-bottom: 450px; font-size: 80px">About Us</h1>
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <br>
-    <h1 class="text-center">Our Team</h1><br>
+    <h1 class="text-center PB-5">KELOMPOK 7 - IT DEL</h1><br>
     <center>
     <div class="row container">
       <div class="col-md-12 container"><center>
@@ -137,7 +140,7 @@
               </h5>
             </div>
           </figure>
-        <h4>Project Manager</h4>
+        <h4 class="pb-5">Project Manager</h4>
           </center>
             </div>
 
@@ -163,7 +166,7 @@
                       </h5>
                     </div>
                   </figure>
-                <h4>Documen Analytic</h4>
+                <h4 class="pb-5">System Analysis</h4>
                   </center>
             </div>
 
@@ -189,7 +192,7 @@
                       </h5>
                     </div>
                   </figure>
-                <h4>Document Analytic</h4>
+                <h4 class="pb-5">System Analysis</h4>
                   </center>
             </div>
 
@@ -215,7 +218,7 @@
                       </h5>
                     </div>
                   </figure>
-                <h4>Technical Writer</h4>
+                <h4 class="pb-5">Technical Writer</h4>
                   </center>
             </div>
 
@@ -241,7 +244,7 @@
                       </h5>
                     </div>
                   </figure>
-                <h4>Programmer</h4>
+                <h4 class="pb-5">Programmer</h4>
                   </center>
             </div>
 
@@ -253,7 +256,7 @@
                   <figcaption>
                     <div class="c4-rotate-down-right c4-delay-200">
                       <h5>
-                        Elsah Sitorus
+                        Elsha Sitorus
                       </h5>
                     </div>
                     <div class="c4-fade-left c4-delay-600">
@@ -267,7 +270,7 @@
                       </h5>
                     </div>
                   </figure>
-                <h4>Designer</h4>
+                <h4 class="pb-5">Designer</h4>
                   </center>
             </div>
 
@@ -293,7 +296,7 @@
               </h5>
             </div>
           </figure>
-                <h4>Tester</h4>
+                <h4 class="pb-5">Tester</h4>
                   </center>
             </div>
       </div>

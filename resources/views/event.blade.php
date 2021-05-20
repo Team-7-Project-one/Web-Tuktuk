@@ -177,30 +177,19 @@
 
           <div class="user-comment container col-md-10 mt-4">
             <div class="message row container">
-              @foreach($comment as $user)
+            @foreach($comment as $user)
                 <div class="col-md-8">
                   <br />
-                  <h5 id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}}</h5>
+                  <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}}</p>
                 </div>
                 <div class="container mx-4">
-                  <h5 id="usercomment">{{$user->comment}}</h5>
-                  <div class="replyform">
+                  <p id="usercomment" style="font-size: 1rem">{{$user->comment}}</p>
 
                     <form action="event/AddReply/" method="post" enctype="multipart/form-data">
                     @csrf
-                        <input type="hidden" name="nama" class="form-control" value="{{Auth::user()->name}}">
-                      <div class="form-group">
-                        <label for="comment">Comment : </label>
-                        <textarea type="text" name="comment" class="form-control" placeholder="Tuliskan Pesan Anda Disini...."></textarea>
-                      </div>
-                      <div class="button">
-                          <button  type="submit" id="balas" class="btn btn-primary mt-1 btn-sm">Balas</button>
-                        <button type="reset" id="reset" class="btn btn-warning mt-1 btn-sm">Reset</button>
-                      </div>
-                    </div> 
-
 
                     <div class="form-group pb-4">
+                      <input type="hidden" name="nama" class="form-control" value="{{Auth::user()->name}}">
                       <input type="hidden" name="comment_id" value="{{ $user->id }}">
                       <label for="comment">Comment : </label>
                       <textarea type="text" name="comment" class="form-control" placeholder="Tuliskan Pesan Anda Disini...."></textarea>
@@ -214,8 +203,8 @@
                   @foreach ($reply as $user2)
                     @if($user->id == $user2->comment_id)
                       <div class="container mt-5" style="margin-top: -10px;">
-                        <h5 class="container"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}</h5>
-                        <h5 id="replyuser" class="ml-4">{{$user2->comment}}</h5>
+                        <h5 class="container" style="color: white"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}</h5>
+                        <h5 id="replyuser" class="ml-4" style="color: white;">{{$user2->comment}}</h5>
                       </div>
                     @endif
                   @endforeach
@@ -284,8 +273,8 @@
                   @foreach ($reply as $user2)
                     @if($user->id == $user2->comment_id)
                       <div class="container mt-5" style="margin-top: -10px;">
-                        <h5 class="container"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}</h5>
-                        <p id="replyuser" class="ml-4">{{$user2->comment}}</p>
+                        <h5 class="container" style="color:white"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}</h5>
+                        <p id="replyuser" style="color:white" class="ml-4">{{$user2->comment}}</p>
                       </div>
                     @endif
                   @endforeach
