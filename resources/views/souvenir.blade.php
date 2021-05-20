@@ -29,7 +29,7 @@
     
     @include('layouts.header')
 
-    <div class="hero-wrap" style="background-image: url('img/carousel1.jpg')">
+    <div class="hero-wrap" style="background-image: url('img/carousel1.jpg'); background-size: cover; background-position: center center;">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text d-flex align-itemd-center justify-content-center">
@@ -66,7 +66,7 @@
       <br><br><br><center>
     <div class="searchotel container col-md-10">
       <form class="d-flex" method="GET">
-      <input name="keyword" class="form-control me-2"  placeholder="Temukan Souvenir Anda Disini ..." aria-label="Search" value{{Request::get('keyword')}} />&nbsp;
+      <input name="keyword" class="form-control me-2"  placeholder="Temukan Souvenir Anda Disini ..." aria-label="Search" value = "{{Request::get('keyword')}}" autocomplete="off"/>&nbsp;
       <button id="cari" class="btn btn-outline-warning rounded-circle" style="width: 55px ;" type="submit"><i class="fas fa-search"></i></button>
       </form>
     </div>
@@ -192,16 +192,7 @@
   </div>
       @endforeach
 
-      <center>
-      <div class="item rounded-3 fs-6 mt-3">
-        &nbsp;Menampilkan
-        {{ $data->firstItem() }}
-        -
-        {{ $data->lastItem() }}
-        dari
-        {{ $data->total() }}
-        entri data
-    </div>
+  <center>
     <div class="pagination mt-3 justify-content-center ">
         {{ $data->links() }}
     </div>

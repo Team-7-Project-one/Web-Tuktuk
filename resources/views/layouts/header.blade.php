@@ -1,16 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Tuktuk<span>Tour</span></a>
+        <a class="navbar-brand" href="index.html" style="font-size: 2rem">Tuktuk<span>Tour</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="oi oi-menu"></span> Menu</button>
 
         <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="/hotel" class="nav-link">Hotel</a></li>
-            <li class="nav-item"><a href="/souvenir" class="nav-link">Souvenir</a></li>
-            <li class="nav-item"><a href="/event" class="nav-link">Event</a></li>
-            <li class="nav-item"><a href="/aboutus" class="nav-link">About Us</a></li>
-            <li class="nav-item">
+          <ul class="navbar-nav ml-auto ">
+            <li class="nav-item active"><a href="/" class="nav-link" style="font-size: 1rem">Home</a></li>
+            <li class="nav-item"><a href="/hotel" class="nav-link" style="font-size: 1rem">Hotel</a></li>
+            <li class="nav-item"><a href="/souvenir" class="nav-link" style="font-size: 1rem">Souvenir</a></li>
+            <li class="nav-item"><a href="/event" class="nav-link" style="font-size: 1rem">Event</a></li>
+            <li class="nav-item"><a href="/aboutus" class="nav-link" style="font-size: 1rem">About Us</a></li>
+            <li class="nav-item" style="font-size: 1rem">
             @if(Auth::user())
               <a href="" class="nav-link"><i class="fas fa-user"></i>&nbsp; {{Auth::user()->name}}
             @else
@@ -18,7 +18,7 @@
             @endif
           </a></li>
           @if (Auth::user())
-          <li class="nav-item fw-bold">
+          <li class="nav-item fw-bold" style="font-size: 1rem">
             <a class="btn btn-sm nav-link" style="background-color: red; transform: scale(0.5); font-size: 25px; border-radius: 40px; margin-top: -6%;"  href="{{ route('logout') }}"
             onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();">

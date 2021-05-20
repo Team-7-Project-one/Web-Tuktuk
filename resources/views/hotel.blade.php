@@ -24,7 +24,7 @@
 
     @include('layouts.header')
 
-    <div class="hero-wrap" style="background-image: url('img/hotel/carolina4.jpg'); background-size: 100%">
+    <div class="hero-wrap" style="background-image: url('img/hotel/carolina4.jpg'); background-size: cover; background-position: center center;">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text d-flex align-itemd-center justify-content-center">
@@ -46,7 +46,7 @@
         <center>
           <div class="searchotel col-md-10">
             <form class="d-flex">
-              <input name="keyword" class="form-control me-2"  placeholder="Temukan Souvenir Anda Disini ..." aria-label="Search" value{{Request::get('keyword')}} />&nbsp;
+              <input name="keyword" class="form-control me-2"  placeholder="Temukan Souvenir Anda Disini ..." aria-label="Search" value = "{{Request::get('keyword')}}" autocomplete="off"/>&nbsp;
               <button id="cari" class="btn btn-outline-warning rounded-circle" style="width: 55px ;" type="submit"><i class="fas fa-search"></i></button>
             </form>
           </div>
@@ -56,19 +56,19 @@
         <br />
         <div class="row d-flex">
           @foreach ($data as $item)
-          <div class="hotel-list col-md-4 d-flex ftco-animate container">
+          <div class="hotel-list col-md-4 d-flex ftco-animate container mt-3">
             <div class="blog-entry align-self-stretch">
             <center>
             <a href="img/hotel/{{ $item->gambar1 }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
               <p class="block-20 rounded container" style="background-image: url('img/hotel/{{ $item->gambar1 }}')"> </p>
             </a>
-          </center>
+            </center>
               <div class="text mt-3">
                 <div class="meta mb-2">
                 </div>
                 <h3 class="heading">{{ $item->nama_hotel }}</h3>
                 <p class="hotel-title-list container"><i class="fas fa-map-marker-alt text-danger"></i>&nbsp;{{ $item->lokasi }}</p>
-                <p class="container" style="text-align = justify">{{ $item->deskripsi }}</p>
+                <p class="container" style="text-align : justify">{{ $item->deskripsi }}</p>
                 <a href="#" class="btn btn-outline-primary" style="font-weight: bold;" data-bs-toggle="modal" data-bs-target="#abc{{ $item['id'] }}">More info</a>
               </div>
             </div>
