@@ -13500,8 +13500,14 @@ reply-button {
   animation-delay: 0.75s;
 }
 
+@font-face {
+  font-family: fontku;
+  src: url('dafont/Catchland.otf');
+}
+
 .navbar .navbar-brand {
   font-size: 2rem;
+  font-family: fontku;
 }
 
 .collapse .navbar-link {
@@ -13531,3 +13537,4 @@ reply-button {
     bottom: 100%;
   }
 }
+

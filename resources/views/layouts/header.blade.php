@@ -1,6 +1,7 @@
+
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
-        <a class="navbar-brand" href="index.html" style="font-size: 2rem">Tuktuk<span>Tour</span></a>
+        <a id="title-web" class="navbar-brand" href="index.html" style="font-size: 2rem">Tuktuk<span>Tour</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="oi oi-menu"></span> Menu</button>
 
         <div class="collapse navbar-collapse" id="ftco-nav">
@@ -10,9 +11,9 @@
             <li class="nav-item"><a href="/souvenir" class="nav-link" style="font-size: 1rem">Souvenir</a></li>
             <li class="nav-item"><a href="/event" class="nav-link" style="font-size: 1rem">Event</a></li>
             <li class="nav-item"><a href="/aboutus" class="nav-link" style="font-size: 1rem">About Us</a></li>
-            <li class="nav-item" style="font-size: 1rem">
+            <li class="nav-item" style="font-size: 1rem; cursor:pointer">
             @if(Auth::user())
-              <a href="" class="nav-link"><i class="fas fa-user"></i>&nbsp; {{Auth::user()->name}}
+              <a href="" class="nav-link"><i class="fas fa-user"></i>&nbsp; {{Auth::user()->username}}
             @else
               <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="nav-link"><i class="fas fa-user"></i>&nbsp;Login
             @endif

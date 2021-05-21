@@ -36,7 +36,7 @@
           <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
             <div class="text">
               <p class="breadcrumbs mb-2">
-                <span class="mr-2"><a href="index.html">Home</a></span> <span>Souvenir</span>
+                <span class="mr-2"><a href="/">Home</a></span> <span>Souvenir</span>
               </p>
               <h1 class="bread" style="margin-bottom: 450px; font-size: 80px">Souvenir</h1>
             </div>
@@ -84,8 +84,8 @@
               <img src="img/souvenir/{{ $item['gambar1'] }}" class="card-img-top mt-2" alt="...">
               <div class="card-body product-desc">
                 <h5 class="card-title mt-2">{{ $item['nama_souvenir'] }}<br></h5>
-                <b class="product-price text-warning"><i class="fas fa-tags"></i>{{ $item['harga'] }}</b>
-                <p><i class="fas fa-store text-primary"></i>{{ $item['nama_toko'] }}</p>
+                <b class="product-price text-warning"><i class="fas fa-tags"></i> {{ $item['harga'] }}</b>
+                <p><i class="fas fa-store text-primary"></i> {{ $item['nama_toko'] }}</p>
                 <button id="modalbtn" href="#" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#abc{{ $item['id'] }}"><i class="fas fa-info-circle"></i> Detail</button>
               </div>
             </div>
@@ -191,7 +191,7 @@
     </div>
   </div>
       @endforeach
-
+<br><br>
   <center>
     <div class="pagination mt-3 justify-content-center ">
         {{ $data->links() }}

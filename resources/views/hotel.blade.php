@@ -31,7 +31,7 @@
           <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
             <div class="text">
               <p class="breadcrumbs mb-2">
-                <span class="mr-2"><a href="index.html">Home</a></span> <span>Hotel</span>
+                <span class="mr-2"><a href="/">Home</a></span> <span>Hotel</span>
               </p>
               <h1 class="bread" style="margin-bottom: 450px; font-size: 80px">Hotel</h1>
             </div>
@@ -350,5 +350,24 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    @error ('username')
+    <script src="{{ asset('js/loginalert.js') }}"></script>
+    @enderror
+    @error ('password')
+    <script src="{{ asset('js/loginalert2.js') }}"></script>
+    @enderror
+
+    @include('sweetalert::alert')
   </body>
 </html>
+
+{{-- 
+    @error ('username')
+    <script src="{{ asset('js/loginalert.js') }}"></script>
+    @enderror
+    @error ('password')
+    <script src="{{ asset('js/loginalert2.js') }}"></script>
+    @enderror
+
+    @include('sweetalert::alert') --}}

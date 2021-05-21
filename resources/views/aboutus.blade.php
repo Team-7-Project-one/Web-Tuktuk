@@ -4,6 +4,7 @@
     <title>Tuktuk Tour - Hotel</title>
     <meta charset="utf-8" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    @include('layouts.link')
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
@@ -18,11 +19,8 @@
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
-    <link rel="stylesheet" href="Izmir-master/docs/css/izmir.min.css">
-    <link rel="stylesheet" href="animate/animate.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Chela+One&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Chela+One&display=swap" rel="stylesheet">
     <style>
       .c4-izmir {
         --primary-color: #2b5876;  
@@ -64,7 +62,7 @@
       }
       .c4-izmir img{
       border-radius: 10px;
-      box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
       /* transform: scale(1.25); */
       }
       .c4-izmir:hover img{
@@ -80,6 +78,9 @@
             font-family: fontku;
             src: url('dafont/ChocoladineDemo.ttf');
         }
+        .col-md-4{
+          margin-bottom: 30px;
+        }
         h5 a{
           color: white;
           font-size: 30px
@@ -93,10 +94,12 @@
         overflow: visible;
       }
     </style>
+  
   </head>
   <body>
 
     @include('layouts.header')
+
     <div class="hero-wrap" style="background-image: url('img/aboutus.jpg'); background-size: cover; background-position: center center;">
       <div class="overlay"></div>
       <div class="container">
@@ -104,14 +107,16 @@
           <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
             <div class="text">
               <p class="breadcrumbs mb-2">
-                <span class="mr-2"><a href="index.html">Home</a></span> <span>Event</span>
+                <span class="mr-2"><a href="/">Home</a></span> <span>About Us</span>
               </p>
-              <h1 class="bread" style="margin-bottom: 450px; font-size: 80px">Event</h1>
+              <h1 class="bread" style="margin-bottom: 450px; font-size: 80px">About Us</h1>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    
     <br>
     <h1 class="text-center">Our Team</h1><br>
     <center>
@@ -159,7 +164,7 @@
                     </div>
                       <div class="c4-fade-right c4-delay-800">
                       <h5>
-                        <a href="mailto:simon061901@gmail.com"><i class="far fa-envelope"></i></a>&nbsp; <a href="https://api.whatsapp.com/send?phone=6281382074016"><i class="fab fa-whatsapp"></i></a>&nbsp; <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:simon061901@gmail.com"><i class="far fa-envelope"></i></a>&nbsp; <a href="https://api.whatsapp.com/send?phone=6281382074016"><i class="fab fa-whatsapp"></i></a>&nbsp; <a href="https://www.instagram.com/Simon.celi11/"><i class="fab fa-instagram"></i></a>
                       </h5>
                     </div>
                   </figure>

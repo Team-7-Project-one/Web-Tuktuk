@@ -47,6 +47,7 @@ Route::post('souvenir/AddReply', 'SouvenirController@storeReply');
 Route::post('event/AddComment', 'EventController@store');
 Route::post('event/AddReply', 'EventController@storeReply');
 
+Route::get('auth/google',[App\Http\Controllers\GoogleController::class,'redirectToGoogle'])->name('google.login');
 
 Route::get('/aboutus', function () {
     return view('aboutus');

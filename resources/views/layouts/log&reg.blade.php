@@ -8,9 +8,9 @@
         </center>
         <form method="POST" action="{{ route('login') }}" class="container">
             @csrf
-            <label for="">{{ __('E-Mail') }}</label>
-            <input id="loginput" type="email" style="background-color: transparent;" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" autofocus placeholder="Masukkan Email anda ...."  required/>
-            @error('email')
+            <label for="">{{ __('Username') }}</label>
+            <input id="loginput" type="text" style="background-color: transparent;" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" autocomplete="username" autofocus placeholder="Masukkan username anda ...."  required/>
+            @error('username')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
@@ -64,6 +64,13 @@
             <label for="">Nama</label>
             <input id="loginput" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" autocomplete="name" autofocus placeholder="Masukkan Nama anda ...." required/>
             @error('name')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
+            <label for="">Username</label>
+            <input id="loginput" id="loginput" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" autocomplete="username" autofocus placeholder="Masukkan username anda ...." required/>
+            @error('username')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
