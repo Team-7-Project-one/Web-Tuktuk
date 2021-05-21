@@ -46,7 +46,7 @@
         <center>
           <div class="searchotel col-md-10">
             <form class="d-flex">
-              <input name="keyword" class="form-control me-2"  placeholder="Temukan Souvenir Anda Disini ..." aria-label="Search" value = "{{Request::get('keyword')}}" autocomplete="off"/>&nbsp;
+              <input name="keyword" class="form-control me-2"  placeholder="Temukan Hotel Anda di Sini ..." aria-label="Search" value = "{{Request::get('keyword')}}" autocomplete="off"/>&nbsp;
               <button id="cari" class="btn btn-outline-warning rounded-circle" style="width: 55px ;" type="submit"><i class="fas fa-search"></i></button>
             </form>
           </div>
