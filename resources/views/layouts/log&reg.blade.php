@@ -9,7 +9,7 @@
         <form method="POST" action="{{ route('login') }}" class="container">
             @csrf
             <label for="">{{ __('Username') }}</label>
-            <input id="loginput" type="text" style="background-color: transparent;" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" autocomplete="username" autofocus placeholder="Masukkan username anda ...."  required/>
+            <input id="loginput" type="text" style="background-color: transparent;" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" autocomplete="username" autofocus placeholder="Masukkan username anda ...."/>
             @error('username')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
@@ -17,7 +17,7 @@
             @enderror
             <br />
             <label for="">Password</label>
-            <input id="loginput" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="current-password" placeholder="Masukkan Password anda ...." required/>
+            <input id="loginput" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="current-password" placeholder="Masukkan Password anda ...."/>
             @error('password')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
@@ -62,14 +62,14 @@
         <form action="{{ route('register') }}" method="POST" class="container">
             @csrf
             <label for="">Nama</label>
-            <input id="loginput" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" autocomplete="name" autofocus placeholder="Masukkan Nama anda ...." required/>
+            <input id="loginput" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" autocomplete="name" autofocus placeholder="Masukkan Nama anda ...." />
             @error('name')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
             <label for="">Username</label>
-            <input id="loginput" id="loginput" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" autocomplete="username" autofocus placeholder="Masukkan username anda ...." required/>
+            <input id="loginput" id="loginput" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" autocomplete="username" autofocus placeholder="Masukkan username anda ...." />
             @error('username')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
@@ -77,7 +77,7 @@
             @enderror
             <br />
             <label for="">Email</label>
-            <input id="loginput" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" placeholder="Masukkan Email anda ...." required/>
+            <input id="loginput" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" placeholder="Masukkan Email anda ...." />
             @error('email')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
@@ -85,7 +85,7 @@
             @enderror
             <br />
             <label for="">Password</label>
-            <input id="loginput" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password" placeholder="Masukkan Password anda ...." required/>
+            <input id="loginput" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password" placeholder="Masukkan Password anda ...." />
             @error('password')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>

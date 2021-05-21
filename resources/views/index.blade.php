@@ -33,7 +33,8 @@
               <div class="col-md-6 ftco-animate">
                 <div class="text">
                   <h2 >Tuktuk Tour Website</h2>
-                  <h1 class="mb-3">Horas <br><br>
+                  <br><br>
+                  <h1 class="mb-3">Horas... <br>
                     Welcome To Tuktuk Tour Website
                   </h1>
                 </div>
@@ -179,7 +180,7 @@
                 <span class="subheading">About Samosir</span>
                 <h2 class="mb-4" style="font-size: -webkit-calc(100% + 30px);">Governance</h2>
               </div>
-              <p style="text-align: justify">Samosir Regency consists of 9 sub-districts, of which 6 sub-districts are on Samosir Island and 3 sub-districts in the outer ring area of Lake Toba right on the ridge of the Bukit Barisan mountains. The sub-districts are Harian, Nainggolan, Onan Runggu, Palipi, Pangururan, Ronggur Nihuta, Sianjur Mulamula, Simanindo, Sitiotio. Tuktuk Siadong is one of the urban villages of Simanindo sub-disticts.</p>
+              <p style="text-align: justify">Samosir Regency consists of 9 sub-districts, of which 6 sub-districts are on Samosir Island and 3 sub-districts in the outer ring area of Lake Toba right on the ridge of the Bukit Barisan mountains. The sub-districts are Harian, Nainggolan, Onan Runggu, Palipi, Pangururan, Ronggur Nihuta, Sianjur Mulamula, Simanindo, Sitiotio. Tuktuk Siadong is one of the urban villages of Simanindo sub-districts.</p>
               <p><a target="_blank" href="https://samosirkab.go.id/" class="btn btn-secondary rounded">More Information</a></p>
             </div>
           </div>

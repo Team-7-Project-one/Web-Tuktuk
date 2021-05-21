@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Harborlights - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Tuktuk Tour - Souvenir</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
@@ -52,7 +52,7 @@
   <form action="" method="GET">
     <div class="category container row">
         <div class=" col-md-4 btncategory">
-          <button name="keyword" id="btnpatung" type="submit" value="patung" class="btn btn-outline-warning mr-5 rounded-pill">Patung</button>
+          <button name="keyword" id="btnpatung" type="submit" value="patung" class="btn btn-outline-warning mr-5 rounded-pill">Ukiran</button>
         </div>
         <div class=" col-md-4 btncategory">
           <button name="keyword" id="btnulos" value="ulos" class="btn btn-outline-danger mr-5 rounded-pill">Ulos</button>
@@ -259,7 +259,7 @@
             </div>
           </div>
           <div class="user-comment container col-md-10">
-            <div class="message row container">
+            <div class="message row container pb-4">
               @foreach($comment as $user)
                 <div class="col-md-8">
                   <br />
@@ -333,7 +333,7 @@
             </div>
           </div>
           <div class="user-comment container col-md-10">
-            <div class="message row container">
+            <div class="message row container pb-4">
               @foreach($comment as $user)
                 <div class="col-md-8">
                   <br />
