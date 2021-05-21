@@ -97,7 +97,7 @@
 
       <!-- Modal souvenir -->
       @foreach ($data as $item)
-      <div class="modal fade" id="abc{{ $item['id'] }}"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal fade shadow p-3 mb-5 bg-body rounded" id="abc{{ $item['id'] }}"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog  modal-xl">
           <div class="modal-content">
             <div class="modal-body">
@@ -177,13 +177,16 @@
                   <div>
                 </div>
               </div>
-              <div class="map-hotel container col-md-12 mt-4" style="border: 1px solid;" ><center><h3>Location</h3>
-              <iframe src="{{ $item['map'] }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="responsive-iframe"></iframe>
+              
+              <div class="map-hotel container col-md-8 mt-4">
+              <center>
+                <h3>Detail Location</h3>
+                <iframe src="{{ $item['map'] }}" style="border: 5px solid; border-radius: 5px" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="responsive-iframe"></iframe>
               </center>
               </div
             </div>
           </div>
-          <div class="modal-footer">
+          <div class="modal-footer mt-4">
             <button type="button" class="btn btn-danger col-md-12" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
@@ -264,23 +267,12 @@
                 </div>
                 <div class="container mx-4">
                   <p id="usercomment">{{$user->comment}}</p>
-                  <div class="replyform">
 
+                  <div class="replyform{{$user->id}}">
                     <form action="souvenir/AddReply/" method="post" enctype="multipart/form-data">
                     @csrf
-                        <input type="hidden" name="nama" class="form-control" value="{{Auth::user()->name}}">
-                      <div class="form-group">
-                        <label for="comment">Comment : </label>
-                        <textarea type="text" name="comment" class="form-control" placeholder="Tuliskan Pesan Anda Disini...."></textarea>
-                      </div>
-                      <div class="button">
-                          <button  type="submit" id="balas" class="btn btn-primary mt-1 btn-sm">Balas</button>
-                        <button type="reset" id="reset" class="btn btn-warning mt-1 btn-sm">Reset</button>
-                      </div>
-                    </div> 
-
-
                     <div class="form-group pb-4">
+                      <input type="hidden" name="nama" class="form-control" value="{{Auth::user()->name}}">
                       <input type="hidden" name="comment_id" value="{{ $user->id }}">
                       <label for="comment">Comment : </label>
                       <textarea type="text" name="comment" class="form-control" placeholder="Tuliskan Pesan Anda Disini...."></textarea>
@@ -289,7 +281,10 @@
                           <button  type="submit" id="balas" class="btn btn-primary btn-sm">Balas</button>
                           <button type="reset" id="reset" class="btn btn-warning btn-sm">Reset</button>
                     </div>
-                  </form>
+                  </form> 
+                </div>
+
+                <h6 id="reply-message{{ $user->id }}" class="container text-secondary btn btn"><i class="fas fa-reply-all"></i> Balas</h6>
                   
                   @foreach ($reply as $user2)
                     @if($user->id == $user2->comment_id)
@@ -348,22 +343,10 @@
                   <p id="usercomment">{{$user->comment}}</p>
                   <div class="replyform">
 
-                    <form action="" method="post" enctype="multipart/form-data">
-                    @csrf
-                      <div class="form-group">
-                        <label for="comment">Comment : </label>
-                        <textarea type="text" name="comment" class="form-control" placeholder="Tuliskan Pesan Anda Disini...."></textarea>
-                      </div>
-                      <div class="button">
-                          <a style="color: white" id="balas" class="btn btn-primary mt-1 btn-sm"  data-bs-toggle="modal" data-bs-target="#exampleModal">Balas</a>
-                        <button type="reset" id="reset" class="btn btn-warning mt-1 btn-sm">Reset</button>
-                      </div>
-                    </div> 
-                  </form>
                   
                   @foreach ($reply as $user2)
                     @if($user->id == $user2->comment_id)
-                      <div class="container mt-5" style="margin-top: -10px;">
+                      <div class="container mt-2" style="margin-top: -10px;">
                         <h5 class="container"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}</h5>
                         <p id="replyuser" class="ml-4">{{$user2->comment}}</p>
                       </div>
@@ -412,5 +395,17 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    @foreach ($comment as $user)
+    <script>
+      $(document).ready(function () {
+        $('.replyform{{$user->id}}').hide();
+
+        $('#reply-message{{$user->id}}').click(function () {
+          $('.replyform{{$user->id}}').slideToggle();
+        });
+      });
+      
+    </script>
+    @endforeach
   </body>
 </html>

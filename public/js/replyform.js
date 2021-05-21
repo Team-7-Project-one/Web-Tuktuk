@@ -1,7 +1,7 @@
-$(document).ready(function () {
-  $('.replyform').hide();
+// $(document).ready(function () {
+//   $('.replyform').hide();
 
-  $('#reply-message').click(function () {
-    $('.replyform').slideToggle();
-  });
-});
+//   $('#reply-message').click(function () {
+//     $('.replyform').slideToggle();
+//   });
+// });

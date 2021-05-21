@@ -6,7 +6,7 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto ">
-            <li class="nav-item active"><a href="/" class="nav-link" style="font-size: 1rem">Home</a></li>
+            <li class="nav-item"><a href="/" class="nav-link" style="font-size: 1rem">Home</a></li>
             <li class="nav-item"><a href="/hotel" class="nav-link" style="font-size: 1rem">Hotel</a></li>
             <li class="nav-item"><a href="/souvenir" class="nav-link" style="font-size: 1rem">Souvenir</a></li>
             <li class="nav-item"><a href="/event" class="nav-link" style="font-size: 1rem">Event</a></li>

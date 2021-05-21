@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/ionicons.min.css" />
     <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
@@ -124,7 +125,7 @@
       <div class="col-md-12 container"><center>
         <figure class="c4-izmir c4-border-cc-1 c4-gradient-top animate__animated animate__flipInY animate__delay-1s">
           <img src="img/aboutus/wordyka.jpg" alt="Sample Image">
-          <h4 class="wor">Wordyka</h4>
+          <h4 class="wor2">Wordyka</h4>
           <figcaption>
             <div class="c4-rotate-down-right c4-delay-200">
               <h5>
@@ -142,14 +143,14 @@
               </h5>
             </div>
           </figure>
-        <h4>Project Manager</h4>
+        <h4 class="pb-5 text-light mt-5">Project Manager</h4>
           </center>
             </div>
 
             <div class="col-md-4">
               <center>
-                <figure id="mon" class="c4-izmir c4-gradient-bottom c4-border-center animate__animated animate__flipInY animate__delay-1s ">
-                  <img src="img/aboutus/simon.jpg" alt="Sample Image">
+                <figure id="mon" class="c4-izmir c4-gradient-bottom c4-border-center animate__animated animate__flipInY animate__delay-1s">
+                  <img src="img/aboutus/simon.jpg" alt="Sample Image" size="100px">
                   <h4 class="wor">Simon</h4>
                   <figcaption>
                     <div class="c4-rotate-down-right c4-delay-200">
@@ -168,7 +169,7 @@
                       </h5>
                     </div>
                   </figure>
-                <h4>Documen Analytic</h4>
+                <h4 class="pb-5 text-light mt-5">System Analysis</h4>
                   </center>
             </div>
 
@@ -194,7 +195,7 @@
                       </h5>
                     </div>
                   </figure>
-                <h4>Document Analytic</h4>
+                <h4 class="pb-5 text-light mt-5">System Analysis</h4>
                   </center>
             </div>
 
@@ -220,7 +221,7 @@
                       </h5>
                     </div>
                   </figure>
-                <h4>Technical Writer</h4>
+                <h4 class="pb-5 text-light mt-5">Technical Writer</h4>
                   </center>
             </div>
 
@@ -246,7 +247,7 @@
                       </h5>
                     </div>
                   </figure>
-                <h4>Programmer</h4>
+                <h4 class="pb-5 text-light mt-5">Programmer</h4>
                   </center>
             </div>
 
@@ -258,7 +259,7 @@
                   <figcaption>
                     <div class="c4-rotate-down-right c4-delay-200">
                       <h5>
-                        Elsah Sitorus
+                        Elsha Sitorus
                       </h5>
                     </div>
                     <div class="c4-fade-left c4-delay-600">
@@ -272,7 +273,7 @@
                       </h5>
                     </div>
                   </figure>
-                <h4>Designer</h4>
+                <h4 class="pb-5 text-light mt-5">Designer</h4>
                   </center>
             </div>
 
@@ -298,14 +299,15 @@
               </h5>
             </div>
           </figure>
-                <h4>Tester</h4>
+                <h4 class="pb-5 text-light mt-5">Tester</h4>
                   </center>
             </div>
       </div>
-    </div>
-  </center><br><br>
-    
     <br><br>
+    </div>
+  </div>
+  </center>
+    
     @include('layouts.footer')
 
     @include('layouts.log&reg')
@@ -317,6 +319,85 @@
         <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
       </svg>
     </div>
+
+    <style>
+      .c4-izmir {
+        --primary-color: #2b5876;  
+        --secondary-color: #4e4376;
+        --transition-duration: 500ms;
+        --border-width: 6px;
+        --overlay-opacity: .5;
+        overflow: visible;
+        height: 300px;
+        width: 280px;
+        cursor: pointer;
+        border-radius: 10px;
+        transform: scale(1.25);
+        margin-bottom: 20px;
+      }
+      #mon{
+        --primary-color: #cc2b5e;
+        --secondary-color: #753a88;
+      }
+      #dan{
+        --primary-color: #bdc3c7 ;
+        --secondary-color: #2c3e50;
+      }
+      #nes{
+        --primary-color: #ee9ca7;
+        --secondary-color: #ffdde1;
+      }
+      #riz{
+        --primary-color: #000428;
+        --secondary-color: #004e92;
+      }
+      #els{
+        --primary-color: #eecda3;
+        --secondary-color: #ef629f;
+      }
+      #onai{
+        --primary-color: #43cea2;
+        --secondary-color: #185a9d;
+      }
+      .c4-izmir img{
+      border-radius: 10px;
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+      /* transform: scale(1.25); */
+      }
+      .c4-izmir:hover img{
+        transform: scale(1.25);
+      }
+      .c4-izmir:hover {
+        transform: scale(1.25);
+      }
+      .c4-izmir:hover h4{
+        display: none;
+      }
+      @font-face {
+            font-family: fontku;
+            src: url('dafont/ChocoladineDemo.ttf');
+        }
+        h5 a{
+          color: white;
+          font-size: 30px
+        }
+      .wor{
+        position: absolute;
+        margin-left: 200px;
+        font-family: 'Chela One', cursive;
+        font-size: 30px;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+        overflow: visible;
+      }
+      .wor2{
+        position: absolute;
+        margin-left: 175px;
+        font-family: 'Chela One', cursive;
+        font-size: 30px;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+        overflow: visible;
+      }
+    </style>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     <script src="js/jquery.min.js"></script>
