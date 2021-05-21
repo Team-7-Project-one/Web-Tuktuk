@@ -173,7 +173,7 @@
                       <td class="text-success "></i> {{ $item['kontak'] }}</td>
                     </tr>
                   </table>
-                  <center><a href="" class="btn btn-success"><i class="fab fa-whatsapp mt-2"></i> Hubungi Penjual</a></center>
+                  <center><a href="https://api.whatsapp.com/send?phone={{$item['kontak']}}" class="btn btn-success"><i class="fab fa-whatsapp mt-2"></i> Hubungi Penjual</a></center>
                   <div>
                 </div>
               </div>
