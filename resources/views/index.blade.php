@@ -172,9 +172,7 @@
         <div class="container">
           <div class="row no-gutters">
             <div class="col-md-5 order-md-last d-flex">
-              <!-- <div class="img img-1 mr-md-2 ftco-animate" style="background-image: url(img/rap.png); widh: 100px"></div> -->
               <img src="img/bupati.png" alt="" />
-              <!-- <div class="img img-2 ml-md-2 ftco-animate" style="background-image: url(images/about-2.jpg)"></div> -->
             </div>
             <div class="col-md-7 wrap-about pb-md-3 ftco-animate pr-md-5 pb-md-5 pt-md-4 px-5">
               <div class="heading-section mb-4 my-5 my-md-0">
