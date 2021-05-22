@@ -135,12 +135,11 @@
               @foreach($comment as $user)
                 <div class="col-md-8">
                   <br />
-                  <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}}</p>
+                  <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}} &nbsp;</p>
                 </div>
-                <div class="container mx-4">
-                  <p id="usercomment" style="font-size: 1rem">{{$user->comment}}</p>
-
-                  <div class="replyform{{$user->id}}">
+                <div class="container mx-4 areareply">
+                  <p id="usercomment" style="font-size: 1rem">{{$user->comment}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ $user->created_at }}</b></p>
+                  <div class="replyform{{$user->id}}" id="balaspesan{{$user->id}}" {{--style="display: none;"--}}>
                     <form action="hotel/AddReply/" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group pb-4">
@@ -155,8 +154,12 @@
                     </div>
                   </form> 
                 </div>
-
-                  <h6 id="reply-message{{ $user->id }}" class="container text-secondary btn btn"><i class="fas fa-reply-all"></i> Balas</h6>
+                {{-- <style>
+                  #balaspesan{
+                    display: none;
+                  }
+                </style> --}}
+                <h6 id="reply-message{{ $user->id }}" onclick="myFunction()" class="container text-secondary btn btn reply"><i class="fas fa-reply-all"></i> Balas</h6>
 
                   
                   @foreach ($reply as $user2)
@@ -313,7 +316,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     <script src="js/jquery.min.js"></script>
-    <script src="js/replyform.js"></script>
+    <script src="js/balaspesan.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -329,7 +332,18 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    {{-- <script type="text/javascript">
+      function myFunction() {
+      var x = document.getElementById('balaspesan[$user->id]');
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    </script> --}}
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
+
 </html>
 

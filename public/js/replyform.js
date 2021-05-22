@@ -1,7 +1,7 @@
-// $(document).ready(function () {
-//   $('.replyform').hide();
+$(document).ready(function () {
+  $('#balaspesan').hide();
 
-//   $('#reply-message').click(function () {
-//     $('.replyform').slideToggle();
-//   });
-// });
+  $('.reply').click(function () {
+    $('.replyform').slideToggle();
+  });
+});
