@@ -165,7 +165,7 @@
                     <input type="hidden" name="nama" class="form-control" value="{{Auth::user()->name}}">
                   <div class="form-group">
                     <label for="comment">Comment : </label>
-                    <textarea type="text" name="comment" class="form-control" placeholder="Tuliskan Pesan Anda Disini...."></textarea>
+                    <textarea type="text" name="comment" class="form-control" placeholder="Tuliskan Pesan Anda Disini...." required></textarea>
                   </div>
                   <div class="button">
                     <button  id="kirim" class="btn btn-success mt-1" type="submit">Kirim</button>
@@ -193,7 +193,7 @@
                     <input type="hidden" name="nama" class="form-control" value="{{Auth::user()->name}}">
                     <input type="hidden" name="comment_id" value="{{ $user->id }}">
                     <label for="comment">Comment : </label>
-                    <textarea type="text" name="comment" class="form-control" placeholder="Tuliskan Pesan Anda Disini...."></textarea>
+                    <textarea type="text" name="comment" class="form-control" placeholder="Tuliskan Pesan Anda Disini...." required></textarea>
                   </div>
                   <div class="button">
                         <button  type="submit" id="balas" class="btn btn-primary btn-sm">Balas</button>

@@ -50,6 +50,7 @@
               <div class="col-md-6 ftco-animate">
                 <div class="text">
                   <h2>Tuk-Tuk Tour Website</h2>
+                  <br><br>
                   <h1 class="mb-3">It's feels like staying in your own home</h1>
                 </div>
               </div>
@@ -63,7 +64,9 @@
             <div class="row no-gutters slider-text align-items-center justify-content-end">
               <div class="col-md-6 ftco-animate">
                 <div class="text">
+                <br><br>
                   <h2>Tuk-Tuk Tour Website</h2>
+                  <br><br>
                   <h1 class="mb-3">It has beautiful scenery and charming sight</h1>
                 </div>
               </div>
