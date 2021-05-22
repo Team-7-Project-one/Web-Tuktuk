@@ -131,7 +131,7 @@
             </div>
           </div>
           <div class="user-comment container col-md-10">
-            <div class="message row container">
+            <div class="message row container pb-4">
               @foreach($comment as $user)
                 <div class="col-md-8">
                   <br />
@@ -206,7 +206,7 @@
             </div>
           </div>
           <div class="user-comment container col-md-10">
-            <div class="message row container">
+            <div class="message row container pb-4">
               @foreach($comment as $user)
                 <div class="col-md-8">
                   <br />
@@ -214,11 +214,10 @@
                 </div>
                 <div class="container mx-4">
                   <p id="usercomment" style="font-size: 1rem">{{$user->comment}}</p>
-                  <div class="replyform">
                   
                   @foreach ($reply as $user2)
                     @if($user->id == $user2->comment_id)
-                      <div class="container mt-5" style="margin-top: -10px;">
+                      <div class="container mt-2" style="margin-top: -10px;">
                         <h5 class="container"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}</h5>
                         <p id="replyuser" class="ml-4" style="font-size: 1rem">{{$user2->comment}}</p>
                       </div>

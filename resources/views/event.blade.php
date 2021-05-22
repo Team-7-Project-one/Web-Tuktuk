@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Tuktuk Tour - Event</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700&display=swap" rel="stylesheet" />
@@ -176,7 +177,7 @@
           </div>
 
           <div class="user-comment container col-md-10 mt-4">
-            <div class="message row container">
+            <div class="message row container pb-4">
             @foreach($comment as $user)
                 <div class="col-md-8">
                   <br />
@@ -201,7 +202,7 @@
                   </form> 
                 </div>
 
-                <h6 id="reply-message{{ $user->id }}" class="container text-secondary btn btn"><i class="fas fa-reply-all"></i> Balas</h6>
+                <h6 id="reply-message{{ $user->id }}" class="container text-secondary btn btn text-light"><i class="fas fa-reply-all text-light"></i> Balas</h6>
                   
                   @foreach ($reply as $user2)
                     @if($user->id == $user2->comment_id)
@@ -250,7 +251,7 @@
             </div>
           </div>
           <div class="user-comment container col-md-10 mt-4">
-            <div class="message row container">
+            <div class="message row container pb-4">
               @foreach($comment as $user)
                 <div class="col-md-8">
                   <br />
