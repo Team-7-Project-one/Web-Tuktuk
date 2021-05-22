@@ -176,7 +176,7 @@
         <div class="container">
           <div class="row no-gutters">
             <div class="col-md-5 order-md-last d-flex">
-              <img src="img/bupati.png" alt="" />
+              <img src="img/bupati.png" alt="" style="width: auto; max-width: 100%; height: auto"/>
             </div>
             <div class="col-md-7 wrap-about pb-md-3 ftco-animate pr-md-5 pb-md-5 pt-md-4 px-5">
               <div class="heading-section mb-4 my-5 my-md-0">
@@ -198,14 +198,14 @@
           <!-- <div class="col-md-5 d-flex">
             <div class="testimony-img aside-stretch-2" style="background-image: url(images/testimony-img.jpg)"></div>
           </div> -->
-          <div class="col-md-12 py-5 pl-md-7 px-5">            
+          <div class="col-md-12 py-5 pl-md-7 px-5 mt-5">            
             <div id="testimony"class="py-md-10" style="margin-top: -15px">
               <div class="heading-section ftco-animate mb-4" >
               <h2 class="mb-0 text-center" style="font-size: -webkit-calc(100% + 30px);">History</h2>
                 <span class="subheading">About Samosir</span>
                 <h2 class="mb-0">Samosir, Sumatera Utara</h2>
               </div>
-              <div class="carousel-testimony owl-carousel ftco-animate p-5">
+              <div class="carousel-testimony owl-carousel ftco-animate">
                 <div class="card p-3">
                   <div class="row ">
                     <div class="col-md-6">
