@@ -143,7 +143,7 @@
               </h5>
             </div>
           </figure>
-        <h4 class="pb-5 text-light mt-5">Project Manager</h4>
+        <h4 class="pb-5 text-dark mt-5">Project Manager</h4>
           </center>
             </div>
 
@@ -169,7 +169,7 @@
                       </h5>
                     </div>
                   </figure>
-                <h4 class="pb-5 text-light mt-5">System Analysis</h4>
+                <h4 class="pb-5 text-dark mt-5">System Analysis</h4>
                   </center>
             </div>
 
@@ -195,7 +195,7 @@
                       </h5>
                     </div>
                   </figure>
-                <h4 class="pb-5 text-light mt-5">System Analysis</h4>
+                <h4 class="pb-5 text-dark mt-5">System Analysis</h4>
                   </center>
             </div>
 
@@ -221,7 +221,7 @@
                       </h5>
                     </div>
                   </figure>
-                <h4 class="pb-5 text-light mt-5">Technical Writer</h4>
+                <h4 class="pb-5 text-dark mt-5">Technical Writer</h4>
                   </center>
             </div>
 
@@ -247,7 +247,7 @@
                       </h5>
                     </div>
                   </figure>
-                <h4 class="pb-5 text-light mt-5">Programmer</h4>
+                <h4 class="pb-5 text-dark mt-5">Programmer</h4>
                   </center>
             </div>
 
@@ -273,7 +273,7 @@
                       </h5>
                     </div>
                   </figure>
-                <h4 class="pb-5 text-light mt-5">Designer</h4>
+                <h4 class="pb-5 text-dark mt-5">Designer</h4>
                   </center>
             </div>
 
@@ -299,7 +299,7 @@
               </h5>
             </div>
           </figure>
-                <h4 class="pb-5 text-light mt-5">Tester</h4>
+                <h4 class="pb-5 text-dark mt-5">Tester</h4>
                   </center>
             </div>
       </div>
