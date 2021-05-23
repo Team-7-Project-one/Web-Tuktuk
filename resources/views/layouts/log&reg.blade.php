@@ -24,21 +24,26 @@
             </span>
             @enderror
             <br />
+            
+            <div class="px-4">
+            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+            <label class="form-check-label" for="remember">
+                {{ __('Remember Me') }}
+            </label>
+            </div>
+            
+            <br><br>
+
+            <button type="submit" id="login" class="btn fw-bold p-2 rounded-pill">
+                {{ __('Login') }}
+            </button><br>
+
             <center>
-                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-        
-                        <label class="form-check-label" for="remember">
-                            {{ __('Remember Me') }}
-                        </label><br><br>
-                    <button type="submit" id="login" class="btn fw-bold p-2 rounded-pill">
-                        {{ __('Login') }}
-                    </button><br>
-        
-                    @if (Route::has('password.request'))
-                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                            {{ __('Forgot Your Password?') }}
-                        </a>
-                    @endif
+            @if (Route::has('password.request'))
+                <a class="btn btn-link" href="{{ route('password.request') }}">
+                    {{ __('Forgot Your Password?') }}
+                </a>
+            @endif
             <p>Don't have account? <a href="" class="" {{--style="text-decoration: none"--}} data-bs-toggle="modal" data-bs-target="#registerModal">Register here</a></p>
             <p>OR</p>
             <button id="gogle" class="btn btn"><i class="fab fa-google-plus-g"></i></button>

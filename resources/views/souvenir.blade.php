@@ -80,7 +80,7 @@
 		  <br />
       <div class="row container ftco-animate">
         @foreach ($data as $item)
-        <div class="col-md-4">
+        <div class="col-md-4 mt-4">
             <div class="container card card-product" style="width: 18rem;">
               <img src="img/souvenir/{{ $item['gambar1'] }}" class="card-img-top mt-2" alt="...">
               <div class="card-body product-desc">
@@ -91,9 +91,9 @@
               </div>
             </div>
           </div>
-            @endforeach
-            
-          </div>
+        @endforeach
+        
+      </div>
         
 
       <!-- Modal souvenir -->
