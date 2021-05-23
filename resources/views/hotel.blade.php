@@ -156,7 +156,8 @@
                     </div>
                   </form> 
                 </div>
-                <h6 id="reply-message{{ $user->id }}" onclick="myFunction()" class="container text-secondary btn btn reply"><i class="fas fa-reply-all"></i> Balas</h6>
+
+                <h6 id="reply-message{{ $user->id }}" onclick="myFunction()" class="container text-secondary btn btn"><i class="fas fa-reply-all"></i> Balas</h6>
 
                   
                   @foreach ($reply as $user2)
@@ -329,16 +330,18 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
-    {{-- <script type="text/javascript">
-      function myFunction() {
-      var x = document.getElementById('balaspesan[$user->id]');
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
-    }
-    </script> --}}
+    @foreach ($comment as $user)
+    <script>
+      $(document).ready(function () {
+        $('.replyform{{$user->id}}').hide();
+
+        $('#reply-message{{$user->id}}').click(function () {
+          $('.replyform{{$user->id}}').slideToggle();
+        });
+      });
+      
+    </script>
+    @endforeach
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 
