@@ -156,11 +156,6 @@
                     </div>
                   </form> 
                 </div>
-                {{-- <style>
-                  #balaspesan{
-                    display: none;
-                  }
-                </style> --}}
                 <h6 id="reply-message{{ $user->id }}" onclick="myFunction()" class="container text-secondary btn btn reply"><i class="fas fa-reply-all"></i> Balas</h6>
 
                   
