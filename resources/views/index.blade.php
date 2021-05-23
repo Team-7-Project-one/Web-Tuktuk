@@ -45,7 +45,7 @@
           </div>
         </div>
 
-        <div class="slider-item" style="background-image: url(img/carousel1.jpg); background-size: cover; background-position: center center;">
+        <div class="slider-item" style="background-image: url(img/carousel12.jpg); background-size: cover; background-position: center center;">
           <div class="overlay"></div>
           <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-end">
@@ -213,7 +213,7 @@
                         <div class="col-md-6">
                           <img class="d-block w-100 border shadow p-3 mb-5 bg-body rounded mt-5" src="img/samosir2.jpg" style="width: auto; max-width: 100%; height: auto; border-radius: 10px" alt="" />
                         </div>
-                        <div class="col-md-6" style="margin-top: 5%;"><br>
+                        <div class="col-md-6" style="margin-top: 1%;"><br>
                           <center><h3 class="text-dark container">History and Origins</h3></center>
                         <p style="text-align:justify;" class="container">Toba people (commonly call as "Batak") are the most numerous of the Batak people of North Sumatra, Indonesia. The Toba people are found in Toba Samosir Regency, Humbang Hasundutan Regency, Samosir Regency, North Tapanuli Regency, part of Dairi Regency, Central Tapanuli Regency, Sibolga and Its surrounding regions. The Batak Toba people speak in the Toba Batak language and are centered on Lake Toba and Samosir Island within the lake. Batak Toba people frequently build in traditional Batak architecture styles which are common on Samosir. Cultural demonstrations, performances and festivities such as Sigale Gale are often held for tourists.</p>
                         </div>
@@ -264,9 +264,9 @@
                     <div class="card p-3">
                       <div class="row ">
                         <div class="col-md-6">
-                          <img class="d-block w-100 border shadow p-3 mb-5 bg-body rounded" src="img/alam.jpg" alt="" style="width: auto; max-width: 100%; height: auto; border-radius: 10px"/>
+                          <img class="d-block w-100 border shadow p-3 mb-5 bg-body rounded mt-2" src="img/alam.jpg" alt="" style="width: auto; max-width: 100%; height: auto; border-radius: 10px"/>
                         </div>
-                        <div class="col-md-6" style="margin-top: 3%;"><br>
+                        <div class="col-md-6" style="margin-top: 1%;"><br>
                           <center><h3 class="text-success container">Nature</h3></center>
                         <p style="text-align:justify;" class="container">Tuk Tuk is an area that full of exotic landscapes. From this place anyway, you can enjoy the beauty of Lake Toba that is so magical. The place is become the center of tourists who want to spend the night in Samosir. There are numbers of hotels and villas that can be your best deal to stay. There are also several coffee shop that provide internet facilities for your business important. As a tourist destination village, in addition to its natural scenery, Tuk Tuk is also known for rich Batak culture.</p>
                         </div>
@@ -299,10 +299,10 @@
         <h2 class="mb-4" style="font-size: -webkit-calc(100% + 30px);">Location</h2>
       </div>
       <div class=" container location row">
-        <div class="col-md-5 px-4" style="margin-top: 10%;">
+        <div class="col-md-7 px-4" style="margin-top: 10%;">
           <p style="text-align:justify">Tuktuk Siadong is a sub-district located in Simanindo District, Samosir Regency, North Sumatra Province, Indonesia. Tuktuk Siadong is located between the villages of Ambarita and Tomok. Geographically, Tuktuk Siadong Village is located on an area of 245 hectares with a topography in the form of a promontory jutting out towards Lake Toba.</p>
         </div>
-        <div class="col-md-7 px-4 mt-3">
+        <div class="col-md-5 px-4 mt-5">
         <center>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16481.696988169602!2d98.84488082822975!3d2.6664429689172593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031ea1e1cfd2cf3%3A0xc7a6307559b9f4d3!2sTuktuk%20Siadong%2C%20Simanindo%2C%20Kabupaten%20Samosir%2C%20Sumatera%20Utara%2C%20Indonesia!5e1!3m2!1sid!2sus!4v1618405352690!5m2!1sid!2sus" max-width="600" height="450" style="border: 5px solid;  border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
         </center>

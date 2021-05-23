@@ -24,16 +24,17 @@
             </span>
             @enderror
             <br />
-            <center>
-                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-        
-                        <label class="form-check-label" for="remember">
-                            {{ __('Remember Me') }}
-                        </label><br><br>
-                    <button type="submit" id="login" class="btn fw-bold p-2 rounded-pill">
-                        {{ __('Login') }}
-                    </button><br>
-        
+            
+            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+    
+                    <label class="form-check-label" for="remember">
+                        {{ __('Remember Me') }}
+                    </label><br><br>
+                <button type="submit" id="login" class="btn fw-bold p-2 rounded-pill">
+                    {{ __('Login') }}
+                </button><br>
+
+                <center>
                     @if (Route::has('password.request'))
                         <a class="btn btn-link" href="{{ route('password.request') }}">
                             {{ __('Forgot Your Password?') }}
