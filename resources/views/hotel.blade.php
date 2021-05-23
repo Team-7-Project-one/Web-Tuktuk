@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Tuk-Tuk Tour</title>
-    <link rel="icon" type="image/png" href="{{asset('img/logo_web2.png')}}" />
+  <title>Tuk-Tuk Tour</title>
+    <link rel="icon" type="image/png" href="{{asset('img/logo_web.png')}}" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -62,7 +62,7 @@
             <div class="blog-entry align-self-stretch">
             <center>
             <a href="img/hotel/{{ $item->gambar1 }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-              <p class="block-20 rounded container" style="background-image: url('img/hotel/{{ $item->gambar1 }}')"> </p>
+              <p class="block-20 rounded container" style="background-image: url('img/hotel/{{ $item->gambar1 }}');"> </p>
             </a>
             </center>
               <div class="text mt-3">
