@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Tuktuk Tour - About Us</title>
+    <link rel="icon" type="image/png" href="{{asset('img/logo_web.png')}}" />
     <meta charset="utf-8" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @include('layouts.link')
@@ -79,9 +80,6 @@
             font-family: fontku;
             src: url('dafont/ChocoladineDemo.ttf');
         }
-        .col-md-4{
-          margin-bottom: 30px;
-        }
         h5 a{
           color: white;
           font-size: 30px
@@ -146,7 +144,9 @@
         <h4 class="pb-5 text-dark mt-5">Project Manager</h4>
           </center>
             </div>
+      </div>
 
+          <div class="row">
             <div class="col-md-4">
               <center>
                 <figure id="mon" class="c4-izmir c4-gradient-bottom c4-border-center animate__animated animate__flipInY animate__delay-1s">
@@ -224,7 +224,9 @@
                 <h4 class="pb-5 text-dark mt-5">Technical Writer</h4>
                   </center>
             </div>
+        </div>
 
+        <div class="row">
             <div class="col-md-4">
               <center>
                 <figure id="riz" class="c4-izmir  c4-gradient-bottom-right c4-border-ccc-3 animate__animated animate__flipInY animate__delay-1s">
@@ -280,29 +282,29 @@
             <div class="col-md-4">
               <center>
                 <figure id="onai" class="c4-izmir c4-gradient-top c4-border-left animate__animated animate__flipInY animate__delay-1s">
-          <img src="img/aboutus/onai.jpg" alt="Sample Image">
-          <h4 class="wor" id="">Onai</h4>
-          <figcaption>
-            <div class="c4-rotate-down-right c4-delay-200">
-              <h5>
-                Onai Nadapdap
-              </h5>
-            </div>
-            <div class="c4-fade-left c4-delay-600">
-              <h5>
-                11420047
-              </h5>
-            </div>
-              <div class="c4-fade-right c4-delay-800">
-              <h5>
-                <a href="mailto:nadapdaponai21@gmail.com"><i class="far fa-envelope"></i></a>&nbsp; <a href="https://api.whatsapp.com/send?phone=6285156870284"><i class="fab fa-whatsapp"></i></a>&nbsp;
-              </h5>
-            </div>
-          </figure>
+                <img src="img/aboutus/onai.jpg" alt="Sample Image">
+                <h4 class="wor" id="">Onai</h4>
+                <figcaption>
+                  <div class="c4-rotate-down-right c4-delay-200">
+                    <h5>
+                      Onai Nadapdap
+                    </h5>
+                  </div>
+                  <div class="c4-fade-left c4-delay-600">
+                    <h5>
+                      11420047
+                    </h5>
+                  </div>
+                <div class="c4-fade-right c4-delay-800">
+                  <h5>
+                    <a href="mailto:nadapdaponai21@gmail.com"><i class="far fa-envelope"></i></a>&nbsp; <a href="https://api.whatsapp.com/send?phone=6285156870284"><i class="fab fa-whatsapp"></i></a>&nbsp;
+                  </h5>
+                </div>
+               </figure>
                 <h4 class="pb-5 text-dark mt-5">Tester</h4>
-                  </center>
+              </center>
             </div>
-      </div>
+          </div>
     <br><br>
     </div>
   </div>
