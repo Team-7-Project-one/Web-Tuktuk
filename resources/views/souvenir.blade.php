@@ -107,7 +107,7 @@
 
               <div class="row container">
                 <div class="col-md-7">
-                  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                  <div id="carouselExampleIndicators{{ $item['id'] }}" class="carousel slide" data-bs-ride="carousel">
                     <div id="carbut2" class="carousel-indicators">
                       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -128,11 +128,11 @@
                         </a>
                       </div>
                     </div>
-                    <button id="carbut2"  class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <button id="carbut2"  class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators{{ $item['id'] }}" data-bs-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="visually-hidden"></span>
                     </button>
-                    <button id="carbut2" class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <button id="carbut2" class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators{{ $item['id'] }}" data-bs-slide="next">
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="visually-hidden"></span>
                     </button>
