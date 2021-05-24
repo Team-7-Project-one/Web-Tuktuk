@@ -140,7 +140,7 @@
                   <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}} &nbsp;</p>
                 </div>
                 <div class="container mx-4 areareply">
-                  <p id="usercomment" style="font-size: 1rem">{{$user->comment}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ $user->created_at }}</b></p>
+                  <p id="usercomment" style="font-size: 1rem">{{$user->comment}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></p>
                   <div class="replyform{{$user->id}}" id="balaspesan{{$user->id}}" {{--style="display: none;"--}}>
                     <form action="hotel/AddReply/" method="post" enctype="multipart/form-data">
                     @csrf
@@ -164,7 +164,7 @@
                     @if($user->id == $user2->comment_id)
                       <div class="container mt-2" style="margin-top: -10px;">
                         <h5 class="container"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}</h5>
-                        <p id="replyuser" class="ml-4" style="font-size: 1rem">{{$user2->comment}}</p>
+                        <p id="replyuser" class="ml-4" style="font-size: 1rem">{{$user2->comment}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></p>
                       </div>
                     @endif
                   @endforeach
@@ -214,13 +214,13 @@
                   <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}}</p>
                 </div>
                 <div class="container mx-4">
-                  <p id="usercomment" style="font-size: 1rem">{{$user->comment}}</p>
+                  <p id="usercomment" style="font-size: 1rem">{{$user->comment}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></p>
                   
                   @foreach ($reply as $user2)
                     @if($user->id == $user2->comment_id)
                       <div class="container mt-2" style="margin-top: -10px;">
                         <h5 class="container"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}</h5>
-                        <p id="replyuser" class="ml-4" style="font-size: 1rem">{{$user2->comment}}</p>
+                        <p id="replyuser" class="ml-4" style="font-size: 1rem">{{$user2->comment}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></p>
                       </div>
                     @endif
                   @endforeach
@@ -255,27 +255,6 @@
               <div class="slider-item" style="background-image: url(img/hotel/{{ $item['gambar2'] }}); border-radius: 10px;"></div>
               <div class="slider-item" style="background-image: url(img/hotel/{{ $item['gambar3'] }}); border-radius: 10px;"></div>
             </section>
-            <!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/hotel/{{$item['gambar1']}}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/hotel/{{$item['gambar2']}}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/hotel/{{$item['gambar3']}}" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div> -->
           </div>
             
           <div class="container">

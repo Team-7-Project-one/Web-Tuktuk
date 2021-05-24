@@ -185,7 +185,7 @@
                   <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}}</p>
                 </div>
                 <div class="container mx-4">
-                  <p id="usercomment" style="font-size: 1rem">{{$user->comment}}</p>
+                  <p id="usercomment" style="font-size: 1rem">{{$user->comment}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></p>
 
                 <div class="replyform{{$user->id}}">
                   <form action="event/AddReply/" method="post" enctype="multipart/form-data">
@@ -208,7 +208,7 @@
                   @foreach ($reply as $user2)
                     @if($user->id == $user2->comment_id)
                       <div class="container mt-2" style="margin-top: -10px;">
-                        <h5 class="container" style="color: white"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}</h5>
+                        <h5 class="container" style="color: white"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></h5>
                         <p id="replyuser" class="ml-4" style="color: white;">{{$user2->comment}}</p>
                       </div>
                     @endif
@@ -256,7 +256,7 @@
               @foreach($comment as $user)
                 <div class="col-md-8">
                   <br />
-                  <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}}</p>
+                  <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></p>
                 </div>
                 <div class="container mx-4">
                   <p id="usercomment">{{$user->comment}}</p>
@@ -267,7 +267,7 @@
                     @if($user->id == $user2->comment_id)
                       <div class="container mt-5" style="margin-top: -10px;">
                         <h5 class="container" style="color:white"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}</h5>
-                        <p id="replyuser" style="color:white" class="ml-4">{{$user2->comment}}</p>
+                        <p id="replyuser" style="color:white" class="ml-4">{{$user2->comment}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></p>
                       </div>
                     @endif
                   @endforeach
