@@ -38,17 +38,17 @@ Route::get('/event', [EventController::class, 'index'])->name('event');
 // Route::get('/event', 'EventController@index')->name('event');
 
 
-Route::post('hotel/AddComment', 'HotelController@store');
-Route::post('hotel/AddReply', 'HotelController@storeReply');
+Route::post('/hotel/AddComment', 'HotelController@store');
+Route::post('/hotel/AddReply', 'HotelController@storeReply');
 
-Route::post('souvenir/AddComment', 'SouvenirController@store');
-Route::post('souvenir/AddReply', 'SouvenirController@storeReply');
+Route::post('/souvenir/AddComment', 'SouvenirController@store');
+Route::post('/souvenir/AddReply', 'SouvenirController@storeReply');
 
-Route::post('event/AddComment', 'EventController@store');
-Route::post('event/AddReply', 'EventController@storeReply');
+Route::post('/event/AddComment', 'EventController@store');
+Route::post('/event/AddReply', 'EventController@storeReply');
 
 Route::get('auth/google',[App\Http\Controllers\GoogleController::class,'redirectToGoogle'])->name('google.login');
 
 Route::get('/aboutus', function () {
-    return view('aboutus');
+    return view('/aboutus');
 });

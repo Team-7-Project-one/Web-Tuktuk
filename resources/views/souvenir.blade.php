@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Tuk-Tuk Tour</title>
-    <link rel="icon" type="image/png" href="{{asset('img/logo_web2.png')}}" />
+  <title>Tuk-Tuk Tour</title>
+    <link rel="icon" type="image/png" href="{{asset('img/logo_web.png')}}" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
@@ -244,7 +244,8 @@
                 </center>
               </div>
               <div class="col-md-9 mt-2">
-                <form action="souvenir/AddComment" enctype="multipart/form-data" method="post">
+                <form action="/souvenir/AddComment" enctype="multipart/form-data" method="post">
+                {{ method_field('POST') }}
                 @csrf
                     <input type="hidden" name="nama" class="form-control" value="{{Auth::user()->name}}">
                   <div class="form-group">
@@ -264,13 +265,14 @@
               @foreach($comment as $user)
                 <div class="col-md-8">
                   <br />
-                  <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}}</p>
+                  <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></p>
                 </div>
                 <div class="container mx-4">
                   <p id="usercomment">{{$user->comment}}</p>
 
                   <div class="replyform{{$user->id}}">
-                    <form action="souvenir/AddReply/" method="post" enctype="multipart/form-data">
+                    <form action="/souvenir/AddReply/" method="post" enctype="multipart/form-data">
+                    {{ method_field('POST') }}
                     @csrf
                     <div class="form-group pb-4">
                       <input type="hidden" name="nama" class="form-control" value="{{Auth::user()->name}}">
@@ -289,8 +291,8 @@
                   
                   @foreach ($reply as $user2)
                     @if($user->id == $user2->comment_id)
-                      <div class="container mt-5" style="margin-top: -10px;">
-                        <h5 class="container"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}</h5>
+                      <div class="container mt-2" style="margin-top: -10px;">
+                        <h5 class="container"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></h5>
                         <p id="replyuser" class="ml-4">{{$user2->comment}}</p>
                       </div>
                     @endif
@@ -341,7 +343,7 @@
                   <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}}</p>
                 </div>
                 <div class="container mx-4">
-                  <p id="usercomment">{{$user->comment}}</p>
+                  <p id="usercomment">{{$user->comment}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></p>
                   <div class="replyform">
 
                   
@@ -349,7 +351,7 @@
                     @if($user->id == $user2->comment_id)
                       <div class="container mt-2" style="margin-top: -10px;">
                         <h5 class="container"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}</h5>
-                        <p id="replyuser" class="ml-4">{{$user2->comment}}</p>
+                        <p id="replyuser" class="ml-4">{{$user2->comment}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></p>
                       </div>
                     @endif
                   @endforeach

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Tuk-Tuk Tour</title>
-    <link rel="icon" type="image/png" href="{{asset('img/logo_web2.png')}}" />
+    <link rel="icon" type="image/png" href="{{asset('img/logo_web.png')}}" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700&display=swap" rel="stylesheet" />
@@ -473,6 +473,7 @@
             <div class="col-md-5 order-md-last d-flex">
               <img src="img/bupati.png" alt="" style="width: auto; max-width: 100%; height: auto"/>
             </div>
+
             <div class="col-md-7 wrap-about pb-md-3 ftco-animate pr-md-5 pb-md-5 pt-md-4 px-5">
               <div class="heading-section mb-4 my-5 my-md-0">
                 <span class="subheading">About Samosir</span>
@@ -487,7 +488,6 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ECF0F1" fill-opacity="1" d="M0,96L48,117.3C96,139,192,181,288,181.3C384,181,480,139,576,106.7C672,75,768,53,864,58.7C960,64,1056,96,1152,117.3C1248,139,1344,149,1392,154.7L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
     </section>
 
-    <section class="testimony-section" style="font-weight: bold">
       <div class="container">
         <div class="row no-gutters ftco-animate justify-content-center">
           <div class="col-md-12 py-5 pl-md-7 px-5 mt-5">            
@@ -498,29 +498,29 @@
                 <h2 class="mb-0">Samosir, Sumatera Utara</h2>
               </div>
 
+              
               <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
+                <div class="carousel-inner" style="width: 75vw;">
                   <div class="carousel-item active">
-                    <div class="card p-3">
+                    <div class="card p-2">
                       <div class="row ">
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                           <img class="d-block w-100 border shadow p-3 mb-5 bg-body rounded mt-5" src="img/samosir2.jpg" style="width: auto; max-width: 100%; height: auto; border-radius: 10px" alt="" />
                         </div>
-                        <div class="col-md-6" style="margin-top: 1%;"><br>
+                        <div class="col-md-7"><br>
                           <center><h3 class="text-dark container">History and Origins</h3></center>
                         <p style="text-align:justify;" class="container">Toba people (commonly call as "Batak") are the most numerous of the Batak people of North Sumatra, Indonesia. The Toba people are found in Toba Samosir Regency, Humbang Hasundutan Regency, Samosir Regency, North Tapanuli Regency, part of Dairi Regency, Central Tapanuli Regency, Sibolga and Its surrounding regions. The Batak Toba people speak in the Toba Batak language and are centered on Lake Toba and Samosir Island within the lake. Batak Toba people frequently build in traditional Batak architecture styles which are common on Samosir. Cultural demonstrations, performances and festivities such as Sigale Gale are often held for tourists.</p>
                         </div>
-
                       </div>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <div class="card p-3">
+                    <div class="card p-2">
                       <div class="row ">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                           <img class="d-block w-100 border shadow p-3 mb-5 bg-body rounded mt-5" src="img/kkultur.jpg" alt="" style="width: auto; max-width: 100%; height: auto; border-radius: 10px"/>
                         </div>
-                        <div class="col-md-6" style="margin-top: 15%;"><br>
+                        <div class="col-md-8 mt-5"><br>
                           <center><h3 class="text-warning container">Culture</h3></center>
                           <p style="text-align:justify;" class="container">The Toba people practices a distinct culture. It is not a must for Toba people to live in Toba region, although their origin is from Toba. Just as it is with other ethnicities, the Toba people have also migrated to other places to look for better life. For example, majority of the Silindung natives are the Hutabarat, Panggabean, Simorangkir, Hutagalung, Hutapea and Lumbantobing clans. It is certain that the Toba people as a distinct culture can be found beyond the boundaries of their geographical origins.</p>
                         </div>
@@ -528,12 +528,12 @@
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <div class="card p-3">
+                    <div class="card p-2">
                       <div class="row ">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                           <img class="d-block w-100 border shadow p-3 mb-5 bg-body rounded mt-5" src="img/pemkab.jpg" alt="" style="width: auto; max-width: 100%; height: auto; border-radius: 10px"/>
                         </div>
-                        <div class="col-md-6" style="margin-top: 15%;"><br>
+                        <div class="col-md-8 mt-4"><br>
                           <center><h3 class="text-danger container">District</h3></center>
                           <p style="text-align:justify;" class="container">Samosir, or Samosir Island, is a large volcanic island in Lake Toba, located in the north of the island of Sumatra in Indonesia. Administratively, Samosir Island is governed as six of the nine districts within Samosir Regency. Samosir is a popular tourist destination due to its exotic history and the vistas it offers. The tourist resorts are concentrated in the Tuktuk area.</p>
                         </div>
@@ -541,12 +541,12 @@
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <div class="card p-3">
+                    <div class="card p-2">
                       <div class="row ">
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                           <img class="d-block w-100 border shadow p-3 mb-5 bg-body rounded mt-5" src="img/toba.jpg" alt="" style="width: auto; max-width: 100%; height: auto; border-radius: 10px"/>
                         </div>
-                        <div class="col-md-6" style="margin-top: 8%;"><br>
+                        <div class="col-md-7 mt-3"><br>
                           <center><h3 style="color: #3498DB;" class="container">Lake Toba</h3></center>
                         <p style="text-align:justify;" class="container">Lake Toba (Indonesian: Danau Toba) is a large natural lake in North Sumatra, Indonesia, occupying the caldera of a supervolcano. The lake is located in the middle of the northern part of the island of Sumatra. The Origin of Lake Toba is a folk story about the lake, in which once upon a time, there was a fisherman who caught a golden fish. Samosir Island is believed to be the golden fish's son.</p>
                         </div>
@@ -554,12 +554,12 @@
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <div class="card p-3">
+                    <div class="card p-2">
                       <div class="row ">
-                        <div class="col-md-6">
+                        <div class="col-md-5 mt-5">
                           <img class="d-block w-100 border shadow p-3 mb-5 bg-body rounded mt-2" src="img/alam.jpg" alt="" style="width: auto; max-width: 100%; height: auto; border-radius: 10px"/>
                         </div>
-                        <div class="col-md-6" style="margin-top: 1%;"><br>
+                        <div class="col-md-7 "><br>
                           <center><h3 class="text-success container">Nature</h3></center>
                         <p style="text-align:justify;" class="container">Tuk Tuk is an area that full of exotic landscapes. From this place anyway, you can enjoy the beauty of Lake Toba that is so magical. The place is become the center of tourists who want to spend the night in Samosir. There are numbers of hotels and villas that can be your best deal to stay. There are also several coffee shop that provide internet facilities for your business important. As a tourist destination village, in addition to its natural scenery, Tuk Tuk is also known for rich Batak culture.</p>
                         </div>

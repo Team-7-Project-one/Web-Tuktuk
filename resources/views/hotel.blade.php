@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Tuk-Tuk Tour</title>
-    <link rel="icon" type="image/png" href="{{asset('img/logo_web2.png')}}" />
+  <title>Tuk-Tuk Tour</title>
+    <link rel="icon" type="image/png" href="{{asset('img/logo_web.png')}}" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -62,7 +62,7 @@
             <div class="blog-entry align-self-stretch">
             <center>
             <a href="img/hotel/{{ $item->gambar1 }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-              <p class="block-20 rounded container" style="background-image: url('img/hotel/{{ $item->gambar1 }}')"> </p>
+              <p class="block-20 rounded container" style="background-image: url('img/hotel/{{ $item->gambar1 }}');"> </p>
             </a>
             </center>
               <div class="text mt-3">
@@ -117,7 +117,8 @@
                 </center>
               </div>
               <div class="col-md-9 mt-2">
-                <form action="hotel/AddComment" enctype="multipart/form-data" method="post">
+                <form action="/hotel/AddComment" enctype="multipart/form-data" method="post">
+                {{ method_field('POST') }}
                 @csrf
                     <input type="hidden" name="nama" class="form-control" value="{{Auth::user()->name}}">
                   <div class="form-group">
@@ -135,34 +136,37 @@
           <div class="user-comment container col-md-10">
             <div class="message row container pb-4">
               @foreach($comment as $user)
-                <div class="col-md-8">
+                <div class="col-md-8 fw-bold">
                   <br />
-                  <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}} &nbsp;</p>
+                  <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}} <b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></p>
                 </div>
                 <div class="container mx-4 areareply">
-                  <p id="usercomment" style="font-size: 1rem">{{$user->comment}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ $user->created_at }}</b></p>
-                  <div class="replyform{{$user->id}}" id="balaspesan{{$user->id}}" {{--style="display: none;"--}}>
-                    <form action="hotel/AddReply/" method="post" enctype="multipart/form-data">
-                    @csrf
-                    <div class="form-group pb-4">
-                      <input type="hidden" name="nama" class="form-control" value="{{Auth::user()->name}}">
-                      <input type="hidden" name="comment_id" value="{{ $user->id }}">
-                      <label for="comment">Comment : </label>
-                      <textarea type="text" name="comment" class="form-control" placeholder="Tuliskan Pesan Anda Disini...." required></textarea>
-                    </div>
-                    <div class="button">
-                          <button  type="submit" id="balas" class="btn btn-primary btn-sm">Balas</button>
-                          <button type="reset" id="reset" class="btn btn-warning btn-sm">Reset</button>
-                    </div>
+                  <p id="usercomment" style="font-size: 1rem">{{$user->comment}}</p>
+                  <div class="replyform{{$user->id}}" id="balaspesan{{$user->id}}">
+                    <form action="/hotel/AddReply/" method="post" enctype="multipart/form-data">
+                    {{ method_field('POST') }}
+                      @csrf
+                      <div class="form-group pb-4">
+                        <input type="hidden" name="nama" class="form-control" value="{{Auth::user()->name}}">
+                        <input type="hidden" name="comment_id" value="{{ $user->id }}">
+                        <label for="comment">Comment : </label>
+                        <textarea type="text" name="comment" class="form-control" placeholder="Tuliskan Pesan Anda Disini...." required></textarea>
+                      </div>
+
+                      <div class="button">
+                        <button  type="submit" id="balas" class="btn btn-primary btn-sm">Balas</button>
+                        <button type="reset" id="reset" class="btn btn-warning btn-sm">Reset</button>
+                      </div>
                   </form> 
                 </div>
-                <h6 id="reply-message{{ $user->id }}" onclick="myFunction()" class="container text-secondary btn btn reply"><i class="fas fa-reply-all"></i> Balas</h6>
+
+                <h6 id="reply-message{{ $user->id }}" onclick="myFunction()" class="container text-secondary btn btn"><i class="fas fa-reply-all"></i> Balas</h6>
 
                   
                   @foreach ($reply as $user2)
                     @if($user->id == $user2->comment_id)
                       <div class="container mt-2" style="margin-top: -10px;">
-                        <h5 class="container"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}</h5>
+                        <h5 class="container"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></h5>
                         <p id="replyuser" class="ml-4" style="font-size: 1rem">{{$user2->comment}}</p>
                       </div>
                     @endif
@@ -210,7 +214,7 @@
               @foreach($comment as $user)
                 <div class="col-md-8">
                   <br />
-                  <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}}</p>
+                  <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></p>
                 </div>
                 <div class="container mx-4">
                   <p id="usercomment" style="font-size: 1rem">{{$user->comment}}</p>
@@ -218,7 +222,7 @@
                   @foreach ($reply as $user2)
                     @if($user->id == $user2->comment_id)
                       <div class="container mt-2" style="margin-top: -10px;">
-                        <h5 class="container"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}</h5>
+                        <h5 class="container"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></h5>
                         <p id="replyuser" class="ml-4" style="font-size: 1rem">{{$user2->comment}}</p>
                       </div>
                     @endif
@@ -240,6 +244,7 @@
 @foreach ($data as $item)  
 <!-- Modal hotel -->
 <div class="modal fade" id="abc{{ $item['id'] }}"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-body">
@@ -296,6 +301,7 @@
       </div>
     </div>
   </div>
+  
 </div>
 @endforeach
 
@@ -329,16 +335,18 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
-    {{-- <script type="text/javascript">
-      function myFunction() {
-      var x = document.getElementById('balaspesan[$user->id]');
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
-    }
-    </script> --}}
+    @foreach ($comment as $user)
+    <script>
+      $(document).ready(function () {
+        $('.replyform{{$user->id}}').hide();
+
+        $('#reply-message{{$user->id}}').click(function () {
+          $('.replyform{{$user->id}}').slideToggle();
+        });
+      });
+      
+    </script>
+    @endforeach
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 
