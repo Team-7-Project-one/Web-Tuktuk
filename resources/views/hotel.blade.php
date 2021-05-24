@@ -117,7 +117,8 @@
                 </center>
               </div>
               <div class="col-md-9 mt-2">
-                <form action="hotel/AddComment" enctype="multipart/form-data" method="post">
+                <form action="/hotel/AddComment" enctype="multipart/form-data" method="post">
+                {{ method_field('POST') }}
                 @csrf
                     <input type="hidden" name="nama" class="form-control" value="{{Auth::user()->name}}">
                   <div class="form-group">
@@ -135,25 +136,27 @@
           <div class="user-comment container col-md-10">
             <div class="message row container pb-4">
               @foreach($comment as $user)
-                <div class="col-md-8">
+                <div class="col-md-8 fw-bold">
                   <br />
-                  <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}} &nbsp;</p>
+                  <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}} <b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></p>
                 </div>
                 <div class="container mx-4 areareply">
-                  <p id="usercomment" style="font-size: 1rem">{{$user->comment}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></p>
-                  <div class="replyform{{$user->id}}" id="balaspesan{{$user->id}}" {{--style="display: none;"--}}>
-                    <form action="hotel/AddReply/" method="post" enctype="multipart/form-data">
-                    @csrf
-                    <div class="form-group pb-4">
-                      <input type="hidden" name="nama" class="form-control" value="{{Auth::user()->name}}">
-                      <input type="hidden" name="comment_id" value="{{ $user->id }}">
-                      <label for="comment">Comment : </label>
-                      <textarea type="text" name="comment" class="form-control" placeholder="Tuliskan Pesan Anda Disini...." required></textarea>
-                    </div>
-                    <div class="button">
-                          <button  type="submit" id="balas" class="btn btn-primary btn-sm">Balas</button>
-                          <button type="reset" id="reset" class="btn btn-warning btn-sm">Reset</button>
-                    </div>
+                  <p id="usercomment" style="font-size: 1rem">{{$user->comment}}</p>
+                  <div class="replyform{{$user->id}}" id="balaspesan{{$user->id}}">
+                    <form action="/hotel/AddReply/" method="post" enctype="multipart/form-data">
+                    {{ method_field('POST') }}
+                      @csrf
+                      <div class="form-group pb-4">
+                        <input type="hidden" name="nama" class="form-control" value="{{Auth::user()->name}}">
+                        <input type="hidden" name="comment_id" value="{{ $user->id }}">
+                        <label for="comment">Comment : </label>
+                        <textarea type="text" name="comment" class="form-control" placeholder="Tuliskan Pesan Anda Disini...." required></textarea>
+                      </div>
+
+                      <div class="button">
+                        <button  type="submit" id="balas" class="btn btn-primary btn-sm">Balas</button>
+                        <button type="reset" id="reset" class="btn btn-warning btn-sm">Reset</button>
+                      </div>
                   </form> 
                 </div>
 
@@ -163,8 +166,8 @@
                   @foreach ($reply as $user2)
                     @if($user->id == $user2->comment_id)
                       <div class="container mt-2" style="margin-top: -10px;">
-                        <h5 class="container"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}</h5>
-                        <p id="replyuser" class="ml-4" style="font-size: 1rem">{{$user2->comment}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></p>
+                        <h5 class="container"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></h5>
+                        <p id="replyuser" class="ml-4" style="font-size: 1rem">{{$user2->comment}}</p>
                       </div>
                     @endif
                   @endforeach
@@ -211,16 +214,16 @@
               @foreach($comment as $user)
                 <div class="col-md-8">
                   <br />
-                  <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}}</p>
+                  <p id="userimg"><img src="img/user.png" class="rounded-circle" style="width: 30px; height: 30px" alt="" />&nbsp;{{$user->name}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></p>
                 </div>
                 <div class="container mx-4">
-                  <p id="usercomment" style="font-size: 1rem">{{$user->comment}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></p>
+                  <p id="usercomment" style="font-size: 1rem">{{$user->comment}}</p>
                   
                   @foreach ($reply as $user2)
                     @if($user->id == $user2->comment_id)
                       <div class="container mt-2" style="margin-top: -10px;">
-                        <h5 class="container"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}</h5>
-                        <p id="replyuser" class="ml-4" style="font-size: 1rem">{{$user2->comment}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></p>
+                        <h5 class="container"><img src="img/user.png" style="width: 25px; height: 25px" alt="" />&nbsp;{{$user2->name}}<b style="font-size: 10px; margin-left: 50px;"><i class="far fa-calendar-alt"></i> &nbsp;{{ Carbon\Carbon::parse($user->created_at)->diffForHumans()}} </b></h5>
+                        <p id="replyuser" class="ml-4" style="font-size: 1rem">{{$user2->comment}}</p>
                       </div>
                     @endif
                   @endforeach
