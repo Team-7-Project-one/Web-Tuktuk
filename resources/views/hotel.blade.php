@@ -241,6 +241,7 @@
 @foreach ($data as $item)  
 <!-- Modal hotel -->
 <div class="modal fade" id="abc{{ $item['id'] }}"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-body">
@@ -254,6 +255,27 @@
               <div class="slider-item" style="background-image: url(img/hotel/{{ $item['gambar2'] }}); border-radius: 10px;"></div>
               <div class="slider-item" style="background-image: url(img/hotel/{{ $item['gambar3'] }}); border-radius: 10px;"></div>
             </section>
+            <!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/hotel/{{$item['gambar1']}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/hotel/{{$item['gambar2']}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/hotel/{{$item['gambar3']}}" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div> -->
           </div>
             
           <div class="container">
@@ -297,6 +319,7 @@
       </div>
     </div>
   </div>
+  
 </div>
 @endforeach
 

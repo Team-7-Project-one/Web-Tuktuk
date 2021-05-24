@@ -181,6 +181,7 @@
             <div class="col-md-5 order-md-last d-flex">
               <img src="img/bupati.png" alt="" style="width: auto; max-width: 100%; height: auto"/>
             </div>
+
             <div class="col-md-7 wrap-about pb-md-3 ftco-animate pr-md-5 pb-md-5 pt-md-4 px-5">
               <div class="heading-section mb-4 my-5 my-md-0">
                 <span class="subheading">About Samosir</span>
@@ -205,24 +206,24 @@
                 <h2 class="mb-0">Samosir, Sumatera Utara</h2>
               </div>
 
+              
               <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
+                <div class="carousel-inner" style="width: 75vw;">
                   <div class="carousel-item active">
-                    <div class="card p-1">
+                    <div class="card p-2">
                       <div class="row ">
                         <div class="col-md-5">
-                          <img class="d-block w-100 border shadow p-3 bg-body rounded mt-5" src="img/samosir2.jpg" style="width: auto; max-width: 100%; height: auto; border-radius: 10px" alt="" />
+                          <img class="d-block w-100 border shadow p-3 mb-5 bg-body rounded mt-5" src="img/samosir2.jpg" style="width: auto; max-width: 100%; height: auto; border-radius: 10px" alt="" />
                         </div>
                         <div class="col-md-7"><br>
                           <center><h3 class="text-dark container">History and Origins</h3></center>
                         <p style="text-align:justify;" class="container">Toba people (commonly call as "Batak") are the most numerous of the Batak people of North Sumatra, Indonesia. The Toba people are found in Toba Samosir Regency, Humbang Hasundutan Regency, Samosir Regency, North Tapanuli Regency, part of Dairi Regency, Central Tapanuli Regency, Sibolga and Its surrounding regions. The Batak Toba people speak in the Toba Batak language and are centered on Lake Toba and Samosir Island within the lake. Batak Toba people frequently build in traditional Batak architecture styles which are common on Samosir. Cultural demonstrations, performances and festivities such as Sigale Gale are often held for tourists.</p>
                         </div>
-
                       </div>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <div class="card p-1">
+                    <div class="card p-2">
                       <div class="row ">
                         <div class="col-md-4">
                           <img class="d-block w-100 border shadow p-3 mb-5 bg-body rounded mt-5" src="img/kkultur.jpg" alt="" style="width: auto; max-width: 100%; height: auto; border-radius: 10px"/>
@@ -235,7 +236,7 @@
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <div class="card p-1">
+                    <div class="card p-2">
                       <div class="row ">
                         <div class="col-md-4">
                           <img class="d-block w-100 border shadow p-3 mb-5 bg-body rounded mt-5" src="img/pemkab.jpg" alt="" style="width: auto; max-width: 100%; height: auto; border-radius: 10px"/>
@@ -248,7 +249,7 @@
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <div class="card p-1">
+                    <div class="card p-2">
                       <div class="row ">
                         <div class="col-md-5">
                           <img class="d-block w-100 border shadow p-3 mb-5 bg-body rounded mt-5" src="img/toba.jpg" alt="" style="width: auto; max-width: 100%; height: auto; border-radius: 10px"/>
@@ -261,7 +262,7 @@
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <div class="card p-1">
+                    <div class="card p-2">
                       <div class="row ">
                         <div class="col-md-5 mt-5">
                           <img class="d-block w-100 border shadow p-3 mb-5 bg-body rounded mt-2" src="img/alam.jpg" alt="" style="width: auto; max-width: 100%; height: auto; border-radius: 10px"/>
