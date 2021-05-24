@@ -9,27 +9,31 @@
         <li class="nav-item"><a href="/souvenir" class="nav-link" style="font-size: 1rem">Souvenir</a></li>
         <li class="nav-item"><a href="/event" class="nav-link" style="font-size: 1rem">Event</a></li>
         <li class="nav-item"><a href="/aboutus" class="nav-link" style="font-size: 1rem">About Us</a></li>
-        <li class="nav-item" style="font-size: 1rem; cursor:pointer">
+        <li class="nav-item dropdown">
         @if(Auth::user())
-          <a href="" class="nav-link"><i class="fas fa-user"></i>&nbsp; {{Auth::user()->username}}
+          <a href="" style="font-size: 1rem" class="nav-link bg-transparent dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user"></i>&nbsp; {{Auth::user()->username}}
+          </a>
+          @if (Auth::user())
+            <ul style="border: 1px solid red; margin-top: -20px;" class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+              <li class="">
+                <a class="dropdown-item text-danger" {{--style="background-color: red; transform: scale(0.5); font-size: 25px; border-radius: 40px; margin-top: -6%;"--}}  href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                              document.getElementById('logout-form').submit();">
+                <i class="fas fa-power-off"></i> {{ __('Logout') }}
+              </a>
+              </li>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
+            </ul>
+      </li>
+        @endif
+          <li class="nav-item" style="font-size: 1rem; cursor:pointer">
         @else
           <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="nav-link"><i class="fas fa-user"></i>&nbsp;Login
         @endif
       </a></li>
-      @if (Auth::user())
-      <li class="nav-item fw-bold" style="font-size: 1rem">
-        <a class="btn btn-sm nav-link" style="background-color: red; transform: scale(0.5); font-size: 25px; border-radius: 40px; margin-top: -6%;"  href="{{ route('logout') }}"
-        onclick="event.preventDefault();
-                      document.getElementById('logout-form').submit();">
-         <i class="fas fa-power-off"></i> {{ __('Logout') }}
-      </a>
-      </li>
-     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-         @csrf
-     </form>
-      @endif
       </ul>
-    </div>
-  </div>
 </nav>
 <!-- END nav -->

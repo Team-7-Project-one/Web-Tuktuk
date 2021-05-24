@@ -167,6 +167,298 @@
         <p style="text-align: center">
         Tuk Tuk is an area that full of exotic landscapes. From this place anyway, you can enjoy the beauty of Lake Toba that is so magical. The place is become the center of tourists who want to spend the night in Samosir. There are numbers of hotels and villas that can be your best deal to stay. There are also several coffee shop that provide internet facilities for your business important. As a tourist destination village, in addition to its natural scenery, Tuk Tuk is also known for rich Batak culture. Therefore, when you took a visit to Tuk Tuk, you do not need to worry because there are plenty of attractions that will make your vacation more memorable.
         </p>
+        <center>
+          <style>
+                .btn-about {
+                background-color: #292D3E;
+                border-radius: 4px;
+                padding: 15px;
+                cursor: pointer; 
+                transition: all 0.2s ease-in-out;
+                font-weight: bolder;
+                border-radius: 50px;
+                }
+                .btn-about:hover {
+                animation: swing 1s ease;
+                animation-iteration-count: 1;
+                }
+                @keyframes swing {
+                15% {
+                transform: translateX(5px);
+                }
+                30% {
+                transform: translateX(-5px);
+                }
+                50% {
+                transform: translateX(3px);
+                }
+                65% {
+                transform: translateX(-3px);
+                }
+                80% {
+                transform: translateX(2px);
+                }
+                100% {
+                transform: translateX(0);
+                }
+                }
+          </style>
+        <button  type="button" class="btn btn-primary btn-about" data-bs-toggle="modal" data-bs-target="#modalabout">
+          More about Tuk-tuk
+        </button>
+        </center>
+
+
+<!-- Modal about tuktuk-->
+<div class="modal fade" id="modalabout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container col-8">
+        <h2 class="text-center">About Tuk-tuk Siadong</h2>
+          <img class="container" src="img/aboutuktuk.jpg" alt="" style="">
+        </div>
+        {{-- <div class="container">
+          Secara Administratif Kelurahan Tuktuk Siadong termasuk ke dalam Kecamatan Simanindo Kabupaten Samosir dengan batas-batas wilayah terdiri dari: 1. Sebelah Timur berbatasan dengan Danau Toba 2. Sebelah Selatan berbatasan dengan Danau Toba 3. Sebelah Barat berbatasan dengan Desa Garoga 4. Sebelah Utara berbatasan dengan Desa Sialagan Kelurahan Tuktuk Siadong terbagi atas 3 lingkungan yakni lingkungan pertama Huta Irnga, Lumban Holbung, Sibolopian, Jalan Gereja Atas, Lumban Nangka, dan Lumban Bakkara. Lingkungan Dua terdiri dari Jalan Gereja Bawah, Pandan, Lumban Manurung dan Kompleks Ambaroba. Lingkungan Tiga terdiri dari Tuktuk Pulo, Sosor Galung, dan Lumban Bakara. Kelurahan Tuktuk Siadong berada pada ketinggian 904 - 2.157 m diatas permukaan laut. Suhu rata-ratanya berkisar antara 18°- 24°C dan luas daratan Kelurahan Tuktuk Siadong 340 Ha dan luas perairan danau adalah 410 Ha Ketika kita pertama kali masuk ke Kelurahan Tuktuk Siadong maka akan disambut dengan gapura besar yang bermotif gorga dan bentang alam yang indah. Sebelah kanan Tuktuk Siadong langsung berbatasan dengan Danau Toba, jalanannya sedikit mendaki dan berbelok-belok ketika memasuki kelurahan ini. Setelah itu kita Universitas Sumatera Utara 35 langsung disuguhkan tempat-tempat penginapan, tempat penjual souvenir, restoran, rental sepeda dan sepeda motor pokonya khas tempat pariwisata.
+        </div> --}}
+        <br><br>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <b class="container">Gambaran Umum Kelurahan Tuktuk Siadong</b> 
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body" style="text-align: justify;">
+                <strong>Gambaran Umum :</strong><br> Secara Administratif Kelurahan Tuktuk Siadong termasuk ke dalam Kecamatan Simanindo Kabupaten Samosir dengan batas-batas wilayah terdiri dari: 1. Sebelah Timur berbatasan dengan Danau Toba 2. Sebelah Selatan berbatasan dengan Danau Toba 3. Sebelah Barat berbatasan dengan Desa Garoga 4. Sebelah Utara berbatasan dengan Desa Sialagan Kelurahan Tuktuk Siadong terbagi atas 3 lingkungan yakni lingkungan pertama Huta Irnga, Lumban Holbung, Sibolopian, Jalan Gereja Atas, Lumban Nangka, dan Lumban Bakkara. Lingkungan Dua terdiri dari Jalan Gereja Bawah, Pandan, Lumban Manurung dan Kompleks Ambaroba. Lingkungan Tiga terdiri dari Tuktuk Pulo, Sosor Galung, dan Lumban Bakara. Kelurahan Tuktuk Siadong berada pada ketinggian 904 - 2.157 m diatas permukaan laut. Suhu rata-ratanya berkisar antara 18°- 24°C dan luas daratan Kelurahan Tuktuk Siadong 340 Ha dan luas perairan danau adalah 410 Ha Ketika kita pertama kali masuk ke Kelurahan Tuktuk Siadong maka akan disambut dengan gapura besar yang bermotif gorga dan bentang alam yang indah. Sebelah kanan Tuktuk Siadong langsung berbatasan dengan Danau Toba, jalanannya sedikit mendaki dan berbelok-belok ketika memasuki kelurahan ini. Setelah itu kita Universitas Sumatera Utara 35 langsung disuguhkan tempat-tempat penginapan, tempat penjual souvenir, restoran, rental sepeda dan sepeda motor pokonya khas tempat pariwisata.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <b class="container">Sejarah Kelurahan Tuktuk Siadong</b>
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body" style="text-align: justify;">
+                <strong>Sejarah :</strong><br> Pada dasarnya Kelurahan Tuktuk Siadong sendiri merupakan semenanjung yang berada di sebelah Timur Pulau Samosir. Kelurahan Tuktuk Siadong merupakan sebuah daerah yang semua wilayahnya terdiri dari bebatuan. Menurut masyarakat sekitar dahulunya ketika bebatuan tersebut diketuk akan menghasilkan bunyi “tuktuk” dan dari sinilah awalnya nama Tuktuk digunakan. Secara administratif nama desa Tuktuk Siadong sebelumnya adalah Tuktuk si asu. Akan tetapi tidak diketahui secara pasti, sejak tahun berapa Tuktuk Siadong menjadikan nama kelurahan. Gita Sarah Siallagan: Perkawinan Antarbangsa studi kasus perkawinan campur antara Orang Batak dengan Wisatawan Asing di Samosir, 2009 Awalnya Kelurahan Tuktuk Siadong sama dengan kelurahan-kelurahan yang ada di Samosir, akan tetapi ketika kebutuhan masyarakat untuk merileksasikan diri dari kejenuhan rutinitas menjadikan Tuktuk Siadong sebagai tempat wisata. Hal ini disebabkan bentang alam Tuktuk Siadong yang merupakan dataran tinggi, sehingga memberikan pemandangan seperti lukisan yang indah. Lambat laun mereka yang berkunjung semakin banyak dan mulai mendirikan tenda tenda rekreasi ke tempat tersebut. Kemudian beberapa penduduk memprakarsai mendirikan beberapa rumah makan dan rumah persinggahan. Demikian selanjutnya Kelurahan Tuktuk Siadong Universitas Sumatera Utara 36 berkembang menjadi daerah tujuan wisata yang banyak dikunjungi oleh wisatawan baik wisatawan lokal maupun wisatawan asing.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <b class="container">Data Statistik Kelurahan Tuktuk Siadong</b>
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                
+                <div class="row">
+                  <div class="col-12">
+                    <div class="list-group list-group-horizontal-sm " id="list-tab" role="tablist">
+                      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Pemerintahan</a>
+                      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Penduduk</a>
+                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Komposisi</a>
+                      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Sarana</a>
+                    </div>
+                  </div>
+                  <div class="container mt-2">
+                    <div class="tab-content" id="nav-tabContent">
+                      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                
+                      </div>
+                      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                        <h3 class="text-center">Jumlah Penduduk</h3>
+                        <table class="table table-hover">
+                          <tr>
+                            <td><i class="fas fa-users"></i> Jumlah Penduduk</td>
+                            <td>:</td>
+                            <td>707</td>
+                          </tr>
+                          <tr>
+                            <td><i class="fas fa-user"></i> Jumlah jiwa</td>
+                            <td>:</td>
+                            <td>2499</td>
+                          </tr>
+                          <tr>
+                            <td><i class="fas fa-male"></i> &nbsp;Laki - laki</td>
+                            <td>:</td>
+                            <td>1228</td>
+                          </tr>
+                          <tr>
+                            <td><i class="fas fa-female"></i> &nbsp;Perempuan</td>
+                            <td>:</td>
+                            <td>1271</td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                        <div class="container">
+                          <h3 class="text-center">Komposisi Penduduk Berdasarkan Agama</h3>
+                        Katolik<div class="progress">
+                          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width:58%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">58%</div>&nbsp;1158&nbsp;orang
+                        </div>
+                        Kristen Protestan<div class="progress">
+                          <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 41.2%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">41.2%</div> &nbsp;823&nbsp;orang
+                        </div>Islam
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style="width: 12%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">0.8%</div> &nbsp;16&nbsp;orang
+                        </div>Hindu
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 3%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">0%</div> &nbsp;0&nbsp;orang
+                        </div>Buddha
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 3%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">0%</div> &nbsp;0&nbsp;orang
+                        </div><br>
+                      </div>
+                      <br>
+                      <h3 class="text-center">Komposisi Penduduk Berdasarkan Pekerjaan</h3>
+                      <table class="table">
+                        <tr>
+                          <tr>
+                            <th>No</th>
+                            <th>Mata Pencarian</th>
+                            <th>Jumlah (jiwa)</th>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>Petani</td>
+                            <td>291</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Buruh</td>
+                            <td>98</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Nelayan</td>
+                            <td>42</td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>Pedagang</td>
+                            <td>31</td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>Pengusaha</td>
+                            <td>14</td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>PNS</td>
+                            <td>34</td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>ABRI</td>
+                            <td>4</td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>Pegawai Swasta</td>
+                            <td>287</td>
+                          </tr>
+                          <tr>
+                            <td>9</td>
+                            <td>Jasa</td>
+                            <td>57</td>
+                          </tr>
+                          <tr>
+                            <td>10</td>
+                            <td>Pensiunan</td>
+                            <td>5</td>
+                          </tr>
+                      </table>
+                      </div>
+                      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                        <h3 class="text-center">Sarana Transportasi Kelurahan Tuk-tuk Siadong</h3>
+                        <table class="table">
+                          <tr>
+                            <tr>
+                              <th>No</th>
+                              <th>Sarana Transportasi</th>
+                              <th>Jumlah (Unit)</th>
+                            </tr>
+                            <tr>
+                              <td>1</td>
+                              <td>Bus Umum</td>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>Sepeda Motor</td>
+                              <td>120</td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>Kapal Umum</td>
+                              <td>20</td>
+                            </tr>
+                            <tr>
+                              <td>4</td>
+                              <td>Sampan</td>
+                              <td>16</td>
+                            </tr>
+                            <tr>
+                              <td>5</td>
+                              <td>Sepeda</td>
+                              <td>53</td>
+                            </tr>
+                          </table>
+                          <br>
+                          <h3 class="text-center">Sarana Kesehatan Kelurahan Tuk-tuk Siadong</h3>
+                        <table class="table">
+                          <tr>
+                            <tr>
+                              <th>No</th>
+                              <th>Sarana Kesehatan</th>
+                              <th>Jumlah (Unit)</th>
+                            </tr>
+                            <tr>
+                              <td>1</td>
+                              <td>Rumah Sakit</td>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>Puskesmas</td>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>Apotek</td>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <td>4</td>
+                              <td>Posyandu</td>
+                              <td>3</td>
+                            </tr>
+                          </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path

@@ -7,13 +7,13 @@
             <h2 class="ftco-heading-2">Tuktuk Tour</h2>
             <p> Tuk Tuk is an area that full of exotic landscapes. From this place anyway, you can enjoy the beauty of Lake Toba that is so magical. The place is become the center of tourists who want to spend the night in Samosir.</p>
             <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-            <li class="ftco-animate">
+            <li class="ftco-animate rounded-circle" style="background-color: #3498DB;">
                 <a href="#"><span class="icon-twitter"></span></a>
             </li>
-            <li class="ftco-animate">
+            <li class="ftco-animate rounded-circle" style="background-color: #2600fd;">
                 <a href="#"><span class="icon-facebook"></span></a>
             </li>
-            <li class="ftco-animate">
+            <li class="ftco-animate rounded-circle" style=" background: linear-gradient(to right, #cc2b5e 0%, #753a88 100%);">
                 <a href="#"><span class="icon-instagram"></span></a>
             </li>
             </ul>
