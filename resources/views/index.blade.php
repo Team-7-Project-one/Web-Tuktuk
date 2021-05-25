@@ -218,12 +218,9 @@
       </div>
       <div class="modal-body">
         <div class="container col-8">
-        <h2 class="text-center">About Tuk-tuk Siadong</h2>
-          <img class="container" src="img/aboutuktuk.jpg" alt="" style="">
+          <h2 class="text-center">About Tuk-tuk Siadong</h2>
+          <img class="container" src="img/aboutuktuk2.jpg" alt="" style="border-radius: 10px">
         </div>
-        {{-- <div class="container">
-          Secara Administratif Kelurahan Tuktuk Siadong termasuk ke dalam Kecamatan Simanindo Kabupaten Samosir dengan batas-batas wilayah terdiri dari: 1. Sebelah Timur berbatasan dengan Danau Toba 2. Sebelah Selatan berbatasan dengan Danau Toba 3. Sebelah Barat berbatasan dengan Desa Garoga 4. Sebelah Utara berbatasan dengan Desa Sialagan Kelurahan Tuktuk Siadong terbagi atas 3 lingkungan yakni lingkungan pertama Huta Irnga, Lumban Holbung, Sibolopian, Jalan Gereja Atas, Lumban Nangka, dan Lumban Bakkara. Lingkungan Dua terdiri dari Jalan Gereja Bawah, Pandan, Lumban Manurung dan Kompleks Ambaroba. Lingkungan Tiga terdiri dari Tuktuk Pulo, Sosor Galung, dan Lumban Bakara. Kelurahan Tuktuk Siadong berada pada ketinggian 904 - 2.157 m diatas permukaan laut. Suhu rata-ratanya berkisar antara 18°- 24°C dan luas daratan Kelurahan Tuktuk Siadong 340 Ha dan luas perairan danau adalah 410 Ha Ketika kita pertama kali masuk ke Kelurahan Tuktuk Siadong maka akan disambut dengan gapura besar yang bermotif gorga dan bentang alam yang indah. Sebelah kanan Tuktuk Siadong langsung berbatasan dengan Danau Toba, jalanannya sedikit mendaki dan berbelok-belok ketika memasuki kelurahan ini. Setelah itu kita Universitas Sumatera Utara 35 langsung disuguhkan tempat-tempat penginapan, tempat penjual souvenir, restoran, rental sepeda dan sepeda motor pokonya khas tempat pariwisata.
-        </div> --}}
         <br><br>
         <div class="accordion" id="accordionExample">
           <div class="accordion-item">
@@ -234,7 +231,7 @@
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
               <div class="accordion-body" style="text-align: justify;">
-                <strong>Gambaran Umum :</strong><br> Secara Administratif Kelurahan Tuktuk Siadong termasuk ke dalam Kecamatan Simanindo Kabupaten Samosir dengan batas-batas wilayah terdiri dari: 1. Sebelah Timur berbatasan dengan Danau Toba 2. Sebelah Selatan berbatasan dengan Danau Toba 3. Sebelah Barat berbatasan dengan Desa Garoga 4. Sebelah Utara berbatasan dengan Desa Sialagan Kelurahan Tuktuk Siadong terbagi atas 3 lingkungan yakni lingkungan pertama Huta Irnga, Lumban Holbung, Sibolopian, Jalan Gereja Atas, Lumban Nangka, dan Lumban Bakkara. Lingkungan Dua terdiri dari Jalan Gereja Bawah, Pandan, Lumban Manurung dan Kompleks Ambaroba. Lingkungan Tiga terdiri dari Tuktuk Pulo, Sosor Galung, dan Lumban Bakara. Kelurahan Tuktuk Siadong berada pada ketinggian 904 - 2.157 m diatas permukaan laut. Suhu rata-ratanya berkisar antara 18°- 24°C dan luas daratan Kelurahan Tuktuk Siadong 340 Ha dan luas perairan danau adalah 410 Ha Ketika kita pertama kali masuk ke Kelurahan Tuktuk Siadong maka akan disambut dengan gapura besar yang bermotif gorga dan bentang alam yang indah. Sebelah kanan Tuktuk Siadong langsung berbatasan dengan Danau Toba, jalanannya sedikit mendaki dan berbelok-belok ketika memasuki kelurahan ini. Setelah itu kita Universitas Sumatera Utara 35 langsung disuguhkan tempat-tempat penginapan, tempat penjual souvenir, restoran, rental sepeda dan sepeda motor pokonya khas tempat pariwisata.
+                <strong>Gambaran Umum :</strong><br> Secara Administratif Kelurahan Tuktuk Siadong termasuk ke dalam Kecamatan Simanindo Kabupaten Samosir dengan batas-batas wilayah terdiri dari: <br>1. Sebelah Timur berbatasan dengan Danau Toba <br>2. Sebelah Selatan berbatasan dengan Danau Toba  <br>3. Sebelah Barat berbatasan dengan Desa Garoga  <br>4. Sebelah Utara berbatasan dengan Desa Sialagan Kelurahan Tuktuk Siadong yang terbagi atas 3 lingkungan yakni lingkungan pertama, yaitu Huta Irnga, Lumban Holbung, Sibolopian, Jalan Gereja Atas, Lumban Nangka, dan Lumban Bakkara. Lingkungan Dua terdiri dari Jalan Gereja Bawah, Pandan, Lumban Manurung dan Kompleks Ambaroba. Lingkungan Tiga terdiri dari Tuktuk Pulo, Sosor Galung, dan Lumban Bakara.<br><br>Secara geografis, Kelurahan Tuktuk Siadong berada pada ketinggian 904 - 2.157 m diatas permukaan laut. Suhu rata-ratanya berkisar antara 18°- 24°C dan luas daratan Kelurahan Tuktuk Siadong 340 Ha dan luas perairan danau adalah 410 Ha Ketika kita pertama kali masuk ke Kelurahan Tuktuk Siadong maka akan disambut dengan gapura besar yang bermotif gorga dan bentang alam yang indah. Sebelah kanan Tuktuk Siadong langsung berbatasan dengan Danau Toba, jalanannya sedikit mendaki dan berbelok-belok ketika memasuki kelurahan ini. Setelah itu kita Universitas Sumatera Utara 35 langsung disuguhkan tempat-tempat penginapan, tempat penjual souvenir, restoran, rental sepeda dan sepeda motor pokonya khas tempat pariwisata.
               </div>
             </div>
           </div>
@@ -246,7 +243,7 @@
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
               <div class="accordion-body" style="text-align: justify;">
-                <strong>Sejarah :</strong><br> Pada dasarnya Kelurahan Tuktuk Siadong sendiri merupakan semenanjung yang berada di sebelah Timur Pulau Samosir. Kelurahan Tuktuk Siadong merupakan sebuah daerah yang semua wilayahnya terdiri dari bebatuan. Menurut masyarakat sekitar dahulunya ketika bebatuan tersebut diketuk akan menghasilkan bunyi “tuktuk” dan dari sinilah awalnya nama Tuktuk digunakan. Secara administratif nama desa Tuktuk Siadong sebelumnya adalah Tuktuk si asu. Akan tetapi tidak diketahui secara pasti, sejak tahun berapa Tuktuk Siadong menjadikan nama kelurahan. Gita Sarah Siallagan: Perkawinan Antarbangsa studi kasus perkawinan campur antara Orang Batak dengan Wisatawan Asing di Samosir, 2009 Awalnya Kelurahan Tuktuk Siadong sama dengan kelurahan-kelurahan yang ada di Samosir, akan tetapi ketika kebutuhan masyarakat untuk merileksasikan diri dari kejenuhan rutinitas menjadikan Tuktuk Siadong sebagai tempat wisata. Hal ini disebabkan bentang alam Tuktuk Siadong yang merupakan dataran tinggi, sehingga memberikan pemandangan seperti lukisan yang indah. Lambat laun mereka yang berkunjung semakin banyak dan mulai mendirikan tenda tenda rekreasi ke tempat tersebut. Kemudian beberapa penduduk memprakarsai mendirikan beberapa rumah makan dan rumah persinggahan. Demikian selanjutnya Kelurahan Tuktuk Siadong Universitas Sumatera Utara 36 berkembang menjadi daerah tujuan wisata yang banyak dikunjungi oleh wisatawan baik wisatawan lokal maupun wisatawan asing.
+                <strong>Sejarah :</strong><br> Pada dasarnya Kelurahan Tuktuk Siadong sendiri merupakan semenanjung yang berada di sebelah Timur Pulau Samosir. Kelurahan Tuktuk Siadong merupakan sebuah daerah yang semua wilayahnya terdiri dari bebatuan. Menurut masyarakat sekitar dahulunya ketika bebatuan tersebut diketuk akan menghasilkan bunyi “tuktuk” dan dari sinilah awalnya nama Tuktuk digunakan. Secara administratif nama desa Tuktuk Siadong sebelumnya adalah Tuktuk si asu. Akan tetapi tidak diketahui secara pasti, sejak tahun berapa Tuktuk Siadong menjadikan nama kelurahan. Awalnya Kelurahan Tuktuk Siadong sama dengan kelurahan-kelurahan yang ada di Samosir, akan tetapi ketika kebutuhan masyarakat untuk merileksasikan diri dari kejenuhan rutinitas menjadikan Tuktuk Siadong sebagai tempat wisata. Hal ini disebabkan bentang alam Tuktuk Siadong yang merupakan dataran tinggi, sehingga memberikan pemandangan seperti lukisan yang indah. Lambat laun mereka yang berkunjung semakin banyak dan mulai mendirikan tenda tenda rekreasi ke tempat tersebut. Kemudian beberapa penduduk memprakarsai mendirikan beberapa rumah makan dan rumah persinggahan. 
               </div>
             </div>
           </div>
@@ -271,8 +268,35 @@
                   <div class="container mt-2">
                     <div class="tab-content" id="nav-tabContent">
                       <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-                
+                        <table class="table table-hover">
+                          <tr>
+                            <td>Kelurahan</td>
+                            <td>:</td>
+                            <td>Tuktuk Siadong</td>
+                          </tr>
+                          <tr>
+                            <td>Kecamatan</td>
+                            <td>:</td>
+                            <td>Simanindo</td>
+                          </tr>
+                          <tr>
+                            <td>Kabupaten</td>
+                            <td>:</td>
+                            <td>Samosir</td>
+                          </tr>
+                          <tr>
+                            <td>Provinsi</td>
+                            <td>:</td>
+                            <td>Sumatera Utara</td>
+                          </tr>
+                          <tr>
+                            <td>Negara</td>
+                            <td>:</td>
+                            <td>Indonesia</td>
+                          </tr>
+                        </table>
                       </div>
+
                       <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
                         <h3 class="text-center">Jumlah Penduduk</h3>
                         <table class="table table-hover">

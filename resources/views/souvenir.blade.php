@@ -87,7 +87,7 @@
                 <h5 class="card-title mt-2">{{ $item['nama_souvenir'] }}<br></h5>
                 <b class="product-price text-warning"><i class="fas fa-tags"></i> {{ $item['harga'] }}</b>
                 <p><i class="fas fa-store text-primary"></i> {{ $item['nama_toko'] }}</p>
-                <button id="modalbtn" href="#" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#abc{{ $item['id'] }}"><i class="fas fa-info-circle"></i> Detail</button>
+                <button id="modalbtn" href="#" class="badge btn-outline-success mt-3" data-bs-toggle="modal" data-bs-target="#abc{{ $item['id'] }}"><i class="fas fa-info-circle"></i> Detail</button>
               </div>
             </div>
           </div>
@@ -271,7 +271,7 @@
                   <p id="usercomment">{{$user->comment}}</p>
 
                   <div class="replyform{{$user->id}}">
-                    <form action="/souvenir/AddReply/" method="post" enctype="multipart/form-data">
+                    <form action="/souvenir/AddReply" method="post" enctype="multipart/form-data">
                     {{ method_field('POST') }}
                     @csrf
                     <div class="form-group pb-4">

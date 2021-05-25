@@ -143,7 +143,7 @@
                 <div class="container mx-4 areareply">
                   <p id="usercomment" style="font-size: 1rem">{{$user->comment}}</p>
                   <div class="replyform{{$user->id}}" id="balaspesan{{$user->id}}">
-                    <form action="/hotel/AddReply/" method="post" enctype="multipart/form-data">
+                    <form action="/hotel/AddReply" method="post" enctype="multipart/form-data">
                     {{ method_field('POST') }}
                       @csrf
                       <div class="form-group pb-4">
