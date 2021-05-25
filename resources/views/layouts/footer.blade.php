@@ -21,7 +21,7 @@
         </div>
         <div class="col-md">
         <div class="ftco-footer-widget mb-4 ml-md-5">
-            <h2 class="ftco-heading-2">Useful Links</h2>
+            <h2 class="ftco-heading-2">Direct Links</h2>
             <ul class="list-unstyled">
             <li><a href="/hotel" class="py-2 d-block">Hotel</a></li>
             <li><a href="/souvenir" class="py-2 d-block">Souvenir</a></li>
@@ -48,7 +48,7 @@
             <ul>
                 <li><span class="icon icon-map-marker"></span><span class="text">Tuktuk Siadong, Simanindo, Samosir, North Sumatera, Indonesia 22395</span></li>
                 <li>
-                <a href="#"><span class="icon icon-phone"></span><span class="text">+6285268615405</span></a>
+                <a href="https://api.whatsapp.com/send?phone=6285268615405"><span class="icon icon-phone"></span><span class="text">+6285268615405</span></a>
                 </li>
                 <li>
                 <a href="#"><span class="icon icon-envelope"></span><span class="text">tuktuktour@gmail.com</span></a>
