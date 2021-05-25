@@ -11890,13 +11890,13 @@ textarea.form-control {
 }
 
 .ftco-bg-dark {
-  background: #3c312e;
+  background-color: #3c312e;
 }
 
 .ftco-footer {
   font-size: 16px;
   padding: 7em 0;
-  background: #1C2833 ;
+  background-color: #1C2833 ;
   position: relative;
 }
 .ftco-footer .overlay {
@@ -11907,7 +11907,7 @@ textarea.form-control {
   bottom: 0;
   content: '';
   opacity: 0.9;
-  background: #1C2833;
+  background-color: #1C2833;
 }
 .ftco-footer .ftco-footer-logo {
   text-transform: uppercase;
