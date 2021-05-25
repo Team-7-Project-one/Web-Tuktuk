@@ -6,22 +6,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
-    <link rel="stylesheet" href="css/animate.css" />
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="css/magnific-popup.css" />
-    <link rel="stylesheet" href="css/aos.css" />
-    <link rel="stylesheet" href="css/ionicons.min.css" />
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
-    <link rel="stylesheet" href="css/jquery.timepicker.css" />
+    <link rel="stylesheet" href="{{asset('css/open-iconic-bootstrap.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/animate.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/aos.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/ionicons.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/bootstrap-datepicker.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/jquery.timepicker.css')}}" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/flaticon.css" />
-    <link rel="stylesheet" href="css/icomoon.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="{{asset('css/flaticon.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/icomoon.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/style.css')}}" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
-    {{--  --}}
   </head>
   <body>
     
