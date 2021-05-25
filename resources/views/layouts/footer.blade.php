@@ -46,12 +46,14 @@
             <h2 class="ftco-heading-2">Have a Questions?</h2>
             <div class="block-23 mb-3">
             <ul>
-                <li><span class="icon icon-map-marker"></span><span class="text">Tuktuk Siadong, Simanindo, Samosir, North Sumatera, Indonesia 22395</span></li>
                 <li>
-                <a href="https://api.whatsapp.com/send?phone=6285268615405"><span class="icon icon-phone"></span><span class="text">+6285268615405</span></a>
+                    <a href="https://goo.gl/maps/ZqAhHioBZPDGicUH8"><span class="icon icon-map-marker"></span><span class="text">Tuktuk Siadong, Simanindo, Samosir, North Sumatera, Indonesia 22395</span></a>
                 </li>
                 <li>
-                <a href="#"><span class="icon icon-envelope"></span><span class="text">tuktuktour@gmail.com</span></a>
+                    <a href="https://api.whatsapp.com/send?phone=6285268615405"><span class="icon icon-phone"></span><span class="text">+6285268615405</span></a>
+                </li>
+                <li>
+                    <a href=""><span class="icon icon-envelope"></span><span class="text">tuktuktour@gmail.com</span></a>
                 </li>
             </ul>
             </div>
@@ -69,4 +71,5 @@
         </div>
     </div>
     </div>
+    <link rel="stylesheet" href="{{asset('css/style.css')}}" />
 </footer>

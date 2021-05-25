@@ -44,7 +44,6 @@ class SouvenirController extends Controller
 
     public function storeReply(Request $request)
     {
-        // $Comment = Comment::find($id);
         SouvenirReply::create([
             'name' => $request->nama,
             'comment' => $request->comment,

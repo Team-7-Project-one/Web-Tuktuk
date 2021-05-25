@@ -28,7 +28,7 @@ class EventController extends Controller
 
     public function storeReply(Request $request)
     {
-        // $Comment = Comment::find($id);
+
         EventReply::create([
             'name' => $request->nama,
             'comment' => $request->comment,

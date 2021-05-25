@@ -67,13 +67,14 @@
         </center>
         <form action="{{ route('register') }}" method="POST" class="container">
             @csrf
-            <label for="">Nama</label>
+            <label for="nama">Nama</label>
             <input id="loginput" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" autocomplete="name" autofocus placeholder="Masukkan Nama anda ...." />
             @error('name')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
+            <br />
             <label for="">Username</label>
             <input id="loginput" id="loginput" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" autocomplete="username" autofocus placeholder="Masukkan username anda ...." />
             @error('username')
