@@ -100,8 +100,10 @@
                   </div>
                 </div>
               </div>
-                <div style="margin-top: -30px;" class="container col-md-5 fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><br>
+                <div style="margin-top: -30px;" class="container col-md-5 fade show active mt-3" id="home" role="tabpanel" aria-labelledby="home-tab"><br>
+                    <center>
                     <h4 class="text-primary" style="font-weight: bold !important;">{{ $data['nama_event'] }}</h4><p style="font-style: italic; color: gray;">Event musik yang menampilkan musisi luar negeri dan lokal ini menjadi acara tahunan yang banyak ditunggu-tunggu masyarakat kawasan Danau Toba, terkhusus Kabupaten Samosir.</p>
+                    </center>
                   <table class="table">
                     <tr>
                       <td><i class="fab fa-elementor text-primary"></i> Category</td>
