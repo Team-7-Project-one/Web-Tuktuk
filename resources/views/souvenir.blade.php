@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Tuk-Tuk Tour</title>
+    <title>Tuk-Tuk Tour</title>
     <link rel="icon" type="image/png" href="{{asset('img/logo_web.png')}}" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -180,10 +180,10 @@
               </div>
               
               <div class="map-hotel container col-md-8 mt-4">
-              <center>
-                <h3>Detail Location</h3>
-                <iframe src="{{ $item['map'] }}" style="border: 5px solid; border-radius: 5px" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="responsive-iframe"></iframe>
-              </center>
+                <center>
+                  <h3>Detail Location</h3>
+                  <iframe src="{{ $item['map'] }}" style="border: 5px solid; border-radius: 5px" width="600" height="450" allowfullscreen="" loading="lazy" class="responsive-iframe"></iframe>
+                </center>
               </div
             </div>
           </div>
