@@ -7,14 +7,14 @@
             <h2 class="ftco-heading-2">Tuktuk Tour</h2>
             <p> Tuk Tuk is an area that full of exotic landscapes. From this place anyway, you can enjoy the beauty of Lake Toba that is so magical. The place is become the center of tourists who want to spend the night in Samosir.</p>
             <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-            <li class="ftco-animate rounded-circle" style="background-color: #3498DB;">
-                <a href="#"><span class="icon-twitter"></span></a>
-            </li>
+            <!-- <li class="ftco-animate rounded-circle" style="background-color: #3498DB;">
+                <a href="#" target="_blank"><span class="icon-twitter"></span></a>
+            </li> -->
             <li class="ftco-animate rounded-circle" style="background-color: #2600fd;">
-                <a href="#"><span class="icon-facebook"></span></a>
+                <a href="https://web.facebook.com/profile.php?id=100068895428353" target="_blank"><span class="icon-facebook"></span></a>
             </li>
             <li class="ftco-animate rounded-circle" style=" background: linear-gradient(to right, #cc2b5e 0%, #753a88 100%);">
-                <a href="#"><span class="icon-instagram"></span></a>
+                <a href="https://www.instagram.com/tuktuk_tour/" target="_blank"><span class="icon-instagram"></span></a>
             </li>
             </ul>
         </div>
@@ -53,7 +53,7 @@
                     <a href="https://api.whatsapp.com/send?phone=6285268615405"><span class="icon icon-phone"></span><span class="text">+6285268615405</span></a>
                 </li>
                 <li>
-                    <a href=""><span class="icon icon-envelope"></span><span class="text">tuktuktour@gmail.com</span></a>
+                    <a href="mailto:tuktuktour21@gmail.com"><span class="icon icon-envelope"></span><span class="text">tuktuktour21@gmail.com</span></a>
                 </li>
             </ul>
             </div>
@@ -62,11 +62,12 @@
     </div>
     <div class="row">
         <div class="col-md-12 text-center">
+        <a href="https://www.del.ac.id/"><img src="img/logoDel.jpg" width="50px" class="pb-3"></a>
         <p>
             Copyright &copy;
             <script>
             document.write(new Date().getFullYear());
-            </script>All Rights Reserved | This Website Is Developed By <a href="https://www.del.ac.id/" target="_blank"><span style="color: #ffff00;">Kelompok 07 PA 1 - IT Del</span></a>
+            </script> All Rights Reserved | This Website Is Developed By&nbsp;<span style="color: #ffff00;">Kelompok 07 PA 1 - IT Del</span>
         </p>
         </div>
     </div>
