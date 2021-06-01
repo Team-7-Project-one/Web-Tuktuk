@@ -11,13 +11,13 @@
         <li class="nav-item"><a href="/aboutus" class="nav-link" style="font-size: 1rem">About Us</a></li>
         <li class="nav-item dropdown">
         @if(Auth::user())
-          <a href="" style="font-size: 1rem" class="nav-link bg-transparent dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+          <a href="" style="font-size: 1rem" class="nav-link bg-transparent dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 1rem;">
             <i class="fas fa-user"></i>&nbsp; {{Auth::user()->username}}
           </a>
           @if (Auth::user())
             <ul style="border: 1px solid red; margin-top: -20px;" class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-              <li class="">
-                <a class="dropdown-item text-danger" {{--style="background-color: red; transform: scale(0.5); font-size: 25px; border-radius: 40px; margin-top: -6%;"--}}  href="{{ route('logout') }}"
+              <li>
+                <a class="badge dropdown-item text-danger fs-6" {{--style="background-color: red; transform: scale(0.5); border-radius: 40px;"--}}  href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                               document.getElementById('logout-form').submit();">
                 <i class="fas fa-power-off"></i> {{ __('Logout') }}
@@ -31,9 +31,9 @@
         @endif
           <li class="nav-item" style="font-size: 1rem; cursor:pointer">
         @else
-          <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="nav-link"><i class="fas fa-user"></i>&nbsp;Login
+          <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="nav-link" style="font-size: 1rem; cursor:pointer"><i class="fas fa-user"></i>&nbsp;Login</a>
         @endif
-      </a></li>
+      </li>
       </ul>
 </nav>
 <!-- END nav -->

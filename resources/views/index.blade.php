@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="{{asset('css/bootstrap-datepicker.css')}}" />
     <link rel="stylesheet" href="{{asset('css/jquery.timepicker.css')}}" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
     <link rel="stylesheet" href="{{asset('css/flaticon.css')}}" />
     <link rel="stylesheet" href="{{asset('css/icomoon.css')}}" />
     <link rel="stylesheet" href="{{asset('css/style.css')}}" />
