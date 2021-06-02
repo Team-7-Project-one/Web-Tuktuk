@@ -27,7 +27,7 @@
 
     <div class="hero">
       <section class="home-slider owl-carousel">
-        <div class="slider-item" style="background-image: url(img/carousel2.jpg); background-size: cover; background-position: center center;">
+        <div class="slider-item" style="background-image: url(img/carousel2.jpg); background-size: cover; background-position: center center; width: 100%; height: 100%">
           <div class="overlay"></div> 
           <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-end">
@@ -44,7 +44,7 @@
           </div>
         </div>
 
-        <div class="slider-item" style="background-image: url(img/carousel1.jpg); background-size: cover; background-position: center center;">
+        <div class="slider-item" style="background-image: url(img/carousel1.jpg); background-size: cover; background-position: center center; width: 100%; height: 100%">
           <div class="overlay"></div>
           <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-end">
@@ -59,7 +59,7 @@
           </div>
         </div>
 
-        <div class="slider-item" style="background-image: url(img/carousel3.jpg); background-size: cover; background-position: center center;">
+        <div class="slider-item" style="background-image: url(img/carousel3.jpg); background-size: cover; background-position: center center; width: 100%; height: 100%">
           <div class="overlay"></div>
           <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-end">
