@@ -44,7 +44,7 @@
           </div>
         </div>
 
-        <div class="slider-item" style="background-image: url(img/carousel12.jpg); background-size: cover; background-position: center center;">
+        <div class="slider-item" style="background-image: url(img/carousel1.jpg); background-size: cover; background-position: center center;">
           <div class="overlay"></div>
           <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-end">
@@ -65,7 +65,7 @@
             <div class="row no-gutters slider-text align-items-center justify-content-end">
               <div class="col-md-6 ftco-animate">
                 <div class="text px-4">
-                <br><br>
+                  <br><br>
                   <h2>Tuk-Tuk Tour Website</h2>
                   <br><br>
                   <h1 class="mb-3">It has beautiful scenery and charming sight</h1>
