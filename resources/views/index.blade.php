@@ -25,6 +25,7 @@
     
     @include('layouts.header')
 
+    <div class="px-1 mt-1">
     <div class="hero">
       <section class="home-slider owl-carousel">
         <div class="slider-item" style="background-image: url(img/carousel2.jpg); background-size: cover; background-position: center center; width: 100%; height: 100%">
@@ -75,6 +76,7 @@
           </div>
         </div>
       </section>
+    </div>
     </div>
 
     <section class="ftco-section">
