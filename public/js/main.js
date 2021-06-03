@@ -1,6 +1,6 @@
 AOS.init({
   duration: 800,
-  easing: 'slide',
+  // easing: 'slide',
 });
 
 (function ($) {
@@ -178,7 +178,7 @@ AOS.init({
     console.log('show');
   });
 
-  // scroll
+  scroll
   var scrollWindow = function () {
     $(window).scroll(function () {
       var $w = $(this),
