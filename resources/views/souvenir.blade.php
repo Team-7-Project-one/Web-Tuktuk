@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Tuk-Tuk Tour</title>
+    <title>Tuk-Tuk Tour</title>
     <link rel="icon" type="image/png" href="{{asset('img/logo_web.png')}}" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="css/jquery.timepicker.css" />
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="{{asset('css/style.css')}}" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
   </head>
   <body>
@@ -180,10 +180,10 @@
               </div>
               
               <div class="map-hotel container col-md-8 mt-4">
-              <center>
-                <h3>Detail Location</h3>
-                <iframe src="{{ $item['map'] }}" style="border: 5px solid; border-radius: 5px" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="responsive-iframe"></iframe>
-              </center>
+                <center>
+                  <h3>Detail Location</h3>
+                  <iframe src="{{ $item['map'] }}" style="border: 5px solid; border-radius: 5px" width="600" height="450" allowfullscreen="" loading="lazy" class="responsive-iframe"></iframe>
+                </center>
               </div
             </div>
           </div>
@@ -271,7 +271,7 @@
                   <p id="usercomment">{{$user->comment}}</p>
 
                   <div class="replyform{{$user->id}}">
-                    <form action="/souvenir/AddReply/" method="post" enctype="multipart/form-data">
+                    <form action="/souvenir/AddReply" method="post" enctype="multipart/form-data">
                     {{ method_field('POST') }}
                     @csrf
                     <div class="form-group pb-4">

@@ -1,6 +1,6 @@
  <!-- Modal login-->
  <div class="modal fade" style="background-image: url(/img/login.jpg); height: 100%;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog ">
+    <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" style="border: none; border-radius: 20px; background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(5px); box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;">
         <div class="modal-body text-light">
         <center><br>
@@ -32,23 +32,23 @@
             </label>
             </div>
             
-            <br><br>
+            <br>
 
 
             <center>
             <button type="submit" id="login" class="btn fw-bold p-2 rounded-pill">
                 {{ __('Login') }}
-            </button><br>
+            </button><br><br><br>
 
-            @if (Route::has('password.request'))
+            <!-- @if (Route::has('password.request'))
                 <a class="btn btn-link" href="{{ route('password.request') }}">
                     {{ __('Forgot Your Password?') }}
                 </a>
-            @endif
-            <p>Don't have account? <a href="" class="" {{--style="text-decoration: none"--}} data-bs-toggle="modal" data-bs-target="#registerModal">Register here</a></p>
-            <p>OR</p>
+            @endif -->
+            <p>Don't have an account? <a href="" class="" {{--style="text-decoration: none"--}} data-bs-toggle="modal" data-bs-target="#registerModal">Register here!</a></p>
+            <!-- <p>OR</p>
             <button id="gogle" class="btn btn"><i class="fab fa-google-plus-g"></i></button>
-            <button id="fb" class="btn btn"><i class="fab fa-facebook-f"></i></button>
+            <button id="fb" class="btn btn"><i class="fab fa-facebook-f"></i></button> -->
             </center>
         </form>
         <br />
@@ -59,7 +59,7 @@
 
     <!-- Modal registrasi-->
     <div class="modal fade" style="background-image: url(/img/login.jpg); height: 100%;" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog ">
+    <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" style="border: none; border-radius: 20px; background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(5px); box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;">
         <div class="modal-body text-light">
         <center><br>
@@ -67,13 +67,14 @@
         </center>
         <form action="{{ route('register') }}" method="POST" class="container">
             @csrf
-            <label for="">Nama</label>
+            <label for="nama">Nama</label>
             <input id="loginput" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" autocomplete="name" autofocus placeholder="Masukkan Nama anda ...." />
             @error('name')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
+            <br />
             <label for="">Username</label>
             <input id="loginput" id="loginput" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" autocomplete="username" autofocus placeholder="Masukkan username anda ...." />
             @error('username')
@@ -109,6 +110,7 @@
         <br><br>
         <br />
         </div>
+        
     </div>
     </div>
 </div>

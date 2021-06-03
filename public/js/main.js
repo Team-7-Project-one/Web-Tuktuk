@@ -27,14 +27,14 @@ AOS.init({
     },
   };
 
-  $(window).stellar({
-    responsive: true,
-    parallaxBackgrounds: true,
-    parallaxElements: true,
-    horizontalScrolling: false,
-    hideDistantElements: false,
-    scrollProperty: 'scroll',
-  });
+  // $(window).stellar({
+  //   responsive: true,
+  //   parallaxBackgrounds: true,
+  //   parallaxElements: true,
+  //   horizontalScrolling: false,
+  //   hideDistantElements: false,
+  //   scrollProperty: 'scroll',
+  // });
 
   var fullHeight = function () {
     $('.js-fullheight').css('height', $(window).height());
@@ -55,7 +55,7 @@ AOS.init({
   loader();
 
   // Scrollax
-  $.Scrollax();
+  // $.Scrollax();
 
   var carousel = function () {
     $('.home-slider').owlCarousel({

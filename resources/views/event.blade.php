@@ -5,20 +5,26 @@
     <link rel="icon" type="image/png" href="{{asset('img/logo_web.png')}}" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700&display=swap" rel="stylesheet" />
+
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
+
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/magnific-popup.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+
     <link rel="stylesheet" href="css/aos.css" />
+
     <link rel="stylesheet" href="css/ionicons.min.css" />
+
     <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
     <link rel="stylesheet" href="css/jquery.timepicker.css" />
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="{{asset('css/style.css')}}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
     <style>
        @font-face {
@@ -53,8 +59,9 @@
     <section class="ftco-section container">
       <h1 class="list-event text-center text-light ">List Event</h1><br>
       @foreach ($data as $data)
+        <center>
         <div class="container row">
-            <div class="hero-wrap  event-card" style="background-image: url('{{$data['gambar']}}');  border-radius: 30px; overflow: hidden;">
+            <div class="hero-wrap  event-card" style="background-image: url(img/event/{{$data['gambar']}});  border-radius: 30px; overflow: hidden;">
               <div class="overlay" id="eventdark"></div>
               <div class="container">
                 <div class="row  ">
@@ -71,13 +78,13 @@
                         <span></span>
                         <span></span>
                         <b> More Details </b>
-                    </a>
+                      </a>
                     </div><br>
                   </div>
                 </div>
-              </div>
-             
+            </div>
         </div>
+        </center>
     </section>
     
     <!-- Event Modal -->
@@ -87,6 +94,7 @@
           <div class="modal-body">
             <center><h1 id="hotel-info-title" class="text-success">Details</h1></center><br>
             <div class="row container">
+
               <div class="col-md-7">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                   <div id="carbut2" class="carousel-indicators">
@@ -94,53 +102,66 @@
                   </div>
                   <div class="carousel-inner" id="hotel-carousel">
                     <div class="carousel-item active">
-                      <a href="img/event/Event.jpeg" class="insta-img image-popup" style="">
-                      <img src="img/event/Event.jpeg" class="d-block w-100" alt=""></a>
+                      <a href="img/event/{{$data['gambar']}}" class="insta-img image-popup" style="">
+                      <img src="img/event/{{$data['gambar']}}" class="d-block w-100" alt=""></a>
                     </div>
                   </div>
                 </div>
               </div>
-                <div style="margin-top: -30px;" class="container col-md-5 fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><br>
-                    <h4 class="text-primary" style="font-weight: bold !important;">{{ $data['nama_event'] }}</h4><p style="font-style: italic; color: gray;">Event musik yang menampilkan musisi luar negeri dan lokal ini menjadi acara tahunan yang banyak ditunggu-tunggu masyarakat kawasan Danau Toba, terkhusus Kabupaten Samosir.</p>
-                  <table class="table">
-                    <tr>
-                      <td><i class="fab fa-elementor text-primary"></i> Category</td>
-                      <td>:</td>
-                      <td>{{ $data['kategori'] }}</td>
-                    </tr>
-                    <tr>
-                      <td><i class="far fa-calendar-check text-primary"></i> Tanggal Mulai</td>
-                      <td>:</td>
-                      <td>{{ $data['tgl_pelaksanaan'] }}</td>
-                    </tr>
-                    <tr>
-                      <td><i class="far fa-calendar-minus text-primary"></i> Tanggal Berakhir</td>
-                      <td>:</td>
-                      <td>{{ $data['tgl_selesai'] }}</td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-clock text-primary"></i> Waktu</td>
-                      <td>:</td>
-                      <td>{{ $data['waktu'] }}</td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-ticket-alt text-primary"></i> Harga Tiket</td>
-                      <td>:</td>
-                      <td class="text-success">{{ $data['harga'] }}</td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-map-marker-alt text-primary"></i> Lokasi</td>
-                      <td>:</td>
-                      <td class="text-success">{{ $data['lokasi'] }}</td>
-                    </tr>
-                  </table>
-                  <div>
-                    <h5 class="text-center" >Location</h5>
-                    {{ $data['link_lokasi'] }}
-                </div>
-                </div>
+
+              <div style="margin-top: -30px;" class="container col-md-5 fade show active mt-3" id="home" role="tabpanel" aria-labelledby="home-tab"><br>
+                <center>
+                <h4 class="text-primary" style="font-weight: bold !important;">{{ $data['nama_event'] }}</h4><p style="font-style: italic; color: gray;">{{ $data['deskripsi'] }}</p>
+                </center>
+                <table class="table">
+                  <tr>
+                    <td><i class="fab fa-elementor text-primary"></i> Category</td>
+                    <td>:</td>
+                    <td>{{ $data['kategori'] }}</td>
+                  </tr>
+                  <tr>
+                    <td><i class="far fa-calendar-check text-primary"></i> Tanggal Mulai</td>
+                    <td>:</td>
+                    <td>{{ $data['tgl_pelaksanaan'] }}</td>
+                  </tr>
+                  <tr>
+                    <td><i class="far fa-calendar-minus text-primary"></i> Tanggal Berakhir</td>
+                    <td>:</td>
+                    <td>{{ $data['tgl_selesai'] }}</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-clock text-primary"></i> Waktu</td>
+                    <td>:</td>
+                    <td>{{ $data['waktu'] }}</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-ticket-alt text-primary"></i> Harga Tiket</td>
+                    <td>:</td>
+                    <td class="text-success">{{ $data['harga'] }}</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-map-marker-alt text-primary"></i> Lokasi</td>
+                    <td>:</td>
+                    <td class="text-success">{{ $data['lokasi'] }}</td>
+                  </tr>
+                </table>
+              </div>
+              
+              <div class="map-hotel container col-md-8 mt-4">
+                <center>
+                  <h3>Detail Location</h3>
+                  <iframe src="{{ $data['map'] }}" style="border: 5px solid; border-radius: 10px" width="600" height="450" allowfullscreen="" loading="lazy" class="responsive-iframe"></iframe>
+                </center>
+              </div>
+
             </div>
+
           </div>
+
+          <div class="modal-footer mt-4">
+            <button type="button" class="btn btn-danger col-md-12" data-bs-dismiss="modal">Close</button>
+          </div>
+
         </div>
       </div>
     </div>
@@ -189,7 +210,7 @@
                   <p id="usercomment" style="font-size: 1rem">{{$user->comment}}</p>
 
                 <div class="replyform{{$user->id}}">
-                  <form action="/event/AddReply/" method="post" enctype="multipart/form-data">
+                  <form action="/event/AddReply" method="post" enctype="multipart/form-data">
                   {{ method_field('POST') }}
                   @csrf
                   <div class="form-group pb-4">

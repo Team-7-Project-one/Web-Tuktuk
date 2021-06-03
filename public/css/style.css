@@ -11890,13 +11890,13 @@ textarea.form-control {
 }
 
 .ftco-bg-dark {
-  background: #3c312e;
+  background-color: #3c312e;
 }
 
 .ftco-footer {
   font-size: 16px;
   padding: 7em 0;
-  background: #1C2833 ;
+  background-color: #1C2833 ;
   position: relative;
 }
 .ftco-footer .overlay {
@@ -11907,7 +11907,7 @@ textarea.form-control {
   bottom: 0;
   content: '';
   opacity: 0.9;
-  background: #1C2833;
+  background-color: #1C2833;
 }
 .ftco-footer .ftco-footer-logo {
   text-transform: uppercase;
@@ -12391,6 +12391,7 @@ textarea.form-control {
 .mfp-with-zoom.mfp-bg {
   opacity: 0;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -13222,9 +13223,6 @@ reply-button {
   color: #21618c;
   font-size: calc(14px + 1vw);
 }
-.table td {
-}
-
 .map-hotel {
   width: max-content;
   height: 30%;
@@ -13255,11 +13253,6 @@ reply-button {
   border: 3px solid;
 }
 
-.category a:hover {
-}
-
-.category a:active {
-}
 #btnulos:hover {
   color: white;
 }
@@ -13354,6 +13347,16 @@ reply-button {
   text-align: center;
   animation: list-event 1s ease-in-out infinite alternate;
   animation-delay: 0.15s;
+}
+
+@keyframes list-event {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
 }
 
 @-webkit-keyframes list-event {

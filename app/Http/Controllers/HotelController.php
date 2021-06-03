@@ -28,17 +28,10 @@ class HotelController extends Controller
             $comment = HotelComment::all();
             $reply = HotelReply::all();
         }
-        // $data=SouvenirModel::all();
+
         return view('hotel',['data'=>$data, 'comment'=>$comment, 'reply'=>$reply]);
     }
 
-    // public function createReply()
-    // {
-    //     $Hotel = Hotel::all();
-    //     $Comment = Comment::all();
-    //     $Reply = Reply::all();
-    //     return view('hotel', compact('Hotel', 'Comment', 'Reply'));
-    // }
 
     public function store(Request $request)
     {
@@ -51,7 +44,7 @@ class HotelController extends Controller
 
     public function storeReply(Request $request)
     {
-        // $Comment = Comment::find($id);
+
         HotelReply::create([
             'name' => $request->nama,
             'comment' => $request->comment,

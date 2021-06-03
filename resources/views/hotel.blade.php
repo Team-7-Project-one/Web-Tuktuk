@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/jquery.timepicker.css" />
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="{{asset('css/style.css')}}" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
     
   </head>
@@ -143,7 +143,7 @@
                 <div class="container mx-4 areareply">
                   <p id="usercomment" style="font-size: 1rem">{{$user->comment}}</p>
                   <div class="replyform{{$user->id}}" id="balaspesan{{$user->id}}">
-                    <form action="/hotel/AddReply/" method="post" enctype="multipart/form-data">
+                    <form action="/hotel/AddReply" method="post" enctype="multipart/form-data">
                     {{ method_field('POST') }}
                       @csrf
                       <div class="form-group pb-4">

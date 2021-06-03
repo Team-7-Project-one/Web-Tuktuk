@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/jquery.timepicker.css" />
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="{{asset('css/style.css')}}" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Chela+One&display=swap" rel="stylesheet">
@@ -138,7 +138,7 @@
             </div>
               <div class="c4-fade-right c4-delay-800">
               <h5>
-                <a href="mailto:wordykanainggolan1212@gmail.com"><i class="far fa-envelope"></i></a>&nbsp; <a href="https://api.whatsapp.com/send?phone=6282283750861"><i class="fab fa-whatsapp"></i></a>&nbsp; <a href="https://www.instagram.com/wordykayn_/"><i class="fab fa-instagram"></i></a>
+                <a target="_blank" href="mailto:wordykanainggolan1212@gmail.com"><i class="far fa-envelope"></i></a>&nbsp; <a target="_blank" href="https://api.whatsapp.com/send?phone=6282283750861"><i class="fab fa-whatsapp"></i></a>&nbsp; <a target="_blank" href="https://www.instagram.com/wordykayn_/"><i class="fab fa-instagram"></i></a>
               </h5>
             </div>
           </figure>
@@ -166,7 +166,7 @@
                     </div>
                       <div class="c4-fade-right c4-delay-800">
                       <h5>
-                        <a href="mailto:simon061901@gmail.com"><i class="far fa-envelope"></i></a>&nbsp; <a href="https://api.whatsapp.com/send?phone=6281382074016"><i class="fab fa-whatsapp"></i></a>&nbsp; <a href="https://www.instagram.com/Simon.celi11/"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="mailto:simon061901@gmail.com"><i class="far fa-envelope"></i></a>&nbsp; <a target="_blank" href="https://api.whatsapp.com/send?phone=6281382074016"><i class="fab fa-whatsapp"></i></a>&nbsp; <a target="_blank" href="https://www.instagram.com/Simon.celi11/"><i class="fab fa-instagram"></i></a>
                       </h5>
                     </div>
                   </figure>
@@ -192,7 +192,7 @@
                     </div>
                       <div class="c4-fade-right c4-delay-800">
                       <h5>
-                        <a href="mailto:xdanielpasaribu@gmail.com"><i class="far fa-envelope"></i></a>&nbsp; <a href="https://api.whatsapp.com/send?phone=6282267507396"><i class="fab fa-whatsapp"></i></a>&nbsp; <a href="https://www.instagram.com/daniel_exaudi/"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="mailto:xdanielpasaribu@gmail.com"><i class="far fa-envelope"></i></a>&nbsp; <a target="_blank" href="https://api.whatsapp.com/send?phone=6282267507396"><i class="fab fa-whatsapp"></i></a>&nbsp; <a target="_blank" href="https://www.instagram.com/daniel_exaudi/"><i class="fab fa-instagram"></i></a>
                       </h5>
                     </div>
                   </figure>
@@ -218,7 +218,7 @@
                     </div>
                       <div class="c4-fade-right c4-delay-800">
                       <h5>
-                        <a href="mailto:agnesfenirosalinanaibaho@gmail.com"><i class="far fa-envelope"></i></a>&nbsp; <a href="https://api.whatsapp.com/send?phone=6282172762595"><i class="fab fa-whatsapp"></i></a>&nbsp; <a href="https://www.instagram.com/agnes.fenny/"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="mailto:agnesfenirosalinanaibaho@gmail.com"><i class="far fa-envelope"></i></a>&nbsp; <a target="_blank" href="https://api.whatsapp.com/send?phone=6282172762595"><i class="fab fa-whatsapp"></i></a>&nbsp; <a target="_blank" href="https://www.instagram.com/agnes.fenny/"><i class="fab fa-instagram"></i></a>
                       </h5>
                     </div>
                   </figure>
@@ -246,7 +246,7 @@
                     </div>
                       <div class="c4-fade-right c4-delay-800">
                       <h5>
-                        <a class="disabled" href="mailto:kikingar.567@gmail.com"><i class="far fa-envelope"></i></a>&nbsp; <a href="https://api.whatsapp.com/send?phone=628976832824"><i class="fab fa-whatsapp"></i></a>&nbsp;
+                        <a class="disabled" href="mailto:kikingar.567@gmail.com"><i class="far fa-envelope"></i></a>&nbsp; <a target="_blank" href="https://api.whatsapp.com/send?phone=628976832824"><i class="fab fa-whatsapp"></i></a>&nbsp;
                       </h5>
                     </div>
                   </figure>
@@ -272,7 +272,7 @@
                     </div>
                       <div class="c4-fade-right c4-delay-800">
                       <h5>
-                        <a href="mailto:sitoruse710@gmail.com"><i class="far fa-envelope"></i></a>&nbsp; <a href="https://api.whatsapp.com/send?phone=6282167371510"><i class="fab fa-whatsapp"></i></a>&nbsp; <a href="https://www.instagram.com/ecchatps_/"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="mailto:sitoruse710@gmail.com"><i class="far fa-envelope"></i></a>&nbsp; <a target="_blank" href="https://api.whatsapp.com/send?phone=6282167371510"><i class="fab fa-whatsapp"></i></a>&nbsp; <a target="_blank" href="https://www.instagram.com/ecchatps_/"><i class="fab fa-instagram"></i></a>
                       </h5>
                     </div>
                   </figure>
@@ -298,7 +298,7 @@
                   </div>
                 <div class="c4-fade-right c4-delay-800">
                   <h5>
-                    <a href="mailto:nadapdaponai21@gmail.com"><i class="far fa-envelope"></i></a>&nbsp; <a href="https://api.whatsapp.com/send?phone=6285156870284"><i class="fab fa-whatsapp"></i></a>&nbsp;
+                    <a target="_blank" href="mailto:nadapdaponai21@gmail.com"><i class="far fa-envelope"></i></a>&nbsp; <a target="_blank" href="https://api.whatsapp.com/send?phone=6285156870284"><i class="fab fa-whatsapp"></i></a>&nbsp;
                   </h5>
                 </div>
                </figure>
