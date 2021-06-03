@@ -1,6 +1,6 @@
 AOS.init({
   duration: 800,
-  // easing: 'slide',
+  easing: 'slide',
 });
 
 (function ($) {
@@ -62,8 +62,9 @@ AOS.init({
       loop: true,
       autoplay: true,
       margin: 0,
-      animateOut: 'fadeOut',
-      animateIn: 'fadeIn',
+      // animateOut: 'fadeOut',
+      // animateIn: 'fadeIn',
+      interval: 2000,
       nav: false,
       dots: true,
       autoplayHoverPause: false,
