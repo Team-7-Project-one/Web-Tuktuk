@@ -27,14 +27,14 @@ AOS.init({
     },
   };
 
-  $(window).stellar({
-    responsive: true,
-    parallaxBackgrounds: true,
-    parallaxElements: true,
-    horizontalScrolling: false,
-    hideDistantElements: false,
-    scrollProperty: 'scroll',
-  });
+  // $(window).stellar({
+  //   responsive: true,
+  //   parallaxBackgrounds: true,
+  //   parallaxElements: true,
+  //   horizontalScrolling: false,
+  //   hideDistantElements: false,
+  //   scrollProperty: 'scroll',
+  // });
 
   var fullHeight = function () {
     $('.js-fullheight').css('height', $(window).height());
@@ -179,44 +179,44 @@ AOS.init({
   });
 
   // scroll
-  // var scrollWindow = function () {
-  //   $(window).scroll(function () {
-  //     var $w = $(this),
-  //       st = $w.scrollTop(),
-  //       navbar = $('.ftco_navbar'),
-  //       sd = $('.js-scroll-wrap');
+  var scrollWindow = function () {
+    $(window).scroll(function () {
+      var $w = $(this),
+        st = $w.scrollTop(),
+        navbar = $('.ftco_navbar'),
+        sd = $('.js-scroll-wrap');
 
-  //     if (st > 150) {
-  //       if (!navbar.hasClass('scrolled')) {
-  //         navbar.addClass('scrolled');
-  //       }
-  //     }
-  //     if (st < 150) {
-  //       if (navbar.hasClass('scrolled')) {
-  //         navbar.removeClass('scrolled sleep');
-  //       }
-  //     }
-  //     if (st > 350) {
-  //       if (!navbar.hasClass('awake')) {
-  //         navbar.addClass('awake');
-  //       }
+      if (st > 150) {
+        if (!navbar.hasClass('scrolled')) {
+          navbar.addClass('scrolled');
+        }
+      }
+      if (st < 150) {
+        if (navbar.hasClass('scrolled')) {
+          navbar.removeClass('scrolled sleep');
+        }
+      }
+      if (st > 350) {
+        if (!navbar.hasClass('awake')) {
+          navbar.addClass('awake');
+        }
 
-  //       if (sd.length > 0) {
-  //         sd.addClass('sleep');
-  //       }
-  //     }
-  //     if (st < 350) {
-  //       if (navbar.hasClass('awake')) {
-  //         navbar.removeClass('awake');
-  //         navbar.addClass('sleep');
-  //       }
-  //       if (sd.length > 0) {
-  //         sd.removeClass('sleep');
-  //       }
-  //     }
-  //   });
-  // };
-  // scrollWindow();
+        if (sd.length > 0) {
+          sd.addClass('sleep');
+        }
+      }
+      if (st < 350) {
+        if (navbar.hasClass('awake')) {
+          navbar.removeClass('awake');
+          navbar.addClass('sleep');
+        }
+        if (sd.length > 0) {
+          sd.removeClass('sleep');
+        }
+      }
+    });
+  };
+  scrollWindow();
 
   var isMobile = {
     Android: function () {
