@@ -545,7 +545,7 @@
 				visualPadding = 10,
 				windowWidth = $window.width(),
 				windowHeight = $window.height(),
-				scrollTop = $window.scrollTop();
+				// scrollTop = $window.scrollTop();
 
 			var zIndex = parseInt(this.element.parents().filter(function(){
 					return $(this).css('z-index') !== 'auto';

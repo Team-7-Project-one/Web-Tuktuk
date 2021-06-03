@@ -9,5 +9,7 @@ class GoogleController extends Controller
 {
     public function redirectToGoogle(){
         return Socialite::drive('google')->redirect();
+
+        socialite
     }
 }
