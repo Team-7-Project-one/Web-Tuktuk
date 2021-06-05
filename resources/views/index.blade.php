@@ -231,14 +231,26 @@
           More about Tuk-tuk
         </button>
         </center>
-
+<style>
+  .accordion-button{
+    /* font-size: 20px; */
+    border-radius: 10px;
+    /* border: none; */
+    border: 4px solid #2471A3;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  }
+  #closemodal{
+    border-radius: 5px;
+    transition: 0.5s ease;
+  }
+</style>
 
 <!-- Modal about tuktuk-->
 <div class="modal fade" id="modalabout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button"  id="closemodal" class="btn btn-close btn-outline-danger btn-sm ml-auto" data-bs-dismiss="modal" aria-label="Close"> <i class="fas fa-times"></i> </button>
       </div>
       <div class="modal-body">
         <div class="container col-8">
@@ -249,8 +261,8 @@
         <div class="accordion" id="accordionExample">
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <b class="container">Gambaran Umum Kelurahan Tuktuk Siadong</b> 
+              <button class="btn btn-outline-primary rounded-pill ml-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <b class="container">I Gambaran Umum Kelurahan Tuktuk Siadong &nbsp;&nbsp;<i class="fas fa-info-circle"></i></b> 
               </button>
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -261,8 +273,8 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <b class="container">Sejarah Kelurahan Tuktuk Siadong</b>
+              <button class="btn btn-outline-primary rounded-pill ml-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <b class="container">II Sejarah Kelurahan Tuktuk Siadong &nbsp;&nbsp;<i class="fas fa-info-circle"></i></b>
               </button>
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -273,8 +285,8 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                <b class="container">Data Statistik Kelurahan Tuktuk Siadong</b>
+              <button class="btn btn-outline-primary rounded-pill ml-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <b class="container">III Data Statistik Kelurahan Tuktuk Siadong &nbsp;&nbsp;<i class="fas fa-info-circle"></i></b>
               </button>
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
