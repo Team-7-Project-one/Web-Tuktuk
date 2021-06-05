@@ -73,7 +73,17 @@
     </div>
   </center>
     <br />
-
+    <style>
+      #modalbtn{
+        transform: scale(1);
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 100%;
+        font-size: 18px;
+        font-weight: bolder;
+        border-radius: 7px;
+      }
+    </style>
   
 	<section class="ftco-section container"> <center>
 		 <h1 class="ftco-animate">List Souvenir</h1>
@@ -87,7 +97,7 @@
                 <h5 class="card-title mt-2">{{ $item['nama_souvenir'] }}<br></h5>
                 <h5 class="product-price text-warning mt-1"><i class="fas fa-tags"></i> {{ $item['harga'] }}</h5>
                 <h5><i class="fas fa-store text-primary"></i> {{ $item['nama_toko'] }}</h5>
-                <button style="" id="modalbtn" href="#" class="badge btn-outline-success btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#abc{{ $item['id'] }}"><i class="fas fa-info-circle"></i> Detail</button>
+                <button style="" id="modalbtn" href="#" class="btn btn-outline-success btn-sm mt-1" data-bs-toggle="modal" data-bs-target="#abc{{ $item['id'] }}"><i class="fas fa-info-circle"></i> Detail</button>
               </div>
             </div>
           </div>
