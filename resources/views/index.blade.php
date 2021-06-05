@@ -554,11 +554,11 @@
             <div id="testimony"class="py-md-10" style="margin-top: -15px">
               <div class="heading-section ftco-animate mb-4" >
                 <h2 class="mb-0 text-center" style="font-size: -webkit-calc(100% + 30px);">History</h2>
-                <span class="subheading">About Samosir</span>
-                <h2 class="mb-0">Samosir, Sumatera Utara</h2>
+                <span class="subheading container">About Samosir</span>
+                <h2 class="mb-0 container">Samosir, Sumatera Utara</h2>
               </div>
 
-              
+              <center>
               <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" style="width: 75vw;">
                   <div class="carousel-item active">
@@ -636,6 +636,8 @@
                   <span class="visually-hidden"></span>
                 </button>
               </div>
+            </center>
+            
             </div>
           </div>
         </div>
