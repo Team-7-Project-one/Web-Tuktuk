@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="{{asset('css/style.css')}}" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
     <style>
        @font-face {
@@ -65,8 +65,8 @@
               <div class="overlay" id="eventdark"></div>
               <div class="container">
                 <div class="row  ">
-                  <div class=" ftco-animate text-center  justify-content-center">
-                    <div class="text event-caption"><br>
+                  <div class=" ftco-animate text-center  justify-content-center container">
+                    <div class="text event-caption container"><br>
                       <h3 class="text-center event-title text-light" style=" font-size: 80px">{{ $data['nama_event'] }}</h3>
                       <h2 class="text-light tanggal">{{ $data['tgl_pelaksanaan'] }}</h2>
                       <p>
