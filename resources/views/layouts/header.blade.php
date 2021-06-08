@@ -29,9 +29,19 @@
             </ul>
       </li>
         @endif
-          <li class="nav-item" style="font-size: 1rem; cursor:pointer">
+          <li class="nav-item dropdown" style="font-size: 1rem; cursor:pointer">
         @else
-          <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="nav-link" style="font-size: 1rem; cursor:pointer"><i class="fas fa-user"></i>&nbsp;Login</a>
+          <a class="nav-link" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user"></i>&nbsp;Login
+          </a>
+        
+          <ul style="margin-top: -15px; margin-left: -30px;" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li class="container"><a class="" data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-size: 1rem; cursor:pointer"><i class="fas fa-user"></i>&nbsp;Login</a></li>
+            <li class="container"><a href="{{ route('admin') }}"><i class="fas fa-user-shield"></i> Login Admin</a></li>
+
+          </ul>
+
+          {{-- <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="nav-link" style="font-size: 1rem; cursor:pointer"><i class="fas fa-user"></i>&nbsp;Login</a> --}}
         @endif
       </li>
       </ul>

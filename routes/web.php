@@ -5,6 +5,8 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\SouvenirController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +26,12 @@ use App\Http\Controllers\EventController;
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('CejLoginMiddleware');
+
+Route::get('admin', [AdminController::class, 'index'])->name('admin');
+Route::post('admin', [AdminController::class, 'login'])->name('admin');
+Route::get('admin/logout', [AdminController::class, 'logout'])->name('admin_logout');
 
 Route::get('/', [IndexController::class, 'index'])->name('home');
 Route::get('/hotel', [HotelController::class, 'index'])->name('hotel');
@@ -52,3 +59,4 @@ Route::get('auth/google',[App\Http\Controllers\GoogleController::class,'redirect
 Route::get('/aboutus', function () {
     return view('/aboutus');
 });
+
