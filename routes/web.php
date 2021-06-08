@@ -26,12 +26,24 @@ use App\Http\Controllers\DashboardController;
 
 Auth::routes();
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('CejLoginMiddleware');
-
 Route::get('admin', [AdminController::class, 'index'])->name('admin');
 Route::post('admin', [AdminController::class, 'login'])->name('admin');
 Route::get('admin/logout', [AdminController::class, 'logout'])->name('admin_logout');
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('CejLoginMiddleware');
+Route::get('dashboard/souvenir', [SouvenirController::class, 'adminsouvenir'])->middleware('CejLoginMiddleware');
+Route::get('dashboard/hotel', [HotelController::class, 'adminhotel'])->middleware('CejLoginMiddleware');
+Route::get('dashboard/event', [EventController::class, 'adminevent'])->middleware('CejLoginMiddleware');
+
+
+
+
+
+
+
+
+
 
 Route::get('/', [IndexController::class, 'index'])->name('home');
 Route::get('/hotel', [HotelController::class, 'index'])->name('hotel');

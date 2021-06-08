@@ -36,4 +36,9 @@ class EventController extends Controller
         ]);
         return redirect('/event');
     }
+
+    public function adminevent(){
+        $data = Event::all();
+        return view('DataEvent.adminevent',['data'=>$data]);
+    }
 }

@@ -55,38 +55,38 @@
           #btn3{
               background-color: #E8F8F5;
           }
-          #btn1 button{
+          #btn1 a{
               background-color: #AED6F1;
               color: #21618C;
               transition: 0.3s ease; 
               padding: 5px;
               padding-right: 10px;
           }
-          #btn1 button:hover{
+          #btn1 a:hover{
               padding-right: 20px;
               padding-left: 25px;
           }
 
-          #btn2 button{
+          #btn2 a{
               background-color: #F9E79F;
               color: #B7950B;
               transition: 0.3s ease; 
               padding: 5px;
               padding-right: 10px;
           }
-          #btn2 button:hover{
+          #btn2 a:hover{
               padding-right: 20px;
               padding-left: 25px;
           }
 
-          #btn3 button{
+          #btn3 a{
               background-color: #82E0AA;
               color: #1D8348;
               transition: 0.3s ease; 
               padding: 5px;
               padding-right: 10px;
           }
-          #btn3 button:hover{
+          #btn3 a:hover{
               padding-right: 20px;
               padding-left: 25px;
           }
@@ -110,7 +110,7 @@
                   <h3 class="card-title" style="color: #154360;">Hotel <i class="fas fa-hotel"></i></h3>
                   <h6 class="card-subtitle mb-2 text-muted">Management Data Hotel</h6>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <button class="btn rounded-pill"><b><i class="fas fa-tasks"></i> Manage List</b></button>
+                    <a href="dashboard/hotel" class="btn rounded-pill"><b><i class="fas fa-tasks"></i> Manage List</b></a>
                 </div>
               </div>
           </div>
@@ -121,7 +121,7 @@
                   <h3 class="card-title" style="color: #7D6608;">Souvenir <i class="fas fa-store"></i></h3>
                   <h6 class="card-subtitle mb-2 text-muted">Management Data Souvenir</h6>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <button class="btn rounded-pill"><b><i class="fas fa-tasks"></i> Manage List</b></button>
+                    <a href="dashboard/souvenir" class="btn rounded-pill"><b><i class="fas fa-tasks"></i> Manage List</b></a>
                 </div>
               </div>
           </div>
@@ -132,7 +132,7 @@
                   <h3 class="card-title" style="color: #145A32;">Event <i class="fas fa-calendar-alt"></i></h3>
                   <h6 class="card-subtitle mb-2 text-muted">Management Data Event</h6>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <button class="btn rounded-pill"><b><i class="fas fa-tasks"></i> Manage List</b></button>
+                    <a href="dashboard/event" class="btn rounded-pill"><b><i class="fas fa-tasks"></i> Manage List</b></a>
                 </div>
               </div>
           </div>

@@ -53,5 +53,24 @@ class HotelController extends Controller
         return redirect('/hotel');
     }
 
+    public function adminhotel(Request $request){
+        if($request->has('keyword')) {
+            $comment = HotelComment::all();
+            $reply = HotelReply::all();
+            $data = Hotel::where('nama_hotel','LIKE','%'.$request->keyword.'%')
+            ->orWhere('rating', 'LIKE', '%'.$request->keyword.'%')
+            ->orWhere('harga', 'LIKE', '%'.$request->keyword.'%')
+            ->orWhere('lokasi', 'LIKE', '%'.$request->keyword.'%')
+            ->orWhere('kontak', 'LIKE', '%'.$request->keyword.'%')
+            ->orWhere('deskripsi', 'LIKE', '%'.$request->keyword.'%')
+            ->orWhere('fasilitas', 'LIKE', '%'.$request->keyword.'%')
+            ->paginate(10);
+        }
+        else{
+            $data = Hotel::paginate(10);
+        }
+        return view('DataHotel.adminhotel',['data'=>$data]);
+    }
+
     
 }

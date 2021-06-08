@@ -53,4 +53,23 @@ class SouvenirController extends Controller
     }
 
 
+    public function adminsouvenir(Request $request){
+        if($request->has('keyword')) {
+            $data = Souvenir::where('nama_souvenir','LIKE','%'.$request->keyword.'%')
+            ->orWhere('bahan', 'LIKE', '%'.$request->keyword.'%')
+            ->orWhere('deskripsi', 'LIKE', '%'.$request->keyword.'%')
+            ->orWhere('harga', 'LIKE', '%'.$request->keyword.'%')
+            ->orWhere('lokasi', 'LIKE', '%'.$request->keyword.'%')
+            ->orWhere('nama_toko', 'LIKE', '%'.$request->keyword.'%')
+            ->orWhere('pemilik', 'LIKE', '%'.$request->keyword.'%')
+            ->orWhere('tipe', 'LIKE', '%'.$request->keyword.'%')
+            ->paginate(10);
+        }
+        else{
+            $data = Souvenir::paginate(10);
+        }
+        // $data=SouvenirModel::all();
+        return view('DataSouvenir.adminsouvenir',['data'=>$data]);
+    }
+
 }
