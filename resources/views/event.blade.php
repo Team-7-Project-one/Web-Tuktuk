@@ -70,7 +70,7 @@
                       <h3 class="text-center event-title text-light" style=" font-size: 80px">{{ $data['nama_event'] }}</h3>
                       <h2 class="text-light tanggal">{{ $data['tgl_pelaksanaan'] }}</h2>
                       <p>
-                        {{ $data['deskripsi'] }}
+                        {{ $data['deskripsi'] }}jnjnjnjn
                       </p>
                       <a class="event-detail" href="#" data-bs-toggle="modal" data-bs-target="#abc{{ $data['id'] }}">
                         <span></span>
