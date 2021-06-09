@@ -69,8 +69,8 @@
                     <div class="text event-caption container"><br>
                       <h3 class="text-center event-title text-light" style=" font-size: 80px">{{ $data['nama_event'] }}</h3>
                       <h2 class="text-light tanggal">{{ $data['tgl_pelaksanaan'] }}</h2>
-                      <p>
-                        {{ $data['deskripsi'] }}jnjnjnjn
+                      <p class="px-5">
+                        {{ $data['deskripsi'] }}
                       </p>
                       <a class="event-detail" href="#" data-bs-toggle="modal" data-bs-target="#abc{{ $data['id'] }}">
                         <span></span>

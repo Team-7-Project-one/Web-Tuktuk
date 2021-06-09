@@ -25,12 +25,20 @@
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
     <style>
+        body {
+            background-image: url('img/carousel2.jpg'); 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
         .loginadmin{
-         margin: 0 auto;
-         width: max-content;
-         padding: 30px;
-         border-radius: 20px;
-         box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: max-content;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
         }
         button{
             width: 100%;
@@ -60,9 +68,9 @@
     <br><br><br>
     <div class="loginadmin container justify-content-center mt-5">
         <div class="text-right mb-2">
-            <a href="/" class="px-4"><i class="fa fa-times fa-lg fa-danger" style="color: black" aria-hidden="true"></i></a>
+            <a href="/" class="px-4"><i class="fa fa-times fa-lg fa-danger" style="color: white" aria-hidden="true"></i></a>
         </div>
-        <form action="{{ route('admin') }}" method="POST" class="container">
+        <form action="{{ route('admin') }}" method="POST" class="container" style="color: white">
             <center>
             <h4 class="mt-4"><i class="fas fa-user-shield"></i>&nbsp;LOGIN ADMIN</h4>
             </center><br>
@@ -72,7 +80,7 @@
             <label for="password" class="mt-3">PASSWORD</label>
             <input id="password" type="password" name="password" class="form-control" size="30" required>
             <br>
-            <button class="btn btn-success btn-sm rounded-pill mt-3">Login</button>
+            <button class="btn btn-success btn-sm rounded-pill mt-3" style="font-size: 1rem; font-weight: bold;">Login</button>
             <br><br>
         </form>
     </div>
