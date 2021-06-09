@@ -8,7 +8,7 @@
         <li class="nav-item"><a href="/hotel" class="nav-link" style="font-size: 1rem">Hotel</a></li>
         <li class="nav-item"><a href="/souvenir" class="nav-link" style="font-size: 1rem">Souvenir</a></li>
         <li class="nav-item"><a href="/event" class="nav-link" style="font-size: 1rem">Event</a></li>
-        <li class="nav-item"><a href="/aboutus" class="nav-link" style="font-size: 1rem">About Us</a></li>
+        <!-- <li class="nav-item"><a href="/aboutus" class="nav-link" style="font-size: 1rem">About Us</a></li> -->
         <li class="nav-item dropdown">
         @if(Auth::user())
           <a href="" style="font-size: 1rem" class="nav-link bg-transparent dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 1rem;">
@@ -34,10 +34,10 @@
           <a class="nav-link" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fas fa-user"></i>&nbsp;Login
           </a>
-        
-          <ul style="margin-top: -15px; margin-left: -30px;" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li class="container"><a class="" data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-size: 1rem; cursor:pointer"><i class="fas fa-user"></i>&nbsp;Login</a></li>
-            <li class="container"><a href="{{ route('admin') }}"><i class="fas fa-user-shield"></i> Login Admin</a></li>
+          
+          <ul style="margin-top: -15px;" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li class="container"><a class="" data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-size: 0.9rem; cursor:pointer"><i class="fas fa-user"></i>&nbsp;Login As User</a></li>
+            <li class="container"><a href="{{ route('admin') }}" style="font-size: 0.9rem; cursor:pointer"><i class="fas fa-user-shield"></i> Login As Admin</a></li>
 
           </ul>
 

@@ -46,7 +46,6 @@
           </div>
         </div>
       </nav>
-      @if (session('success')) {
         <div class="col-md-10 container">
         <div class="alert alert-success container" role="alert">
         <h3 class="alert-heading"><i class="fas fa-calendar-check"></i> {{ session('success') }}</h3>
@@ -64,17 +63,6 @@
       </div>
       <table class="table container table-hover">
         <thead>
-          <tr>
-            <th>No</th>
-            <th>Nama Event</th>
-            <th>Kategori</th>
-            <th>Tanggal Mulai</th>
-            <th>Tanggal Selesai</th>
-            <th>Waktu</th>
-            <th>Harga</th>
-            <th>Action</th>
-          </tr>
-        </thead>
         <tbody>
           <?php $i=1 ?>
           @foreach ($data as $item)
