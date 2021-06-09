@@ -62,6 +62,7 @@
       </thead>
       <tbody>
         <?php $i = 1 ?>
+        @foreach ($data as $item)
         <tr>
           <th>{{ $i }}</th>
           <th></th>
@@ -70,6 +71,7 @@
           <th></th>
           <th></th>
         </tr>
+        @endforeach
         <?php $i++ ?>
       </tbody>
       </table>

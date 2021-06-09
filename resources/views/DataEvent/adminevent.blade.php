@@ -25,6 +25,13 @@
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="{{asset('css/style.css')}}" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+    <style>
+      .btn-close1{
+    /* position: absolute; */
+    float: right;
+    margin-top: -50px;
+  }
+</style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg p-3 mb-5 bg-body rounded">
@@ -39,9 +46,22 @@
           </div>
         </div>
       </nav>
-      <br>
+      @if (session('success')) {
+        <div class="col-md-10 container">
+        <div class="alert alert-success container" role="alert">
+        <h3 class="alert-heading"><i class="fas fa-calendar-check"></i> {{ session('success') }}</h3>
+        <div class="btn-close1">
+        <button type="button" class="btn btn-close ml-auto" data-bs-dismiss="alert" aria-label="Close"><h4 style="color: #196F3D;"><i class="fas fa-window-close"></i></h4></button>
+        </div>  
+      </div>
+    </div>
+        } 
+    @endif
       <h1 class="text-center">Event List</h1>
-      <br>
+      <div class="container mb-2 btnadd">
+        <a href="/dashboard" class="btn btn-secondary"><i class="fas fa-arrow-alt-circle-left"></i> back</a>
+        <a href="/dashboard/event/tambah" class="btn  btn-primary "><i class="fas fa-plus-square"></i> Tambah Data</a>
+      </div>
       <table class="table container table-hover">
         <thead>
           <tr>
@@ -58,6 +78,7 @@
         <tbody>
           <?php $i=1 ?>
           @foreach ($data as $item)
+          <tr>
           <th>{{ $i++ }}</th>
           <th>{{ $item['nama_event'] }}</th>
           <th>{{ $item['kategori'] }}</th>
@@ -66,10 +87,11 @@
           <th>{{ $item['waktu'] }}</th>
           <th>{{ $item['harga'] }}</th>
           <td>
-            <a href="" class="btn btn-success btn-sm rounded-pill"><i class="fas fa-info-circle"></i> Detail</a>
-            <a href="" class="btn btn-warning btn-sm rounded-pill" ><i class="fas fa-edit"></i> Ubah</a>
-            <a href="" class="btn btn-danger btn-sm rounded-pill"><i class="fas fa-trash"></i> Hapus</a>
+            <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#abc{{ $item['id'] }}"><i class="fas fa-info-circle"></i> Detail</button>
+              <a href="/dashboard/event/ubah/{{ $item['id'] }}" class="btn btn-warning btn-sm" ><i class="fas fa-edit"></i> Ubah</a>
+              <a href="/dashboard/event/hapus/{{ $item['id'] }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>
           </td>
+        </tr>
           @endforeach
         </tbody>
       </table>

@@ -92,7 +92,7 @@
         @foreach ($data as $item)
         <div class="col-md-4 mt-4">
             <div class="container card card-product" style="width: 18rem;">
-              <img src="img/souvenir/{{ $item['gambar1'] }}" class="card-img-top mt-2" alt="...">
+              <img src="{{ asset('gambar1') }}/{{ $item['gambar1'] }}" class="card-img-top mt-2" alt="...">
               <div class="card-body product-desc">
                 <h5 class="card-title mt-2">{{ $item['nama_souvenir'] }}<br></h5>
                 <h5 class="product-price text-warning mt-1"><i class="fas fa-tags"></i> {{ $item['harga'] }}</h5>
@@ -126,16 +126,16 @@
                     </div>
                     <div class="carousel-inner" id="hotel-carousel">
                       <div class="carousel-item active">
-                        <a href="img/souvenir/{{ $item['gambar1'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-                        <img src="img/souvenir/{{ $item['gambar1'] }}" class="d-block w-50" alt=""></a>
+                        <a href="{{ asset('gambar1') }}/{{ $item['gambar1'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                        <img src="{{ asset('gambar1') }}/{{ $item['gambar1'] }}" class="d-block w-50" alt=""></a>
                       </div>
                       <div class="carousel-item">
-                        <a href="img/souvenir/{{ $item['gambar2'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-                        <img src="img/souvenir/{{ $item['gambar2'] }}" class="d-block w-50" alt=""></a>
+                        <a href="{{ asset('gambar2') }}/{{ $item['gambar2'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                        <img src="{{ asset('gambar2') }}/{{ $item['gambar2'] }}" class="d-block w-50" alt=""></a>
                       </div>
                       <div class="carousel-item">
-                        <a href="img/souvenir/{{ $item['gambar3'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-                        <img src="img/souvenir/{{ $item['gambar3'] }}" class="d-block w-50" alt="">
+                        <a href="{{ asset('gambar3') }}/{{ $item['gambar3'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                        <img src="{{ asset('gambar3') }}/{{ $item['gambar3'] }}" class="d-block w-50" alt="">
                         </a>
                       </div>
                     </div>

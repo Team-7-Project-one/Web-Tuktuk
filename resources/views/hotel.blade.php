@@ -61,8 +61,8 @@
           <div class="hotel-list col-md-4 d-flex ftco-animate container mt-3">
             <div class="blog-entry align-self-stretch">
             <center>
-            <a href="img/hotel/{{ $item->gambar1 }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-              <p class="block-20 rounded container" style="background-image: url('img/hotel/{{ $item->gambar1 }}');"> </p>
+            <a href="{{asset('gambar1')}}/{{ $item['gambar1'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+              <p class="block-20 rounded container" style="background-image: url('{{asset('gambar1')}}/{{ $item['gambar1'] }}');"> </p>
             </a>
             </center>
               <div class="text mt-3">
@@ -255,9 +255,9 @@
           <div class="container">
             <b class="hotel-name">{{ $item['nama_hotel'] }}</b>
             <section class="home-slider owl-carousel mt-3">
-              <div class="slider-item" style="background-image: url(img/hotel/{{ $item['gambar1'] }}); border-radius: 10px;"></div>
-              <div class="slider-item" style="background-image: url(img/hotel/{{ $item['gambar2'] }}); border-radius: 10px;"></div>
-              <div class="slider-item" style="background-image: url(img/hotel/{{ $item['gambar3'] }}); border-radius: 10px;"></div>
+              <div class="slider-item" style="background-image: url({{asset('gambar1')}}/{{ $item['gambar1'] }}); border-radius: 10px;"></div>
+              <div class="slider-item" style="background-image: url({{asset('gambar2')}}/{{ $item['gambar2'] }}); border-radius: 10px;"></div>
+              <div class="slider-item" style="background-image: url({{asset('gambar3')}}/{{ $item['gambar3'] }}); border-radius: 10px;"></div>
             </section>
           </div>
             

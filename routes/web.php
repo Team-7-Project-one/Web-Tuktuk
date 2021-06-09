@@ -33,16 +33,25 @@ Route::get('admin/logout', [AdminController::class, 'logout'])->name('admin_logo
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('CejLoginMiddleware');
 Route::get('dashboard/souvenir', [SouvenirController::class, 'adminsouvenir'])->middleware('CejLoginMiddleware');
+Route::get('dashboard/souvenir/tambah', [SouvenirController::class, 'create'])->middleware('CejLoginMiddleware');
+Route::post('dashboard/souvenir/simpan', [SouvenirController::class, 'add'])->middleware('CejLoginMiddleware');
+Route::get('dashboard/souvenir/ubah/{id}', [SouvenirController::class, 'edit'])->middleware('CejLoginMiddleware');
+Route::post('dashboard/souvenir/update/{id}', [SouvenirController::class, 'update'])->middleware('CejLoginMiddleware');
+Route::get('dashboard/souvenir/hapus/{id}', [SouvenirController::class, 'destroy'])->middleware('CejLoginMiddleware');
+
 Route::get('dashboard/hotel', [HotelController::class, 'adminhotel'])->middleware('CejLoginMiddleware');
+Route::get('dashboard/hotel/tambah', [HotelController::class, 'create'])->middleware('CejLoginMiddleware');
+Route::post('dashboard/hotel/simpan', [HotelController::class, 'add'])->middleware('CejLoginMiddleware');
+Route::get('dashboard/hotel/ubah/{id}', [HotelController::class, 'edit'])->middleware('CejLoginMiddleware');
+Route::post('dashboard/hotel/update/{id}', [HotelController::class, 'update'])->middleware('CejLoginMiddleware');
+Route::get('dashboard/hotel/hapus/{id}', [HotelController::class, 'destroy'])->middleware('CejLoginMiddleware');
+
 Route::get('dashboard/event', [EventController::class, 'adminevent'])->middleware('CejLoginMiddleware');
-
-
-
-
-
-
-
-
+Route::get('dashboard/event/tambah', [EventController::class, 'create'])->middleware('CejLoginMiddleware');
+Route::post('dashboard/event/simpan', [EventController::class, 'add'])->middleware('CejLoginMiddleware');
+Route::get('dashboard/event/ubah/{id}', [EventController::class, 'edit'])->middleware('CejLoginMiddleware');
+Route::post('dashboard/event/update/{id}', [EventController::class, 'update'])->middleware('CejLoginMiddleware');
+Route::get('dashboard/event/hapus/{id}', [EventController::class, 'destroy'])->middleware('CejLoginMiddleware');
 
 
 Route::get('/', [IndexController::class, 'index'])->name('home');
