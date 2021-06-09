@@ -109,7 +109,7 @@
               <p class="breadcrumbs mb-2">
                 <span class="mr-2"><a href="/">Home</a></span> <span>About Us</span>
               </p>
-              <h1 class="bread" style="margin-bottom: 450px; font-size: 80px">About Us</h1>
+              <h1 class="bread" style="margin-bottom: 450px; font-size: 80px">About Developer</h1>
             </div>
           </div>
         </div>

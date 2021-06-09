@@ -28,7 +28,7 @@
         .loginadmin{
          margin: 0 auto;
          width: max-content;
-         padding: 20px;
+         padding: 30px;
          border-radius: 20px;
          box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
         }
@@ -58,18 +58,22 @@
   
 
     <br><br><br>
-    <div class="loginadmin container justify-content-center">
-        <form action="{{ route('admin') }}" method="POST">
+    <div class="loginadmin container justify-content-center mt-5">
+        <div class="text-right mb-2">
+            <a href="/" class="px-4"><i class="fa fa-times fa-lg fa-danger" style="color: black" aria-hidden="true"></i></a>
+        </div>
+        <form action="{{ route('admin') }}" method="POST" class="container">
             <center>
-            <h4><i class="fas fa-user-shield"></i>&nbsp;Login Admin</h4>
+            <h4 class="mt-4"><i class="fas fa-user-shield"></i>&nbsp;LOGIN ADMIN</h4>
             </center><br>
             @csrf
-            <label for="username">Username</label>
-            <input id="username" type="text" name="username" class="form-control" required>
-            <label for="password">Password</label>
-            <input id="password" type="password" name="password" class="form-control" required>
+            <label class="mt-3" for="username">USERNAME</label>
+            <input id="username" type="text" name="username" class="form-control" size="30" required>
+            <label for="password" class="mt-3">PASSWORD</label>
+            <input id="password" type="password" name="password" class="form-control" size="30" required>
             <br>
-            <button class="btn btn-success btn-sm rounded-pill">Login</button>
+            <button class="btn btn-success btn-sm rounded-pill mt-3">Login</button>
+            <br><br>
         </form>
     </div>
 

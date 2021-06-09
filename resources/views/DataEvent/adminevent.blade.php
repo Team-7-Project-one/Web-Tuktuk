@@ -39,10 +39,15 @@
           </div>
         </div>
       </nav>
+
+      <div class="back-button container mt-4">
+          <a href="/dashboard" class="btn btn-primary px-4" style="border-radius: 20px; font-weight: bold">Kembali</a>
+      </div>
+
       <br>
       <h1 class="text-center">Event List</h1>
       <br>
-      <table class="table container table-hover">
+      <table class="table container table-hover mb-5">
         <thead>
           <tr>
             <th>No</th>

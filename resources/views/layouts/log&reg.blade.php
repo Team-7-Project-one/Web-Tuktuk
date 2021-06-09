@@ -3,13 +3,18 @@
     <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" style="border: none; border-radius: 20px; background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(5px); box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;">
         <div class="modal-body text-light">
+
+        <div class="text-right mb-3">
+            <a href="/" class="px-4"><i class="fa fa-times fa-lg fa-danger" style="color: white" aria-hidden="true"></i></a>
+        </div>
+
         <center><br>
             <h3 class="fw-bold text-light"><i class="fas fa-user-alt"></i> LOGIN</h3>
         </center>
         <form method="POST" action="{{ route('login') }}" class="container">
             @csrf
             <label for="">{{ __('Username') }}</label>
-            <input id="loginput" type="text" style="background-color: transparent;" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" autocomplete="username" autofocus placeholder="Masukkan username anda ...."/>
+            <input id="loginput" type="text" style="background-color: transparent;" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" autocomplete="username" autofocus placeholder="Input your username"/>
             @error('username')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
@@ -17,7 +22,7 @@
             @enderror
             <br />
             <label for="">Password</label>
-            <input id="loginput" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="current-password" placeholder="Masukkan Password anda ...."/>
+            <input id="loginput" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="current-password" placeholder="Input your password"/>
             @error('password')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
@@ -63,13 +68,16 @@
     <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" style="border: none; border-radius: 20px; background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(5px); box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;">
         <div class="modal-body text-light">
+        <div class="text-right mb-3">
+            <a href="/" class="px-4"><i class="fa fa-times fa-lg fa-danger" style="color: white" aria-hidden="true"></i></a>
+        </div>
         <center><br>
             <h3 class="fw-bold text-light"><i class="fas fa-registered"></i> REGISTER</h3>
         </center>
         <form action="{{ route('register') }}" method="POST" class="container">
             @csrf
-            <label for="nama">Nama</label>
-            <input id="loginput" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" autocomplete="name" autofocus placeholder="Masukkan Nama anda ...." />
+            <label for="nama">Name</label>
+            <input id="loginput" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" autocomplete="name" autofocus placeholder="Input your name" />
             @error('name')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
@@ -77,7 +85,7 @@
             @enderror
             <br />
             <label for="">Username</label>
-            <input id="loginput" id="loginput" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" autocomplete="username" autofocus placeholder="Masukkan username anda ...." />
+            <input id="loginput" id="loginput" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" autocomplete="username" autofocus placeholder="Input your username" />
             @error('username')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
@@ -85,7 +93,7 @@
             @enderror
             <br />
             <label for="">Email</label>
-            <input id="loginput" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" placeholder="Masukkan Email anda ...." />
+            <input id="loginput" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" placeholder="Input your email" />
             @error('email')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
@@ -93,7 +101,7 @@
             @enderror
             <br />
             <label for="">Password</label>
-            <input id="loginput" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password" placeholder="Masukkan Password anda ...." />
+            <input id="loginput" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password" placeholder="Input your password" />
             @error('password')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
@@ -104,12 +112,9 @@
             <input id="loginput" {{--id="password-confirm"--}} type="password" class="form-control" name="password_confirmation" autocomplete="new-password"/>
             <br />
             <center>
-            <button id="register" class="btn fw-bold p-2 rounded-pill">Register</button><br /><br>
+            <button id="register" class="btn fw-bold p-2 rounded-pill mt-3">Register</button><br /><br>
             </center>
         </form>
-
-        <br><br>
-        <br />
         </div>
         
     </div>
