@@ -27,16 +27,13 @@
     <style>
         body {
             background-image: url('img/carousel2.jpg'); 
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
             background-size: cover;
         }
         .loginadmin{
             margin: 0 auto;
             background-color: rgba(0, 0, 0, 0.5);
             width: max-content;
-            padding: 30px;
+            /* padding: 30px; */
             border-radius: 20px;
             box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
         }
@@ -67,8 +64,8 @@
 
     <br><br><br>
     <div class="loginadmin container justify-content-center mt-5">
-        <div class="text-right mb-2">
-            <a href="/" class="px-4"><i class="fa fa-times fa-lg fa-danger" style="color: white" aria-hidden="true"></i></a>
+        <div class="text-right">
+            <a href="/" class="px-4"><i class="fa fa-times fa-lg fa-danger mt-3" style="color: white" aria-hidden="true"></i></a>
         </div>
         <form action="{{ route('admin') }}" method="POST" class="container" style="color: white">
             <center>
@@ -81,7 +78,7 @@
             <input id="password" type="password" name="password" class="form-control" size="30" required>
             <br>
             <button class="btn btn-success btn-sm rounded-pill mt-3" style="font-size: 1rem; font-weight: bold;">Login</button>
-            <br><br>
+            <br><br><br>
         </form>
     </div>
 

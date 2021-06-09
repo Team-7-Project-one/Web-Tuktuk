@@ -35,7 +35,7 @@
             <i class="fas fa-user"></i>&nbsp;Login
           </a>
           
-          <ul style="margin-top: -15px; margin-left: -30px;" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <ul style="margin-top: -15px; margin-left: -45px;" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <li class="container"><a class="" data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-size: 0.9rem; cursor:pointer"><i class="fas fa-user"></i>&nbsp;Login As User</a></li>
             <li class="container"><a href="{{ route('admin') }}" style="font-size: 0.9rem; cursor:pointer"><i class="fas fa-user-shield"></i> Login As Admin</a></li>
 
