@@ -30,7 +30,7 @@
 <body style="background-color: #E5E7E9;">
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg p-3 mb-5 bg-body rounded">
         <div class="container-fluid">
-          <a class=" navbar-brand" href="#">TukTukTour</a>
+          <a class=" navbar-brand" href="#"><img src="{{asset('img/logo_web.png')}}" width="80%" alt=""></a>
           <div class="" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
