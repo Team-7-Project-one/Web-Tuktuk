@@ -92,7 +92,25 @@ class HotelController extends Controller
                 'gambar2'=>'required',
                 'gambar3'=>'required',
             ]);
-    
+                
+            if($request->file('gambar1')==NULL AND $request->file('gambar2')==NULL AND $request->file('gambar3')==NULL) {
+                Hotel::create([
+                    'nama_hotel' => $request->nama_hotel,
+                    'lokasi' => $request->lokasi,
+                    'map' => $request->map,
+                    'deskripsi' => $request->deskripsi,
+                    'rating' => $request->rating,
+                    'kontak' => $request->kontak,
+                    'link' => $request->link,
+                    'harga' => $request->harga,
+                    'fasilitas' => $request->fasilitas,
+                    'gambar1' => $request->gambar1,
+                    'gambar2' => $request->gambar2,
+                    'gambar3' => $request->gambar3,
+                ]);
+            
+            } else {
+
             $nama_hotel = $request->nama_hotel;
             $lokasi = $request->lokasi;
             $map = $request->map;
@@ -102,15 +120,18 @@ class HotelController extends Controller
             $link = $request->link;
             $harga = $request->harga;
             $fasilitas = $request->fasilitas;
+
             $gambar1 = $request->file('gambar1');
             $Namagambar1 = time().'.'.$gambar1->extension();
-            $gambar1->move(public_path('gambar1'),$Namagambar1);
+            $gambar1->move(public_path('img_hotel'),$Namagambar1);
+
             $gambar2 = $request->file('gambar2');
             $Namagambar2 = time().'.'.$gambar2->extension();
-            $gambar2->move(public_path('gambar2'),$Namagambar2);
+            $gambar2->move(public_path('img_hotel'),$Namagambar2);
+
             $gambar3 = $request->file('gambar3');
             $Namagambar3 = time().'.'.$gambar3->extension();
-            $gambar3->move(public_path('gambar3'),$Namagambar3);
+            $gambar3->move(public_path('img_hotel'),$Namagambar3);
     
             $hotel = new Hotel();
             $hotel->nama_hotel = $nama_hotel;
@@ -127,6 +148,8 @@ class HotelController extends Controller
             $hotel->gambar3 = $Namagambar3;
             $hotel->save();
     
+            }
+
         return redirect('/dashboard/hotel')->with('success','Data Berhasil Ditambahkan');
         }
 
@@ -138,9 +161,8 @@ class HotelController extends Controller
 
         public function update(Request $request,$id){
 
-            if($request->file('gambar1')==NULL || $request->file('gambar2')==NULL || $request->file('gambar3')==NULL){
+            if($request->file('gambar1')==NULL AND $request->file('gambar2')==NULL AND $request->file('gambar3')==NULL){
                 $hotel = Hotel::find($id);
-                $hotel->id = $request->id;
                 $hotel->nama_hotel = $request->nama_hotel;
                 $hotel->harga = $request->harga;
                 $hotel->kontak = $request->kontak;
@@ -148,58 +170,58 @@ class HotelController extends Controller
                 $hotel->lokasi = $request->lokasi;
                 $hotel->link = $request->link;
                 $hotel->fasilitas = $request->fasilitas;
-                $Namagambar1 = $request->Namagambar1;
-                $Namagambar2 = $request->Namagambar2;
-                $Namagambar3 = $request->Namagambar3;
+                $gambar1 = $request->gambar1;
+                $gambar2 = $request->gambar2;
+                $gambar3 = $request->gambar3;
                 $hotel->deskripsi = $request->deskripsi;
+
                 $hotel->save();
                 return redirect('/dashboard/hotel')->with('success','Data Berhasil Diubah');
+
             }else{
                 $gambar1 = $request->file('gambar1');
                 $Namagambar1 = time().'.'.$gambar1->extension();
-                $gambar1->move(public_path('gambar1'),$Namagambar1);
+                $gambar1->move(public_path('img_hotel/slide1'), $Namagambar1);
+
                 $gambar2 = $request->file('gambar2');
                 $Namagambar2 = time().'.'.$gambar2->extension();
-                $gambar2->move(public_path('gambar2'),$Namagambar2);
+                $gambar2->move(public_path('img_hotel/slide2'), $Namagambar2);
+
                 $gambar3 = $request->file('gambar3');
                 $Namagambar3 = time().'.'.$gambar3->extension();
-                $gambar3->move(public_path('gambar3'),$Namagambar3);
-                $id = $request->$id;
+                $gambar3->move(public_path('img_hotel/slide3'), $Namagambar3);
+
                 $nama_hotel = $request->nama_hotel;
-                $nama_toko = $request->nama_toko;
-                $pemilik = $request->pemilik;
-                $bahan = $request->bahan;
-                $tipe = $request->tipe;
-                $ukuran = $request->ukuran;
-                $warna = $request->warna;
-                $harga = $request->harga;
-                $kontak = $request->kontak;
-                $map = $request->map;
                 $lokasi = $request->lokasi;
+                $map = $request->map;
                 $deskripsi = $request->deskripsi;
+                $rating = $request->rating;
+                $kontak = $request->kontak;
+                $harga = $request->harga;
+                $link = $request->link;
+                $fasilitas = $request->fasilitas;
     
     
-            $hotel = Hotel::find($id);
-            $hotel->id = $request->id;
-            $hotel->nama_hotel = $request->nama_hotel;
-            $hotel->nama_toko = $request->nama_toko;
-            $hotel->pemilik = $request->pemilik;
-            $hotel->bahan = $request->bahan;
-            $hotel->tipe = $request->tipe;
-            $hotel->ukuran = $request->ukuran;
-            $hotel->warna = $request->warna;
-            $hotel->harga = $request->harga;
-            $hotel->kontak = $request->kontak;
-            $hotel->map = $request->map;
-            $hotel->lokasi = $request->lokasi;
-            $hotel->gambar1 = $request->Namagambar1;
-            $hotel->gambar2 = $request->Namagambar2;
-            $hotel->gambar3 = $request->Namagambar3;
-            $hotel->deskripsi = $Request->deskripsi;
-    
-            $hotel->save();
-            return redirect('/dashboard/hotel')->with('success','Data Berhasil Diubah');
-            }
+                $hotel = Hotel::find($id);
+                $hotel->nama_hotel = $request->nama_hotel;
+                $hotel->lokasi = $request->lokasi;
+                $hotel->map = $request->map;
+                $hotel->harga = $request->harga;
+                $hotel->kontak = $request->kontak;
+                $hotel->deskripsi = $request->deskripsi;
+                $hotel->rating = $request->rating;
+                $hotel->kontak = $request->kontak;
+                $hotel->harga = $request->harga;
+                $hotel->link = $request->link;
+                $hotel->fasilitas = $request->fasilitas;
+                $hotel->gambar1 = $Namagambar1;
+                $hotel->gambar2 = $Namagambar2;
+                $hotel->gambar3 = $Namagambar3;
+                
+        
+                $hotel->save();
+                return redirect('/dashboard/hotel')->with('success','Data Berhasil Diubah');
+                }
     
         }
 

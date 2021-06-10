@@ -109,15 +109,19 @@ class SouvenirController extends Controller
         $kontak = $request->kontak;
         $map = $request->map;
         $lokasi = $request->lokasi;
+
         $gambar1 = $request->file('gambar1');
         $Namagambar1 = time().'.'.$gambar1->extension();
-        $gambar1->move(public_path('gambar1'),$Namagambar1);
+        $gambar1->move(public_path('img_souvenir/slide1'),$Namagambar1);
+
         $gambar2 = $request->file('gambar2');
         $Namagambar2 = time().'.'.$gambar2->extension();
-        $gambar2->move(public_path('gambar2'),$Namagambar2);
+        $gambar2->move(public_path('img_souvenir/slide2'),$Namagambar2);
+
         $gambar3 = $request->file('gambar3');
         $Namagambar3 = time().'.'.$gambar3->extension();
-        $gambar3->move(public_path('gambar3'),$Namagambar3);
+        $gambar3->move(public_path('img_souvenir/slide3'),$Namagambar3);
+
         $deskripsi = $request->deskripsi;
 
         $Souvenir = new Souvenir();
@@ -149,9 +153,9 @@ class SouvenirController extends Controller
 
     public function update(Request $request,$id){
 
-        if($request->file('gambar1')==NULL && $request->file('gambar1')==NULL && $request->file('gambar1')==NULL){
+
+        if($request->file('gambar1')==NULL AND $request->file('gambar2')==NULL AND $request->file('gambar3')==NULL){
             $Souvenir = Souvenir::find($id);
-            $Souvenir->id = $request->id;
             $Souvenir->nama_souvenir = $request->nama_souvenir;
             $Souvenir->nama_toko = $request->nama_toko;
             $Souvenir->pemilik = $request->pemilik;
@@ -167,20 +171,23 @@ class SouvenirController extends Controller
             $gambar2 = $request->gambar2;
             $gambar3 = $request->gambar3;
             $Souvenir->deskripsi = $request->deskripsi;
+
             $Souvenir->save();
             return redirect('/dashboard/souvenir')->with('success','Data Berhasil Diubah');
 
         }else{
             $gambar1 = $request->file('gambar1');
             $Namagambar1 = time().'.'.$gambar1->extension();
-            $gambar1->move(public_path('gambar1'),$Namagambar1);
+            $gambar1->move(public_path('img_souvenir/slide1'),$Namagambar1);
+
             $gambar2 = $request->file('gambar2');
             $Namagambar2 = time().'.'.$gambar2->extension();
-            $gambar2->move(public_path('gambar2'),$Namagambar2);
+            $gambar2->move(public_path('img_souvenir/slide2'),$Namagambar2);
+
             $gambar3 = $request->file('gambar3');
             $Namagambar3 = time().'.'.$gambar3->extension();
-            $gambar3->move(public_path('gambar3'),$Namagambar3);
-            $id = $request->$id;
+            $gambar3->move(public_path('img_souvenir/slide3'),$Namagambar3);
+
             $nama_souvenir = $request->nama_souvenir;
             $nama_toko = $request->nama_toko;
             $pemilik = $request->pemilik;
@@ -196,7 +203,6 @@ class SouvenirController extends Controller
 
 
         $Souvenir = Souvenir::find($id);
-        $Souvenir->id = $request->id;
         $Souvenir->nama_souvenir = $request->nama_souvenir;
         $Souvenir->nama_toko = $request->nama_toko;
         $Souvenir->pemilik = $request->pemilik;
@@ -211,7 +217,7 @@ class SouvenirController extends Controller
         $Souvenir->gambar1 = $Namagambar1;
         $Souvenir->gambar2 = $Namagambar2;
         $Souvenir->gambar3 = $Namagambar3;
-        $Souvenir->deskripsi = $Request->deskripsi;
+        $Souvenir->deskripsi = $request->deskripsi;
 
         $Souvenir->save();
         return redirect('/dashboard/souvenir')->with('success','Data Berhasil Diubah');

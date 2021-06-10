@@ -102,8 +102,8 @@
                   </div>
                   <div class="carousel-inner" id="hotel-carousel">
                     <div class="carousel-item active">
-                      <a href="{{asset('gambar')}}/{{$item['gambar']}}" class="insta-img image-popup" style="">
-                      <img src="{{asset('gambar')}}/{{$item['gambar']}}" class="d-block w-100" alt=""></a>
+                      <a href="{{asset('img_event')}}/{{ $item->gambar }}" class="insta-img image-popup" style="">
+                      <img src="{{asset('img_event')}}/{{ $item->gambar }}" class="d-block w-100" alt=""></a>
                     </div>
                   </div>
                 </div>

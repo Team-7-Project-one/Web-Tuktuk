@@ -109,15 +109,15 @@
           </div>
           <div class="col-md-6">
             <label for="">Gambar 1</label>
-            <input type="file" name="gambar1" class="form-control" value="{{ $Souvenir->Namagambar1 }}" id="inputGroupFile02">
+            <input type="file" name="gambar1" class="form-control" value="{{ $Souvenir->gambar1 }}" id="inputGroupFile02">
           </div>
           <div class="col-md-6">
             <label for="">Gambar 2</label>
-            <input type="file" name="gambar2" class="form-control" value="{{ $Souvenir->Namagambar2 }}" id="inputGroupFile02">
+            <input type="file" name="gambar2" class="form-control" value="{{ $Souvenir->gambar2 }}" id="inputGroupFile02">
           </div>
           <div class="col-md-6">
             <label for="">Gambar 3</label>
-            <input type="file" name="gambar3" class="form-control" value="{{ $Souvenir->Namagambar3 }}" id="inputGroupFile02">
+            <input type="file" name="gambar3" class="form-control" value="{{ $Souvenir->gambar3 }}" id="inputGroupFile02">
           </div>
           <div class="col-md-12">
             <label for="">Deskripisi</label>

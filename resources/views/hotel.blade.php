@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Tuk-Tuk Tour</title>
+    <title>Tuk-Tuk Tour</title>
     <link rel="icon" type="image/png" href="{{asset('img/logo_web.png')}}" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width">
@@ -61,8 +61,8 @@
           <div class="hotel-list col-md-4 d-flex ftco-animate container mt-3">
             <div class="blog-entry align-self-stretch">
             <center>
-            <a href="{{asset('gambar1')}}/{{ $item['gambar1'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-              <p class="block-20 rounded container" style="background-image: url('{{asset('gambar1')}}/{{ $item['gambar1'] }}');"> </p>
+            <a href="{{asset('img_hotel/slide1')}}/{{ $item['gambar1'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+              <p class="block-20 rounded container" style="background-image: url('{{asset('img_hotel/slide1')}}/{{ $item['gambar1'] }}');"> </p>
             </a>
             </center>
               <div class="text mt-3">
@@ -255,9 +255,9 @@
           <div class="container">
             <b class="hotel-name">{{ $item['nama_hotel'] }}</b>
             <section class="home-slider owl-carousel mt-3">
-              <div class="slider-item" style="background-image: url({{asset('gambar1')}}/{{ $item['gambar1'] }}); border-radius: 10px;"></div>
-              <div class="slider-item" style="background-image: url({{asset('gambar2')}}/{{ $item['gambar2'] }}); border-radius: 10px;"></div>
-              <div class="slider-item" style="background-image: url({{asset('gambar3')}}/{{ $item['gambar3'] }}); border-radius: 10px;"></div>
+              <div class="slider-item" style="background-image: url({{asset('img_hotel/slide1')}}/{{ $item['gambar1'] }}); border-radius: 10px;"></div>
+              <div class="slider-item" style="background-image: url({{asset('img_hotel/slide2')}}/{{ $item['gambar2'] }}); border-radius: 10px;"></div>
+              <div class="slider-item" style="background-image: url({{asset('img_hotel/slide3')}}/{{ $item['gambar3'] }}); border-radius: 10px;"></div>
             </section>
           </div>
             
