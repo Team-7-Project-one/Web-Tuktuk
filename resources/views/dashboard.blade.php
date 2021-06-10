@@ -110,7 +110,7 @@
   </style>
     <nav style="background-color: #212F3C;" class="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-body rounded">
         <div class="container-fluid">
-          <a class=" navbar-brand text-light" style="font-family: 'Quicksand', sans-serif;" href="#">TukTukTour</a>
+          <a class=" navbar-brand" href="#"><img src="{{asset('img/logo_web.png')}}" width="80%" alt=""></a>
           <div class="" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">

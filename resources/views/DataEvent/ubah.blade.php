@@ -33,7 +33,7 @@
   <body>
       <nav class="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-body rounded">
         <div class="container-fluid">
-          <a class=" navbar-brand text-dark" style="font-family: 'Quicksand', sans-serif; font-weight: bolder;" href="#">TukTukTour</a>
+        <a class=" navbar-brand text-dark" style="font-family: 'Quicksand', sans-serif;" href="#">TukTukTour</a>
           <div class="" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">

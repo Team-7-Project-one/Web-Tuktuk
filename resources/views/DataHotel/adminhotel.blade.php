@@ -40,6 +40,7 @@
       }
     </style>
   </head>
+
   <body style="background-color: #34495E;">
     <nav style="background-color: #212F3C;" class="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-body rounded">
       <div class="container-fluid">
@@ -74,7 +75,7 @@
       </div>
       <div class="container mb-2 btnadd mt-3">
         <a href="/dashboard" class="btn btn-secondary rounded-pill"><i class="fas fa-arrow-alt-circle-left"></i> back</a>
-        <a href="/dashboard/hotel/tambah" class="btn  btn-primary "><i class="fas fa-plus-square rounded-pill"></i> Tambah Data</a>
+        <a href="/dashboard/hotel/tambah" class="btn  btn-primary rounded-pill"><i class="fas fa-plus-square"></i> Tambah Data</a>
       </div>
       <table class="table container table-hover mt-5">
         <thead>
