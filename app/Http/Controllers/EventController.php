@@ -84,7 +84,7 @@ class EventController extends Controller
         $event->harga = $harga;
         $event->lokasi = $lokasi;
         $event->map = $map;
-        $event->gambar = $gambar;
+        $event->gambar = $Namagambar;
         $event->deskripsi = $deskripsi;
         $event->save();
 

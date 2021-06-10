@@ -99,93 +99,87 @@
         </tbody>
       </table>
 
-@foreach ($data as $item)  
-<!-- Modal hotel -->
-<div class="modal fade" id="abc{{ $item['id'] }}"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 
-  <div class="modal-dialog modal-dialog-centered modal-lg">
+ <!-- Event Modal -->
+ <div class="modal fade" id="abc{{ $data['id'] }}"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-xl">
     <div class="modal-content">
       <div class="modal-body">
-        <center><h1 id="hotel-info-title" class="">Description</h1></center><br>
+        <center><h1 id="hotel-info-title" class="text-success">Details</h1></center><br>
         <div class="row container">
-        
-          <div class="container">
-            <b class="hotel-name">{{ $item['nama_hotel'] }}</b>
-            <div id="carouselExampleIndicators{{ $item['id'] }}" class="carousel slide" data-bs-ride="carousel">
+
+          <div class="col-md-7">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
               <div id="carbut2" class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
               </div>
               <div class="carousel-inner" id="hotel-carousel">
                 <div class="carousel-item active">
-                  <a href="{{ asset('gambar1') }}/{{ $item['gambar1'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-                  <img src="{{ asset('gambar1') }}/{{ $item['gambar1'] }}" class="d-block w-50" alt=""></a>
-                </div>
-                <div class="carousel-item">
-                  <a href="{{ asset('gambar2') }}/{{ $item['gambar2'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-                  <img src="{{ asset('gambar2') }}/{{ $item['gambar2'] }}" class="d-block w-50" alt=""></a>
-                </div>
-                <div class="carousel-item">
-                  <a href="{{ asset('gambar3') }}/{{ $item['gambar3'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-                  <img src="{{ asset('gambar3') }}/{{ $item['gambar3'] }}" class="d-block w-50" alt="">
-                  </a>
+                  <a href="img/event/{{$data['gambar']}}" class="insta-img image-popup" style="">
+                  <img src="img/event/{{$data['gambar']}}" class="d-block w-100" alt=""></a>
                 </div>
               </div>
-              <button id="carbut2"  class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators{{ $item['id'] }}" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden"></span>
-              </button>
-              <button id="carbut2" class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators{{ $item['id'] }}" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden"></span>
-              </button>
             </div>
           </div>
-            
-          <div class="container">
-            <table class="table mt-4">
+
+          <div style="margin-top: -30px;" class="container col-md-5 fade show active mt-3" id="home" role="tabpanel" aria-labelledby="home-tab"><br>
+            <center>
+            <h4 class="text-primary" style="font-weight: bold !important;">{{ $data['nama_event'] }}</h4><p style="font-style: italic; color: gray;">{{ $data['deskripsi'] }}</p>
+            </center>
+            <table class="table">
               <tr>
-                <td class="w-25"><i class="fas fa-map-marker-alt text-danger"></i>&nbsp;Location</td>
+                <td><i class="fab fa-elementor text-primary"></i> Category</td>
                 <td>:</td>
-                <td>{{ $item['lokasi'] }}</td>
+                <td>{{ $data['kategori'] }}</td>
               </tr>
               <tr>
-                <td><i class="fas fa-star text-warning"></i>&nbsp;Rating</td>
+                <td><i class="far fa-calendar-check text-primary"></i> Tanggal Mulai</td>
                 <td>:</td>
-                <td>{{ $item['rating'] }}</td>
+                <td>{{ $data['tgl_pelaksanaan'] }}</td>
               </tr>
               <tr>
-                <td><i class="fas fa-bed"></i>&nbsp;Fasilitas</td>
+                <td><i class="far fa-calendar-minus text-primary"></i> Tanggal Berakhir</td>
                 <td>:</td>
-                <td>{{ $item['fasilitas'] }}</td>
+                <td>{{ $data['tgl_selesai'] }}</td>
               </tr>
               <tr>
-                <td><i class="fas fa-address-book text-primary"></i>&nbsp;Contact</td>
+                <td><i class="fas fa-clock text-primary"></i> Waktu</td>
                 <td>:</td>
-                <td>{{ $item['kontak'] }}</td>
+                <td>{{ $data['waktu'] }}</td>
               </tr>
               <tr>
-                <td><i class="fas fa-tags"></i>&nbsp;Price</td>
+                <td><i class="fas fa-ticket-alt text-primary"></i> Harga Tiket</td>
                 <td>:</td>
-                <td>{{ $item['harga'] }}</td>
+                <td class="text-success">{{ $data['harga'] }}</td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-map-marker-alt text-primary"></i> Lokasi</td>
+                <td>:</td>
+                <td class="text-success">{{ $data['lokasi'] }}</td>
               </tr>
             </table>
           </div>
-          <div class="map-hotel container col-md-12 mt-4" style="border: 1px solid;" ><center><h3>Location</h3>
-            <iframe src="{{ $item['map'] }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="responsive-iframe"></iframe>
+          
+          <div class="map-hotel container col-md-8 mt-4">
+            <center>
+              <h3>Detail Location</h3>
+              <iframe src="{{ $data['map'] }}" style="border: 5px solid; border-radius: 10px" width="600" height="450" allowfullscreen="" loading="lazy" class="responsive-iframe"></iframe>
             </center>
           </div>
+
         </div>
+
       </div>
-      <div class="modal-footer">
-        <a href="{{ $item['link'] }}" target="_blank" class="btn btn-primary container col-md-6">Kunjungi</a>
-        <button type="button" class="btn btn-danger col-md-6" data-bs-dismiss="modal">Close</button>
+
+      <div class="modal-footer mt-4">
+        <button type="button" class="btn btn-danger col-md-12" data-bs-dismiss="modal">Close</button>
       </div>
+
     </div>
   </div>
 </div>
 @endforeach
+
 
       <center>
         <div class="pagination mt-3 justify-content-center ">

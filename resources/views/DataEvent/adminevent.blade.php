@@ -46,6 +46,7 @@
           </div>
         </div>
       </nav>
+      @if(session('success'))
         <div class="col-md-10 container">
         <div class="alert alert-success container" role="alert">
         <h3 class="alert-heading"><i class="fas fa-calendar-check"></i> {{ session('success') }}</h3>
@@ -84,6 +85,87 @@
         </tbody>
       </table>
       
+      @foreach($data as $item)
+       <!-- Event Modal -->
+    <div class="modal fade" id="abc{{ $item['id'] }}"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog  modal-xl">
+        <div class="modal-content">
+          <div class="modal-body">
+            <center><h1 id="hotel-info-title" class="text-success">Details</h1></center><br>
+            <div class="row container">
+
+              <div class="col-md-7">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                  <div id="carbut2" class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  </div>
+                  <div class="carousel-inner" id="hotel-carousel">
+                    <div class="carousel-item active">
+                      <a href="{{asset('gambar')}}/{{$item['gambar']}}" class="insta-img image-popup" style="">
+                      <img src="{{asset('gambar')}}/{{$item['gambar']}}" class="d-block w-100" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top: -30px;" class="container col-md-5 fade show active mt-3" id="home" role="tabpanel" aria-labelledby="home-tab"><br>
+                <center>
+                <h4 class="text-primary" style="font-weight: bold !important;">{{ $item['nama_event'] }}</h4><p style="font-style: italic; color: gray;">{{ $item['deskripsi'] }}</p>
+                </center>
+                <table class="table">
+                  <tr>
+                    <td><i class="fab fa-elementor text-primary"></i> Category</td>
+                    <td>:</td>
+                    <td>{{ $item['kategori'] }}</td>
+                  </tr>
+                  <tr>
+                    <td><i class="far fa-calendar-check text-primary"></i> Tanggal Mulai</td>
+                    <td>:</td>
+                    <td>{{ $item['tgl_pelaksanaan'] }}</td>
+                  </tr>
+                  <tr>
+                    <td><i class="far fa-calendar-minus text-primary"></i> Tanggal Berakhir</td>
+                    <td>:</td>
+                    <td>{{ $item['tgl_selesai'] }}</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-clock text-primary"></i> Waktu</td>
+                    <td>:</td>
+                    <td>{{ $item['waktu'] }}</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-ticket-alt text-primary"></i> Harga Tiket</td>
+                    <td>:</td>
+                    <td class="text-success">{{ $item['harga'] }}</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-map-marker-alt text-primary"></i> Lokasi</td>
+                    <td>:</td>
+                    <td class="text-success">{{ $item['lokasi'] }}</td>
+                  </tr>
+                </table>
+              </div>
+              
+              <div class="map-hotel container col-md-8 mt-4">
+                <center>
+                  <h3>Detail Location</h3>
+                  <iframe src="{{ $item['map'] }}" style="border: 5px solid; border-radius: 10px" width="600" height="450" allowfullscreen="" loading="lazy" class="responsive-iframe"></iframe>
+                </center>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="modal-footer mt-4">
+            <button type="button" class="btn btn-danger col-md-12" data-bs-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    @endforeach
+    
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     <script src="js/jquery.min.js"></script>
