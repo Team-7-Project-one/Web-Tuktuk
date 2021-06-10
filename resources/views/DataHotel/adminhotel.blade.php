@@ -2,23 +2,17 @@
 <html lang="en">
   <head>
     <title>Tuk-Tuk Tour</title>
-    <link rel="icon" type="image/png" href="{{asset('img/logo_web.png')}}" />
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
+    <meta name="viewport" content="width=device-width">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700&display=swap" rel="stylesheet" />
-
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
-
-    <link rel="stylesheet" href="/css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/magnific-popup.css" />
-
     <link rel="stylesheet" href="css/aos.css" />
-
     <link rel="stylesheet" href="css/ionicons.min.css" />
-
     <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
     <link rel="stylesheet" href="css/jquery.timepicker.css" />
     <link rel="stylesheet" href="css/flaticon.css" />
@@ -100,6 +94,7 @@
         </tbody>
       </table>
 
+
 @foreach ($data as $item)  
 <!-- Modal hotel -->
 <div class="modal fade" id="abc{{ $item['id'] }}"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -120,16 +115,16 @@
               </div>
               <div class="carousel-inner" id="hotel-carousel">
                 <div class="carousel-item active">
-                  <a href="{{ asset('gambar1') }}/{{ $item['gambar1'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-                  <img src="{{ asset('gambar1') }}/{{ $item['gambar1'] }}" class="d-block w-50" alt=""></a>
+                  <a href="{{ asset('img_hotel/slide1') }}/{{ $item['gambar1'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                  <img src="{{ asset('img_hotel/slide1') }}/{{ $item['gambar1'] }}" class="d-block w-50" alt=""></a>
                 </div>
                 <div class="carousel-item">
-                  <a href="{{ asset('gambar2') }}/{{ $item['gambar2'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-                  <img src="{{ asset('gambar2') }}/{{ $item['gambar2'] }}" class="d-block w-50" alt=""></a>
+                  <a href="{{ asset('img_hotel/slide2') }}/{{ $item['gambar2'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                  <img src="{{ asset('img_hotel/slide2') }}/{{ $item['gambar2'] }}" class="d-block w-50" alt=""></a>
                 </div>
                 <div class="carousel-item">
-                  <a href="{{ asset('gambar3') }}/{{ $item['gambar3'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-                  <img src="{{ asset('gambar3') }}/{{ $item['gambar3'] }}" class="d-block w-50" alt="">
+                  <a href="{{ asset('img_hotel/slide3') }}/{{ $item['gambar3'] }}" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                  <img src="{{ asset('img_hotel/slide3') }}/{{ $item['gambar3'] }}" class="d-block w-50" alt="">
                   </a>
                 </div>
               </div>
@@ -185,6 +180,7 @@
       </div>
     </div>
   </div>
+  
 </div>
 @endforeach
 

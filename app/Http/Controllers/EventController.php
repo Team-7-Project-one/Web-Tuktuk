@@ -61,6 +61,22 @@ class EventController extends Controller
             'deskripsi'=>'required',
         ]);
 
+        if ($request->file('gambar')==NULL) {
+            Event::create([ 
+                'nama_event' => $request->nama_event,
+                'kategori' => $request->kategori,
+                'tgl_pelaksanaan' => $request->tgl_pelaksanaan,
+                'tgl_selesai' => $request->tgl_selesai,
+                'waktu'=> $request->waktu,
+                'harga' => $request->harga,
+                'lokasi' => $request->lokasi,
+                'map' => $request->map,
+                'deskripsi' => $request->deskripsi,
+                'gambar' => $request->gambar,
+            ]);
+        
+        } else {
+
         $nama_event = $request->nama_event;
         $kategori = $request->kategori;
         $tgl_pelaksanaan = $request->tgl_pelaksanaan;
@@ -72,7 +88,7 @@ class EventController extends Controller
         $deskripsi = $request->deskripsi;
         $gambar = $request->file('gambar');
         $Namagambar = time().'.'.$gambar->extension();
-        $gambar->move(public_path('gambar'),$Namagambar);
+        $gambar->move(public_path('img_event'),$Namagambar);
         
 
         $event = new Event();
@@ -87,6 +103,7 @@ class EventController extends Controller
         $event->gambar = $Namagambar;
         $event->deskripsi = $deskripsi;
         $event->save();
+        }
 
     return redirect('/dashboard/event')->with('success','Data Berhasil Ditambahkan');
     }
@@ -102,7 +119,6 @@ class EventController extends Controller
 
         if($request->file('gambar')==NULL){
             $event = Event::find($id);
-            $event->id = $request->id;
             $event->nama_event = $request->nama_event;
             $event->kategori = $request->kategori;
             $event->tgl_pelaksanaan = $request->tgl_pelaksanaan;
@@ -113,14 +129,14 @@ class EventController extends Controller
             $event->map = $request->map;
             $gambar = $request->gambar;
             $event->deskripsi = $request->deskripsi;
+
             $event->save();
             return redirect('/dashboard/event')->with('success','Data Berhasil Diubah');
         }else{
             $gambar = $request->file('gambar');
             $Namagambar = time().'.'.$gambar->extension();
-            $gambar->move(public_path('gambar'),$Namagambar);
-            
-            $id = $request->id;
+            $gambar->move(public_path('img_event'),$Namagambar);
+    
             $nama_event = $request->nama_event;
             $kategori = $request->kategori;
             $tgl_pelaksanaan = $request->tgl_pelaksanaan;
@@ -133,7 +149,6 @@ class EventController extends Controller
 
 
         $event = Event::find($id);
-        $event->id = $request->id;
         $event->nama_event = $request->nama_event;
         $event->kategori = $request->kategori;
         $event->tgl_pelaksanaan = $request->tgl_pelaksanaan;
@@ -142,7 +157,7 @@ class EventController extends Controller
         $event->harga = $request->harga;
         $event->lokasi = $request->lokasi;
         $event->map = $request->map;
-        $gambar = $Namagambar;
+        $event->gambar = $Namagambar;
         $event->deskripsi = $request->deskripsi;
 
         $event->save();
