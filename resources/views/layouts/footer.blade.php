@@ -67,7 +67,7 @@
             Copyright &copy;
             <script>
             document.write(new Date().getFullYear());
-            </script> All Rights Reserved | This Website Is Developed By&nbsp;<span style="color: #ffff00;">Kelompok 07 PA 1 - IT Del</span>
+            </script> All Rights Reserved | This Website Is Developed By&nbsp;<a href="/aboutus" style="color: #ffff00;">Kelompok 07 PA 1 - IT Del</a>
         </p>
         </div>
     </div>
