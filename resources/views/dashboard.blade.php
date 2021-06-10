@@ -102,9 +102,9 @@
           }
 
       </style>
-      <div class="col-md-10 container">
+      <div class="col-md-8 container">
       <div class="row container">
-          <div class="col-md-4 mb-3 container">
+          <div class="col-md-4 mb-3 container mt-4">
             <div class="card container" id="btn1" style="width: 18rem;">
                 <div class="card-body">
                 <center>
@@ -117,7 +117,7 @@
               </div>
           </div>
 
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3 mt-4">
             <div class="card container" id="btn2" style="width: 18rem;">
                 <div class="card-body">
                 <center>
@@ -130,7 +130,7 @@
               </div>
           </div>
 
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3 mt-4">
             <div class="card container" id="btn3" style="width: 18rem;">
                 <div class="card-body">
                 <center>
