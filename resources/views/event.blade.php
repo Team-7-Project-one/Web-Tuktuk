@@ -61,7 +61,7 @@
       @foreach ($data as $data)
         <center>
         <div class="container row">
-            <div class="hero-wrap  event-card" style="background-image: url(img/event/{{$data['gambar']}});  border-radius: 30px; overflow: hidden;">
+            <div class="hero-wrap  event-card" style="background-image: url({{asset('gambar')}}/{{$data['gambar']}});  border-radius: 30px; overflow: hidden;">
               <div class="overlay" id="eventdark"></div>
               <div class="container">
                 <div class="row  ">
@@ -102,8 +102,8 @@
                   </div>
                   <div class="carousel-inner" id="hotel-carousel">
                     <div class="carousel-item active">
-                      <a href="img/event/{{$data['gambar']}}" class="insta-img image-popup" style="">
-                      <img src="img/event/{{$data['gambar']}}" class="d-block w-100" alt=""></a>
+                      <a href="{{asset('gambar')}}/{{$data['gambar']}}" class="insta-img image-popup" style="">
+                      <img src="{{asset('gambar')}}/{{$data['gambar']}}" class="d-block w-100" alt=""></a>
                     </div>
                   </div>
                 </div>

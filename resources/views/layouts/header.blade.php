@@ -31,7 +31,7 @@
         @endif
           <li class="nav-item dropdown" style="font-size: 1rem; cursor:pointer">
         @else
-          <a class="nav-link" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link" style="cursor: pointer;" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fas fa-user"></i>&nbsp;Login
           </a>
           
