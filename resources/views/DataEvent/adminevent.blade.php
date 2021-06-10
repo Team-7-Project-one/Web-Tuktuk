@@ -68,8 +68,8 @@
     @endif
       <h1 class="text-center text-light"><i class="fas fa-calendar-alt"></i> Event Data</h1>
       <div class="container mb-2 btnadd mt-3">
-        <a href="/dashboard" class="btn btn-secondary"><i class="fas fa-arrow-alt-circle-left"></i> back</a>
-        <a href="/dashboard/event/tambah" class="btn  btn-primary "><i class="fas fa-plus-square"></i> Tambah Data</a>
+        <a href="/dashboard" class="btn btn-secondary"><i class="fas fa-arrow-alt-circle-left rounded-pill"></i> back</a>
+        <a href="/dashboard/event/tambah" class="btn  btn-primary rounded-pill"><i class="fas fa-plus-square"></i> Tambah Data</a>
       </div>
       <table class="table container table-hover mt-5">
         <thead>

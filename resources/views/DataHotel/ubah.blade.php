@@ -33,7 +33,7 @@
   <body>
       <nav class="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-body rounded">
         <div class="container-fluid">
-        <a class=" navbar-brand" href="#"><img src="{{asset('img/logo_web.png')}}" width="80%" alt=""></a>
+        <a class=" navbar-brand text-dark" style="font-family: 'Quicksand', sans-serif;" href="#">TukTukTour</a>
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
                 <a class="nav-link btn btn-danger active p-2"  href="{{ route('admin_logout') }}" href="#" style="font-weight: bold"><i class="fas fa-power-off"></i> Logout</a>
