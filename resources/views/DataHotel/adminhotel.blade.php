@@ -80,11 +80,11 @@
             <th>Action</th>
           </tr>
         </thead>
-        <?php $i=1 ?>
+        <?php $i=0 ?>
         @foreach ($data as $item)
         <tbody>
           <tr>
-            <td>{{ $i++ }}</td>
+            <td>{{ $data->firstItem() + $i }}</td>
             <td>{{ $item['nama_hotel'] }}</td>
             <td>{{ $item['kontak'] }}</td>
             <td>{{ $item['rating'] }}</td>
@@ -95,6 +95,7 @@
               <a href="/dashboard/hotel/hapus/{{ $item['id'] }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>
             </td>
           </tr>
+        <?php $i++ ?>
          @endforeach
         </tbody>
       </table>
