@@ -76,9 +76,9 @@
             </center><br>
             @csrf
             <label class="mt-3" for="username">USERNAME</label>
-            <input id="username" type="text" name="username" class="form-control" size="30" required>
+            <input id="username" type="text" name="username" class="form-control" size="20" required>
             <label for="password" class="mt-3">PASSWORD</label>
-            <input id="password" type="password" name="password" class="form-control" size="30" required>
+            <input id="password" type="password" name="password" class="form-control" size="20" required>
             <br>
             <button class="btn btn-success btn-sm rounded-pill mt-3" style="font-size: 1rem; font-weight: bold;">Login</button>
             <br><br><br>

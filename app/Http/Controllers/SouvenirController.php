@@ -63,10 +63,10 @@ class SouvenirController extends Controller
             ->orWhere('nama_toko', 'LIKE', '%'.$request->keyword.'%')
             ->orWhere('pemilik', 'LIKE', '%'.$request->keyword.'%')
             ->orWhere('tipe', 'LIKE', '%'.$request->keyword.'%')
-            ->paginate(10);
+            ->paginate(5);
         }
         else{
-            $data = Souvenir::paginate(10);
+            $data = Souvenir::paginate(5);
         }
         // $data=SouvenirModel::all();
         return view('DataSouvenir.adminsouvenir',['data'=>$data]);

@@ -38,7 +38,7 @@ class EventController extends Controller
     }
 
     public function adminevent(){
-        $data = Event::all();
+        $data = Event::paginate(5);
         return view('DataEvent.adminevent',['data'=>$data]);
     }
 
