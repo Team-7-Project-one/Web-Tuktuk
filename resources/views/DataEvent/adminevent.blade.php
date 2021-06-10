@@ -57,18 +57,18 @@
     </div>
         } 
     @endif
-      <h1 class="text-center">Event List</h1>
-      <div class="container mb-2 btnadd">
+      <h1 class="text-center">Event Data</h1>
+      <div class="container mb-2 btnadd mt-3">
         <a href="/dashboard" class="btn btn-secondary"><i class="fas fa-arrow-alt-circle-left"></i> back</a>
         <a href="/dashboard/event/tambah" class="btn  btn-primary "><i class="fas fa-plus-square"></i> Tambah Data</a>
       </div>
-      <table class="table container table-hover">
+      <table class="table container table-hover mt-5">
         <thead>
         <tbody>
-          <?php $i=1 ?>
+          <?php $i=0 ?>
           @foreach ($data as $item)
           <tr>
-          <th>{{ $i++ }}</th>
+          <th>{{ $data->firstItem() + $i }}</th>
           <th>{{ $item['nama_event'] }}</th>
           <th>{{ $item['kategori'] }}</th>
           <th>{{ $item['tgl_pelaksanaan'] }}</th>
@@ -81,6 +81,7 @@
               <a href="/dashboard/event/hapus/{{ $item['id'] }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>
           </td>
         </tr>
+          <?php $i++; ?>
           @endforeach
         </tbody>
       </table>
@@ -166,6 +167,12 @@
     </div>
     @endforeach
     
+    
+    <center>
+      <div class="pagination mt-5 justify-content-center ">
+          {{ $data->links() }}
+      </div>
+    </center>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     <script src="js/jquery.min.js"></script>

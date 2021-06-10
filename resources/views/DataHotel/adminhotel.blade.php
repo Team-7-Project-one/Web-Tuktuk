@@ -57,19 +57,19 @@
     </div>
         } 
     @endif
-      <h1 class="text-center">Hotel List</h1>
+      <h1 class="text-center">Hotel Data</h1>
       <br>
       <div class="searchotel container col-md-10 mb-3">
         <form class="d-flex" method="GET">
-        <input name="keyword" class="form-control me-2"  placeholder="Temukan Hotel Anda di sini ..." aria-label="Search" value = "{{Request::get('keyword')}}" autocomplete="off"/>&nbsp;
+        <input name="keyword" class="form-control me-2"  placeholder="Cari data hotel ..." aria-label="Search" value = "{{Request::get('keyword')}}" autocomplete="off"/>&nbsp;
         <button id="cari" class="btn btn-outline-primary rounded-circle" style="width: 55px ;" type="submit"><i class="fas fa-search"></i></button>
         </form>
       </div>
-      <div class="container mb-2 btnadd">
-        <a href="/dashboard" class="btn btn-secondary"><i class="fas fa-arrow-alt-circle-left"></i> back</a>
-        <a href="/dashboard/hotel/tambah" class="btn  btn-primary "><i class="fas fa-plus-square"></i> Tambah Data</a>
+      <div class="container mb-2 btnadd mt-4">
+        <a href="/dashboard" class="btn btn-secondary rounded-pill"><i class="fas fa-arrow-alt-circle-left"></i> back</a>
+        <a href="/dashboard/hotel/tambah" class="btn  btn-primary rounded-pill"><i class="fas fa-plus-square"></i> Tambah Data</a>
       </div>
-      <table class="table container table-hover">
+      <table class="table container table-hover mt-5">
         <thead>
           <tr>
             <th>No</th>
@@ -80,28 +80,30 @@
             <th>Action</th>
           </tr>
         </thead>
-        <?php $i=1 ?>
+        <?php $i=0 ?>
         @foreach ($data as $item)
         <tbody>
           <tr>
-            <td>{{ $i++ }}</td>
+            <td>{{ $data->firstItem() + $i }}</td>
             <td>{{ $item['nama_hotel'] }}</td>
             <td>{{ $item['kontak'] }}</td>
             <td>{{ $item['rating'] }}</td>
             <td>{{ $item['harga'] }}</td>
             <td>
-              <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#abc{{ $item['id'] }}"><i class="fas fa-info-circle"></i> Detail</button>
-              <a href="/dashboard/hotel/ubah/{{ $item['id'] }}" class="btn btn-warning btn-sm" ><i class="fas fa-edit"></i> Ubah</a>
-              <a href="/dashboard/hotel/hapus/{{ $item['id'] }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>
+              <button class="btn btn-success btn-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#abc{{ $item['id'] }}"><i class="fas fa-info-circle"></i> Detail</button>
+              <a href="/dashboard/hotel/ubah/{{ $item['id'] }}" class="btn btn-warning btn-sm rounded-pill" ><i class="fas fa-edit"></i> Ubah</a>
+              <a href="/dashboard/hotel/hapus/{{ $item['id'] }}" class="btn btn-danger btn-sm rounded-pill"><i class="fas fa-trash"></i> Hapus</a>
             </td>
           </tr>
+          <?php $i++; ?>
          @endforeach
         </tbody>
       </table>
 
 
+  @foreach ($data as $item)
  <!-- Event Modal -->
- <div class="modal fade" id="abc{{ $data['id'] }}"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+ <div class="modal fade" id="abc{{ $item['id'] }}"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog  modal-xl">
     <div class="modal-content">
       <div class="modal-body">
@@ -115,8 +117,8 @@
               </div>
               <div class="carousel-inner" id="hotel-carousel">
                 <div class="carousel-item active">
-                  <a href="img/event/{{$data['gambar']}}" class="insta-img image-popup" style="">
-                  <img src="img/event/{{$data['gambar']}}" class="d-block w-100" alt=""></a>
+                  <a href="img/event/{{$item['gambar']}}" class="insta-img image-popup" style="">
+                  <img src="img/event/{{$item['gambar']}}" class="d-block w-100" alt=""></a>
                 </div>
               </div>
             </div>
@@ -124,38 +126,38 @@
 
           <div style="margin-top: -30px;" class="container col-md-5 fade show active mt-3" id="home" role="tabpanel" aria-labelledby="home-tab"><br>
             <center>
-            <h4 class="text-primary" style="font-weight: bold !important;">{{ $data['nama_event'] }}</h4><p style="font-style: italic; color: gray;">{{ $data['deskripsi'] }}</p>
+            <h4 class="text-primary" style="font-weight: bold !important;">{{ $item['nama_event'] }}</h4><p style="font-style: italic; color: gray;">{{ $item['deskripsi'] }}</p>
             </center>
             <table class="table">
               <tr>
                 <td><i class="fab fa-elementor text-primary"></i> Category</td>
                 <td>:</td>
-                <td>{{ $data['kategori'] }}</td>
+                <td>{{ $item['kategori'] }}</td>
               </tr>
               <tr>
                 <td><i class="far fa-calendar-check text-primary"></i> Tanggal Mulai</td>
                 <td>:</td>
-                <td>{{ $data['tgl_pelaksanaan'] }}</td>
+                <td>{{ $item['tgl_pelaksanaan'] }}</td>
               </tr>
               <tr>
                 <td><i class="far fa-calendar-minus text-primary"></i> Tanggal Berakhir</td>
                 <td>:</td>
-                <td>{{ $data['tgl_selesai'] }}</td>
+                <td>{{ $item['tgl_selesai'] }}</td>
               </tr>
               <tr>
                 <td><i class="fas fa-clock text-primary"></i> Waktu</td>
                 <td>:</td>
-                <td>{{ $data['waktu'] }}</td>
+                <td>{{ $item['waktu'] }}</td>
               </tr>
               <tr>
                 <td><i class="fas fa-ticket-alt text-primary"></i> Harga Tiket</td>
                 <td>:</td>
-                <td class="text-success">{{ $data['harga'] }}</td>
+                <td class="text-success">{{ $item['harga'] }}</td>
               </tr>
               <tr>
                 <td><i class="fas fa-map-marker-alt text-primary"></i> Lokasi</td>
                 <td>:</td>
-                <td class="text-success">{{ $data['lokasi'] }}</td>
+                <td class="text-success">{{ $item['lokasi'] }}</td>
               </tr>
             </table>
           </div>
@@ -163,7 +165,7 @@
           <div class="map-hotel container col-md-8 mt-4">
             <center>
               <h3>Detail Location</h3>
-              <iframe src="{{ $data['map'] }}" style="border: 5px solid; border-radius: 10px" width="600" height="450" allowfullscreen="" loading="lazy" class="responsive-iframe"></iframe>
+              <iframe src="{{ $item['map'] }}" style="border: 5px solid; border-radius: 10px" width="600" height="450" allowfullscreen="" loading="lazy" class="responsive-iframe"></iframe>
             </center>
           </div>
 
@@ -182,7 +184,7 @@
 
 
       <center>
-        <div class="pagination mt-3 justify-content-center ">
+        <div class="pagination mt-5 justify-content-center ">
             {{ $data->links() }}
         </div>
       </center>

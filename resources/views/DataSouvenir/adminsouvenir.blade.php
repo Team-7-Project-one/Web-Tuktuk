@@ -60,20 +60,20 @@
     </div>
         } 
     @endif
-      <h1 class="text-center">Souvenir List</h1>
+      <h1 class="text-center">Souvenir Data</h1>
       <br>
       <div class="searchotel container col-md-10">
         <form class="d-flex" method="GET">
-        <input name="keyword" class="form-control me-2"  placeholder="Temukan Souvenir Anda di sini ..." aria-label="Search" value = "{{Request::get('keyword')}}" autocomplete="off"/>&nbsp;
+        <input name="keyword" class="form-control me-2"  placeholder="Temukan data souvenir ..." aria-label="Search" value = "{{Request::get('keyword')}}" autocomplete="off"/>&nbsp;
         <button id="cari" class="btn btn-outline-warning rounded-circle" style="width: 55px ;" type="submit"><i class="fas fa-search"></i></button>
         </form>
       </div>
       <br>
-      <div class="container mb-2 btnadd">
-        <a href="/dashboard" class="btn btn-secondary"><i class="fas fa-arrow-alt-circle-left"></i> back</a>
-        <a href="/dashboard/souvenir/tambah" class="btn  btn-primary "><i class="fas fa-plus-square"></i> Tambah Data</a>
+      <div class="container mb-2 btnadd mt-3">
+        <a href="/dashboard" class="btn btn-secondary rounded-pill"><i class="fas fa-arrow-alt-circle-left"></i> back</a>
+        <a href="/dashboard/souvenir/tambah" class="btn  btn-primary rounded-pill"><i class="fas fa-plus-square"></i> Tambah Data</a>
       </div><br>
-      <table class="table container table-hover">
+      <table class="table container table-hover mt-5">
         <thead>
         <tr>
           <th>No</th>
@@ -85,10 +85,10 @@
         </tr>
       </thead>
       <tbody>
-        <?php $i=1 ?>
+        <?php $i=0 ?>
         @foreach ($data as $item)
         <tr>
-          <td>{{ $i++ }}</td>
+          <td>{{ $data->firstItem() + $i }}</td>
           <td>{{ $item['nama_souvenir'] }}</td>
           <td>{{ $item['nama_toko'] }}</td>
           <td>{{ $item['pemilik'] }}</td>
@@ -99,6 +99,7 @@
             <a href="/dashboard/souvenir/hapus/{{ $item['id'] }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>
           </td>
         </tr>
+        <?php $i++; ?>
         @endforeach
       </tbody>
       </table>
@@ -207,7 +208,7 @@
 @endforeach
 
       <center>
-        <div class="pagination mt-3 justify-content-center ">
+        <div class="pagination mt-5 justify-content-center ">
             {{ $data->links() }}
         </div>
       </center>

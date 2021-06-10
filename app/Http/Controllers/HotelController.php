@@ -64,10 +64,10 @@ class HotelController extends Controller
             ->orWhere('kontak', 'LIKE', '%'.$request->keyword.'%')
             ->orWhere('deskripsi', 'LIKE', '%'.$request->keyword.'%')
             ->orWhere('fasilitas', 'LIKE', '%'.$request->keyword.'%')
-            ->paginate(10);
+            ->paginate(5);
         }
         else{
-            $data = Hotel::paginate(10);
+            $data = Hotel::paginate(5);
         }
         return view('DataHotel.adminhotel',['data'=>$data]);
     }
