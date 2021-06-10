@@ -73,6 +73,15 @@
       </div>
       <table class="table container table-hover mt-5">
         <thead>
+          <th>No</th>
+          <th>Nama Event</th>
+          <th>Kategori</th>
+          <th>Tanggal Mulai</th>
+          <th>Tanggal Selesai</th>
+          <th>Waktu Mulai</th>
+          <th>Harga</th>
+          <th>Action</th>
+        </thead>
         <tbody>
           <?php $i=0 ?>
           @foreach ($data as $item)
