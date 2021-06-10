@@ -172,10 +172,112 @@ class SouvenirController extends Controller
             $gambar3 = $request->gambar3;
             $Souvenir->deskripsi = $request->deskripsi;
 
-            $Souvenir->save();
-            return redirect('/dashboard/souvenir')->with('success','Data Berhasil Diubah');
+        } else if ($request->file('gambar1')) {
+            $gambar1 = $request->file('gambar1');
+            $Namagambar1 = time().'.'.$gambar1->extension();
+            $gambar1->move(public_path('img_souvenir/slide1'),$Namagambar1);
 
-        }else{
+            $nama_souvenir = $request->nama_souvenir;
+            $nama_toko = $request->nama_toko;
+            $pemilik = $request->pemilik;
+            $bahan = $request->bahan;
+            $tipe = $request->tipe;
+            $ukuran = $request->ukuran;
+            $warna = $request->warna;
+            $harga = $request->harga;
+            $kontak = $request->kontak;
+            $map = $request->map;
+            $lokasi = $request->lokasi;
+            $deskripsi = $request->deskripsi;
+
+
+            $Souvenir = Souvenir::find($id);
+            $Souvenir->nama_souvenir = $request->nama_souvenir;
+            $Souvenir->nama_toko = $request->nama_toko;
+            $Souvenir->pemilik = $request->pemilik;
+            $Souvenir->bahan = $request->bahan;
+            $Souvenir->tipe = $request->tipe;
+            $Souvenir->ukuran = $request->ukuran;
+            $Souvenir->warna = $request->warna;
+            $Souvenir->harga = $request->harga;
+            $Souvenir->kontak = $request->kontak;
+            $Souvenir->map = $request->map;
+            $Souvenir->lokasi = $request->lokasi;
+            $Souvenir->gambar1 = $Namagambar1;
+            $Souvenir->deskripsi = $request->deskripsi;
+
+        } else if ($request->file('gambar2')) {
+
+            $gambar2 = $request->file('gambar2');
+            $Namagambar2 = time().'.'.$gambar2->extension();
+            $gambar2->move(public_path('img_souvenir/slide2'),$Namagambar2);
+
+            $nama_souvenir = $request->nama_souvenir;
+            $nama_toko = $request->nama_toko;
+            $pemilik = $request->pemilik;
+            $bahan = $request->bahan;
+            $tipe = $request->tipe;
+            $ukuran = $request->ukuran;
+            $warna = $request->warna;
+            $harga = $request->harga;
+            $kontak = $request->kontak;
+            $map = $request->map;
+            $lokasi = $request->lokasi;
+            $deskripsi = $request->deskripsi;
+
+
+            $Souvenir = Souvenir::find($id);
+            $Souvenir->nama_souvenir = $request->nama_souvenir;
+            $Souvenir->nama_toko = $request->nama_toko;
+            $Souvenir->pemilik = $request->pemilik;
+            $Souvenir->bahan = $request->bahan;
+            $Souvenir->tipe = $request->tipe;
+            $Souvenir->ukuran = $request->ukuran;
+            $Souvenir->warna = $request->warna;
+            $Souvenir->harga = $request->harga;
+            $Souvenir->kontak = $request->kontak;
+            $Souvenir->map = $request->map;
+            $Souvenir->lokasi = $request->lokasi;
+            $Souvenir->gambar2 = $Namagambar2;
+            $Souvenir->deskripsi = $request->deskripsi;
+        
+        } else if ($request->file('gambar3')) {
+
+            $gambar3 = $request->file('gambar3');
+            $Namagambar3 = time().'.'.$gambar3->extension();
+            $gambar3->move(public_path('img_souvenir/slide3'),$Namagambar3);
+
+            $nama_souvenir = $request->nama_souvenir;
+            $nama_toko = $request->nama_toko;
+            $pemilik = $request->pemilik;
+            $bahan = $request->bahan;
+            $tipe = $request->tipe;
+            $ukuran = $request->ukuran;
+            $warna = $request->warna;
+            $harga = $request->harga;
+            $kontak = $request->kontak;
+            $map = $request->map;
+            $lokasi = $request->lokasi;
+            $deskripsi = $request->deskripsi;
+
+
+            $Souvenir = Souvenir::find($id);
+            $Souvenir->nama_souvenir = $request->nama_souvenir;
+            $Souvenir->nama_toko = $request->nama_toko;
+            $Souvenir->pemilik = $request->pemilik;
+            $Souvenir->bahan = $request->bahan;
+            $Souvenir->tipe = $request->tipe;
+            $Souvenir->ukuran = $request->ukuran;
+            $Souvenir->warna = $request->warna;
+            $Souvenir->harga = $request->harga;
+            $Souvenir->kontak = $request->kontak;
+            $Souvenir->map = $request->map;
+            $Souvenir->lokasi = $request->lokasi;
+            $Souvenir->gambar3 = $Namagambar3;
+            $Souvenir->deskripsi = $request->deskripsi;
+            
+
+        } else{
             $gambar1 = $request->file('gambar1');
             $Namagambar1 = time().'.'.$gambar1->extension();
             $gambar1->move(public_path('img_souvenir/slide1'),$Namagambar1);
@@ -202,26 +304,27 @@ class SouvenirController extends Controller
             $deskripsi = $request->deskripsi;
 
 
-        $Souvenir = Souvenir::find($id);
-        $Souvenir->nama_souvenir = $request->nama_souvenir;
-        $Souvenir->nama_toko = $request->nama_toko;
-        $Souvenir->pemilik = $request->pemilik;
-        $Souvenir->bahan = $request->bahan;
-        $Souvenir->tipe = $request->tipe;
-        $Souvenir->ukuran = $request->ukuran;
-        $Souvenir->warna = $request->warna;
-        $Souvenir->harga = $request->harga;
-        $Souvenir->kontak = $request->kontak;
-        $Souvenir->map = $request->map;
-        $Souvenir->lokasi = $request->lokasi;
-        $Souvenir->gambar1 = $Namagambar1;
-        $Souvenir->gambar2 = $Namagambar2;
-        $Souvenir->gambar3 = $Namagambar3;
-        $Souvenir->deskripsi = $request->deskripsi;
+            $Souvenir = Souvenir::find($id);
+            $Souvenir->nama_souvenir = $request->nama_souvenir;
+            $Souvenir->nama_toko = $request->nama_toko;
+            $Souvenir->pemilik = $request->pemilik;
+            $Souvenir->bahan = $request->bahan;
+            $Souvenir->tipe = $request->tipe;
+            $Souvenir->ukuran = $request->ukuran;
+            $Souvenir->warna = $request->warna;
+            $Souvenir->harga = $request->harga;
+            $Souvenir->kontak = $request->kontak;
+            $Souvenir->map = $request->map;
+            $Souvenir->lokasi = $request->lokasi;
+            $Souvenir->gambar1 = $Namagambar1;
+            $Souvenir->gambar2 = $Namagambar2;
+            $Souvenir->gambar3 = $Namagambar3;
+            $Souvenir->deskripsi = $request->deskripsi;
+
+        }
 
         $Souvenir->save();
         return redirect('/dashboard/souvenir')->with('success','Data Berhasil Diubah');
-        }
 
     }
 

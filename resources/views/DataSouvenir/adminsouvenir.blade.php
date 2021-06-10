@@ -101,9 +101,9 @@
           <td>{{ $item['pemilik'] }}</td>
           <td>{{ $item['harga'] }}</td>
           <td>
-            <button href="" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#abc{{ $item['id'] }}" ><i class="fas fa-info-circle"></i> Detail</button>
-            <a href="/dashboard/souvenir/ubah/{{ $item['id'] }}" class="btn btn-warning btn-sm" ><i class="fas fa-edit"></i> Ubah</a>
-            <a href="/dashboard/souvenir/hapus/{{ $item['id'] }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>
+            <button href="" class="btn btn-success btn-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#abc{{ $item['id'] }}" ><i class="fas fa-info-circle"></i> Detail</button>
+            <a href="/dashboard/souvenir/ubah/{{ $item['id'] }}" class="btn btn-warning btn-sm rounded-pill" ><i class="fas fa-edit"></i> Ubah</a>
+            <a href="/dashboard/souvenir/hapus/{{ $item['id'] }}" class="btn btn-danger btn-sm rounded-pill"><i class="fas fa-trash"></i> Hapus</a>
           </td>
         </tr>
         <?php $i++; ?>

@@ -72,11 +72,11 @@
         <button id="cari" class="btn btn-outline-primary rounded-circle" style="width: 55px ;" type="submit"><i class="fas fa-search"></i></button>
         </form>
       </div>
-      <div class="container mb-2 btnadd">
-        <a href="/dashboard" class="btn btn-secondary"><i class="fas fa-arrow-alt-circle-left"></i> back</a>
-        <a href="/dashboard/hotel/tambah" class="btn  btn-primary "><i class="fas fa-plus-square"></i> Tambah Data</a>
+      <div class="container mb-2 btnadd mt-3">
+        <a href="/dashboard" class="btn btn-secondary rounded-pill"><i class="fas fa-arrow-alt-circle-left"></i> back</a>
+        <a href="/dashboard/hotel/tambah" class="btn  btn-primary "><i class="fas fa-plus-square rounded-pill"></i> Tambah Data</a>
       </div>
-      <table class="table container table-hover">
+      <table class="table container table-hover mt-5">
         <thead>
           <tr>
             <th>No</th>
@@ -97,9 +97,9 @@
             <td>{{ $item['rating'] }}</td>
             <td>{{ $item['harga'] }}</td>
             <td>
-              <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#abc{{ $item['id'] }}"><i class="fas fa-info-circle"></i> Detail</button>
-              <a href="/dashboard/hotel/ubah/{{ $item['id'] }}" class="btn btn-warning btn-sm" ><i class="fas fa-edit"></i> Ubah</a>
-              <a href="/dashboard/hotel/hapus/{{ $item['id'] }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>
+              <button class="btn btn-success btn-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#abc{{ $item['id'] }}"><i class="fas fa-info-circle"></i> Detail</button>
+              <a href="/dashboard/hotel/ubah/{{ $item['id'] }}" class="btn btn-warning btn-sm rounded-pill" ><i class="fas fa-edit"></i> Ubah</a>
+              <a href="/dashboard/hotel/hapus/{{ $item['id'] }}" class="btn btn-danger btn-sm rounded-pill"><i class="fas fa-trash"></i> Hapus</a>
             </td>
           </tr>
         <?php $i++ ?>
