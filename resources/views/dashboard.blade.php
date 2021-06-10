@@ -26,82 +26,103 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
 </head>
-<body style="background-color: #E5E7E9;">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg p-3 mb-5 bg-body rounded">
+<body style="background-color: #34495E;" >
+  <style> 
+    *{
+      font-family: 'Quicksand', sans-serif;
+    }
+    h1{
+      /* font-weight: bold; */
+      color: #AED6F1; 
+    }
+    h1 b, h1 i{
+      font-size: 48px;
+    }
+      .card{
+          border-radius: 18px;
+      }
+      #btn1{
+          border: 5px solid #1A5276;
+          background-color: #2E86C1;
+      }
+      #btn2{
+          border: 5px solid #9A7D0A;
+          background-color: #F1C40F;
+      }
+      #btn3{
+        border: 5px solid #145A32 ; 
+          background-color: #27AE60;
+      }
+      #btn1 a{
+          background-color: #AED6F1;
+          color: #21618C;
+          transition: 0.3s ease; 
+          padding: 7px;
+          padding-right: 10px;
+          border: 4px solid;
+      }
+      #btn1 a:hover{
+          padding-right: 20px;
+          padding-left: 25px;
+      }
+
+      #btn2 a{
+          background-color: #F9E79F;
+          color: #B7950B;
+          transition: 0.3s ease; 
+          padding: 7px;
+          padding-right: 10px;
+          border: 4px solid;
+      }
+      #btn2 a:hover{
+          padding-right: 20px;
+          padding-left: 25px;
+      }
+      .card-subtitle{
+        color: white;
+      }
+      #btn3 a{
+          background-color: #82E0AA;
+          color: #1D8348;
+          transition: 0.3s ease; 
+          padding: 7px;
+          padding-right: 10px;
+          border: 4px solid;
+      }
+      #btn3 a:hover{
+          padding-right: 20px;
+          padding-left: 25px;
+      }
+      .card-title{
+          font-weight: bolder;
+      }
+      .card{
+          transition: 0.5s ease-out;
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      }
+      .card:hover{
+          transform: scale(1.12);
+      }
+
+  </style>
+    <nav style="background-color: #212F3C;" class="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-body rounded">
         <div class="container-fluid">
-          <a class=" navbar-brand" href="#">TukTukTour</a>
+          <a class=" navbar-brand text-light" style="font-family: 'Quicksand', sans-serif;" href="#">TukTukTour</a>
           <div class="" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link active text-danger"  href="{{ route('admin_logout') }}" href="#" style="font-weight: bold"><i class="fas fa-power-off"></i> Logout</a>
+                <a class="nav-link btn btn-danger active p-2"  href="{{ route('admin_logout') }}" href="#" style="font-weight: bold"><i class="fas fa-power-off"></i> Logout</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      <h1 class="text-center">Data Management</h1><br><br>
+      <h1 class="text-center "><i class="fas fa-server"></i> ADMIN &nbsp;<b>DASHBOARD<b></h1><br><br>
+        <hr class="container">
       
-      <style>
-          .card{
-              border-radius: 18px;
-          }
-          #btn1{
-              background-color: #EBF5FB;
-          }
-          #btn2{
-              background-color: #FEF9E7;
-          }
-          #btn3{
-              background-color: #E8F8F5;
-          }
-          #btn1 a{
-              background-color: #AED6F1;
-              color: #21618C;
-              transition: 0.3s ease; 
-              padding: 5px;
-              padding-right: 10px;
-          }
-          #btn1 a:hover{
-              padding-right: 20px;
-              padding-left: 25px;
-          }
-
-          #btn2 a{
-              background-color: #F9E79F;
-              color: #B7950B;
-              transition: 0.3s ease; 
-              padding: 5px;
-              padding-right: 10px;
-          }
-          #btn2 a:hover{
-              padding-right: 20px;
-              padding-left: 25px;
-          }
-
-          #btn3 a{
-              background-color: #82E0AA;
-              color: #1D8348;
-              transition: 0.3s ease; 
-              padding: 5px;
-              padding-right: 10px;
-          }
-          #btn3 a:hover{
-              padding-right: 20px;
-              padding-left: 25px;
-          }
-          .card-title{
-              font-weight: bolder;
-          }
-          .card{
-              transition: 0.5s ease-out;
-              box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-          }
-          .card:hover{
-              transform: scale(1.12);
-          }
-
-      </style>
       <div class="col-md-10 container">
       <div class="row container">
           <div class="col-md-4 mb-3 container">
@@ -109,7 +130,7 @@
                 <div class="card-body">
                 <center>
                   <h3 class="card-title" style="color: #154360;">Hotel <i class="fas fa-hotel"></i></h3>
-                  <h6 class="card-subtitle mb-2 text-muted">Management Data Hotel</h6>
+                  <h6 class="card-subtitle mb-2">Management Data Hotel</h6>
                   <p class="card-text mt-3">Klik button untuk mengelola database list Hotel</p>
                   </center>
                     <a href="dashboard/hotel" class="btn rounded-pill mt-4"><b>&nbsp;&nbsp;&nbsp;<i class="fas fa-tasks"></i> Manage List</b></a>
@@ -122,7 +143,7 @@
                 <div class="card-body">
                 <center>
                   <h3 class="card-title" style="color: #7D6608;">Souvenir <i class="fas fa-store"></i></h3>
-                  <h6 class="card-subtitle mb-2 text-muted">Management Data Souvenir</h6>
+                  <h6 class="card-subtitle mb-2">Management Data Souvenir</h6>
                   <p class="card-text">Klik button untuk mengelola database list Souvenir</p>
                 </center>
                     <a href="dashboard/souvenir" class="btn rounded-pill mt-4"><b>&nbsp;&nbsp;&nbsp;<i class="fas fa-tasks"></i> Manage List</b></a>
@@ -135,7 +156,7 @@
                 <div class="card-body">
                 <center>
                   <h3 class="card-title" style="color: #145A32;">Event <i class="fas fa-calendar-alt"></i></h3>
-                  <h6 class="card-subtitle mb-2 text-muted">Management Data Event</h6>
+                  <h6 class="card-subtitle mb-2">Management Data Event</h6>
                   <p class="card-text">Klik button untuk mengelola database list Event</p>
                 </center>
                     <a href="dashboard/event" class="btn rounded-pill mt-4"><b>&nbsp;&nbsp;&nbsp;<i class="fas fa-tasks"></i> Manage List</b></a>
@@ -147,11 +168,6 @@
       <br><br><br>
     </div>
    
-      <footer class="fixed-bottom bg-secondary p-3">
-          <div>
-            <h5 class="text-center text-light"><b>TUK-TUK TOUR WEBSITE</b></h5>
-          </div>
-      </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/replyform.js"></script>

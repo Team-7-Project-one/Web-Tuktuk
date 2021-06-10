@@ -24,31 +24,38 @@
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="{{asset('css/style.css')}}" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
     <style>
-      .btnadd a{
-        border-radius: 8px;
+      *{
+        font-family: 'Quicksand', sans-serif;
       }
-      .btn-close1{
+          .btn-close1{
         /* position: absolute; */
         float: right;
         margin-top: -50px;
       }
+      td,th{
+        color: white;
+      }
+      h1{
+        font-weight: bolder;
+      }
     </style>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg p-3 mb-5 bg-body rounded">
-        <div class="container-fluid">
-          <a class=" navbar-brand" href="#">TukTukTour</a>
-          <div class="" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link active text-danger"  href="{{ route('admin_logout') }}" href="#"><i class="fas fa-power-off"></i> Logout</a>
-              </li>
-            </ul>
-          </div>
+  <body style="background-color: #34495E;">
+    <nav style="background-color: #212F3C;" class="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-body rounded">
+      <div class="container-fluid">
+        <a class=" navbar-brand text-light" style="font-family: 'Quicksand', sans-serif;" href="#">TukTukTour</a>
+        <div class="" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link btn btn-danger active p-2"  href="{{ route('admin_logout') }}" href="#" style="font-weight: bold"><i class="fas fa-power-off"></i> Logout</a>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
       @if (session('success')) {
         <div class="col-md-10 container">
         <div class="alert alert-success container" role="alert">
@@ -60,7 +67,7 @@
     </div>
         } 
     @endif
-      <h1 class="text-center">Souvenir Data</h1>
+      <h1 class="text-center text-light"><i class="fas fa-store"></i> Souvenir Data</h1>
       <br>
       <div class="searchotel container col-md-10">
         <form class="d-flex" method="GET">
@@ -70,8 +77,8 @@
       </div>
       <br>
       <div class="container mb-2 btnadd mt-3">
-        <a href="/dashboard" class="btn btn-secondary rounded-pill"><i class="fas fa-arrow-alt-circle-left"></i> back</a>
-        <a href="/dashboard/souvenir/tambah" class="btn  btn-primary rounded-pill"><i class="fas fa-plus-square"></i> Tambah Data</a>
+        <a href="/dashboard" class="btn btn-secondary"><i class="fas fa-arrow-alt-circle-left"></i> back</a>
+        <a href="/dashboard/souvenir/tambah" class="btn  btn-primary"><i class="fas fa-plus-square"></i> Tambah Data</a>
       </div><br>
       <table class="table container table-hover mt-5">
         <thead>
@@ -155,33 +162,33 @@
                   </center>
                   <table class="table">
                     <tr>
-                      <td><i class="fas fa-wrench text-primary"></i> Bahan</td>
-                      <td>:</td>
-                      <td>{{ $item['bahan'] }}</td>
+                      <td class="text-dark"><i class="fas fa-wrench text-primary"></i> Bahan</td>
+                      <td class="text-dark">:</td>
+                      <td class="text-dark">{{ $item['bahan'] }}</td>
                     </tr>
                     <tr>
-                      <td><i class="fas fa-dharmachakra text-primary"></i> Tipe</td>
-                      <td>:</td>
-                      <td>{{ $item['tipe'] }}</td>
+                      <td class="text-dark"><i class="fas fa-dharmachakra text-primary"></i> Tipe</td>
+                      <td class="text-dark">:</td>
+                      <td class="text-dark">{{ $item['tipe'] }}</td>
                     </tr>
                     <tr>
-                      <td><i class="fas fa-search-plus text-primary"></i> Ukuran</td>
-                      <td>:</td>
-                      <td>{{ $item['ukuran'] }}</td>
+                      <td class="text-dark"><i class="fas fa-search-plus text-primary"></i> Ukuran</td>
+                      <td class="text-dark">:</td>
+                      <td class="text-dark">{{ $item['ukuran'] }}</td>
                     </tr>
                     <tr>
-                      <td><i class="fas fa-palette text-primary"></i> Warna</td>
-                      <td>:</td>
-                      <td>{{ $item['warna'] }}</td>
+                      <td class="text-dark"><i class="fas fa-palette text-primary"></i> Warna</td>
+                      <td class="text-dark">:</td>
+                      <td class="text-dark">{{ $item['warna'] }}</td>
                     </tr>
                     <tr>
-                      <td><i class="fas fa-tags text-warning"></i> Harga</td>
-                      <td>:</td>
+                      <td class="text-dark"><i class="fas fa-tags text-warning"></i> Harga</td>
+                      <td class="text-dark">:</td>
                       <td class="text-success">{{ $item['harga'] }}</td>
                     </tr>
                     <tr>
-                      <td><i class="fas fa-phone-volume text-primary"></i> Contact</td>
-                      <td>:</td>
+                      <td class="text-dark"><i class="fas fa-phone-volume text-primary"></i> Contact</td>
+                      <td class="text-dark">:</td>
                       <td class="text-success "></i> {{ $item['kontak'] }}</td>
                     </tr>
                   </table>

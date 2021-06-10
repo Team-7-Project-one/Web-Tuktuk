@@ -18,28 +18,41 @@
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="{{asset('css/style.css')}}" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
     <style>
+      *{
+        font-family: 'Quicksand', sans-serif;
+      }
           .btn-close1{
         /* position: absolute; */
         float: right;
         margin-top: -50px;
       }
+      td,th{
+        color: white;
+      }
+      .tbl-list{
+        color: black;
+      }
+      h1{
+        font-weight: bolder;
+      }
     </style>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg p-3 mb-5 bg-body rounded">
-        <div class="container-fluid">
-          <a class=" navbar-brand" href="#">TukTukTour</a>
-          <div class="" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link active text-danger"  href="{{ route('admin_logout') }}" href="#"><i class="fas fa-power-off"></i> Logout</a>
-              </li>
-            </ul>
-          </div>
+  <body style="background-color: #34495E;">
+    <nav style="background-color: #212F3C;" class="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-body rounded">
+      <div class="container-fluid">
+        <a class=" navbar-brand text-light" style="font-family: 'Quicksand', sans-serif;" href="#">TukTukTour</a>
+        <div class="" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link btn btn-danger active p-2"  href="{{ route('admin_logout') }}" href="#" style="font-weight: bold"><i class="fas fa-power-off"></i> Logout</a>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
       @if (session('success')) {
         <div class="col-md-10 container">
         <div class="alert alert-success container" role="alert">
@@ -51,7 +64,7 @@
     </div>
         } 
     @endif
-      <h1 class="text-center">Hotel List</h1>
+      <h1 class="text-center text-light"><i class="fas fa-h-square mr-1"></i>otel List</h1>
       <br>
       <div class="searchotel container col-md-10 mb-3">
         <form class="d-flex" method="GET">
@@ -106,7 +119,9 @@
         <div class="row container">
         
           <div class="container">
-            <b class="hotel-name">{{ $item['nama_hotel'] }}</b>
+            <center>
+            <b class="hotel-name tex-center">{{ $item['nama_hotel'] }}</b>
+          </center>
             <div id="carouselExampleIndicators{{ $item['id'] }}" class="carousel slide" data-bs-ride="carousel">
               <div id="carbut2" class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -138,33 +153,37 @@
               </button>
             </div>
           </div>
-            
+        <style>
+          .modtbl{
+            color: black;
+          }
+        </style>
           <div class="container">
-            <table class="table mt-4">
+            <table class="table mt-4 tbl-list">
               <tr>
-                <td class="w-25"><i class="fas fa-map-marker-alt text-danger"></i>&nbsp;Location</td>
-                <td>:</td>
-                <td>{{ $item['lokasi'] }}</td>
+                <td class="w-25 modtbl"><i class="fas fa-map-marker-alt text-danger"></i>&nbsp;Location</td>
+                <td class="text-dark">:</td>
+                <td class="modtbl">{{ $item['lokasi'] }}</td>
               </tr>
               <tr>
-                <td><i class="fas fa-star text-warning"></i>&nbsp;Rating</td>
-                <td>:</td>
-                <td>{{ $item['rating'] }}</td>
+                <td class="modtbl"><i class="fas fa-star text-warning"></i>&nbsp;Rating</td>
+                <td class="modtbl">:</td>
+                <td class="modtbl">{{ $item['rating'] }}</td>
               </tr>
               <tr>
-                <td><i class="fas fa-bed"></i>&nbsp;Fasilitas</td>
-                <td>:</td>
-                <td>{{ $item['fasilitas'] }}</td>
+                <td class="modtbl"><i class="fas fa-bed"></i>&nbsp;Fasilitas</td>
+                <td class="modtbl">:</td>
+                <td class="modtbl">{{ $item['fasilitas'] }}</td>
               </tr>
               <tr>
-                <td><i class="fas fa-address-book text-primary"></i>&nbsp;Contact</td>
-                <td>:</td>
-                <td>{{ $item['kontak'] }}</td>
+                <td class="modtbl"><i class="fas fa-address-book text-primary"></i>&nbsp;Contact</td>
+                <td class="modtbl">:</td>
+                <td class="modtbl">{{ $item['kontak'] }}</td>
               </tr>
               <tr>
-                <td><i class="fas fa-tags"></i>&nbsp;Price</td>
-                <td>:</td>
-                <td>{{ $item['harga'] }}</td>
+                <td class="modtbl"><i class="fas fa-tags"></i>&nbsp;Price</td>
+                <td class="modtbl">:</td>
+                <td class="modtbl">{{ $item['harga'] }}</td>
               </tr>
             </table>
           </div>
@@ -185,12 +204,14 @@
 @endforeach
 
       <center>
-        <div class="pagination mt-3 justify-content-center ">
+        <div class="pagination mt-3 justify-content-center">
             {{ $data->links() }}
         </div>
       </center>
     
       <style>
+        .flex .relative{
+        }
         .w-5{
           width: 20px;
         }

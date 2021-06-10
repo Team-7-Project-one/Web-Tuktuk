@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/aos.css" />
 
     <link rel="stylesheet" href="css/ionicons.min.css" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
     <link rel="stylesheet" href="css/jquery.timepicker.css" />
     <link rel="stylesheet" href="css/flaticon.css" />
@@ -26,26 +26,35 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
     <style>
-      .btn-close1{
-    /* position: absolute; */
-    float: right;
-    margin-top: -50px;
-  }
-</style>
+      *{
+        font-family: 'Quicksand', sans-serif;
+      }
+          .btn-close1{
+        /* position: absolute; */
+        float: right;
+        margin-top: -50px;
+      }
+      td,th{
+        color: white;
+      }
+      h1{
+        font-weight: bolder;
+      }
+    </style>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg p-3 mb-5 bg-body rounded">
-        <div class="container-fluid">
-          <a class=" navbar-brand" href="#">TukTukTour</a>
-          <div class="" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link active text-danger"  href="{{ route('admin_logout') }}" href="#"><i class="fas fa-power-off"></i> Logout</a>
-              </li>
-            </ul>
-          </div>
+  <body style="background-color: #34495E;">
+    <nav style="background-color: #212F3C;" class="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-body rounded">
+      <div class="container-fluid">
+        <a class=" navbar-brand text-light" style="font-family: 'Quicksand', sans-serif;" href="#">TukTukTour</a>
+        <div class="" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link btn btn-danger active p-2"  href="{{ route('admin_logout') }}" href="#" style="font-weight: bold"><i class="fas fa-power-off"></i> Logout</a>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
       @if(session('success'))
         <div class="col-md-10 container">
         <div class="alert alert-success container" role="alert">
@@ -57,7 +66,7 @@
     </div>
         } 
     @endif
-      <h1 class="text-center">Event Data</h1>
+      <h1 class="text-center text-light"><i class="fas fa-calendar-alt"></i> Event Data</h1>
       <div class="container mb-2 btnadd mt-3">
         <a href="/dashboard" class="btn btn-secondary"><i class="fas fa-arrow-alt-circle-left"></i> back</a>
         <a href="/dashboard/event/tambah" class="btn  btn-primary "><i class="fas fa-plus-square"></i> Tambah Data</a>
@@ -115,33 +124,33 @@
                 </center>
                 <table class="table">
                   <tr>
-                    <td><i class="fab fa-elementor text-primary"></i> Category</td>
-                    <td>:</td>
-                    <td>{{ $item['kategori'] }}</td>
+                    <td class="text-dark"><i class="fab fa-elementor text-primary"></i> Category</td>
+                    <td class="text-dark">:</td>
+                    <td class="text-dark">{{ $item['kategori'] }}</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-calendar-check text-primary"></i> Tanggal Mulai</td>
-                    <td>:</td>
-                    <td>{{ $item['tgl_pelaksanaan'] }}</td>
+                    <td class="text-dark"><i class="far fa-calendar-check text-primary"></i> Tanggal Mulai</td>
+                    <td class="text-dark">:</td>
+                    <td class="text-dark">{{ $item['tgl_pelaksanaan'] }}</td>
                   </tr>
                   <tr>
-                    <td><i class="far fa-calendar-minus text-primary"></i> Tanggal Berakhir</td>
-                    <td>:</td>
-                    <td>{{ $item['tgl_selesai'] }}</td>
+                    <td class="text-dark"><i class="far fa-calendar-minus text-primary"></i> Tanggal Berakhir</td>
+                    <td class="text-dark">:</td>
+                    <td class="text-dark">{{ $item['tgl_selesai'] }}</td>
                   </tr>
                   <tr>
-                    <td><i class="fas fa-clock text-primary"></i> Waktu</td>
-                    <td>:</td>
-                    <td>{{ $item['waktu'] }}</td>
+                    <td class="text-dark"><i class="fas fa-clock text-primary"></i> Waktu</td>
+                    <td class="text-dark">:</td>
+                    <td class="text-dark">{{ $item['waktu'] }}</td>
                   </tr>
                   <tr>
-                    <td><i class="fas fa-ticket-alt text-primary"></i> Harga Tiket</td>
-                    <td>:</td>
+                    <td class="text-dark"><i class="fas fa-ticket-alt text-primary"></i> Harga Tiket</td>
+                    <td class="text-dark">:</td>
                     <td class="text-success">{{ $item['harga'] }}</td>
                   </tr>
                   <tr>
-                    <td><i class="fas fa-map-marker-alt text-primary"></i> Lokasi</td>
-                    <td>:</td>
+                    <td class="text-dark"><i class="fas fa-map-marker-alt text-primary"></i> Lokasi</td>
+                    <td class="text-dark">:</td>
                     <td class="text-success">{{ $item['lokasi'] }}</td>
                   </tr>
                 </table>
@@ -167,12 +176,22 @@
     </div>
     @endforeach
     
-    
     <center>
-      <div class="pagination mt-5 justify-content-center ">
+      <div class="pagination mt-3 justify-content-center">
           {{ $data->links() }}
       </div>
     </center>
+  
+    <style>
+      .flex .relative{
+      }
+      .w-5{
+        width: 20px;
+      }
+      .text-sm{
+        margin-top: 10px;
+      }
+    </style>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     <script src="js/jquery.min.js"></script>

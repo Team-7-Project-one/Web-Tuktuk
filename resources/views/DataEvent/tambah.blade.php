@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/magnific-popup.css" />
@@ -25,19 +25,19 @@
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
     <style>
-        .form-group{
-        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+      *{
+        font-family: 'Quicksand', sans-serif;
       }
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg p-3 mb-5 bg-body rounded">
+      <nav class="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-body rounded">
         <div class="container-fluid">
-          <a class=" navbar-brand" href="#">TukTukTour</a>
+          <a class=" navbar-brand text-dark" style="font-family: 'Quicksand', sans-serif; font-weight: bolder;" href="#">TukTukTour</a>
           <div class="" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link active text-danger"  href="{{ route('admin_logout') }}" href="#"><i class="fas fa-power-off"></i> Logout</a>
+                <a class="nav-link btn btn-danger active p-2"  href="{{ route('admin_logout') }}" href="#" style="font-weight: bold"><i class="fas fa-power-off"></i> Logout</a>
               </li>
             </ul>
           </div>
