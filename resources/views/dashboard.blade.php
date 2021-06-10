@@ -110,7 +110,7 @@
                 <center>
                   <h3 class="card-title" style="color: #154360;">Hotel <i class="fas fa-hotel"></i></h3>
                   <h6 class="card-subtitle mb-2 text-muted">Management Data Hotel</h6>
-                  <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text mt-3">Klik button untuk mengelola database list Hotel</p>
                   </center>
                     <a href="dashboard/hotel" class="btn rounded-pill mt-4"><b>&nbsp;&nbsp;&nbsp;<i class="fas fa-tasks"></i> Manage List</b></a>
                 </div>
@@ -123,7 +123,7 @@
                 <center>
                   <h3 class="card-title" style="color: #7D6608;">Souvenir <i class="fas fa-store"></i></h3>
                   <h6 class="card-subtitle mb-2 text-muted">Management Data Souvenir</h6>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">Klik button untuk mengelola database list Souvenir</p>
                 </center>
                     <a href="dashboard/souvenir" class="btn rounded-pill mt-4"><b>&nbsp;&nbsp;&nbsp;<i class="fas fa-tasks"></i> Manage List</b></a>
                 </div>
@@ -136,7 +136,7 @@
                 <center>
                   <h3 class="card-title" style="color: #145A32;">Event <i class="fas fa-calendar-alt"></i></h3>
                   <h6 class="card-subtitle mb-2 text-muted">Management Data Event</h6>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">Klik button untuk mengelola database list Event</p>
                 </center>
                     <a href="dashboard/event" class="btn rounded-pill mt-4"><b>&nbsp;&nbsp;&nbsp;<i class="fas fa-tasks"></i> Manage List</b></a>
                 </div>

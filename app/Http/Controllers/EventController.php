@@ -111,7 +111,7 @@ class EventController extends Controller
             $event->harga = $request->harga;
             $event->lokasi = $request->lokasi;
             $event->map = $request->map;
-            $Namagambar = $request->Namagambar;
+            $gambar = $request->gambar;
             $event->deskripsi = $request->deskripsi;
             $event->save();
             return redirect('/dashboard/event')->with('success','Data Berhasil Diubah');
@@ -120,7 +120,7 @@ class EventController extends Controller
             $Namagambar = time().'.'.$gambar->extension();
             $gambar->move(public_path('gambar'),$Namagambar);
             
-            $id = $request->$id;
+            $id = $request->id;
             $nama_event = $request->nama_event;
             $kategori = $request->kategori;
             $tgl_pelaksanaan = $request->tgl_pelaksanaan;
@@ -142,7 +142,7 @@ class EventController extends Controller
         $event->harga = $request->harga;
         $event->lokasi = $request->lokasi;
         $event->map = $request->map;
-        $Namagambar = $request->Namagambar;
+        $gambar = $Namagambar;
         $event->deskripsi = $request->deskripsi;
 
         $event->save();

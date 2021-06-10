@@ -149,7 +149,7 @@ class SouvenirController extends Controller
 
     public function update(Request $request,$id){
 
-        if($request->file('gambar1')==NULL || $request->file('gambar2')==NULL || $request->file('gambar3')==NULL){
+        if($request->file('gambar1')==NULL && $request->file('gambar1')==NULL && $request->file('gambar1')==NULL){
             $Souvenir = Souvenir::find($id);
             $Souvenir->id = $request->id;
             $Souvenir->nama_souvenir = $request->nama_souvenir;
@@ -163,12 +163,13 @@ class SouvenirController extends Controller
             $Souvenir->kontak = $request->kontak;
             $Souvenir->map = $request->map;
             $Souvenir->lokasi = $request->lokasi;
-            $Namagambar1 = $request->Namagambar1;
-            $Namagambar2 = $request->Namagambar2;
-            $Namagambar3 = $request->Namagambar3;
+            $gambar1 = $request->gambar1;
+            $gambar2 = $request->gambar2;
+            $gambar3 = $request->gambar3;
             $Souvenir->deskripsi = $request->deskripsi;
             $Souvenir->save();
             return redirect('/dashboard/souvenir')->with('success','Data Berhasil Diubah');
+
         }else{
             $gambar1 = $request->file('gambar1');
             $Namagambar1 = time().'.'.$gambar1->extension();
@@ -207,9 +208,9 @@ class SouvenirController extends Controller
         $Souvenir->kontak = $request->kontak;
         $Souvenir->map = $request->map;
         $Souvenir->lokasi = $request->lokasi;
-        $Souvenir->gambar1 = $request->Namagambar1;
-        $Souvenir->gambar2 = $request->Namagambar2;
-        $Souvenir->gambar3 = $request->Namagambar3;
+        $Souvenir->gambar1 = $Namagambar1;
+        $Souvenir->gambar2 = $Namagambar2;
+        $Souvenir->gambar3 = $Namagambar3;
         $Souvenir->deskripsi = $Request->deskripsi;
 
         $Souvenir->save();
