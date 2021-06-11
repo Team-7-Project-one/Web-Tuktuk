@@ -227,9 +227,9 @@
                 }
                 }
           </style>
-        <button  type="button" class="btn btn-primary btn-about" data-bs-toggle="modal" data-bs-target="#modalabout">
+        <!-- <button  type="button" class="btn btn-primary btn-about" data-bs-toggle="modal" data-bs-target="#modalabout">
           More about Tuk-tuk
-        </button>
+        </button> -->
         </center>
 <style>
   .accordion-button{
@@ -246,7 +246,7 @@
 </style>
 
 <!-- Modal about tuktuk-->
-<div class="modal fade" id="modalabout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="modalabout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -518,7 +518,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
