@@ -43,7 +43,7 @@
           </div>
         </div>
       </nav>
-      <h1 class="text-center">Create Data Event</h1>
+      <h1 class="text-center">UPDATE DATA EVENT</h1>
       <br>
       <style>
         .form-group{

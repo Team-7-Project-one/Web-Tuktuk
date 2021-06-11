@@ -44,7 +44,7 @@
         </div>
       </nav>
       <br>
-      <h1 class="text-center">Create Data Hotel</h1>
+      <h1 class="text-center">CREATE DATA HOTEL</h1>
       <br>
       <style>
         .form-group{

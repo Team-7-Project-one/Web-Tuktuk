@@ -42,7 +42,7 @@
           </div>
         </div>
       </nav>
-      <h1 class="text-center">Create Data Hotel</h1>
+      <h1 class="text-center">UPDATE Data Hotel</h1>
       <br>
       <style>
         .form-group{

@@ -43,7 +43,7 @@
           </div>
         </div>
       </nav>
-      <h1 class="text-center">Create Data Souvenir</h1>
+      <h1 class="text-center">CREATE DATA SOUVENIR</h1>
       <br>
       <style>
         .form-group{
