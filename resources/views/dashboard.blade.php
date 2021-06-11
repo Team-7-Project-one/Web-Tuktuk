@@ -114,7 +114,7 @@
           <div class="" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link btn btn-danger active p-2"  href="{{ route('admin_logout') }}" href="#" style="font-weight: bold"><i class="fas fa-power-off"></i> Logout</a>
+                <a class="nav-link btn btn-danger active p-2 rounded-pill"  href="{{ route('admin_logout') }}" href="#" style="font-weight: bold"><i class="fas fa-power-off"></i> Logout</a>
               </li>
             </ul>
           </div>
@@ -123,15 +123,15 @@
       <h1 class="text-center "><i class="fas fa-server"></i> ADMIN &nbsp;<b>DASHBOARD<b></h1><br><br>
         <hr class="container">
       
-      <div class="col-md-10 container">
+      <div class="container">
       <div class="row container">
           <div class="col-md-4 mb-3 container mt-4">
             <div class="card container" id="btn1" style="width: 18rem;">
                 <div class="card-body">
                 <center>
                   <h3 class="card-title" style="color: #154360;">Hotel <i class="fas fa-hotel"></i></h3>
-                  <h6 class="card-subtitle mb-2">Management Data Hotel</h6>
-                  <p class="card-text mt-3">Klik button untuk mengelola database list Hotel</p>
+                  <h6 class="card-subtitle mb-2 mt-4">Management Data Hotel</h6>
+                  <p class="card-text mt-3">Klik <i>Manage List</i>  untuk mengelola data Hotel</p>
                   </center>
                     <a href="dashboard/hotel" class="btn rounded-pill mt-4"><b>&nbsp;&nbsp;&nbsp;<i class="fas fa-tasks"></i> Manage List</b></a>
                 </div>
@@ -143,8 +143,8 @@
                 <div class="card-body">
                 <center>
                   <h3 class="card-title" style="color: #7D6608;">Souvenir <i class="fas fa-store"></i></h3>
-                  <h6 class="card-subtitle mb-2">Management Data Souvenir</h6>
-                  <p class="card-text">Klik button untuk mengelola database list Souvenir</p>
+                  <p class="card-subtitle mb-2 mt-4">Management Data Souvenir</p>
+                  <p class="card-text mt-3">Klik <i>Manage List</i>  untuk mengelola data Souvenir</p>
                 </center>
                     <a href="dashboard/souvenir" class="btn rounded-pill mt-4"><b>&nbsp;&nbsp;&nbsp;<i class="fas fa-tasks"></i> Manage List</b></a>
                 </div>
@@ -156,8 +156,8 @@
                 <div class="card-body">
                 <center>
                   <h3 class="card-title" style="color: #145A32;">Event <i class="fas fa-calendar-alt"></i></h3>
-                  <h6 class="card-subtitle mb-2">Management Data Event</h6>
-                  <p class="card-text">Klik button untuk mengelola database list Event</p>
+                  <h6 class="card-subtitle mb-2 mt-4">Management Data Event</h6>
+                  <p class="card-text mt-3">Klik <i>Manage List</i>  untuk mengelola data Event</p>
                 </center>
                     <a href="dashboard/event" class="btn rounded-pill mt-4"><b>&nbsp;&nbsp;&nbsp;<i class="fas fa-tasks"></i> Manage List</b></a>
                 </div>

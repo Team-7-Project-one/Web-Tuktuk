@@ -31,18 +31,19 @@
     </style>
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-body rounded">
+      <nav class="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-body rounded" >
         <div class="container-fluid">
-        <a class=" navbar-brand text-dark" style="font-family: 'Quicksand', sans-serif;" href="#">TukTukTour</a>
+          <a class=" navbar-brand" href="#"><img src="{{asset('img/logo_web.png')}}" width="80%" alt=""></a>
           <div class="" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link btn btn-danger active p-2"  href="{{ route('admin_logout') }}" href="#" style="font-weight: bold"><i class="fas fa-power-off"></i> Logout</a>
+                <a class="nav-link btn btn-danger active p-2 rounded-pill"  href="{{ route('admin_logout') }}" href="#" style="font-weight: bold"><i class="fas fa-power-off"></i> Logout</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
+
       <h1 class="text-center">Create Data Souvenir</h1>
       <br>
       <style>
@@ -56,12 +57,13 @@
           border-radius: 20px;
         }
       </style>
-      <div class="form-group container col-md-10 p-5">
+
+      <div class="form-group container col-md-10 p-5 bg-secondary text-light mb-5">
       <form class="container" enctype="multipart/form-data" action="/dashboard/souvenir/update/{{ $Souvenir->id }}" method="post">
         {{ csrf_field() }}
         <div class="row">
           <div class="container mb-4">
-            <a href="/dashboard/souvenir" class="btn btn-secondary"><i class="fas fa-arrow-alt-circle-left"></i> back</a><br>
+            <a href="/dashboard/souvenir" class="btn btn-success rounded-pill"><i class="fas fa-arrow-alt-circle-left"></i> back</a><br>
           </div><br><br>
           <div class="col-md-6">
             <label for="">Nama Souvenir</label>
@@ -121,10 +123,10 @@
           </div>
           <div class="col-md-12">
             <label for="">Deskripisi</label>
-            <input class="form-control" value="{{ $Souvenir->deskripsi }}" name='deskripsi'>
+            <textarea class="form-control" name='deskripsi'>{{ $Souvenir->deskripsi }}</textarea>
           </div> <br>
           <div class="btn-group mt-3">
-            <button type="submit" class="btn btnsu btn-primary "><i class="fas fa-save"></i> Save Change</button> 
+            <button type="submit" class="btn btnsu btn-primary mt-4"><i class="fas fa-save"></i> Save Change</button> 
           </div>
       </div>
       </form>
