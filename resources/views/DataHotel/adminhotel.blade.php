@@ -44,11 +44,11 @@
   <body style="background-color: #34495E;">
     <nav style="background-color: #212F3C;" class="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-body rounded">
       <div class="container-fluid">
-        <a class=" navbar-brand text-light" style="font-family: 'Quicksand', sans-serif;" href="#">TukTukTour</a>
+        <a class=" navbar-brand" href="#"><img src="{{asset('img/logo_web.png')}}" width="80%" alt=""></a>
         <div class="" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link btn btn-danger active p-2"  href="{{ route('admin_logout') }}" href="#" style="font-weight: bold"><i class="fas fa-power-off"></i> Logout</a>
+              <a class="nav-link btn btn-danger active p-2 rounded-pill"  href="{{ route('admin_logout') }}" href="#" style="font-weight: bold"><i class="fas fa-power-off"></i> Logout</a>
             </li>
           </ul>
         </div>
@@ -65,7 +65,7 @@
     </div>
         } 
     @endif
-      <h1 class="text-center text-light"><i class="fas fa-h-square mr-1"></i>otel List</h1>
+      <h1 class="text-center text-light"> Hotel Data</h1>
       <br>
       <div class="searchotel container col-md-10 mb-3">
         <form class="d-flex" method="GET">
@@ -219,12 +219,16 @@
         .text-sm{
           margin-top: 10px;
         }
+        tr th {
+        text-align: center
+        }
       </style>
       </center><br>
-      <footer class=" bg-secondary p-3">
-        <div>
-          <h5 class="text-center text-light"><b>TUK-TUK TOUR WEBSITE</b></h5>
-        </div>
+
+    <footer class="p-3 mt-4" style="background-color: #212F3C;">
+      <div>
+        <h5 class="text-center text-light"><b>TUKTUK TOUR WEBSITE</b></h5>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>

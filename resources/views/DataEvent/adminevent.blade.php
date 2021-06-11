@@ -40,6 +40,9 @@
       h1{
         font-weight: bolder;
       }
+      tr th {
+        text-align: center
+      }
     </style>
   </head>
   <body style="background-color: #34495E;">
@@ -49,7 +52,7 @@
         <div class="" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link btn btn-danger active p-2"  href="{{ route('admin_logout') }}" href="#" style="font-weight: bold"><i class="fas fa-power-off"></i> Logout</a>
+              <a class="nav-link btn btn-danger active p-2 rounded-pill"  href="{{ route('admin_logout') }}" href="#" style="font-weight: bold"><i class="fas fa-power-off"></i> Logout</a>
             </li>
           </ul>
         </div>
@@ -68,7 +71,7 @@
     @endif
       <h1 class="text-center text-light"><i class="fas fa-calendar-alt"></i> Event Data</h1>
       <div class="container mb-2 btnadd mt-3">
-        <a href="/dashboard" class="btn btn-secondary"><i class="fas fa-arrow-alt-circle-left rounded-pill"></i> back</a>
+        <a href="/dashboard" class="btn btn-secondary rounded-pill"><i class="fas fa-arrow-alt-circle-left rounded-pill"></i> back</a>
         <a href="/dashboard/event/tambah" class="btn  btn-primary rounded-pill"><i class="fas fa-plus-square"></i> Tambah Data</a>
       </div>
       <table class="table container table-hover mt-5">
@@ -201,11 +204,12 @@
         margin-top: 10px;
       }
     </style><br><br><br><br><br><br>
-         <footer class=" bg-secondary p-3">
-          <div>
-            <h5 class="text-center text-light"><b>TUK-TUK TOUR WEBSITE</b></h5>
-          </div>
-      </footer>
+         
+    <footer class="p-3 mt-4 fixed-bottom" style="background-color: #212F3C;">
+    <div>
+      <h5 class="text-center text-light"><b>TUKTUK TOUR WEBSITE</b></h5>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     <script src="js/jquery.min.js"></script>
