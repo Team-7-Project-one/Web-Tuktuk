@@ -8,7 +8,7 @@
         <li class="nav-item"><a href="/hotel" class="nav-link" style="font-size: 1rem">Hotel</a></li>
         <li class="nav-item"><a href="/souvenir" class="nav-link" style="font-size: 1rem">Souvenir</a></li>
         <li class="nav-item"><a href="/event" class="nav-link" style="font-size: 1rem">Event</a></li>
-        <!-- <li class="nav-item"><a href="/aboutus" class="nav-link" style="font-size: 1rem">About Us</a></li> -->
+        <li class="nav-item"><a href="/tuktuk" class="nav-link" style="font-size: 1rem">About</a></li>
         <li class="nav-item dropdown">
         @if(Auth::user())
           <a href="" style="font-size: 1rem" class="nav-link bg-transparent dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 1rem;">

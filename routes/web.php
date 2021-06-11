@@ -7,6 +7,7 @@ use App\Http\Controllers\SouvenirController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AboutusController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,6 +61,8 @@ Route::get('/hotel', [HotelController::class, 'index'])->name('hotel');
 Route::get('/souvenir', [SouvenirController::class, 'index'])->name('souvenir');
 
 Route::get('/event', [EventController::class, 'index'])->name('event');
+
+Route::get('/tuktuk', [AboutusController::class, 'index2']);
 
 // Route::get('/hotel', 'HotelController@index')->name('hotel');
 // Route::get('/souvenir', 'SouvenirController@index')->name('souvenir');
