@@ -175,20 +175,30 @@
           <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
             <div class="container">
               <h3 class="text-center">Komposisi Penduduk Berdasarkan Agama</h3>
-            Katolik<div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width:58%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">58%</div>&nbsp;1158&nbsp;orang
+            <div class="mt-4 fw-bold text-dark text-left">Katolik</div>
+            <div class="progress" style="height: 20px;">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width:58%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">58%</div>
+              <div class="mt-2 fw-bold text-dark">&nbsp;1158&nbsp;orang</div>
             </div>
-            Kristen Protestan<div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 41.2%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">41.2%</div> &nbsp;823&nbsp;orang
-            </div>Islam
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style="width: 12%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">0.8%</div> &nbsp;16&nbsp;orang
-            </div>Hindu
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 3%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">0%</div> &nbsp;0&nbsp;orang
-            </div>Buddha
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 3%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">0%</div> &nbsp;0&nbsp;orang
+            <div class="mt-4 fw-bold text-dark text-left">Kristen Protestan</div>
+            <div class="progress" style="height: 20px;">
+              <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 41.2%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">41.2%</div> 
+              <div class="mt-2 fw-bold text-dark">&nbsp;823&nbsp;orang</div>
+            </div>
+            <div class="mt-4 fw-bold text-dark text-left">Islam</div>
+            <div class="progress" style="height: 20px;">
+              <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style="width: 12%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">0.8%</div> 
+              <div class="mt-2 fw-bold text-dark">&nbsp;16&nbsp;orang</div>
+            </div>
+            <div class="mt-4 fw-bold text-dark text-left">Hindu</div>
+            <div class="progress" style="height: 20px;">
+              <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 3%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">0%</div> 
+              <div class="mt-2 fw-bold text-dark">&nbsp;0&nbsp;orang</div>
+            </div>
+            <div class="mt-4 fw-bold text-dark text-left">Buddha</div>
+            <div class="progress" style="height: 20px;">
+              <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 3%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">0%</div> 
+              <div class="mt-2 fw-bold text-dark">&nbsp;0&nbsp;orang</div>
             </div><br>
           </div>
           <br>

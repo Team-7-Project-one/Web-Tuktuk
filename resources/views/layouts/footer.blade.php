@@ -26,7 +26,8 @@
             <li><a href="/hotel" class="py-2 d-block">Hotel</a></li>
             <li><a href="/souvenir" class="py-2 d-block">Souvenir</a></li>
             <li><a href="/event" class="py-2 d-block">Event</a></li>
-            <li><a href="/aboutus" class="py-2 d-block">Developer Team</a></li>
+            <li><a href="/tuktuk" class="py-2 d-block">About</a></li>
+            <!-- <li><a href="/aboutus" class="py-2 d-block">Developer Team</a></li> -->
             </ul>
         </div>
         </div>
